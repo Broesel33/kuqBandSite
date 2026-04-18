@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const navLinks = [
-  { href: "/galerie", label: "Galerie" },
+  { href: "/", label: "Start" },
   { href: "/setlist", label: "Setlist" },
   { href: "/termine", label: "Termine" },
   { href: "/leistungen", label: "Leistungen" },
@@ -46,6 +46,13 @@ export default function Navigation() {
               </Link>
             );
           })}
+          <Link
+            href="/kontakt"
+            className="bg-[var(--color-primary-container)] text-white px-5 py-2 rounded-md font-semibold text-[11px] uppercase tracking-widest hover:opacity-90 transition-opacity"
+            style={{ fontFamily: "var(--font-label)" }}
+          >
+            Jetzt buchen
+          </Link>
         </nav>
 
         <button
@@ -75,6 +82,14 @@ export default function Navigation() {
               </Link>
             );
           })}
+          <Link
+            href="/kontakt"
+            onClick={() => setMenuOpen(false)}
+            className="bg-[var(--color-primary-container)] text-white px-5 py-3 rounded-md font-semibold text-[11px] uppercase tracking-widest text-center hover:opacity-90 transition-opacity mt-2"
+            style={{ fontFamily: "var(--font-label)" }}
+          >
+            Jetzt buchen
+          </Link>
         </div>
       )}
     </header>

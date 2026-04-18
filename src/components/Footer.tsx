@@ -31,8 +31,15 @@ export default function Footer() {
         </div>
 
         <div className="text-sm text-[var(--color-on-primary-container)]" style={{ fontFamily: "var(--font-body)" }}>
-          <p>© {new Date().getFullYear()} Kreiz &amp; Quer.</p>
-          <p className="mt-1 text-[var(--color-secondary-fixed)]/60">The Electric Gallery Experience.</p>
+          <a href="tel:+436802378954" className="flex items-center gap-2 hover:text-white transition-colors mb-2">
+            <span className="material-symbols-outlined text-base text-[var(--color-secondary-fixed)]">phone</span>
+            +43 680 23 78 95 4
+          </a>
+          <a href="mailto:info@kreizundquer.com" className="flex items-center gap-2 hover:text-white transition-colors mb-4">
+            <span className="material-symbols-outlined text-base text-[var(--color-secondary-fixed)]">mail</span>
+            info@kreizundquer.com
+          </a>
+          <p className="text-[var(--color-secondary-fixed)]/60">© {new Date().getFullYear()} Kreiz &amp; Quer. Live-Band aus der Steiermark.</p>
         </div>
       </div>
     </footer>

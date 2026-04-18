@@ -8,34 +8,36 @@ export default function Startseite() {
       {/* Hero */}
       <section className="relative w-full min-h-[640px] flex items-center bg-[var(--color-surface-container-low)] overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/band.png"
-            alt="Kreiz & Quer live auf der Bühne"
-            fill
-            className="object-cover opacity-25 mix-blend-luminosity"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-surface)] via-[var(--color-surface)]/90 to-transparent" />
+          <div className="absolute right-0 top-0 bottom-0 w-[42%]">
+            <Image
+              src="/band.png"
+              alt="Kreiz & Quer live auf der Bühne"
+              fill
+              className="object-cover object-top opacity-85"
+              priority
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-surface)] from-48% via-[var(--color-surface)]/55 via-58% to-transparent to-72%" />
         </div>
         <div className="relative z-10 max-w-screen-2xl mx-auto px-6 md:px-8 w-full py-24">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-7xl font-bold text-[var(--color-on-surface)] mb-6 leading-tight">
-              Der Soundtrack zu{" "}
+              Kreiz &amp; Quer –{" "}
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-secondary)] to-[var(--color-primary-container)]">
-                Eurer besten Nacht.
+                Hochzeiten, Bälle &amp; Events.
               </span>
             </h1>
             <p
               className="text-xl md:text-2xl text-[var(--color-on-surface-variant)] mb-10 max-w-2xl leading-relaxed"
               style={{ fontFamily: "var(--font-body)" }}
             >
-              Von intimen Hochzeiten bis zur Firmen-Gala — Kreiz &amp; Quer bringt das Electric Gallery Erlebnis auf jede Bühne.
+              Vier Musiker aus der Steiermark. Ein Versprechen: euren Abend unvergesslich zu machen — bei Hochzeiten, Bällen, Firmenfeiern und Events in ganz Österreich.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/kontakt"
-                className="bg-[var(--color-primary)] text-[var(--color-on-primary)] px-8 py-4 rounded-md font-semibold hover:bg-[var(--color-primary-container)] transition-colors shadow-[0_10px_30px_rgba(23,28,31,0.08)]"
+                className="bg-[var(--color-primary-container)] text-white px-8 py-4 rounded-md font-semibold hover:opacity-90 transition-opacity shadow-[0_10px_30px_rgba(23,28,31,0.15)]"
                 style={{ fontFamily: "var(--font-label)" }}
               >
                 Jetzt buchen
@@ -47,6 +49,16 @@ export default function Startseite() {
               >
                 Setlist ansehen
               </Link>
+            </div>
+            <div className="flex flex-wrap gap-6 mt-4" style={{ fontFamily: "var(--font-body)" }}>
+              <a href="tel:+436802378954" className="flex items-center gap-2 text-[var(--color-on-surface-variant)] hover:text-[var(--color-secondary)] transition-colors text-sm">
+                <span className="material-symbols-outlined text-base text-[var(--color-secondary)]">phone</span>
+                +43 680 23 78 95 4
+              </a>
+              <a href="mailto:info@kreizundquer.com" className="flex items-center gap-2 text-[var(--color-on-surface-variant)] hover:text-[var(--color-secondary)] transition-colors text-sm">
+                <span className="material-symbols-outlined text-base text-[var(--color-secondary)]">mail</span>
+                info@kreizundquer.com
+              </a>
             </div>
           </div>
         </div>
@@ -68,7 +80,7 @@ export default function Startseite() {
                 className="text-lg text-[var(--color-on-surface-variant)] mb-6 max-w-lg"
                 style={{ fontFamily: "var(--font-body)" }}
               >
-                Von der ersten Umarmung bis zum letzten Tanz — wir passen uns Eurem Stil an und sorgen dafür, dass die Tanzfläche niemals leer bleibt.
+                Vom gefühlvollen Ja-Wort bis zur ausgelassenen Party — wir begleiten euren großen Tag mit Herz, Gespür und genau der Musik, die den Moment unsterblich macht.
               </p>
               <div className="flex flex-wrap gap-3 mt-auto">
                 {["Akustik-Set", "Vollband", "DJ-Service"].map((tag) => (
@@ -97,7 +109,7 @@ export default function Startseite() {
                 className="text-base text-[var(--color-on-primary-container)] mb-6"
                 style={{ fontFamily: "var(--font-body)" }}
               >
-                Professionell, pünktlich und erstklassig. Ob dezentes Hintergrundambiente oder Hauptact — wir liefern genau das.
+                Professionell auf der Bühne, flexibel im Programm. Vom ruhigen Empfangsambiente bis zum mitreißenden Hauptact — wir passen uns eurem Event an.
               </p>
               <Link
                 href="/leistungen"
@@ -118,7 +130,7 @@ export default function Startseite() {
                 className="text-lg text-[var(--color-on-surface-variant)] mb-6"
                 style={{ fontFamily: "var(--font-body)" }}
               >
-                Erstklassige Galas verlangen eine Band, die das Timing beherrscht — vom eleganten Dinner-Jazz bis zum explosiven Late-Night-Set.
+                Eleganter Walzer, zeitlose Evergreens und mitreißende Tanzfloor-Hits — wir wissen, wann es leise sein muss und wann die Tanzfläche explodieren soll.
               </p>
               <ul className="space-y-4 text-[var(--color-on-surface-variant)]" style={{ fontFamily: "var(--font-body)" }}>
                 {[
@@ -146,16 +158,16 @@ export default function Startseite() {
           <div className="flex flex-col md:flex-row gap-16 items-start">
             <div className="md:w-1/3 pt-12">
               <h2 className="text-3xl font-bold text-[var(--color-on-surface)] mb-4 leading-tight">
-                Das Electric Gallery<br />Versprechen
+                Das Kreiz &amp; Quer<br />Versprechen
               </h2>
               <div className="w-12 h-1 bg-[var(--color-secondary)] mb-8" />
             </div>
             <div className="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-12">
               {[
-                { icon: "tune", title: "Anpassungsfähigkeit", text: "Wir spielen kein starres Programm. Wir lesen den Raum, passen das Tempo an und sorgen dafür, dass die Energie immer stimmt." },
-                { icon: "verified", title: "Zuverlässigkeit", text: "Professionalität ist unser Maßstab. Pünktliche Ankunft, reibungsloser Aufbau und klare Kommunikation von der Buchung bis zum Abbau." },
-                { icon: "music_note", title: "Musikalische Vielfalt", text: "Von Pop und Rock über Funk bis Jazz — unsere Setlist überspannt Jahrzehnte und begeistert jedes Publikum." },
-                { icon: "groups", title: "Persönliche Betreuung", text: "Jede Veranstaltung ist einzigartig. Wir nehmen uns Zeit für Eure Wünsche und planen jeden Auftritt individuell." },
+                { icon: "graphic_eq", title: "Im Takt des Abends", text: "Wir spielen kein starres Programm. Wir lesen die Energie im Raum — und passen unser Set spontan an. Jeder Abend ist anders, und genau das macht ihn besonders." },
+                { icon: "verified", title: "100% Live", text: "Keine Playbacks. Kein Netz. Kein doppelter Boden. Nur ehrliche Musik von Manu, Robert, Steph und Gabs — live gespielt, jedes Mal." },
+                { icon: "music_note", title: "Austropop bis Charts", text: "Von Austropop-Klassikern über Rock und Pop bis zu aktuellen Hits — wir verbinden Generationen und sorgen dafür, dass jeder seinen Moment hat." },
+                { icon: "groups", title: "Persönliche Betreuung", text: "Kein Event gleicht dem anderen. Wir nehmen uns Zeit für eure Wünsche und gestalten den Abend gemeinsam mit euch — von der ersten Anfrage bis zur letzten Zugabe." },
               ].map(({ icon, title, text }) => (
                 <div key={title}>
                   <h3 className="text-xl font-bold text-[var(--color-on-surface)] mb-3 flex items-center gap-2">
@@ -172,20 +184,44 @@ export default function Startseite() {
 
       {/* Kontakt CTA */}
       <section className="bg-[var(--color-primary-container)] py-24 px-6 md:px-8">
-        <div className="max-w-screen-2xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
-          <div>
-            <h2 className="text-4xl font-bold text-white mb-2">Bereit für Euren Auftritt?</h2>
-            <p className="text-[var(--color-on-primary-container)] text-lg" style={{ fontFamily: "var(--font-body)" }}>
-              Schreibt uns und wir planen gemeinsam Euren unvergesslichen Abend.
-            </p>
+        <div className="max-w-screen-2xl mx-auto">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mb-12">
+            <div>
+              <h2 className="text-4xl font-bold text-white mb-2">Euer nächster Abend verdient die beste Musik.</h2>
+              <p className="text-[var(--color-on-primary-container)] text-lg" style={{ fontFamily: "var(--font-body)" }}>
+                Schreibt uns unverbindlich — wir melden uns innerhalb von 24 Stunden zurück und besprechen alles persönlich.
+              </p>
+            </div>
+            <Link
+              href="/kontakt"
+              className="bg-[var(--color-secondary)] text-white px-10 py-4 rounded-md font-semibold hover:opacity-90 transition-opacity whitespace-nowrap shadow-[0_10px_40px_rgba(0,81,213,0.3)]"
+              style={{ fontFamily: "var(--font-label)" }}
+            >
+              Jetzt anfragen
+            </Link>
           </div>
-          <Link
-            href="/kontakt"
-            className="bg-[var(--color-secondary)] text-white px-10 py-4 rounded-md font-semibold hover:bg-[var(--color-secondary-container)] transition-colors whitespace-nowrap shadow-[0_10px_40px_rgba(0,81,213,0.3)]"
-            style={{ fontFamily: "var(--font-label)" }}
-          >
-            Jetzt anfragen
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-6">
+            <a
+              href="tel:+436802378954"
+              className="flex-1 flex items-center gap-4 bg-white/10 hover:bg-white/20 transition-colors rounded-xl px-6 py-5"
+            >
+              <span className="material-symbols-outlined text-3xl text-[var(--color-secondary-fixed)]">phone</span>
+              <div>
+                <p className="text-xs text-[var(--color-on-primary-container)] uppercase tracking-widest mb-1" style={{ fontFamily: "var(--font-label)" }}>Anrufen</p>
+                <p className="text-xl font-bold text-white" style={{ fontFamily: "var(--font-body)" }}>+43 680 23 78 95 4</p>
+              </div>
+            </a>
+            <a
+              href="mailto:info@kreizundquer.com"
+              className="flex-1 flex items-center gap-4 bg-white/10 hover:bg-white/20 transition-colors rounded-xl px-6 py-5"
+            >
+              <span className="material-symbols-outlined text-3xl text-[var(--color-secondary-fixed)]">mail</span>
+              <div>
+                <p className="text-xs text-[var(--color-on-primary-container)] uppercase tracking-widest mb-1" style={{ fontFamily: "var(--font-label)" }}>Schreiben</p>
+                <p className="text-xl font-bold text-white" style={{ fontFamily: "var(--font-body)" }}>info@kreizundquer.com</p>
+              </div>
+            </a>
+          </div>
         </div>
       </section>
     </>

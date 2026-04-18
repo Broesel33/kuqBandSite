@@ -28,7 +28,7 @@ export default function Kontakt() {
           </p>
           <h1 className="text-5xl md:text-6xl font-bold text-[var(--color-on-surface)]">Kontakt</h1>
           <p className="text-xl text-[var(--color-on-surface-variant)] mt-4 max-w-xl" style={{ fontFamily: "var(--font-body)" }}>
-            Buchungsanfragen, Fragen, Feedback — wir freuen uns von Euch zu hören.
+            Plant ihr ein Event und sucht die passende Live-Band? Schreibt uns — wir melden uns innerhalb von 24 Stunden zurück und besprechen alles persönlich.
           </p>
         </div>
       </div>
@@ -42,7 +42,7 @@ export default function Kontakt() {
                 <span className="material-symbols-outlined text-5xl text-emerald-500">check_circle</span>
                 <h2 className="text-2xl font-bold text-[var(--color-on-surface)]">Nachricht gesendet!</h2>
                 <p className="text-[var(--color-on-surface-variant)]" style={{ fontFamily: "var(--font-body)" }}>
-                  Danke für Eure Anfrage. Wir melden uns innerhalb von 48 Stunden bei Euch.
+                  Danke für eure Nachricht. Wir melden uns innerhalb von 24 Stunden zurück und besprechen alles persönlich.
                 </p>
                 <button
                   onClick={() => { setSent(false); setFormState({ name: "", email: "", telefon: "", anlass: "", datum: "", nachricht: "" }); }}
@@ -80,7 +80,7 @@ export default function Kontakt() {
                       onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                       className="w-full bg-[var(--color-surface-container-high)] border-0 border-b-2 border-[var(--color-outline-variant)] px-0 py-3 text-[var(--color-on-surface)] focus:border-[var(--color-secondary)] focus:outline-none transition-colors"
                       style={{ fontFamily: "var(--font-body)" }}
-                      placeholder="eure@email.de"
+                      placeholder="eure@email.at"
                     />
                   </div>
                 </div>
@@ -96,7 +96,7 @@ export default function Kontakt() {
                       onChange={(e) => setFormState({ ...formState, telefon: e.target.value })}
                       className="w-full bg-[var(--color-surface-container-high)] border-0 border-b-2 border-[var(--color-outline-variant)] px-0 py-3 text-[var(--color-on-surface)] focus:border-[var(--color-secondary)] focus:outline-none transition-colors"
                       style={{ fontFamily: "var(--font-body)" }}
-                      placeholder="+49 ..."
+                      placeholder="+43 ..."
                     />
                   </div>
                   <div>
@@ -166,16 +166,19 @@ export default function Kontakt() {
               <h3 className="text-xl font-bold text-[var(--color-on-surface)] mb-6">Direkt erreichen</h3>
               <div className="space-y-4">
                 {[
-                  { icon: "mail", label: "E-Mail", value: "booking@kreizundquer.de" },
-                  { icon: "phone", label: "Telefon", value: "+49 89 123 456 78" },
-                  { icon: "location_on", label: "Heimatbasis", value: "München, Bayern" },
-                  { icon: "schedule", label: "Erreichbarkeit", value: "Mo–Fr, 10–18 Uhr" },
-                ].map(({ icon, label, value }) => (
+                  { icon: "mail", label: "E-Mail", value: "info@kreizundquer.com", href: "mailto:info@kreizundquer.com" },
+                  { icon: "phone", label: "Telefon", value: "+43 680 23 78 95 4", href: "tel:+436802378954" },
+                  { icon: "location_on", label: "Heimatbasis", value: "Steiermark, Österreich", href: null },
+                ].map(({ icon, label, value, href }) => (
                   <div key={label} className="flex items-center gap-4">
                     <span className="material-symbols-outlined text-[var(--color-secondary)] text-xl w-6 shrink-0">{icon}</span>
                     <div>
                       <p className="text-xs text-[var(--color-on-surface-variant)] uppercase tracking-widest" style={{ fontFamily: "var(--font-label)" }}>{label}</p>
-                      <p className="text-[var(--color-on-surface)] font-medium" style={{ fontFamily: "var(--font-body)" }}>{value}</p>
+                      {href ? (
+                        <a href={href} className="text-[var(--color-on-surface)] font-medium hover:text-[var(--color-secondary)] transition-colors" style={{ fontFamily: "var(--font-body)" }}>{value}</a>
+                      ) : (
+                        <p className="text-[var(--color-on-surface)] font-medium" style={{ fontFamily: "var(--font-body)" }}>{value}</p>
+                      )}
                     </div>
                   </div>
                 ))}
@@ -185,7 +188,7 @@ export default function Kontakt() {
             <div className="bg-[var(--color-primary-container)] rounded-xl p-8">
               <h3 className="text-xl font-bold text-white mb-3">Schnelle Antwort</h3>
               <p className="text-[var(--color-on-primary-container)]" style={{ fontFamily: "var(--font-body)" }}>
-                Wir antworten auf Buchungsanfragen in der Regel innerhalb von 24–48 Stunden. Für dringende Anfragen bitte telefonisch melden.
+                Wir melden uns in der Regel innerhalb von 24 Stunden zurück. Kein Auftrag zu klein, kein Event zu groß — schreibt uns einfach.
               </p>
             </div>
 
