@@ -4,6 +4,20 @@ export const metadata = {
 
 const genres = [
   {
+    name: "Austropop",
+    color: "bg-red-500/10 text-red-600",
+    songs: [
+      { artist: "Rainhard Fendrich", title: "Wien bei Nacht", decade: "80er" },
+      { artist: "STS", title: "Irgendwann bleib i dann dort", decade: "80er" },
+      { artist: "Wolfgang Ambros", title: "Schifoan", decade: "80er" },
+      { artist: "Georg Danzer", title: "Jö schau", decade: "70er" },
+      { artist: "Christina Stürmer", title: "Millionen Lichter", decade: "00er" },
+      { artist: "Hubert von Goisern", title: "Hiatamadl", decade: "90er" },
+      { artist: "Falco", title: "Rock Me Amadeus", decade: "80er" },
+      { artist: "Rainhard Fendrich", title: "Strada del Sole", decade: "80er" },
+    ],
+  },
+  {
     name: "Pop & Rock",
     color: "bg-[var(--color-secondary)]/10 text-[var(--color-secondary)]",
     songs: [
@@ -65,7 +79,7 @@ export default function Setlist() {
           </p>
           <h1 className="text-5xl md:text-6xl font-bold text-white">Setlist</h1>
           <p className="text-xl text-[var(--color-on-primary-container)] mt-4 max-w-2xl" style={{ fontFamily: "var(--font-body)" }}>
-            Eine Auswahl aus unserem Repertoire — über 200 Songs aus 6 Jahrzehnten. Auf Wunsch spielen wir auch Euren Lieblingssong.
+            Eine Auswahl aus unserem Repertoire — von Austropop-Klassikern über Rock-Hits bis zu aktuellen Charts. Alles live gespielt, alles mit Herzblut. Und habt ihr einen besonderen Wunsch? Fragt einfach.
           </p>
         </div>
       </div>
@@ -106,9 +120,9 @@ export default function Setlist() {
         <div className="mt-16 bg-[var(--color-surface-container-low)] rounded-xl p-8 flex flex-col md:flex-row items-center gap-6">
           <span className="material-symbols-outlined text-4xl text-[var(--color-secondary)]">library_music</span>
           <div>
-            <h3 className="text-xl font-bold text-[var(--color-on-surface)]">Wunsch-Song?</h3>
+            <h3 className="text-xl font-bold text-[var(--color-on-surface)]">Euer Lieblingssong ist nicht dabei?</h3>
             <p className="text-[var(--color-on-surface-variant)] mt-1" style={{ fontFamily: "var(--font-body)" }}>
-              Habt Ihr einen besonderen Wunsch? Schreibt uns — wir lernen gerne neue Songs für Euren Anlass.
+              Kein Problem. Schreibt uns — wir lernen gerne neue Songs für euren Anlass. Kein Wunsch ist zu groß, kein Song zu klein.
             </p>
           </div>
           <a
