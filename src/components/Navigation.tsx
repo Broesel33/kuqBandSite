@@ -10,7 +10,7 @@ const navLinks: NavLink[] = [
   { href: "/", label: "Start" },
   { href: "/ueber-uns", label: "Über uns" },
   { href: "/leistungen", label: "Leistungen" },
-  { href: "/setlist", label: "Setlist" },
+  { href: "/repertoire", label: "Repertoire" },
   { href: "/galerie", label: "Galerie" },
   { href: "/termine", label: "Termine" },
   { href: "/kontakt", label: "Kontakt" },

@@ -16,7 +16,7 @@ export default function Startseite() {
         subline="Vier Musiker aus der Steiermark. Hochzeiten, Bälle, Firmenfeiern und Events in ganz Österreich — 100 % live, 100 % Herzblut."
         eyebrow="Live. Leidenschaftlich. Unvergesslich."
         primaryCta={{ label: "Jetzt buchen", href: "/kontakt" }}
-        secondaryCta={{ label: "Setlist ansehen", href: "/setlist" }}
+        secondaryCta={{ label: "Repertoire ansehen", href: "/repertoire" }}
         contactBar={true}
         photoAlt="Kreiz & Quer live auf der Bühne"
       />

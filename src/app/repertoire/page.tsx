@@ -1,95 +1,91 @@
-import SetlistFilter, { type GenreSection } from "@/components/SetlistFilter";
+import RepertoireFilter, { type GenreSection } from "@/components/RepertoireFilter";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Setlist – Kreiz & Quer",
+  title: "Repertoire – Kreiz & Quer",
   description:
-    "Unser Repertoire: Austropop, Pop & Rock, Disco & Funk, Evergreens und aktuelle Charts — alles live.",
+    "Unser Repertoire: Austropop, Pop & Rock, Evergreens, aktuelle Charts und Walzer — alles live gespielt.",
 };
 
 const GENRES: GenreSection[] = [
   {
     id: "austropop",
     label: "Austropop",
-    badgeColor: "",
     songs: [
-      { artist: "Rainhard Fendrich", title: "Wien bei Nacht", decade: "80er" },
-      { artist: "STS", title: "Irgendwann bleib i dann dort", decade: "80er" },
-      { artist: "Wolfgang Ambros", title: "Schifoan", decade: "80er" },
-      { artist: "Georg Danzer", title: "Jö schau", decade: "70er" },
-      { artist: "Christina Stürmer", title: "Millionen Lichter", decade: "00er" },
-      { artist: "Hubert von Goisern", title: "Hiatamadl", decade: "90er" },
-      { artist: "Falco", title: "Rock Me Amadeus", decade: "80er" },
-      { artist: "Rainhard Fendrich", title: "Strada del Sole", decade: "80er" },
-    ],
-  },
-  {
-    id: "disco-funk",
-    label: "Disco & Funk",
-    badgeColor: "",
-    songs: [
-      { artist: "Earth, Wind & Fire", title: "September", decade: "70er" },
-      { artist: "Sister Sledge", title: "We Are Family", decade: "70er" },
-      { artist: "Chic", title: "Le Freak", decade: "70er" },
-      { artist: "Kool & The Gang", title: "Celebration", decade: "80er" },
-      { artist: "Michael Jackson", title: "Don't Stop 'Til You Get Enough", decade: "80er" },
-      { artist: "James Brown", title: "I Got You", decade: "60er" },
+      { title: "Amoi segn ma uns wieder", artist: "Andreas Gabalier", decade: "10er" },
+      { title: "Cordula Grün", artist: "Josh.", decade: "10er" },
+      { title: "Ham kummst", artist: "Seiler & Speer", decade: "10er" },
+      { title: "Bonnie und Clyde", artist: "Seiler & Speer", decade: "10er" },
+      { title: "I Am From Austria", artist: "Rainhard Fendrich", decade: "80er" },
+      { title: "Irgendwann bleib i dann dort", artist: "STS", decade: "80er" },
+      { title: "Fürstenfeld", artist: "STS", decade: "80er" },
+      { title: "Es lebe der Zentralfriedhof", artist: "Wolfgang Ambros", decade: "70er" },
+      { title: "Blume aus dem Gemeindebau", artist: "Wolfgang Ambros", decade: "80er" },
+      { title: "Danke, gut", artist: "Pizzera & Jaus", decade: "10er" },
     ],
   },
   {
     id: "pop-rock",
     label: "Pop & Rock",
-    badgeColor: "",
     songs: [
-      { artist: "The Killers", title: "Mr. Brightside", decade: "00er" },
-      { artist: "Coldplay", title: "The Scientist", decade: "00er" },
-      { artist: "Dua Lipa", title: "Levitating", decade: "20er" },
-      { artist: "Ed Sheeran", title: "Shape of You", decade: "10er" },
-      { artist: "Bruno Mars", title: "Uptown Funk", decade: "10er" },
-      { artist: "Adele", title: "Rolling in the Deep", decade: "10er" },
-      { artist: "Amy Winehouse", title: "Valerie", decade: "00er" },
-      { artist: "Red Hot Chili Peppers", title: "Under the Bridge", decade: "90er" },
+      { title: "Wonderwall", artist: "Oasis", decade: "90er" },
+      { title: "Sweet Home Alabama", artist: "Lynyrd Skynyrd", decade: "70er" },
+      { title: "Knocking on Heaven's Door", artist: "Guns N' Roses", decade: "90er" },
+      { title: "Satisfaction", artist: "The Rolling Stones", decade: "60er" },
+      { title: "Sultans of Swing", artist: "Dire Straits", decade: "70er" },
+      { title: "Nothing Else Matters", artist: "Metallica", decade: "90er" },
+      { title: "It's My Life", artist: "Bon Jovi", decade: "00er" },
+      { title: "Good Riddance", artist: "Green Day", decade: "90er" },
+      { title: "Somebody That I Used to Know", artist: "Gotye", decade: "10er" },
+      { title: "Creep", artist: "Radiohead", decade: "90er" },
     ],
   },
   {
-    id: "evergreens-jazz",
-    label: "Evergreens & Jazz",
-    badgeColor: "",
+    id: "evergreens",
+    label: "Evergreens",
     songs: [
-      { artist: "Frank Sinatra", title: "New York, New York", decade: "80er" },
-      { artist: "Louis Armstrong", title: "What a Wonderful World", decade: "60er" },
-      { artist: "Norah Jones", title: "Come Away with Me", decade: "00er" },
-      { artist: "Nat King Cole", title: "L-O-V-E", decade: "60er" },
-      { artist: "Billie Holiday", title: "The Very Thought of You", decade: "50er" },
+      { title: "Halleluja", artist: "Cohen / Buckley", decade: "90er" },
+      { title: "Tears in Heaven", artist: "Eric Clapton", decade: "90er" },
+      { title: "Father and Son", artist: "Cat Stevens", decade: "70er" },
+      { title: "Free Fallin'", artist: "Tom Petty", decade: "80er" },
+      { title: "Country Roads", artist: "John Denver", decade: "70er" },
+      { title: "Have You Ever Seen the Rain", artist: "CCR", decade: "70er" },
+      { title: "Über den Wolken", artist: "Reinhard Mey", decade: "70er" },
+      { title: "Let Her Go", artist: "Passenger", decade: "10er" },
+      { title: "Gute Nacht Freunde", artist: "Reinhard Mey", decade: "70er" },
     ],
   },
   {
     id: "aktuelle-charts",
     label: "Aktuelle Charts",
-    badgeColor: "",
     songs: [
-      { artist: "Harry Styles", title: "As It Was", decade: "20er" },
-      { artist: "The Weeknd", title: "Blinding Lights", decade: "20er" },
-      { artist: "Olivia Rodrigo", title: "Good 4 U", decade: "20er" },
-      { artist: "Lizzo", title: "About Damn Time", decade: "20er" },
-      { artist: "Sam Smith", title: "Stay with Me", decade: "10er" },
+      { title: "Riptide", artist: "Vance Joy", decade: "10er" },
+      { title: "Renegades", artist: "X Ambassadors", decade: "10er" },
+      { title: "Wolke 4", artist: "Philipp Dittberner", decade: "10er" },
+      { title: "Gewinner", artist: "Clueso", decade: "10er" },
+      { title: "Sail", artist: "AWOLNATION", decade: "10er" },
+      { title: "Ein Kompliment", artist: "Sportfreunde Stiller", decade: "00er" },
+      { title: "Halt dich an mir fest", artist: "Revolverheld", decade: "10er" },
+      { title: "Little Lion Man", artist: "Mumford & Sons", decade: "10er" },
     ],
   },
   {
     id: "walzer",
     label: "Walzer & Tanzmusik",
-    badgeColor: "",
     songs: [
-      { artist: "Johann Strauß", title: "An der schönen blauen Donau", decade: "Klassik" },
-      { artist: "Johann Strauß", title: "Wiener Blut", decade: "Klassik" },
-      { artist: "Josef Strauß", title: "Sphärenklänge", decade: "Klassik" },
-      { artist: "Carl Michael Ziehrer", title: "Schönfeld-Marsch", decade: "Klassik" },
-      { artist: "Trad.", title: "Steirischer", decade: "Volksmusik" },
+      { title: "An der schönen blauen Donau", artist: "Johann Strauß II", decade: "Klassik" },
+      { title: "Wiener Blut", artist: "Johann Strauß II", decade: "Klassik" },
+      { title: "Kaiser-Walzer", artist: "Johann Strauß II", decade: "Klassik" },
+      { title: "Frühlingsstimmen", artist: "Johann Strauß II", decade: "Klassik" },
+      { title: "Geschichten aus dem Wienerwald", artist: "Johann Strauß II", decade: "Klassik" },
+      { title: "Radetzky-Marsch", artist: "Johann Strauß I", decade: "Klassik" },
+      { title: "Steirischer", artist: "Trad.", decade: "Volksmusik" },
+      { title: "Sphärenklänge", artist: "Josef Strauß", decade: "Klassik" },
     ],
   },
 ];
 
-export default function SetlistPage() {
+export default function RepertoirePage() {
   return (
     <div className="min-h-screen">
       {/* Page Header */}
@@ -109,7 +105,7 @@ export default function SetlistPage() {
               marginBottom: "1rem",
             }}
           >
-            Repertoire
+            Was wir spielen
           </p>
           <h1
             style={{
@@ -120,7 +116,7 @@ export default function SetlistPage() {
               marginBottom: "1rem",
             }}
           >
-            Setlist
+            Repertoire
           </h1>
           <p
             style={{
@@ -136,19 +132,19 @@ export default function SetlistPage() {
         </div>
       </header>
 
-      {/* Setlist Section */}
+      {/* Repertoire Section */}
       <section
-        aria-labelledby="setlist-heading"
+        aria-labelledby="repertoire-heading"
         style={{
           backgroundColor: "var(--color-surface)",
           padding: "4rem 1.5rem 6rem",
         }}
       >
         <div className="max-w-screen-xl mx-auto">
-          <h2 id="setlist-heading" className="sr-only">
+          <h2 id="repertoire-heading" className="sr-only">
             Songauswahl nach Genre
           </h2>
-          <SetlistFilter genres={GENRES} />
+          <RepertoireFilter genres={GENRES} />
         </div>
       </section>
 
@@ -213,7 +209,6 @@ export default function SetlistPage() {
                 borderRadius: "var(--radius-md)",
                 textDecoration: "none",
                 minHeight: "44px",
-                transition: "opacity 0.15s",
               }}
             >
               Song anfragen
