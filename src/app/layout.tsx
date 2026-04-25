@@ -3,6 +3,7 @@ import { Space_Grotesk, Manrope, Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SkipLink from "@/components/SkipLink";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -43,9 +44,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-full flex flex-col bg-[var(--color-surface)] text-[var(--color-on-surface)]">
+      <body className="min-h-full flex flex-col bg-[var(--color-surface)] text-[var(--color-text)]">
+        <SkipLink />
         <Navigation />
-        <main className="flex-grow pt-20">
+        <main id="main-content" className="flex-grow pt-20">
           {children}
         </main>
         <Footer />

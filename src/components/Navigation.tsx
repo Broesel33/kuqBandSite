@@ -1,96 +1,183 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
-const navLinks = [
+type NavLink = { href: string; label: string };
+
+const navLinks: NavLink[] = [
   { href: "/", label: "Start" },
-  { href: "/setlist", label: "Setlist" },
-  { href: "/leistungen", label: "Leistungen" },
   { href: "/ueber-uns", label: "Über uns" },
+  { href: "/leistungen", label: "Leistungen" },
+  { href: "/setlist", label: "Setlist" },
+  { href: "/galerie", label: "Galerie" },
+  { href: "/termine", label: "Termine" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
 export default function Navigation() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  const hamburgerRef = useRef<HTMLButtonElement>(null);
+  const firstMenuLinkRef = useRef<HTMLAnchorElement>(null);
+
+  const openMenu = () => {
+    setMenuOpen(true);
+    setTimeout(() => firstMenuLinkRef.current?.focus(), 50);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+    hamburgerRef.current?.focus();
+  };
+
+  // Scroll-aware shadow
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Escape closes mobile menu
+  useEffect(() => {
+    if (!menuOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeMenu();
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [menuOpen]);
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-sm transition-all duration-300 glass-effect">
+    <header
+      className="fixed top-0 w-full z-50 transition-shadow duration-300"
+      style={{
+        backgroundColor: "#0d1b2a",
+        boxShadow: scrolled ? "0 2px 16px rgba(0,0,0,0.35)" : "none",
+      }}
+    >
       <div className="flex justify-between items-center w-full px-6 md:px-8 py-4 max-w-screen-2xl mx-auto">
-        <Link href="/" className="flex items-center gap-3">
-          <Image src="/logo.png" alt="Kreiz & Quer Logo" width={40} height={40} className="object-contain" />
-          <span className="text-xl font-black tracking-tight text-[var(--color-primary-container)]" style={{ fontFamily: "var(--font-headline)" }}>
-            Kreiz &amp; Quer
-          </span>
+        {/* Logo */}
+        <Link
+          href="/"
+          className="flex items-center gap-2 text-xl font-black tracking-tight"
+          style={{ fontFamily: "var(--font-headline)", color: "#f0ede8" }}
+        >
+          Kreiz{" "}
+          <span style={{ color: "#c8951a" }}>&amp;</span>{" "}
+          Quer
         </Link>
 
-        <nav className="hidden md:flex space-x-8 items-center">
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-6" aria-label="Hauptnavigation">
           {navLinks.map(({ href, label }) => {
             const active = pathname === href;
             return (
               <Link
                 key={href}
                 href={href}
-                className={`pb-1 font-semibold uppercase text-[11px] tracking-widest transition-colors duration-300 ${
-                  active
-                    ? "text-[var(--color-secondary)] border-b-2 border-[var(--color-secondary)]"
-                    : "text-[var(--color-on-surface-variant)] hover:text-[var(--color-secondary)]"
-                }`}
-                style={{ fontFamily: "var(--font-label)" }}
+                aria-current={active ? "page" : undefined}
+                className="pb-0.5 font-semibold uppercase text-[11px] tracking-widest transition-colors duration-200"
+                style={{
+                  fontFamily: "var(--font-ui)",
+                  color: active ? "#c8951a" : "rgba(240,237,232,0.75)",
+                  borderBottom: active ? "2px solid #c8951a" : "2px solid transparent",
+                }}
               >
                 {label}
               </Link>
             );
           })}
+
           <Link
             href="/kontakt"
-            className="bg-[var(--color-primary-container)] text-white px-5 py-2 rounded-md font-semibold text-[11px] uppercase tracking-widest hover:opacity-90 transition-opacity"
-            style={{ fontFamily: "var(--font-label)" }}
+            className="ml-2 px-5 py-2 rounded-md font-semibold text-[11px] uppercase tracking-widest transition-colors duration-200"
+            style={{
+              fontFamily: "var(--font-ui)",
+              backgroundColor: "#2563eb",
+              color: "#fff",
+              minHeight: "44px",
+              display: "inline-flex",
+              alignItems: "center",
+            }}
           >
             Jetzt buchen
           </Link>
         </nav>
 
+        {/* Hamburger Button */}
         <button
-          className="md:hidden text-[var(--color-on-surface)] p-2"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Menü öffnen"
+          ref={hamburgerRef}
+          className="md:hidden p-2 flex items-center justify-center rounded"
+          style={{
+            color: "#f0ede8",
+            minWidth: "44px",
+            minHeight: "44px",
+          }}
+          onClick={menuOpen ? closeMenu : openMenu}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
+          aria-label={menuOpen ? "Menü schließen" : "Menü öffnen"}
         >
-          <span className="material-symbols-outlined">{menuOpen ? "close" : "menu"}</span>
+          <span className="material-symbols-outlined" aria-hidden="true">
+            {menuOpen ? "close" : "menu"}
+          </span>
         </button>
       </div>
 
-      {menuOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-xl border-t border-[var(--color-outline-variant)]/20 px-6 py-4 flex flex-col gap-4">
-          {navLinks.map(({ href, label }) => {
-            const active = pathname === href;
-            return (
-              <Link
-                key={href}
-                href={href}
-                onClick={() => setMenuOpen(false)}
-                className={`font-semibold uppercase text-[11px] tracking-widest transition-colors duration-300 py-2 ${
-                  active ? "text-[var(--color-secondary)]" : "text-[var(--color-on-surface-variant)] hover:text-[var(--color-secondary)]"
-                }`}
-                style={{ fontFamily: "var(--font-label)" }}
-              >
-                {label}
-              </Link>
-            );
-          })}
-          <Link
-            href="/kontakt"
-            onClick={() => setMenuOpen(false)}
-            className="bg-[var(--color-primary-container)] text-white px-5 py-3 rounded-md font-semibold text-[11px] uppercase tracking-widest text-center hover:opacity-90 transition-opacity mt-2"
-            style={{ fontFamily: "var(--font-label)" }}
-          >
-            Jetzt buchen
-          </Link>
-        </div>
-      )}
+      {/* Mobile Menu */}
+      <div
+        id="mobile-menu"
+        role="navigation"
+        aria-label="Mobile Navigation"
+        hidden={!menuOpen}
+        className="md:hidden px-6 pb-6 pt-2 flex flex-col gap-1"
+        style={{ backgroundColor: "#0d1b2a", borderTop: "1px solid rgba(255,255,255,0.08)" }}
+      >
+        {navLinks.map(({ href, label }, index) => {
+          const active = pathname === href;
+          const isFirst = index === 0;
+          return (
+            <Link
+              key={href}
+              href={href}
+              ref={isFirst ? firstMenuLinkRef : undefined}
+              onClick={closeMenu}
+              aria-current={active ? "page" : undefined}
+              className="font-semibold uppercase text-sm tracking-widest transition-colors duration-200 rounded px-3"
+              style={{
+                fontFamily: "var(--font-ui)",
+                color: active ? "#c8951a" : "rgba(240,237,232,0.8)",
+                minHeight: "44px",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              {label}
+            </Link>
+          );
+        })}
+
+        <Link
+          href="/kontakt"
+          onClick={closeMenu}
+          className="mt-3 px-5 rounded-md font-semibold text-sm uppercase tracking-widest text-center transition-colors duration-200"
+          style={{
+            fontFamily: "var(--font-ui)",
+            backgroundColor: "#2563eb",
+            color: "#fff",
+            minHeight: "44px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          Jetzt buchen
+        </Link>
+      </div>
     </header>
   );
 }

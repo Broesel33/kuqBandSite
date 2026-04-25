@@ -1,14 +1,49 @@
-interface Props {
-  gradient?: string;
-  dark?: boolean;
+interface PlaceholderImageProps {
+  alt: string;
+  label?: string;
+  variant?: 'dark' | 'light';
+  className?: string;
 }
 
-export default function PlaceholderImage({ gradient = "from-slate-300/30 to-slate-200/20", dark = false }: Props) {
+export default function PlaceholderImage({
+  alt,
+  label = "Foto folgt",
+  variant = 'light',
+  className = "",
+}: PlaceholderImageProps) {
+  const isDark = variant === 'dark';
+
   return (
     <div
-      className={`absolute inset-0 bg-gradient-to-br ${gradient} ${dark ? "bg-slate-800" : "bg-slate-100"} flex items-center justify-center`}
+      role="img"
+      aria-label={alt}
+      className={`w-full h-full flex flex-col items-center justify-center gap-3 ${className}`}
+      style={{
+        backgroundColor: isDark ? '#162338' : '#f0ece7',
+        border: `2px dashed ${isDark ? 'rgba(255,255,255,0.15)' : '#ddd8d2'}`,
+      }}
     >
-      <span className="material-symbols-outlined text-6xl opacity-10 text-slate-600">image</span>
+      <span
+        className="material-symbols-outlined"
+        aria-hidden="true"
+        style={{
+          fontSize: '2.5rem',
+          color: isDark ? 'rgba(176,190,200,0.4)' : 'rgba(138,155,170,0.5)',
+        }}
+      >
+        photo_camera
+      </span>
+      <span
+        style={{
+          fontSize: '11px',
+          fontWeight: 600,
+          letterSpacing: '0.15em',
+          textTransform: 'uppercase',
+          color: isDark ? 'rgba(176,190,200,0.5)' : 'rgba(138,155,170,0.6)',
+        }}
+      >
+        {label}
+      </span>
     </div>
   );
 }

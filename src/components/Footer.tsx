@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 const socialLinks = [
@@ -32,17 +31,43 @@ const socialLinks = [
   },
 ];
 
+const footerNavLinks = [
+  { href: "/", label: "Start" },
+  { href: "/ueber-uns", label: "Über uns" },
+  { href: "/leistungen", label: "Leistungen" },
+  { href: "/setlist", label: "Setlist" },
+  { href: "/termine", label: "Termine" },
+  { href: "/galerie", label: "Galerie" },
+  { href: "/kontakt", label: "Kontakt" },
+  { href: "/impressum", label: "Impressum" },
+];
+
 export default function Footer() {
   return (
-    <footer className="w-full py-16 px-6 md:px-8 bg-[var(--color-primary-container)]">
+    <footer
+      role="contentinfo"
+      className="w-full py-16 px-6 md:px-8"
+      style={{ backgroundColor: "var(--color-navy)" }}
+    >
       <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+        {/* Brand & Socials */}
         <div>
-          <div className="flex items-center gap-3 mb-6">
-            <Image src="/logo.png" alt="Kreiz & Quer Logo" width={48} height={48} className="object-contain brightness-[2] opacity-80" />
-            <span className="text-xl font-black text-white" style={{ fontFamily: "var(--font-headline)" }}>
-              Kreiz &amp; Quer
+          <div className="mb-6">
+            <span
+              className="text-xl font-black"
+              style={{ fontFamily: "var(--font-headline)", color: "var(--color-text-on-dark)" }}
+            >
+              Kreiz{" "}
+              <span style={{ color: "var(--color-gold)" }}>&amp;</span>{" "}
+              Quer
             </span>
           </div>
+          <p
+            className="text-sm mb-6"
+            style={{ color: "var(--color-text-muted-on-dark)", fontFamily: "var(--font-body)" }}
+          >
+            Live-Band aus der Steiermark für Hochzeiten, Bälle, Firmenfeiern und Events.
+          </p>
           <div className="flex items-center gap-4">
             {socialLinks.map(({ label, href, icon }) => (
               <a
@@ -50,47 +75,85 @@ export default function Footer() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={label}
-                className="text-[var(--color-secondary-fixed)]/70 hover:text-[var(--color-secondary-fixed)] transition-colors"
+                aria-label={`${label} — öffnet in neuem Tab`}
+                className="transition-colors duration-200"
+                style={{ color: "rgba(176,190,200,0.7)" }}
               >
                 {icon}
+                <span className="sr-only">(öffnet in neuem Tab)</span>
               </a>
             ))}
           </div>
         </div>
 
-        <div className="flex flex-col space-y-4 text-sm" style={{ fontFamily: "var(--font-body)" }}>
-          <Link href="/leistungen" className="text-[var(--color-on-primary-container)] hover:text-[var(--color-secondary-fixed)] transition-colors">
-            Leistungen
-          </Link>
-          <Link href="/#events" className="text-[var(--color-on-primary-container)] hover:text-[var(--color-secondary-fixed)] transition-colors">
-            Öffentliche Events
-          </Link>
-          <Link href="/galerie" className="text-[var(--color-on-primary-container)] hover:text-[var(--color-secondary-fixed)] transition-colors">
-            Galerie
-          </Link>
-          <Link href="/kontakt" className="text-[var(--color-on-primary-container)] hover:text-[var(--color-secondary-fixed)] transition-colors">
-            Buchung & Kontakt
-          </Link>
-          <Link href="/impressum" className="text-[var(--color-on-primary-container)] hover:text-[var(--color-secondary-fixed)] transition-colors">
-            Impressum
-          </Link>
-        </div>
+        {/* Navigation Links */}
+        <nav aria-label="Footer-Navigation">
+          <ul className="flex flex-col gap-3 text-sm" style={{ fontFamily: "var(--font-body)" }}>
+            {footerNavLinks.map(({ href, label }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  className="transition-colors duration-200"
+                  style={{ color: "var(--color-text-muted-on-dark)" }}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-        <div className="text-sm text-[var(--color-on-primary-container)]" style={{ fontFamily: "var(--font-body)" }}>
-          <a href="tel:+436802378954" className="flex items-center gap-2 hover:text-white transition-colors mb-2">
-            <span className="material-symbols-outlined text-base text-[var(--color-secondary-fixed)]">phone</span>
+        {/* Contact Info */}
+        <div className="text-sm" style={{ fontFamily: "var(--font-body)", color: "var(--color-text-muted-on-dark)" }}>
+          <a
+            href="tel:+436802378954"
+            className="flex items-center gap-2 transition-colors duration-200 mb-3"
+            style={{ color: "var(--color-text-muted-on-dark)", minHeight: "44px" }}
+          >
+            <span
+              className="material-symbols-outlined text-base"
+              aria-hidden="true"
+              style={{ color: "var(--color-gold)" }}
+            >
+              phone
+            </span>
             +43 680 23 78 95 4
           </a>
-          <a href="https://wa.me/436802378954" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors mb-4">
-            <WhatsAppIcon className="w-4 h-4 text-[var(--color-secondary-fixed)]" />
+
+          <a
+            href="https://wa.me/436802378954"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp — öffnet in neuem Tab"
+            className="flex items-center gap-2 transition-colors duration-200 mb-3"
+            style={{ color: "var(--color-text-muted-on-dark)", minHeight: "44px" }}
+          >
+            <WhatsAppIcon
+              className="w-4 h-4"
+              style={{ color: "var(--color-gold)" }}
+            />
             WhatsApp
+            <span className="sr-only">(öffnet in neuem Tab)</span>
           </a>
-          <a href="mailto:info@kreizundquer.com" className="flex items-center gap-2 hover:text-white transition-colors mb-2">
-            <span className="material-symbols-outlined text-base text-[var(--color-secondary-fixed)]">mail</span>
+
+          <a
+            href="mailto:info@kreizundquer.com"
+            className="flex items-center gap-2 transition-colors duration-200 mb-6"
+            style={{ color: "var(--color-text-muted-on-dark)", minHeight: "44px" }}
+          >
+            <span
+              className="material-symbols-outlined text-base"
+              aria-hidden="true"
+              style={{ color: "var(--color-gold)" }}
+            >
+              mail
+            </span>
             info@kreizundquer.com
           </a>
-          <p className="text-[var(--color-secondary-fixed)]/60">© {new Date().getFullYear()} Kreiz &amp; Quer. Live-Band aus der Steiermark.</p>
+
+          <p style={{ color: "rgba(176,190,200,0.5)", fontSize: "12px" }}>
+            © {new Date().getFullYear()} Kreiz &amp; Quer. Live-Band aus der Steiermark.
+          </p>
         </div>
       </div>
     </footer>

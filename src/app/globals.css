@@ -1,79 +1,135 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Colors – Stitch "The Electric Gallery" Design System */
-  --color-primary: #000000;
-  --color-on-primary: #ffffff;
-  --color-primary-container: #0d1c32;
-  --color-on-primary-container: #76849f;
-  --color-secondary: #0051d5;
-  --color-on-secondary: #ffffff;
-  --color-secondary-container: #316bf3;
-  --color-on-secondary-container: #fefcff;
-  --color-secondary-fixed: #dbe1ff;
-  --color-secondary-fixed-dim: #b4c5ff;
-  --color-tertiary: #000000;
-  --color-tertiary-container: #0b1c30;
-  --color-on-tertiary-container: #75859d;
-  --color-background: #f6fafe;
-  --color-on-background: #171c1f;
-  --color-surface: #f6fafe;
-  --color-surface-dim: #d6dade;
-  --color-surface-bright: #f6fafe;
-  --color-surface-variant: #dfe3e7;
-  --color-on-surface: #171c1f;
-  --color-on-surface-variant: #44474d;
-  --color-surface-container-lowest: #ffffff;
-  --color-surface-container-low: #f0f4f8;
-  --color-surface-container: #eaeef2;
-  --color-surface-container-high: #e4e9ed;
-  --color-surface-container-highest: #dfe3e7;
-  --color-outline: #75777e;
-  --color-outline-variant: #c5c6cd;
-  --color-inverse-surface: #2c3134;
-  --color-inverse-on-surface: #edf1f5;
-  --color-error: #ba1a1a;
+  /* ── Markenkernfarben ── */
+  --color-navy:           #0d1b2a;
+  --color-navy-mid:       #162338;
+  --color-blue:           #2563eb;
+  --color-blue-dark:      #1d4ed8;
+  --color-blue-light:     #dbeafe;
+  --color-gold:           #c8951a;   /* decorative / on dark backgrounds (6.4:1 on navy) */
+  --color-gold-text:      #7c5c0a;   /* gold text on light backgrounds (5.9:1 on surface, 5.3:1 on warm-gray) */
+  --color-gold-light:     #fef3c7;
 
-  /* Typography */
+  /* ── Oberflächenfarben ── */
+  --color-surface:        #faf9f6;
+  --color-warm-gray:      #f0ece7;
+  --color-warm-gray-2:    #e5e0da;
+  --color-border:         #ddd8d2;
+
+  /* ── Text ── */
+  --color-text:                #1a1410;
+  --color-text-secondary:      #5c5448;
+  --color-text-muted:          #8a9baa;
+  --color-text-muted-on-dark:  #b0bec8;
+  --color-text-on-dark:        #f0ede8;
+
+  /* ── Feedback ── */
+  --color-success:        #16a34a;
+  --color-error:          #dc2626;
+
+  /* ── Typografie-Referenzen ── */
   --font-headline: var(--font-space-grotesk), sans-serif;
-  --font-body: var(--font-manrope), sans-serif;
-  --font-label: var(--font-inter), sans-serif;
+  --font-body:     var(--font-manrope), sans-serif;
+  --font-ui:       var(--font-inter), sans-serif;
 
-  /* Border Radius */
-  --radius-sm: 0.125rem;
-  --radius-md: 0.375rem;
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.75rem;
+  /* ── Border Radius ── */
+  --radius-sm:  0.375rem;
+  --radius-md:  0.5rem;
+  --radius-lg:  0.875rem;
+  --radius-xl:  1rem;
+  --radius-2xl: 1.25rem;
 }
+
+/* Base Styles */
+*, *::before, *::after { box-sizing: border-box; }
 
 body {
   font-family: var(--font-body);
   background-color: var(--color-surface);
-  color: var(--color-on-surface);
+  color: var(--color-text);
+  line-height: 1.7;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-headline);
   letter-spacing: -0.02em;
+  line-height: 1.15;
 }
 
-.glass-effect {
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+/* Focus Styles — NIEMALS outline: none ohne Ersatz */
+:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
-.material-symbols-outlined {
-  font-family: 'Material Symbols Outlined';
-  font-weight: normal;
-  font-style: normal;
-  display: inline-block;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-blue);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Skip-Link */
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  background-color: var(--color-gold);
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  transition: top 0.2s;
+}
+.skip-link:focus-visible {
+  top: 0;
+  outline: 3px solid #000;
+  outline-offset: 2px;
+}
+
+/* Formularfelder */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  border-color: var(--color-blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  outline: none;
+}
+
+/* Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  -webkit-font-feature-settings: 'liga';
-  font-feature-settings: 'liga';
-  -webkit-font-smoothing: antialiased;
+  border: 0;
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+  user-select: none;
+}
+
+/* prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
