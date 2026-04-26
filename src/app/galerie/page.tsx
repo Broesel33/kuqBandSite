@@ -5,14 +5,25 @@ export const metadata = {
   description: "Impressionen von Auftritten: Hochzeiten, Bälle, Events und mehr.",
 };
 
-// GalleryGrid zeigt eigene Placeholder wenn images leer ist.
-// Wir übergeben ein leeres Array — der interne buildPlaceholderImages() greift.
 const GALLERY_IMAGES: {
   src: string;
   alt: string;
   width: number;
   height: number;
-}[] = [];
+}[] = [
+  { src: "/comingSoon.png", alt: "Kreiz & Quer — Event, Einzug mit Musik", width: 800, height: 600 },
+  { src: "/comingSoon.png", alt: "Kreiz & Quer — Eröffnungstanz beim Fest", width: 800, height: 600 },
+  { src: "/comingSoon.png", alt: "Kreiz & Quer — Tanzfläche beim Event", width: 800, height: 600 },
+  { src: "/comingSoon.png", alt: "Kreiz & Quer — Ball, Bühnenauftritt", width: 800, height: 600 },
+  { src: "/comingSoon.png", alt: "Kreiz & Quer — Walzer beim Galaball", width: 800, height: 600 },
+  { src: "/comingSoon.png", alt: "Kreiz & Quer — Publikum beim Ball", width: 800, height: 600 },
+  { src: "/comingSoon.png", alt: "Kreiz & Quer — Firmenfeier, Abendprogramm", width: 800, height: 600 },
+  { src: "/comingSoon.png", alt: "Kreiz & Quer — Live-Set Firmen-Event", width: 800, height: 600 },
+  { src: "/comingSoon.png", alt: "Kreiz & Quer — Outdoor-Event, Sommerfest", width: 800, height: 600 },
+  { src: "/comingSoon.png", alt: "Kreiz & Quer — Bandportrait", width: 800, height: 600 },
+  { src: "/comingSoon.png", alt: "Kreiz & Quer — Duo-Auftritt beim Empfang", width: 800, height: 600 },
+  { src: "/comingSoon.png", alt: "Kreiz & Quer — Stadtfest, große Bühne", width: 800, height: 600 },
+];
 
 export default function GaleriePage() {
   return (

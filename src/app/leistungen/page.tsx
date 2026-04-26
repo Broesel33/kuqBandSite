@@ -147,6 +147,7 @@ export default function Leistungen() {
 
       {/* Leistungs-Sektionen */}
       {leistungen.map((l) => {
+
         const textColor = l.dark ? "var(--color-text-on-dark)" : "var(--color-text)";
         const bodyColor = l.dark ? "var(--color-text-muted-on-dark)" : "var(--color-text-secondary)";
         const headingSmColor = l.dark ? "var(--color-text-muted-on-dark)" : "var(--color-text-secondary)";
@@ -280,6 +281,136 @@ export default function Leistungen() {
           </section>
         );
       })}
+
+      {/* Preise & Konditionen */}
+      <section
+        id="preise"
+        aria-labelledby="preise-heading"
+        style={{ background: "var(--color-navy)", padding: "5rem 0" }}
+      >
+        <div style={{ maxWidth: "1536px", margin: "0 auto", padding: "0 2rem" }}>
+          <div style={{ maxWidth: "720px" }}>
+            <p
+              style={{
+                fontSize: "0.75rem",
+                fontWeight: 600,
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
+                color: "var(--color-gold)",
+                fontFamily: "var(--font-ui)",
+                marginBottom: "0.75rem",
+              }}
+            >
+              Transparenz
+            </p>
+            <h2
+              id="preise-heading"
+              style={{
+                fontFamily: "var(--font-headline)",
+                fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
+                color: "var(--color-text-on-dark)",
+                marginBottom: "1.5rem",
+              }}
+            >
+              Preise & Konditionen
+            </h2>
+            <p
+              style={{
+                color: "var(--color-text-muted-on-dark)",
+                fontFamily: "var(--font-body)",
+                fontSize: "1.0625rem",
+                lineHeight: 1.75,
+                marginBottom: "2rem",
+              }}
+            >
+              Gute Musik hat ihren Preis — und der soll fair und nachvollziehbar sein.
+              Unsere Pakete beginnen bereits bei wenigen hundert Euro und werden individuell
+              auf euren Anlass zugeschnitten. Was den genauen Preis beeinflusst? Spieldauer,
+              Anreise, Besetzung (Duo oder Vollband), technischer Aufwand und ob ihr euren
+              Abend mit ein paar Extras unvergesslich machen möchtet.
+            </p>
+            <p
+              style={{
+                color: "var(--color-text-muted-on-dark)",
+                fontFamily: "var(--font-body)",
+                fontSize: "1.0625rem",
+                lineHeight: 1.75,
+                marginBottom: "2.5rem",
+              }}
+            >
+              Kein Einheitspaket, kein verstecktes Kleingedrucktes. Schreibt uns einfach —
+              wir erstellen euch ein unverbindliches Angebot, das wirklich zu eurem Event passt.
+            </p>
+
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+                gap: "1rem",
+                marginBottom: "2.5rem",
+              }}
+            >
+              {[
+                { icon: "schedule", label: "Spieldauer" },
+                { icon: "location_on", label: "Anreise" },
+                { icon: "groups", label: "Besetzung" },
+                { icon: "speaker", label: "Technik & Equipment" },
+              ].map(({ icon, label }) => (
+                <div
+                  key={label}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.75rem",
+                    background: "rgba(255,255,255,0.06)",
+                    borderRadius: "var(--radius-md)",
+                    padding: "0.875rem 1.125rem",
+                    border: "1px solid rgba(255,255,255,0.1)",
+                  }}
+                >
+                  <span
+                    className="material-symbols-outlined"
+                    aria-hidden="true"
+                    style={{ fontSize: "1.25rem", color: "var(--color-gold)", flexShrink: 0 }}
+                  >
+                    {icon}
+                  </span>
+                  <span
+                    style={{
+                      fontFamily: "var(--font-ui)",
+                      fontSize: "0.875rem",
+                      fontWeight: 600,
+                      color: "var(--color-text-on-dark)",
+                    }}
+                  >
+                    {label}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <Link
+              href="/kontakt"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                backgroundColor: "var(--color-gold)",
+                color: "#000",
+                fontFamily: "var(--font-ui)",
+                fontWeight: 700,
+                fontSize: "0.9375rem",
+                padding: "0.875rem 2rem",
+                borderRadius: "var(--radius-md)",
+                textDecoration: "none",
+                minHeight: "44px",
+              }}
+            >
+              Kostenloses Angebot anfragen →
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

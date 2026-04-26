@@ -133,9 +133,9 @@ export default function ContactForm() {
         </div>
       )}
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem 2rem" }}>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
         {/* Name */}
-        <div style={{ gridColumn: "1 / 2" }}>
+        <div>
           <label htmlFor="contact-name" style={labelStyle}>
             Name <abbr title="Pflichtfeld" aria-label="Pflichtfeld">*</abbr>
           </label>
@@ -154,7 +154,7 @@ export default function ContactForm() {
         </div>
 
         {/* Email */}
-        <div style={{ gridColumn: "2 / 3" }}>
+        <div>
           <label htmlFor="contact-email" style={labelStyle}>
             E-Mail <abbr title="Pflichtfeld" aria-label="Pflichtfeld">*</abbr>
           </label>
@@ -173,7 +173,7 @@ export default function ContactForm() {
         </div>
 
         {/* Telefon */}
-        <div style={{ gridColumn: "1 / 2" }}>
+        <div>
           <label htmlFor="contact-telefon" style={labelStyle}>Telefon</label>
           <input
             id="contact-telefon"
@@ -186,7 +186,7 @@ export default function ContactForm() {
         </div>
 
         {/* Datum */}
-        <div style={{ gridColumn: "2 / 3" }}>
+        <div>
           <label htmlFor="contact-datum" style={labelStyle}>Wunschdatum</label>
           <input
             id="contact-datum"
@@ -198,7 +198,7 @@ export default function ContactForm() {
         </div>
 
         {/* Anlass */}
-        <div style={{ gridColumn: "1 / -1" }}>
+        <div className="sm:col-span-2">
           <label htmlFor="contact-anlass" style={labelStyle}>
             Anlass <abbr title="Pflichtfeld" aria-label="Pflichtfeld">*</abbr>
           </label>
@@ -221,7 +221,7 @@ export default function ContactForm() {
         </div>
 
         {/* Nachricht */}
-        <div style={{ gridColumn: "1 / -1" }}>
+        <div className="sm:col-span-2">
           <label htmlFor="contact-nachricht" style={labelStyle}>
             Nachricht <abbr title="Pflichtfeld" aria-label="Pflichtfeld">*</abbr>
           </label>

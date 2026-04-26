@@ -25,13 +25,16 @@ export default function MemberCard({
       }}
     >
       {/* Photo area — 4:3 aspect ratio */}
-      <div className="relative w-full aspect-[4/3] overflow-hidden">
+      <div
+        className="relative w-full aspect-[4/3]"
+        style={{ backgroundColor: 'var(--color-warm-gray)' }}
+      >
         {photoSrc ? (
           <Image
             src={photoSrc}
             alt={photoAlt}
             fill
-            className="object-cover object-top"
+            className="object-contain object-bottom"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
         ) : (

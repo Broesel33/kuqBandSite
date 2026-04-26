@@ -200,7 +200,7 @@ export default function RepertoireFilter({ genres }: RepertoireFilterProps) {
               {genre.label}
             </span>
             <span style={{ color: "var(--color-text-muted)", fontSize: "0.8125rem", fontFamily: "var(--font-ui)" }}>
-              {genre.songs.length} Songs
+              {genre.songs.length} Songs · Auszug
             </span>
           </div>
 
@@ -220,7 +220,7 @@ export default function RepertoireFilter({ genres }: RepertoireFilterProps) {
                 {song.decade && (
                   <span
                     style={{
-                      width: "3rem",
+                      width: "3.5rem",
                       flexShrink: 0,
                       fontSize: "0.75rem",
                       color: "var(--color-text-muted)",
@@ -245,6 +245,37 @@ export default function RepertoireFilter({ genres }: RepertoireFilterProps) {
                 <SongPreviewButton song={song} />
               </li>
             ))}
+            <li
+              aria-hidden="true"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "1rem",
+                padding: "0.875rem 0 0.25rem",
+              }}
+            >
+              <span
+                style={{
+                  width: "3.5rem",
+                  flexShrink: 0,
+                  fontSize: "1rem",
+                  color: "var(--color-text-muted)",
+                  letterSpacing: "0.15em",
+                }}
+              >
+                ···
+              </span>
+              <span
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.875rem",
+                  fontStyle: "italic",
+                  color: "var(--color-text-muted)",
+                }}
+              >
+                und viele weitere Songs
+              </span>
+            </li>
           </ul>
         </div>
       ))}

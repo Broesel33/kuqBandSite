@@ -12,14 +12,14 @@ const mitglieder = [
     name: "Manu",
     instrument: "Gesang · Rhythmus-Gitarre",
     bio: "Manu ist der Grund, warum Gäste den letzten Zug verpassen. Mit einer Stimme, die tiefer geht als so manche Erwartung, zieht er einen Raum in seinen Bann — langsam, sicher, und bevor man es merkt, singt der ganze Saal mit. Manche nennen das Talent. Manu nennt es Dienstag.",
-    photoSrc: "/manu.png",
+    photoSrc: "/Manu.png",
     photoAlt: "Manu singt und spielt Rhythmus-Gitarre",
   },
   {
     name: "Robert",
     instrument: "Gesang · E-Gitarre",
     bio: "Robert singt in Höhen, die Manu freundlich lächelnd an sich vorbeilässt — und zusammen klingt das, als wäre es so geplant gewesen. Seit immer. Wo Worte nicht mehr reichen, lässt er seine Gitarre reden. Manche Menschen haben einfach zu viel Talent für eine einzige Sache — Robert ist einer davon.",
-    photoSrc: "/robert.png",
+    photoSrc: "/Robert.png",
     photoAlt: "Robert singt und spielt E-Gitarre",
   },
   {
@@ -154,8 +154,8 @@ export default function UeberUns() {
                 <p>
                   Kreiz &amp; Quer steht für ehrliche Musik, echte Emotion und unvergessliche
                   Live-Momente. Wir sind Manu, Robert, Steph und Gabs — vier Musiker aus der
-                  Steiermark, jeder mit seiner eigenen Handschrift, zusammen mit einem Sound, der
-                  verbindet.
+                  Steiermark, jeder mit seiner eigenen Handschrift, jeder mit über 10 Jahren
+                  Bühnenerfahrung im Gepäck. Zusammen ein Sound, der verbindet.
                 </p>
                 <p>
                   Was uns ausmacht? Wir spielen nicht einfach ein Programm ab. Wir fühlen die

@@ -97,14 +97,14 @@ export default function Navigation() {
             className="ml-2 px-5 py-2 rounded-md font-semibold text-[11px] uppercase tracking-widest transition-colors duration-200"
             style={{
               fontFamily: "var(--font-ui)",
-              backgroundColor: "#2563eb",
-              color: "#fff",
+              backgroundColor: "var(--color-gold)",
+              color: "#000",
               minHeight: "44px",
               display: "inline-flex",
               alignItems: "center",
             }}
           >
-            Jetzt buchen
+            Anfragen →
           </Link>
         </nav>
 
@@ -167,7 +167,7 @@ export default function Navigation() {
           className="mt-3 px-5 rounded-md font-semibold text-sm uppercase tracking-widest text-center transition-colors duration-200"
           style={{
             fontFamily: "var(--font-ui)",
-            backgroundColor: "#2563eb",
+            backgroundColor: "var(--color-gold)",
             color: "#fff",
             minHeight: "44px",
             display: "flex",
@@ -175,7 +175,7 @@ export default function Navigation() {
             justifyContent: "center",
           }}
         >
-          Jetzt buchen
+          Anfragen →
         </Link>
       </div>
     </header>

@@ -13,15 +13,62 @@ export default function Startseite() {
       {/* 1. Hero */}
       <HeroSection
         headline="Kreiz & Quer"
-        subline="Vier Musiker aus der Steiermark. Hochzeiten, Bälle, Firmenfeiern und Events in ganz Österreich — 100 % live, 100 % Herzblut."
+        subline="Die Band, die euer Event zur Legende macht — Hochzeiten, Bälle und mehr in ganz Österreich."
         eyebrow="Live. Leidenschaftlich. Unvergesslich."
-        primaryCta={{ label: "Jetzt buchen", href: "/kontakt" }}
+        primaryCta={{ label: "Unverbindlich anfragen", href: "/kontakt" }}
         secondaryCta={{ label: "Repertoire ansehen", href: "/repertoire" }}
         contactBar={true}
         photoAlt="Kreiz & Quer live auf der Bühne"
       />
 
-      {/* 2. Leistungen */}
+      {/* 2. Video */}
+      <section
+        aria-labelledby="video-heading"
+        style={{ background: "var(--color-navy)", padding: "5rem 0" }}
+      >
+        <div style={{ maxWidth: "960px", margin: "0 auto", padding: "0 1.5rem" }}>
+          <h2
+            id="video-heading"
+            style={{
+              fontFamily: "var(--font-headline)",
+              fontSize: "clamp(1.5rem, 3vw, 2rem)",
+              fontWeight: 700,
+              color: "var(--color-text-on-dark)",
+              textAlign: "center",
+              marginBottom: "2rem",
+            }}
+          >
+            Wer wir sind — und wie wir klingen
+          </h2>
+          <div
+            style={{
+              position: "relative",
+              paddingBottom: "56.25%",
+              height: 0,
+              borderRadius: "var(--radius-xl)",
+              overflow: "hidden",
+              boxShadow: "0 24px 64px rgba(0,0,0,0.5)",
+            }}
+          >
+            <iframe
+              src="https://www.youtube.com/embed/WW9Yz7XWEPA"
+              title="Kreiz & Quer — Live-Vorstellung"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                border: "none",
+              }}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Leistungen */}
       <section
         aria-labelledby="leistungen-heading"
         style={{ background: "var(--color-surface)", padding: "6rem 0" }}

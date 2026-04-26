@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Repertoire – Kreiz & Quer",
   description:
-    "Unser Repertoire: Austropop, Pop & Rock, Evergreens, aktuelle Charts und Walzer — alles live gespielt.",
+    "Unser Repertoire: Austropop, Pop & Rock, Evergreens und aktuelle Charts — alles live gespielt.",
 };
 
 const GENRES: GenreSection[] = [
@@ -12,11 +12,11 @@ const GENRES: GenreSection[] = [
     id: "austropop",
     label: "Austropop",
     songs: [
-      { title: "Es lebe der Zentralfriedhof", artist: "Wolfgang Ambros", decade: "70er" },
+      { title: "Da Hofer", artist: "Wolfgang Ambros", decade: "70er" },
       { title: "Jö schau", artist: "Georg Danzer", decade: "70er" },
       { title: "I Am From Austria", artist: "Rainhard Fendrich", decade: "80er" },
       { title: "Irgendwann bleib i dann dort", artist: "STS", decade: "80er" },
-      { title: "Ja, ja, der Alkohol", artist: "EAV", decade: "80er" },
+      { title: "Morgen", artist: "EAV", decade: "80er" },
       { title: "Ham kummst", artist: "Seiler & Speer", decade: "10er" },
       { title: "Cordula Grün", artist: "Josh.", decade: "10er" },
       { title: "Danke, gut", artist: "Pizzera & Jaus", decade: "10er" },
@@ -36,7 +36,9 @@ const GENRES: GenreSection[] = [
       { title: "Creep", artist: "Radiohead", decade: "90er" },
       { title: "It's My Life", artist: "Bon Jovi", decade: "00er" },
       { title: "Holiday", artist: "Green Day", decade: "00er" },
+      { title: "Ein Kompliment", artist: "Sportfreunde Stiller", decade: "00er" },
       { title: "Somebody That I Used to Know", artist: "Gotye", decade: "10er" },
+      { title: "Perfect", artist: "Ed Sheeran", decade: "10er" },
     ],
   },
   {
@@ -56,12 +58,11 @@ const GENRES: GenreSection[] = [
     ],
   },
   {
-    id: "aktuelle-charts",
-    label: "Aktuelle Charts",
+    id: "2010er",
+    label: "2010er",
     songs: [
-      { title: "Ein Kompliment", artist: "Sportfreunde Stiller", decade: "00er" },
-      { title: "Sail", artist: "AWOLNATION", decade: "10er" },
       { title: "Little Lion Man", artist: "Mumford & Sons", decade: "10er" },
+      { title: "Sail", artist: "AWOLNATION", decade: "10er" },
       { title: "Riptide", artist: "Vance Joy", decade: "10er" },
       { title: "Renegades", artist: "X Ambassadors", decade: "10er" },
       { title: "Gewinner", artist: "Clueso", decade: "10er" },
@@ -70,17 +71,15 @@ const GENRES: GenreSection[] = [
     ],
   },
   {
-    id: "walzer",
-    label: "Walzer & Tanzmusik",
+    id: "aktuelle-charts",
+    label: "Aktuelle Charts",
     songs: [
-      { title: "Cheek to Cheek", artist: "Fred Astaire", decade: "30er" },
-      { title: "La Vie en Rose", artist: "Édith Piaf", decade: "40er" },
-      { title: "Tennessee Waltz", artist: "Patti Page", decade: "50er" },
-      { title: "Fly Me to the Moon", artist: "Frank Sinatra", decade: "60er" },
-      { title: "Moon River", artist: "Henry Mancini", decade: "60er" },
-      { title: "Can't Help Falling in Love", artist: "Elvis Presley", decade: "60er" },
-      { title: "Feeling Good", artist: "Nina Simone", decade: "60er" },
-      { title: "What a Wonderful World", artist: "Louis Armstrong", decade: "60er" },
+      { title: "Wackelkontakt", artist: "OIMARA", decade: "20er" },
+      { title: "The Emptiness Machine", artist: "Linkin Park", decade: "20er" },
+      { title: "Hödn", artist: "Seiler & Speer", decade: "20er" },
+      { title: "Feiawerk", artist: "Granada", decade: "20er" },
+      { title: "Zweifelturm", artist: "Pizzera & Jaus", decade: "20er" },
+      { title: "Martina", artist: "Josh.", decade: "20er" },
     ],
   },
 ];
@@ -129,6 +128,55 @@ export default function RepertoirePage() {
           >
             Eine Auswahl aus unserem Repertoire — alles live gespielt, alles mit Herzblut.
           </p>
+
+          <div
+            style={{
+              marginTop: "2.5rem",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "1.25rem",
+              background: "rgba(255,255,255,0.06)",
+              border: "1px solid rgba(212,160,23,0.4)",
+              borderLeft: "4px solid var(--color-gold)",
+              borderRadius: "var(--radius-md)",
+              padding: "1rem 1.5rem",
+            }}
+          >
+            <span
+              style={{
+                fontFamily: "var(--font-headline)",
+                fontSize: "2.5rem",
+                fontWeight: 800,
+                color: "var(--color-gold)",
+                lineHeight: 1,
+              }}
+            >
+              200+
+            </span>
+            <div>
+              <p
+                style={{
+                  margin: 0,
+                  fontFamily: "var(--font-headline)",
+                  fontSize: "1.0625rem",
+                  fontWeight: 700,
+                  color: "var(--color-text-on-dark)",
+                }}
+              >
+                Songs im Gepäck
+              </p>
+              <p
+                style={{
+                  margin: "0.2rem 0 0",
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.875rem",
+                  color: "var(--color-text-muted-on-dark)",
+                }}
+              >
+                Alles live. Stetig wachsend. Nie fertig.
+              </p>
+            </div>
+          </div>
         </div>
       </header>
 
