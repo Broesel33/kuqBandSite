@@ -110,7 +110,7 @@ export default function HeroSection({
         </div>
 
         {/* BOTTOM: Foto + Gradient + CTAs — drei unabhängige Ebenen */}
-        <div className="relative flex-1 min-h-[420px] -mt-17">
+        <div className="relative flex-1 min-h-[420px] -mt-14">
           <Image
             src="/band.png"
             alt={photoAlt}

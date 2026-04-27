@@ -60,7 +60,7 @@ export default function Navigation() {
         boxShadow: scrolled ? "0 2px 16px rgba(0,0,0,0.35)" : "none",
       }}
     >
-      <div className="flex justify-between items-center w-full px-6 md:px-8 py-5 max-w-screen-2xl mx-auto">
+      <div className="flex justify-between items-center w-full px-6 md:px-8 py-3 max-w-screen-2xl mx-auto">
         {/* Logo */}
         <Link
           href="/"
