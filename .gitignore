@@ -43,3 +43,6 @@ next-env.d.ts
 # claude code & agent artifacts
 .claude/
 requirements/
+review/
+AGENTS.md
+CLAUDE.md

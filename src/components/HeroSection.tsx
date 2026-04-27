@@ -82,99 +82,100 @@ export default function HeroSection({
       style={{ backgroundColor: 'var(--color-navy)' }}
       aria-label={eyebrow ? `${eyebrow}: ${headline}` : headline}
     >
-      {/* ── MOBILE: Vollbild-Hintergrundfoto ── */}
-      <div className="md:hidden absolute inset-0" aria-hidden="true">
-        <Image
-          src="/band.png"
-          alt=""
-          fill
-          className="object-cover object-top"
-          priority
-          sizes="100vw"
-        />
-        {/* dark top (text) → transparent middle (Gesichter frei) → dark bottom (Buttons) */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background: 'linear-gradient(to bottom, #0d1b2a 0%, rgba(13,27,42,0.85) 18%, rgba(13,27,42,0.55) 30%, transparent 38%, transparent 48%, rgba(13,27,42,0.8) 56%, rgba(13,27,42,0.96) 64%, #0d1b2a 76%)',
-          }}
-        />
-      </div>
-
-      {/* ── MOBILE TOP: Eyebrow + Headline + Subline — oberhalb der Gesichter ── */}
-      <div className="md:hidden absolute top-0 left-0 right-0 px-6 pt-8 z-10 flex flex-col gap-2.5">
-        {eyebrow && (
-          <p
-            className="text-xs font-semibold uppercase tracking-[0.2em]"
-            style={{ color: 'var(--color-gold)', fontFamily: 'var(--font-ui)' }}
-            aria-hidden="true"
-          >
-            {eyebrow}
-          </p>
-        )}
-        <h1
-          className="text-5xl font-bold text-white"
-          style={{ fontFamily: 'var(--font-headline)', letterSpacing: '-0.02em', lineHeight: 1.05 }}
-        >
-          {headline}
-        </h1>
-        <p
-          className="text-sm"
-          style={{ color: 'rgba(255,255,255,0.88)', fontFamily: 'var(--font-body)', lineHeight: 1.4 }}
-        >
-          {subline}
-        </p>
-      </div>
-
-      {/* ── MOBILE BOTTOM: Trust + CTAs + Kontakt — unterhalb der Gesichter ── */}
-      <div className="md:hidden absolute bottom-0 left-0 right-0 px-6 pb-6 z-10 flex flex-col gap-2">
-        {trustBadge}
-        <div className="flex flex-wrap items-center gap-3">
-          <Link
-            href={primaryCta.href}
-            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg font-semibold min-h-[44px]"
-            style={{ backgroundColor: 'var(--color-gold)', color: '#000', fontFamily: 'var(--font-ui)' }}
-          >
-            {primaryCta.label} <span aria-hidden="true">→</span>
-          </Link>
-          {secondaryCta && (
-            <Link
-              href={secondaryCta.href}
-              className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg font-semibold text-white border border-white/40 min-h-[44px]"
-              style={{ fontFamily: 'var(--font-ui)', background: 'transparent' }}
+      {/* ── MOBILE: Flex-Stack — Text · Foto (frei) · CTAs ── */}
+      <div className="md:hidden relative w-full min-h-[100svh] flex flex-col">
+        {/* TOP: Eyebrow + Headline + Subline */}
+        <div className="px-6 pt-5 pb-2 flex flex-col gap-2.5">
+          {eyebrow && (
+            <p
+              className="text-xs font-semibold uppercase tracking-[0.2em]"
+              style={{ color: 'var(--color-gold)', fontFamily: 'var(--font-ui)' }}
+              aria-hidden="true"
             >
-              {secondaryCta.label}
-            </Link>
+              {eyebrow}
+            </p>
           )}
-          {playBtn}
-        </div>
-        {contactBar && (
-          <div
-            className="flex flex-wrap items-center gap-x-4 gap-y-1 pt-3 border-t border-white/10"
-            aria-label="Direkte Kontaktmöglichkeiten"
+          <h1
+            className="text-5xl font-bold text-white"
+            style={{ fontFamily: 'var(--font-headline)', letterSpacing: '-0.02em', lineHeight: 1.05 }}
           >
-            <a
-              href="tel:+436802378954"
-              className="flex items-center gap-2 text-sm min-h-[36px]"
-              style={{ color: 'var(--color-text-muted-on-dark)', fontFamily: 'var(--font-ui)' }}
-            >
-              <span className="material-symbols-outlined text-base" aria-hidden="true">phone</span>
-              <span>+43 680 23 78 95 4</span>
-            </a>
-            <a
-              href="https://wa.me/436802378954"
-              className="flex items-center gap-2 text-sm min-h-[36px]"
-              style={{ color: 'var(--color-text-muted-on-dark)', fontFamily: 'var(--font-ui)' }}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="WhatsApp — öffnet in neuem Tab"
-            >
-              <WhatsAppIcon className="w-4 h-4" />
-              <span aria-hidden="true">WhatsApp</span>
-              <span className="sr-only">öffnet in neuem Tab</span>
-            </a>
+            {headline}
+          </h1>
+          <p
+            className="text-sm"
+            style={{ color: 'rgba(255,255,255,0.88)', fontFamily: 'var(--font-body)', lineHeight: 1.4 }}
+          >
+            {subline}
+          </p>
+        </div>
+
+        {/* BOTTOM: Foto + Gradient + CTAs — drei unabhängige Ebenen */}
+        <div className="relative flex-1 min-h-[420px]">
+          <Image
+            src="/band.png"
+            alt={photoAlt}
+            fill
+            className="object-contain object-top"
+            priority
+            sizes="100vw"
+          />
+          {/* Gradient-Ebene: setzt erst bei 58% ein (unterhalb der Hüfte) */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{ background: 'linear-gradient(to top, #0d1b2a 0px, #0d1b2a 210px, transparent 350px, transparent 100%)' }}
+            aria-hidden="true"
+          />
+          {/* Button-Ebene: unabhängig vom Gradient */}
+          <div className="absolute inset-x-0 bottom-0 px-6 pb-6 flex flex-col gap-2">
+            {trustBadge}
+            <div className="flex flex-wrap items-center gap-3">
+              <Link
+                href={primaryCta.href}
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg font-semibold min-h-[44px]"
+                style={{ backgroundColor: 'var(--color-gold)', color: '#000', fontFamily: 'var(--font-ui)' }}
+              >
+                {primaryCta.label} <span aria-hidden="true">→</span>
+              </Link>
+              {secondaryCta && (
+                <Link
+                  href={secondaryCta.href}
+                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg font-semibold text-white border border-white/40 min-h-[44px]"
+                  style={{ fontFamily: 'var(--font-ui)', background: 'transparent' }}
+                >
+                  {secondaryCta.label}
+                </Link>
+              )}
+              {playBtn}
+            </div>
+            {contactBar && (
+              <div
+                className="flex flex-wrap items-center gap-x-4 gap-y-1 pt-3 border-t border-white/10"
+                aria-label="Direkte Kontaktmöglichkeiten"
+              >
+                <a
+                  href="tel:+436802378954"
+                  className="flex items-center gap-2 text-sm min-h-[36px]"
+                  style={{ color: 'var(--color-text-muted-on-dark)', fontFamily: 'var(--font-ui)' }}
+                >
+                  <span className="material-symbols-outlined text-base" aria-hidden="true">phone</span>
+                  <span>+43 680 23 78 95 4</span>
+                </a>
+                <a
+                  href="https://wa.me/436802378954"
+                  className="flex items-center gap-2 text-sm min-h-[36px]"
+                  style={{ color: 'var(--color-text-muted-on-dark)', fontFamily: 'var(--font-ui)' }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp — öffnet in neuem Tab"
+                >
+                  <WhatsAppIcon className="w-4 h-4" />
+                  <span aria-hidden="true">WhatsApp</span>
+                  <span className="sr-only">öffnet in neuem Tab</span>
+                </a>
+              </div>
+            )}
           </div>
-        )}
+        </div>
       </div>
 
       {/* ── DESKTOP: Golden stage glow + Bandfoto rechts ── */}
