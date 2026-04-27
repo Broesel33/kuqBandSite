@@ -78,7 +78,7 @@ export default function HeroSection({
 
   return (
     <section
-      className="relative w-full min-h-[100svh] overflow-hidden flex items-start"
+      className="relative w-full min-h-[100svh] md:h-[calc(100svh-68px)] overflow-hidden flex items-start"
       style={{ backgroundColor: 'var(--color-navy)' }}
       aria-label={eyebrow ? `${eyebrow}: ${headline}` : headline}
     >
@@ -204,7 +204,7 @@ export default function HeroSection({
       </div>
 
       {/* ── DESKTOP: Textinhalt links ── */}
-      <div className="hidden md:block relative w-full max-w-screen-2xl mx-auto px-8 pt-16 pb-16">
+      <div className="hidden md:block relative w-full max-w-screen-2xl mx-auto px-8 pt-12 pb-16">
         <div className="w-[55%] flex flex-col gap-5">
           {eyebrow && (
             <p
