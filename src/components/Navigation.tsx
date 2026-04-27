@@ -95,7 +95,7 @@ export default function Navigation() {
 
           <Link
             href="/kontakt"
-            className="ml-2 px-5 py-2 rounded-md font-semibold text-[11px] uppercase tracking-widest transition-colors duration-200"
+            className="ml-2 px-5 py-2 rounded-xl font-semibold text-[11px] uppercase tracking-widest transition-colors duration-200"
             style={{
               fontFamily: "var(--font-ui)",
               backgroundColor: "var(--color-gold)",

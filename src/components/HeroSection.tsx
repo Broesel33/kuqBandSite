@@ -110,7 +110,7 @@ export default function HeroSection({
         </div>
 
         {/* BOTTOM: Foto + Gradient + CTAs — drei unabhängige Ebenen */}
-        <div className="relative flex-1 min-h-[420px] -mt-20">
+        <div className="relative flex-1 min-h-[420px] -mt-17">
           <Image
             src="/band.png"
             alt={photoAlt}
@@ -180,7 +180,7 @@ export default function HeroSection({
 
       {/* ── DESKTOP: Golden stage glow + Bandfoto rechts ── */}
       <div
-        className="hidden md:block absolute right-0 top-0 bottom-0 w-[45%]"
+        className="hidden md:block absolute right-0 top-6 bottom-6 w-[45%]"
         aria-hidden="true"
       >
         {/* Subtiler Gold-Glow hinter der Band — Bühnen-Atmosphäre */}
@@ -196,7 +196,7 @@ export default function HeroSection({
           src="/band.png"
           alt={photoAlt}
           fill
-          className="object-contain object-bottom"
+          className="object-contain object-center"
           priority
           sizes="45vw"
           style={{ position: 'absolute', zIndex: 1 }}
@@ -208,7 +208,7 @@ export default function HeroSection({
         <div className="w-[55%] flex flex-col gap-5">
           {eyebrow && (
             <p
-              className="text-sm font-semibold uppercase tracking-[0.2em]"
+              className="text-[11px] font-semibold uppercase tracking-[0.28em]"
               style={{ color: 'var(--color-gold)', fontFamily: 'var(--font-ui)' }}
               aria-hidden="true"
             >
@@ -222,7 +222,7 @@ export default function HeroSection({
             {headline}
           </h1>
           <p
-            className="text-xl max-w-xl"
+            className="text-xl max-w-lg"
             style={{ color: 'var(--color-text-muted-on-dark)', fontFamily: 'var(--font-body)', lineHeight: 1.7 }}
           >
             {subline}
