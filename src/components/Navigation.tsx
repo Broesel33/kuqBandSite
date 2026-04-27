@@ -56,10 +56,11 @@ export default function Navigation() {
       className="fixed top-0 w-full z-50 transition-shadow duration-300"
       style={{
         backgroundColor: "#0d1b2a",
+        borderBottom: "1px solid rgba(255,255,255,0.08)",
         boxShadow: scrolled ? "0 2px 16px rgba(0,0,0,0.35)" : "none",
       }}
     >
-      <div className="flex justify-between items-center w-full px-6 md:px-8 py-4 max-w-screen-2xl mx-auto">
+      <div className="flex justify-between items-center w-full px-6 md:px-8 py-5 max-w-screen-2xl mx-auto">
         {/* Logo */}
         <Link
           href="/"

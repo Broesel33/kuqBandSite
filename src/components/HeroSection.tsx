@@ -49,9 +49,9 @@ export default function HeroSection({
     <p
       className="text-sm font-semibold"
       style={{ color: 'var(--color-gold)', fontFamily: 'var(--font-ui)', letterSpacing: '0.02em' }}
-      aria-label="Fünf Sterne · über 200 Events · seit 2019"
+      aria-label="über 200 Events · Fünf Sterne · seit 2019"
     >
-      ★★★★★ · 200+ Events · seit 2019
+      200+ Events · ★★★★★ · seit 2019
     </p>
   );
 
@@ -85,10 +85,10 @@ export default function HeroSection({
       {/* ── MOBILE: Flex-Stack — Text · Foto (frei) · CTAs ── */}
       <div className="md:hidden relative w-full min-h-[100svh] flex flex-col">
         {/* TOP: Eyebrow + Headline + Subline */}
-        <div className="px-6 pt-5 pb-2 flex flex-col gap-2.5">
+        <div className="px-6 pt-7 pb-2 flex flex-col gap-2.5">
           {eyebrow && (
             <p
-              className="text-xs font-semibold uppercase tracking-[0.2em]"
+              className="text-[11px] font-semibold uppercase tracking-[0.28em]"
               style={{ color: 'var(--color-gold)', fontFamily: 'var(--font-ui)' }}
               aria-hidden="true"
             >
@@ -103,7 +103,7 @@ export default function HeroSection({
           </h1>
           <p
             className="text-sm"
-            style={{ color: 'rgba(255,255,255,0.88)', fontFamily: 'var(--font-body)', lineHeight: 1.4 }}
+            style={{ color: 'rgba(255,255,255,0.88)', fontFamily: 'var(--font-body)', lineHeight: 1.65 }}
           >
             {subline}
           </p>
@@ -122,24 +122,24 @@ export default function HeroSection({
           {/* Gradient-Ebene: setzt erst bei 58% ein (unterhalb der Hüfte) */}
           <div
             className="absolute inset-0 pointer-events-none"
-            style={{ background: 'linear-gradient(to top, #0d1b2a 0px, #0d1b2a 210px, transparent 350px, transparent 100%)' }}
+            style={{ background: 'linear-gradient(to top, #0d1b2a 0px, #0d1b2a 185px, transparent 330px, transparent 100%)' }}
             aria-hidden="true"
           />
           {/* Button-Ebene: unabhängig vom Gradient */}
-          <div className="absolute inset-x-0 bottom-0 px-6 pb-6 flex flex-col gap-2">
+          <div className="absolute inset-x-0 bottom-0 px-6 pb-6 pt-3 flex flex-col gap-2">
             {trustBadge}
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3 mt-1 pt-2 border-t border-white/10">
               <Link
                 href={primaryCta.href}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg font-semibold min-h-[44px]"
-                style={{ backgroundColor: 'var(--color-gold)', color: '#000', fontFamily: 'var(--font-ui)' }}
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold min-h-[44px]"
+                style={{ backgroundColor: 'var(--color-gold)', color: '#000', fontFamily: 'var(--font-ui)', boxShadow: '0 4px 14px rgba(200,149,26,0.4)' }}
               >
                 {primaryCta.label} <span aria-hidden="true">→</span>
               </Link>
               {secondaryCta && (
                 <Link
                   href={secondaryCta.href}
-                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg font-semibold text-white border border-white/40 min-h-[44px]"
+                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-semibold text-white border-2 border-white/55 min-h-[44px]"
                   style={{ fontFamily: 'var(--font-ui)', background: 'transparent' }}
                 >
                   {secondaryCta.label}
@@ -231,8 +231,8 @@ export default function HeroSection({
           <div className="flex flex-wrap items-center gap-4 mt-1">
             <Link
               href={primaryCta.href}
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg font-semibold transition-opacity min-h-[44px]"
-              style={{ backgroundColor: 'var(--color-gold)', color: '#000', fontFamily: 'var(--font-ui)' }}
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-semibold transition-opacity min-h-[44px]"
+              style={{ backgroundColor: 'var(--color-gold)', color: '#000', fontFamily: 'var(--font-ui)', boxShadow: '0 4px 14px rgba(200,149,26,0.4)' }}
               onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '0.88'; }}
               onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '1'; }}
             >
@@ -241,7 +241,7 @@ export default function HeroSection({
             {secondaryCta && (
               <Link
                 href={secondaryCta.href}
-                className="inline-flex items-center justify-center px-7 py-3.5 rounded-lg font-semibold text-white border border-white/40 hover:border-white hover:bg-white/10 transition-colors min-h-[44px]"
+                className="inline-flex items-center justify-center px-7 py-3.5 rounded-xl font-semibold text-white border-2 border-white/55 hover:border-white hover:bg-white/10 transition-colors min-h-[44px]"
                 style={{ fontFamily: 'var(--font-ui)', background: 'transparent' }}
               >
                 {secondaryCta.label}
