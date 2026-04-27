@@ -18,7 +18,7 @@ export default function Startseite() {
         primaryCta={{ label: "Unverbindlich anfragen", href: "/kontakt" }}
         secondaryCta={{ label: "Repertoire ansehen", href: "/repertoire" }}
         contactBar={true}
-        photoAlt="Kreiz & Quer live auf der Bühne"
+        photoAlt="Die vier Bandmitglieder von Kreiz & Quer in weißem Hemd, dunkler Hose und Hosenträgern"
       />
 
       {/* 2. Video */}
