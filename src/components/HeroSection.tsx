@@ -126,7 +126,7 @@ export default function HeroSection({
             aria-hidden="true"
           />
           {/* Button-Ebene: unabhängig vom Gradient */}
-          <div className="absolute inset-x-0 bottom-0 px-6 pb-6 pt-3 flex flex-col gap-2">
+          <div className="absolute inset-x-0 bottom-0 px-6 pb-3 pt-3 flex flex-col gap-2">
             {trustBadge}
             <div className="flex flex-wrap items-center gap-3 mt-1 pt-2 border-t border-white/10">
               <Link

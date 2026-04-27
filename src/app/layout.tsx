@@ -47,7 +47,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-[var(--color-surface)] text-[var(--color-text)]">
         <SkipLink />
         <Navigation />
-        <main id="main-content" className="flex-grow pt-20">
+        <main id="main-content" className="flex-grow pt-[68px]">
           {children}
         </main>
         <Footer />
