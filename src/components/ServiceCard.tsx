@@ -100,7 +100,7 @@ export default function ServiceCard({
           }}
         >
           <span>{linkLabel}</span>
-          <span className="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span>
+          <span aria-hidden="true">→</span>
         </Link>
       </div>
     </article>

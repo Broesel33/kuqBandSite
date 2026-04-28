@@ -17,18 +17,6 @@ export interface Termin {
 // Alle Termine liegen in der Zukunft (Mai–August 2026)
 export const TERMINE: Termin[] = [
   {
-    id: '2026-05-07-musikfruehling',
-    dateISO: '2026-05-07',
-    day: '07',
-    monthShort: 'Mai',
-    year: '2026',
-    weekday: 'Do',
-    eventName: 'Musikfrühling',
-    venue: 'Hoaterwirt, Frohnleiten',
-    status: 'confirmed',
-    statusLabel: 'Bestätigt',
-  },
-  {
     id: '2026-05-09-rinthpark-eroeffnung',
     dateISO: '2026-05-09',
     day: '09',
@@ -53,13 +41,13 @@ export const TERMINE: Termin[] = [
     statusLabel: 'Bald',
   },
   {
-    id: '2026-08-01-spoe-sommerfest',
+    id: '2026-08-01-sommerfest',
     dateISO: '2026-08-01',
     day: '01',
     monthShort: 'Aug',
     year: '2026',
     weekday: 'Sa',
-    eventName: 'SPÖ-Sommerfest',
+    eventName: 'Sommerfest',
     venue: 'Rinthpark, Frohnleiten',
     status: 'upcoming',
     statusLabel: 'Bald',

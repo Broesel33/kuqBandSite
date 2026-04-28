@@ -105,7 +105,7 @@ export default function Navigation() {
               alignItems: "center",
             }}
           >
-            Anfragen →
+            Anfragen <span aria-hidden="true">→</span>
           </Link>
         </nav>
 

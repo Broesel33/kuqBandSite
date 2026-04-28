@@ -48,7 +48,7 @@ export default function Termine() {
               lineHeight: 1.6,
             }}
           >
-            Unsere nächsten öffentlichen Auftritte.
+            Ihr möchtet uns erst live erleben, bevor ihr euch entscheidet? Sehr gerne — kommt einfach bei einem unserer öffentlichen Auftritte vorbei. Wir freuen uns über jeden Besuch, und ein persönliches Gespräch ist dabei immer möglich.
           </p>
         </div>
       </div>

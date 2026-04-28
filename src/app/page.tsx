@@ -111,7 +111,7 @@ export default function Startseite() {
               title="Hochzeiten"
               description="Vom gefühlvollen Ja-Wort bis zur ausgelassenen Party — wir begleiten euren großen Tag mit Herz, Feingefühl und genau der Musik, die den Moment unvergesslich macht."
               linkHref="/leistungen"
-              linkLabel="Hochzeiten & Details"
+              linkLabel="Mehr"
               variant="light"
             />
             <ServiceCard
@@ -119,15 +119,15 @@ export default function Startseite() {
               title="Bälle & Gala"
               description="Eleganter Walzer, zeitlose Evergreens — wir wissen, wann Eleganz gefragt ist und wann die Tanzfläche explodieren soll."
               linkHref="/leistungen"
-              linkLabel="Ballmusik entdecken"
+              linkLabel="Mehr"
               variant="dark"
             />
             <ServiceCard
               icon="business_center"
-              title="Firmen & Events"
+              title="Firmen, Partys & Events"
               description="Professionell auf der Bühne, flexibel im Programm. Vom ruhigen Empfangsambiente bis zum mitreißenden Hauptact."
               linkHref="/leistungen"
-              linkLabel="Firmenevents anfragen"
+              linkLabel="Mehr"
               variant="mid"
             />
           </div>
@@ -196,22 +196,22 @@ export default function Startseite() {
                 {
                   icon: "graphic_eq",
                   title: "Im Takt des Abends",
-                  text: "Wir spielen kein starres Programm. Wir lesen die Energie im Raum — und passen unser Set spontan an.",
+                  text: "Wir spielen kein starres Programm. Ihr sucht euch eure liebsten Songs aus unserem stetig wachsenden Katalog aus, wir lesen die Stimmung im Raum und passen unser Set spontan an. Musikwünsche auf Zuruf? Kein Problem! Leiser / lauter? Jederzeit möglich. Eine Ansprache? Gerne, hier habt ihr unser Gäste-Mikrofon!",
                 },
                 {
                   icon: "verified",
                   title: "100% Live",
-                  text: "Keine Playbacks. Kein Netz. Kein doppelter Boden. Nur ehrliche Musik, live gespielt.",
+                  text: "Keine Playbacks. Kein Netz. Kein doppelter Boden. Nur ehrliche Musik, live gesungen und mit (E-)Gitarre, Bass, Schlagzeug und Keyboard gespielt.",
                 },
                 {
                   icon: "music_note",
                   title: "Austropop bis Charts",
-                  text: "Von Klassikern über Rock und Pop bis zu aktuellen Hits — wir verbinden Generationen.",
+                  text: "Von Klassikern über Rock und Pop bis hin zu aktuellen Hits, einfach Kreiz & Quer — wir verbinden Generationen.",
                 },
                 {
                   icon: "groups",
                   title: "Persönliche Betreuung",
-                  text: "Kein Event gleicht dem anderen. Wir nehmen uns Zeit für eure Wünsche.",
+                  text: "Kein Event gleicht dem anderen. Wir nehmen uns Zeit für eure Wünsche. Egal ob ausführliche Mails, persönliche Gespräche oder detaillierte Telefonate. Für uns steht euer Event genauso im Mittelpunkt, wie für euch!",
                 },
               ].map(({ icon, title, text }) => (
                 <div key={title}>
@@ -306,7 +306,7 @@ export default function Startseite() {
                 textDecoration: "none",
               }}
             >
-              Alle Termine ansehen →
+              Alle Termine ansehen <span aria-hidden="true">→</span>
             </Link>
           </div>
           {naechsteTermine.map((t) => (
@@ -333,7 +333,7 @@ export default function Startseite() {
                 marginBottom: "0.75rem",
               }}
             >
-              Was Gäste sagen
+              Was Kunden sagen
             </p>
             <h2
               id="stimmen-heading"
@@ -343,7 +343,7 @@ export default function Startseite() {
                 color: "var(--color-text)",
               }}
             >
-              Stimmen unserer Gäste
+              Stimmen unserer Kunden
             </h2>
           </div>
           <div
@@ -354,19 +354,19 @@ export default function Startseite() {
             }}
           >
             <TestimonialCard
-              quote="Der Abend war einfach unglaublich. Kreiz & Quer hat jede Situation perfekt gespielt — vom romantischen Eröffnungswalzer bis zur ausgelassenen Tanzparty."
-              authorName="Anna & Thomas M."
-              eventDescription="Hochzeit · Graz · 2024"
+              quote="Ein ganz besonderer Abend mit ganz besonderer Stimmung! Danke!"
+              authorName="Melanie"
+              eventDescription="Geburtstagsfeier · Dezember 2025"
             />
             <TestimonialCard
-              quote="Wir haben Kreiz & Quer für unseren Firmenball gebucht und alle waren begeistert. Professionell, flexibel und einfach unglaublich gute Musik."
-              authorName="Mag. Barbara S."
-              eventDescription="Firmenball · Wien · 2024"
+              quote="Das machen wir wieder! Es war genial!"
+              authorName="Daniel"
+              eventDescription="Sommerfest · Juli 2025"
             />
             <TestimonialCard
-              quote="Als Veranstalter schätze ich Verlässlichkeit. Kreiz & Quer war pünktlich, hat die Bühne im Griff und das Publikum tanzt — mehr braucht's nicht."
-              authorName="Klaus W."
-              eventDescription="Stadtfest Frohnleiten · 2024"
+              quote="Hi, ich muss dir nochmal schreiben: Wir haben nämlich auch Tage nach der Hochzeit noch so oft von Gästen gehört, dass die Band so cool war! Das wollt ich euch nochmal sagen!"
+              authorName="Jakob & Marlene"
+              eventDescription="Hochzeit · Oktober 2024"
             />
           </div>
         </div>
