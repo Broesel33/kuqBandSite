@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Leistungen – Kreiz & Quer",
   description:
-    "Hochzeiten, Bälle, Firmenfeiern und Events — Kreiz & Quer bietet Live-Musik für jeden Anlass.",
+    "Live-Musik für Hochzeiten, Bälle, Firmenfeiern und Events in der Steiermark und ganz Österreich — Kreiz & Quer. 100 % live, individuell abgestimmt.",
 };
 
 interface LeistungItem {
@@ -21,7 +21,7 @@ const leistungen: LeistungItem[] = [
     id: "hochzeiten",
     icon: "favorite",
     title: "Hochzeiten",
-    body: "Vom gefühlvollen Ja-Wort bis zur ausgelassenen Party — wir begleiten euren großen Tag mit Herz, Feingefühl und genau der Musik, die den Moment unvergesslich macht. Jeder Wunsch, jede Stimmung, jeder Tanz.",
+    body: "Vom gefühlvollen Ja-Wort bis zur ausgelassenen Party — wir begleiten deinen großen Tag mit Herz, Feingefühl und genau der Musik, die den Moment unvergesslich macht. Jeder Wunsch, jede Stimmung, jeder Tanz.",
     checks: [
       "Akustik-Set",
       "Vollband",
@@ -46,32 +46,19 @@ const leistungen: LeistungItem[] = [
     bg: "var(--color-warm-gray)",
   },
   {
-    id: "firmenfeiern",
+    id: "firmen-events",
     icon: "business_center",
-    title: "Firmenfeiern",
-    body: "Professionell auf der Bühne, flexibel im Programm. Vom ruhigen Empfangsambiente bis zum mitreißenden Hauptact — wir passen uns eurem Event an und liefern genau das, was der Abend braucht.",
+    title: "Firmen, Partys & Events",
+    body: "Professionell auf der Bühne, flexibel im Programm. Vom ruhigen Empfangsambiente bis zum mitreißenden Hauptact — ob Firmenfeier, Stadtfest, Sommernachtsparty oder Vereinsjubiläum: wir passen uns deinem Event an und liefern genau das, was dein Event braucht.",
     checks: [
       "Hintergrundmusik / Empfang",
       "Hauptact / Tanzabend",
-      "Flexible Programmgestaltung",
-      "Technische Selbstversorgung",
-    ],
-    bg: "var(--color-surface)",
-  },
-  {
-    id: "events",
-    icon: "campaign",
-    title: "Events, Partys und Veranstaltungen",
-    body: "Ob Stadtfest, Sommernachtsparty oder Vereinsjubiläum — wenn ein Anlass Livemusik verdient, sind wir dabei. Flexibel, verlässlich und immer auf den Punkt.",
-    checks: [
       "Vollständiges PA- & Licht-Setup",
       "Flexible Setlänge & Pausengestaltung",
-      "Abstimmung mit Veranstalter & Location",
       "Outdoor- & Innenbereich geeignet",
-      "Hintergrundmusik bis Hauptact",
       "Spontane Programmänderungen möglich",
     ],
-    bg: "var(--color-warm-gray)",
+    bg: "var(--color-surface)",
   },
   {
     id: "duo",
@@ -91,7 +78,7 @@ const leistungen: LeistungItem[] = [
     id: "vollband",
     icon: "groups",
     title: "Vollband",
-    body: "Wenn die Tanzfläche brennen soll. Mit vier Musikern, vollem Sound und professioneller Technik entfesseln wir den Abend — druckvoll, lebendig und mitreißend bis zur letzten Zugabe.",
+    body: "Wenn die Tanzfläche brennen soll. Mit vier Musikern, vollem Sound und professioneller Technik entfesseln wir die Tanzfläche — druckvoll, lebendig und mitreißend bis zur letzten Zugabe.",
     checks: [
       "4 Musiker",
       "Vollständiges Equipment",
@@ -224,7 +211,7 @@ export default function Leistungen() {
                       marginBottom: "1rem",
                     }}
                   >
-                    Was ihr bekommt
+                    Was du bekommst
                   </h3>
                   <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                     {l.checks.map((check) => (
@@ -275,7 +262,7 @@ export default function Leistungen() {
                   minHeight: "44px",
                 }}
               >
-                Unverbindlich anfragen →
+                Unverbindlich anfragen <span aria-hidden="true">→</span>
               </Link>
             </div>
           </section>
@@ -325,9 +312,9 @@ export default function Leistungen() {
             >
               Gute Musik hat ihren Preis — und der soll fair und nachvollziehbar sein.
               Unsere Pakete beginnen bereits bei wenigen hundert Euro und werden individuell
-              auf euren Anlass zugeschnitten. Was den genauen Preis beeinflusst? Spieldauer,
-              Anreise, Besetzung (Duo oder Vollband), technischer Aufwand und ob ihr euren
-              Abend mit ein paar Extras unvergesslich machen möchtet.
+              auf deinen Anlass zugeschnitten. Was den genauen Preis beeinflusst? Spieldauer,
+              Anreise, Besetzung (Duo oder Vollband), technischer Aufwand und ob du dein
+              Event mit ein paar Extras unvergesslich machen möchtest.
             </p>
             <p
               style={{
@@ -338,8 +325,8 @@ export default function Leistungen() {
                 marginBottom: "2.5rem",
               }}
             >
-              Kein Einheitspaket, kein verstecktes Kleingedrucktes. Schreibt uns einfach —
-              wir erstellen euch ein unverbindliches Angebot, das wirklich zu eurem Event passt.
+              Kein Einheitspaket, kein verstecktes Kleingedrucktes. Schreib uns einfach —
+              wir erstellen dir ein unverbindliches Angebot, das wirklich zu deinem Event passt.
             </p>
 
             <div
@@ -406,7 +393,7 @@ export default function Leistungen() {
                 minHeight: "44px",
               }}
             >
-              Kostenloses Angebot anfragen →
+              Kostenloses Angebot anfragen <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>

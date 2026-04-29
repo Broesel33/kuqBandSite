@@ -13,7 +13,7 @@ export default function Startseite() {
       {/* 1. Hero */}
       <HeroSection
         headline="Kreiz & Quer"
-        subline="Die Band, die euer Event zur Legende macht — Hochzeiten, Bälle und mehr in ganz Österreich."
+        subline="Live-Musik aus der Steiermark für Hochzeiten, Bälle und Events — vier Musiker, ein Sound, kein Playback."
         eyebrow="Live. Leidenschaftlich. Unvergesslich."
         primaryCta={{ label: "Unverbindlich anfragen", href: "/kontakt" }}
         secondaryCta={{ label: "Repertoire ansehen", href: "/repertoire" }}
@@ -109,9 +109,9 @@ export default function Startseite() {
             <ServiceCard
               icon="favorite"
               title="Hochzeiten"
-              description="Vom gefühlvollen Ja-Wort bis zur ausgelassenen Party — wir begleiten euren großen Tag mit Herz, Feingefühl und genau der Musik, die den Moment unvergesslich macht."
+              description="Vom gefühlvollen Ja-Wort bis zur ausgelassenen Party — wir begleiten deinen großen Tag mit Herz, Feingefühl und genau der Musik, die den Moment unvergesslich macht."
               linkHref="/leistungen"
-              linkLabel="Mehr"
+              linkLabel="Details ansehen"
               variant="light"
             />
             <ServiceCard
@@ -119,7 +119,7 @@ export default function Startseite() {
               title="Bälle & Gala"
               description="Eleganter Walzer, zeitlose Evergreens — wir wissen, wann Eleganz gefragt ist und wann die Tanzfläche explodieren soll."
               linkHref="/leistungen"
-              linkLabel="Mehr"
+              linkLabel="Details ansehen"
               variant="dark"
             />
             <ServiceCard
@@ -127,7 +127,7 @@ export default function Startseite() {
               title="Firmen, Partys & Events"
               description="Professionell auf der Bühne, flexibel im Programm. Vom ruhigen Empfangsambiente bis zum mitreißenden Hauptact."
               linkHref="/leistungen"
-              linkLabel="Mehr"
+              linkLabel="Details ansehen"
               variant="mid"
             />
           </div>
@@ -196,7 +196,7 @@ export default function Startseite() {
                 {
                   icon: "graphic_eq",
                   title: "Im Takt des Abends",
-                  text: "Wir spielen kein starres Programm. Ihr sucht euch eure liebsten Songs aus unserem stetig wachsenden Katalog aus, wir lesen die Stimmung im Raum und passen unser Set spontan an. Musikwünsche auf Zuruf? Kein Problem! Leiser / lauter? Jederzeit möglich. Eine Ansprache? Gerne, hier habt ihr unser Gäste-Mikrofon!",
+                  text: "Wir spielen kein starres Programm. Du suchst dir deine liebsten Songs aus unserem stetig wachsenden Katalog aus, wir lesen die Stimmung im Raum und passen unser Set spontan an. Musikwünsche auf Zuruf? Kein Problem! Leiser / lauter? Jederzeit möglich. Eine Ansprache? Gerne, hier hast du unser Gäste-Mikrofon!",
                 },
                 {
                   icon: "verified",
@@ -211,7 +211,7 @@ export default function Startseite() {
                 {
                   icon: "groups",
                   title: "Persönliche Betreuung",
-                  text: "Kein Event gleicht dem anderen. Wir nehmen uns Zeit für eure Wünsche. Egal ob ausführliche Mails, persönliche Gespräche oder detaillierte Telefonate. Für uns steht euer Event genauso im Mittelpunkt, wie für euch!",
+                  text: "Kein Event gleicht dem anderen. Wir nehmen uns Zeit für deine Wünsche. Egal ob ausführliche Mails, persönliche Gespräche oder detaillierte Telefonate. Für uns steht dein Event genauso im Mittelpunkt wie für dich!",
                 },
               ].map(({ icon, title, text }) => (
                 <div key={title}>
@@ -333,7 +333,7 @@ export default function Startseite() {
                 marginBottom: "0.75rem",
               }}
             >
-              Was Kunden sagen
+              Stimmen
             </p>
             <h2
               id="stimmen-heading"
@@ -343,7 +343,7 @@ export default function Startseite() {
                 color: "var(--color-text)",
               }}
             >
-              Stimmen unserer Kunden
+              Was wir nach dem Event hören
             </h2>
           </div>
           <div
@@ -393,7 +393,7 @@ export default function Startseite() {
               marginBottom: "1rem",
             }}
           >
-            Euer nächster Abend verdient die beste Musik.
+            Erzähl uns von deinem Event.
           </h2>
           <p
             style={{
@@ -406,7 +406,7 @@ export default function Startseite() {
               lineHeight: 1.7,
             }}
           >
-            Schreibt uns unverbindlich — wir melden uns innerhalb von 24 Stunden.
+            Schreib uns unverbindlich — wir melden uns innerhalb von 24 Stunden.
           </p>
           <Link
             href="/kontakt"
@@ -425,7 +425,7 @@ export default function Startseite() {
               minHeight: "44px",
             }}
           >
-            Jetzt anfragen
+            Termin sichern
           </Link>
         </div>
       </section>

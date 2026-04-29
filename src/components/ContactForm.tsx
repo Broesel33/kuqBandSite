@@ -124,7 +124,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} noValidate aria-label="Kontaktformular">
       <p style={{ fontSize: "0.8125rem", color: "var(--color-text-secondary)", marginBottom: "2rem", fontFamily: "var(--font-ui)" }}>
-        <abbr title="Pflichtfeld" aria-label="Pflichtfeld">*</abbr> Pflichtfelder
+        Felder mit <abbr title="Pflichtfeld" aria-label="Pflichtfeld">*</abbr> brauchen wir, um dir antworten zu können.
       </p>
 
       {errors._global && (

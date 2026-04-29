@@ -4,7 +4,7 @@ import MemberCard from "@/components/MemberCard";
 export const metadata = {
   title: "Über uns – Kreiz & Quer",
   description:
-    "Lerne Manu, Robert, Steph und Gabs kennen — die vier Musiker hinter Kreiz & Quer.",
+    "Lern Manu, Robert, Steph und Gabs kennen — die vier Musiker hinter Kreiz & Quer, einer Live-Band aus der Steiermark mit über 200 Auftritten in ganz Österreich.",
 };
 
 const mitglieder = [
@@ -76,7 +76,7 @@ export default function UeberUns() {
               lineHeight: 1.6,
             }}
           >
-            Vier Persönlichkeiten. Eine gemeinsame Leidenschaft.
+            Die vier Köpfe hinter dem Sound.
           </p>
         </div>
       </div>
@@ -137,7 +137,7 @@ export default function UeberUns() {
                   marginBottom: "1.5rem",
                 }}
               >
-                Vier Persönlichkeiten. Eine gemeinsame Leidenschaft.
+                Wie aus vier Musikern eine Band wurde.
               </h2>
 
               <div
@@ -160,7 +160,7 @@ export default function UeberUns() {
                 <p>
                   Was uns ausmacht? Wir spielen nicht einfach ein Programm ab. Wir fühlen die
                   Energie im Raum und passen unser Set spontan an — wann es leise sein muss, wann
-                  die Tanzfläche explodieren soll. Jeder Abend ist anders, und genau das macht ihn
+                  die Tanzfläche explodieren soll. Jeder Auftritt ist anders, und genau das macht ihn
                   besonders.
                 </p>
                 <p>
@@ -181,7 +181,7 @@ export default function UeberUns() {
                 {[
                   { zahl: "200+", label: "Auftritte" },
                   { zahl: "200+", label: "Songs im Repertoire" },
-                  { zahl: "4", label: "Bandmitglieder" },
+                  { zahl: "2019", label: "Gründungsjahr" },
                 ].map(({ zahl, label }) => (
                   <div key={label}>
                     <dt
@@ -231,7 +231,7 @@ export default function UeberUns() {
                 marginBottom: "0.75rem",
               }}
             >
-              Die Crew
+              Wir Vier
             </p>
             <h2
               id="mitglieder-heading"

@@ -24,8 +24,21 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.kreizundquer.com"),
   title: "Kreiz & Quer – Live, leidenschaftlich, unvergesslich – Musik für dein Event!",
   description: "Kreiz & Quer: Live-Musik für Hochzeiten, Bälle, Firmenfeiern und Events in ganz Österreich. 4 Musiker, 200+ Auftritte, 100 % live.",
+  openGraph: {
+    title: "Kreiz & Quer – Live-Band aus der Steiermark",
+    description: "Live-Musik für Hochzeiten, Bälle und Events. 4 Musiker, kein Playback, 200+ Auftritte in ganz Österreich.",
+    siteName: "Kreiz & Quer",
+    locale: "de_AT",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kreiz & Quer – Live-Band aus der Steiermark",
+    description: "Live-Musik für Hochzeiten, Bälle und Events. 4 Musiker, kein Playback, 200+ Auftritte in ganz Österreich.",
+  },
 };
 
 export default function RootLayout({

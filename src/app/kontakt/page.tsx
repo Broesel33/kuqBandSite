@@ -4,7 +4,7 @@ import WhatsAppIcon from "@/components/WhatsAppIcon";
 export const metadata = {
   title: "Kontakt – Kreiz & Quer",
   description:
-    "Schreib uns für eine unverbindliche Anfrage. Wir antworten innerhalb von 24 Stunden.",
+    "Schreib uns für eine unverbindliche Anfrage — Kreiz & Quer, Live-Band aus der Steiermark. Wir antworten innerhalb von 24 Stunden.",
 };
 
 export default function KontaktPage() {
@@ -49,7 +49,7 @@ export default function KontaktPage() {
               lineHeight: 1.6,
             }}
           >
-            Wir freuen uns auf eure Anfrage und melden uns innerhalb von 24 Stunden.
+            Schreib uns, wie du dir dein Event vorstellst — wir melden uns innerhalb von 24 Stunden zurück, meist deutlich schneller.
           </p>
         </div>
       </header>
@@ -93,7 +93,7 @@ export default function KontaktPage() {
                     marginBottom: "1.5rem",
                   }}
                 >
-                  Direkt erreichen
+                  So erreichst du uns sofort
                 </h2>
 
                 <ul
@@ -231,7 +231,7 @@ export default function KontaktPage() {
                     marginBottom: "0.75rem",
                   }}
                 >
-                  Schnelle Antwort
+                  Wir lesen das gleich.
                 </h3>
                 <p
                   style={{
@@ -241,8 +241,7 @@ export default function KontaktPage() {
                     lineHeight: 1.6,
                   }}
                 >
-                  Wir sind meist innerhalb weniger Stunden erreichbar. Am schnellsten per
-                  WhatsApp.
+                  Wir sind meist innerhalb weniger Stunden erreichbar — am schnellsten per WhatsApp. Spätestens innerhalb von 24 Stunden hörst du von uns.
                 </p>
               </div>
 
@@ -263,7 +262,7 @@ export default function KontaktPage() {
                     marginBottom: "1.25rem",
                   }}
                 >
-                  Folgt uns
+                  Bleib am Ohr
                 </h3>
 
                 <ul

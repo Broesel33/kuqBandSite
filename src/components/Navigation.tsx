@@ -176,7 +176,7 @@ export default function Navigation() {
             justifyContent: "center",
           }}
         >
-          Anfragen →
+          Anfragen <span aria-hidden="true">→</span>
         </Link>
       </div>
     </header>

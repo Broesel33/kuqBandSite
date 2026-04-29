@@ -5,7 +5,7 @@ import EventRow from "@/components/EventRow";
 export const metadata = {
   title: "Termine – Kreiz & Quer",
   description:
-    "Alle öffentlichen Auftritte von Kreiz & Quer — findet euren nächsten Live-Abend.",
+    "Alle öffentlichen Auftritte von Kreiz & Quer — erlebe die Live-Band aus der Steiermark bei Konzerten in ganz Österreich.",
 };
 
 export default function Termine() {
@@ -48,7 +48,7 @@ export default function Termine() {
               lineHeight: 1.6,
             }}
           >
-            Ihr möchtet uns erst live erleben, bevor ihr euch entscheidet? Sehr gerne — kommt einfach bei einem unserer öffentlichen Auftritte vorbei. Wir freuen uns über jeden Besuch, und ein persönliches Gespräch ist dabei immer möglich.
+            Du willst uns erst einmal live erleben? Schau einfach bei einem unserer öffentlichen Auftritte vorbei — ein Hallo nach dem Set ist immer drin.
           </p>
         </div>
       </div>
@@ -137,7 +137,7 @@ export default function Termine() {
                   minHeight: "44px",
                 }}
               >
-                Für private Events — jetzt anfragen →
+                Für private Events — jetzt anfragen <span aria-hidden="true">→</span>
               </Link>
             </div>
           )}
@@ -183,7 +183,7 @@ export default function Termine() {
                   lineHeight: 1.6,
                 }}
               >
-                Hochzeiten, Bälle, Firmenfeiern — schreibt uns einfach und wir planen gemeinsam euren Abend.
+                Hochzeiten, Bälle, Firmenfeiern — schreib uns einfach und wir planen gemeinsam dein Event.
               </p>
             </div>
             <Link
@@ -204,7 +204,7 @@ export default function Termine() {
                 whiteSpace: "nowrap",
               }}
             >
-              Jetzt anfragen
+              Event planen
             </Link>
           </div>
         </div>

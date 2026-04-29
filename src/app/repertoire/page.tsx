@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Repertoire – Kreiz & Quer",
   description:
-    "Unser Repertoire: Austropop, Pop & Rock, Evergreens und aktuelle Charts — alles live gespielt.",
+    "Unser Repertoire: Austropop, Pop & Rock, Evergreens und aktuelle Charts — alles live gespielt von Kreiz & Quer, der Live-Band aus der Steiermark.",
 };
 
 const GENRES: GenreSection[] = [
@@ -20,7 +20,7 @@ const GENRES: GenreSection[] = [
       { title: "Ham kummst", artist: "Seiler & Speer", decade: "10er" },
       { title: "Cordula Grün", artist: "Josh.", decade: "10er" },
       { title: "Danke, gut", artist: "Pizzera & Jaus", decade: "10er" },
-      { title: "Hula Palu", artist: "Andreas Gabalier", decade: "10er" },
+      { title: "Hulapalu", artist: "Andreas Gabalier", decade: "10er" },
     ],
   },
   {
@@ -240,7 +240,7 @@ export default function RepertoirePage() {
                   lineHeight: 1.6,
                 }}
               >
-                Kein Problem. Schreibt uns — wir lernen gerne neue Songs für euren Anlass.
+                Kein Problem. Schreib uns — wir lernen gerne neue Songs für deinen Anlass.
               </p>
             </div>
             <Link

@@ -2,7 +2,7 @@ import GalleryGrid from "@/components/GalleryGrid";
 
 export const metadata = {
   title: "Galerie – Kreiz & Quer",
-  description: "Impressionen von Auftritten: Hochzeiten, Bälle, Events und mehr.",
+  description: "Impressionen von Kreiz & Quer live auf der Bühne: Hochzeiten, Bälle, Events und mehr — eine Live-Band aus der Steiermark.",
 };
 
 const GALLERY_IMAGES: {
@@ -117,7 +117,7 @@ export default function GaleriePage() {
               marginBottom: "1.5rem",
             }}
           >
-            Folgt uns für aktuelle Impressionen von Auftritten und Events.
+            Folg uns für aktuelle Impressionen von Auftritten und Events.
           </p>
           <a
             href="https://www.instagram.com/kreizundquer"
