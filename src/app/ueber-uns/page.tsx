@@ -241,7 +241,7 @@ export default function UeberUns() {
                 color: "var(--color-text)",
               }}
             >
-              Die vier Musiker
+              Wir Vier – Ganz persönlich
             </h2>
           </div>
           <div
@@ -261,6 +261,109 @@ export default function UeberUns() {
                 photoAlt={m.photoAlt}
               />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. ViertelVier */}
+      <section
+        aria-labelledby="viertelvier-heading"
+        style={{ background: "var(--color-surface)", padding: "6rem 0" }}
+      >
+        <div style={{ maxWidth: "1536px", margin: "0 auto", padding: "0 2rem" }}>
+          <div style={{ maxWidth: "720px" }}>
+            <p
+              style={{
+                fontSize: "0.75rem",
+                fontWeight: 600,
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
+                color: "var(--color-gold-text)",
+                fontFamily: "var(--font-ui)",
+                marginBottom: "0.75rem",
+              }}
+            >
+              Eigene Musik
+            </p>
+            <h2
+              id="viertelvier-heading"
+              style={{
+                fontFamily: "var(--font-headline)",
+                fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)",
+                color: "var(--color-text)",
+                marginBottom: "1.5rem",
+              }}
+            >
+              Wir covern nicht nur
+            </h2>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "1rem",
+                color: "var(--color-text-secondary)",
+                fontFamily: "var(--font-body)",
+                lineHeight: 1.7,
+                marginBottom: "2.5rem",
+              }}
+            >
+              <p>
+                Jetzt wisst ihr, wer wir sind. Aber es gibt noch eine Seite von uns, die ihr
+                vielleicht noch nicht kennt: Neben Kreiz &amp; Quer machen wir als{" "}
+                <strong style={{ color: "var(--color-text)" }}>ViertelVier</strong> eigene Musik —
+                modernen Austropop, den wir selbst schreiben, selbst produzieren und der sich
+                schlicht nach uns anhört.
+              </p>
+              <p>
+                Keine fremden Songs, keine Vorgaben — nur das, was wir wirklich sagen wollen.
+                Wenn ihr neugierig seid, wie wir klingen, wenn wir ganz wir selbst sind, hört
+                einfach rein:
+              </p>
+            </div>
+            <ul
+              style={{
+                listStyle: "none",
+                padding: 0,
+                margin: 0,
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.75rem",
+              }}
+            >
+              {[
+                { label: "Moch's Guat", href: "https://music.youtube.com/watch?v=8BaV9QXCqz4&si=nIkO2tHbNYr-mAvL" },
+                { label: "Alle 9", href: "https://music.youtube.com/watch?v=CFuDMRsb6Vw&si=w24L7MxnQXgmSdq3" },
+                { label: "Farben", href: "https://music.youtube.com/watch?v=NcfB1NRb6FE&si=d3MfE7mzGLAjj8S5" },
+              ].map(({ label, href }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "0.5rem",
+                      color: "var(--color-gold-text)",
+                      fontFamily: "var(--font-ui)",
+                      fontWeight: 600,
+                      fontSize: "0.9375rem",
+                      textDecoration: "none",
+                    }}
+                  >
+                    <span
+                      className="material-symbols-outlined"
+                      aria-hidden="true"
+                      style={{ fontSize: "1.25rem" }}
+                    >
+                      play_circle
+                    </span>
+                    ViertelVier – {label} <span aria-hidden="true">↗</span>
+                    <span className="sr-only">(öffnet in neuem Tab)</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
