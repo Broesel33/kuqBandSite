@@ -112,7 +112,7 @@ export default function HeroSection({
         </div>
 
         {/* BOTTOM: Foto + Gradient + CTAs */}
-        <div className="relative flex-1 min-h-[420px] -mt-10">
+        <div className="relative flex-1 min-h-[420px] -mt-4">
           <Image
             src="/band.png"
             alt={photoAlt}
@@ -123,7 +123,7 @@ export default function HeroSection({
           />
           <div
             className="absolute inset-0 pointer-events-none"
-            style={{ background: 'linear-gradient(to top, #0d1b2a 0px, #0d1b2a 185px, transparent 330px, transparent 100%)' }}
+            style={{ background: 'linear-gradient(to top, var(--color-navy) 0px, var(--color-navy) 185px, transparent 330px, transparent 100%)' }}
             aria-hidden="true"
           />
           <div className="absolute inset-x-0 bottom-0 px-6 pb-3 pt-3 flex flex-col gap-2">
@@ -132,7 +132,7 @@ export default function HeroSection({
               <Link
                 href={primaryCta.href}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold min-h-[44px] transition-opacity hover:opacity-90"
-                style={{ backgroundColor: 'var(--color-gold)', color: '#000', fontFamily: 'var(--font-ui)', boxShadow: '0 4px 14px rgba(200,149,26,0.4)' }}
+                style={{ backgroundColor: 'var(--color-gold)', color: '#000', fontFamily: 'var(--font-ui)', boxShadow: '0 4px 14px rgba(0,0,0,0.2)' }}
               >
                 {primaryCta.label} <span aria-hidden="true">→</span>
               </Link>
@@ -183,16 +183,7 @@ export default function HeroSection({
         className="hero-item hero-delay-2 hidden md:block absolute right-0 top-6 bottom-6 w-[45%]"
         aria-hidden="true"
       >
-        {/* Gold-Glow hinter der Band */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background: 'radial-gradient(ellipse at 50% 80%, rgba(200,149,26,0.30) 0%, rgba(200,149,26,0.10) 45%, transparent 80%)',
-            pointerEvents: 'none',
-            zIndex: 0,
-          }}
-        />
-        <Image
+<Image
           src="/band.png"
           alt={photoAlt}
           fill
@@ -231,7 +222,7 @@ export default function HeroSection({
             <Link
               href={primaryCta.href}
               className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-semibold transition-opacity min-h-[44px] hover:opacity-90"
-              style={{ backgroundColor: 'var(--color-gold)', color: '#000', fontFamily: 'var(--font-ui)', boxShadow: '0 4px 14px rgba(200,149,26,0.4)' }}
+              style={{ backgroundColor: 'var(--color-gold)', color: '#000', fontFamily: 'var(--font-ui)', boxShadow: '0 4px 14px rgba(0,0,0,0.2)' }}
             >
               {primaryCta.label} <span aria-hidden="true">→</span>
             </Link>

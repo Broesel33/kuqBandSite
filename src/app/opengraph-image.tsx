@@ -29,7 +29,7 @@ export default async function Image() {
           width: '100%',
           height: '100%',
           display: 'flex',
-          backgroundColor: '#0d1b2a',
+          backgroundColor: '#3c4748',
           position: 'relative',
         }}
       >
@@ -62,7 +62,7 @@ export default async function Image() {
             width: '100%',
             height: '100%',
             background:
-              'linear-gradient(to right, #0d1b2a 48%, rgba(13,27,42,0.55) 72%, transparent 100%)',
+              'linear-gradient(to right, #3c4748 48%, rgba(60,71,72,0.55) 72%, transparent 100%)',
             display: 'flex',
           }}
         />
@@ -86,7 +86,7 @@ export default async function Image() {
             style={{
               fontSize: '15px',
               fontWeight: 700,
-              color: '#c8951a',
+              color: '#a8c8cc',
               letterSpacing: '3px',
               textTransform: 'uppercase',
               marginBottom: '18px',
@@ -126,7 +126,7 @@ export default async function Image() {
           <div
             style={{
               fontSize: '17px',
-              color: '#c8951a',
+              color: '#a8c8cc',
               fontWeight: 600,
               letterSpacing: '0.5px',
               display: 'flex',

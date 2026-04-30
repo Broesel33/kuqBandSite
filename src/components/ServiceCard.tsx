@@ -51,49 +51,47 @@ export default function ServiceCard({
   const styles = variantStyles[variant];
 
   return (
-    <Link
-      href={linkHref}
-      aria-label={`${title} – ${linkLabel}`}
-      className="group block rounded-xl transition-all duration-200 hover:-translate-y-1 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)] focus-visible:ring-offset-2"
-      style={{ border: `1px solid ${styles.border}` }}
+    <article
+      className="group relative flex flex-col justify-between rounded-xl p-8 md:p-10 h-full transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
+      style={{ backgroundColor: styles.bg, border: `1px solid ${styles.border}` }}
     >
-      <article
-        className="flex flex-col justify-between rounded-xl p-8 md:p-10 h-full"
-        style={{ backgroundColor: styles.bg }}
-      >
-        <div className="flex flex-col gap-4">
-          <span
-            className="material-symbols-outlined select-none"
-            aria-hidden="true"
-            style={{ color: 'var(--color-gold)', fontSize: '2.25rem' }}
-          >
-            {icon}
-          </span>
+      <div className="flex flex-col gap-4">
+        <span
+          className="material-symbols-outlined select-none"
+          aria-hidden="true"
+          style={{ color: 'var(--color-gold)', fontSize: '2.25rem' }}
+        >
+          {icon}
+        </span>
 
-          <h3
-            className="text-xl font-bold"
-            style={{ color: styles.text, fontFamily: 'var(--font-headline)' }}
+        <h3
+          className="text-xl font-bold"
+          style={{ color: styles.text, fontFamily: 'var(--font-headline)' }}
+        >
+          <Link
+            href={linkHref}
+            className="after:absolute after:inset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)] focus-visible:ring-offset-2 rounded-sm"
           >
             {title}
-          </h3>
+          </Link>
+        </h3>
 
-          <p
-            className="text-base leading-relaxed"
-            style={{ color: styles.textSecondary, fontFamily: 'var(--font-body)' }}
-          >
-            {description}
-          </p>
-        </div>
+        <p
+          className="text-base leading-relaxed"
+          style={{ color: styles.textSecondary, fontFamily: 'var(--font-body)' }}
+        >
+          {description}
+        </p>
+      </div>
 
-        <div className="mt-8">
-          <span
-            className="inline-flex items-center gap-2 text-sm font-semibold transition-all duration-200 group-hover:gap-3"
-            style={{ color: styles.linkColor, fontFamily: 'var(--font-ui)' }}
-          >
-            {linkLabel} <span aria-hidden="true">→</span>
-          </span>
-        </div>
-      </article>
-    </Link>
+      <div className="mt-8">
+        <span
+          className="inline-flex items-center gap-2 text-sm font-semibold transition-all duration-200 group-hover:gap-3"
+          style={{ color: styles.linkColor, fontFamily: 'var(--font-ui)' }}
+        >
+          {linkLabel} <span aria-hidden="true">→</span>
+        </span>
+      </div>
+    </article>
   );
 }

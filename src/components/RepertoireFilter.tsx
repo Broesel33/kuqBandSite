@@ -194,7 +194,7 @@ export default function RepertoireFilter({ genres }: RepertoireFilterProps) {
                 fontWeight: 600,
                 fontFamily: "var(--font-ui)",
                 background: "var(--color-gold-light)",
-                color: "#92610a",
+                color: "var(--color-gold-text)",
               }}
             >
               {genre.label}

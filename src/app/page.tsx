@@ -475,7 +475,7 @@ export default function Startseite() {
                 borderRadius: "var(--radius-md)",
                 textDecoration: "none",
                 minHeight: "44px",
-                boxShadow: "0 4px 20px rgba(200,149,26,0.35)",
+                boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
               }}
             >
               Termin sichern <span aria-hidden="true">→</span>

@@ -1,28 +1,28 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* ── Markenkernfarben ── */
-  --color-navy:           #0d1b2a;
-  --color-navy-mid:       #162338;
-  --color-blue:           #2563eb;
-  --color-blue-dark:      #1d4ed8;
-  --color-blue-light:     #dbeafe;
-  --color-gold:           #c8951a;   /* decorative / on dark backgrounds (6.4:1 on navy) */
-  --color-gold-text:      #7c5c0a;   /* gold text on light backgrounds (5.9:1 on surface, 5.3:1 on warm-gray) */
-  --color-gold-light:     #fef3c7;
+  /* ── Markenkernfarben — Schema „Dunkles Petrol & Silber" ── */
+  --color-navy:           #3c4748;   /* dunkles Petrol — Bühne/Hero/Nav */
+  --color-navy-mid:       #4e5e60;   /* mittleres Petrol — Karten/Placeholder */
+  --color-blue:           #6ba3a8;   /* Petrol-Silber — CTA / Links / Focus */
+  --color-blue-dark:      #4a8288;   /* dunkles Petrol-Silber — Hover/Pressed */
+  --color-blue-light:     #d4e8ea;   /* helles Petrol — Tag-Hintergründe */
+  --color-gold:           #a8c8cc;   /* Silber-Highlight — CTA-Button & Akzente auf Dunkel */
+  --color-gold-text:      #235458;   /* dunkles Petrol für Akzenttext auf Hell (≈9:1 auf surface) */
+  --color-gold-light:     #e4f0f2;   /* sehr helles Petrol — sanfte Hintergründe */
 
   /* ── Oberflächenfarben ── */
-  --color-surface:        #faf9f6;
-  --color-warm-gray:      #f0ece7;
-  --color-warm-gray-2:    #e5e0da;
-  --color-border:         #ddd8d2;
+  --color-surface:        #f3f7f8;   /* kühles Hellgrau-Weiß */
+  --color-warm-gray:      #e4ecee;
+  --color-warm-gray-2:    #d0e0e2;
+  --color-border:         #b0cccf;
 
   /* ── Text ── */
-  --color-text:                #1a1410;
-  --color-text-secondary:      #5c5448;
-  --color-text-muted:          #8a9baa;
-  --color-text-muted-on-dark:  #b0bec8;
-  --color-text-on-dark:        #f0ede8;
+  --color-text:                #1a2627;
+  --color-text-secondary:      #3e5558;
+  --color-text-muted:          #6e9096;
+  --color-text-muted-on-dark:  #8cb0b4;
+  --color-text-on-dark:        #e8f2f3;
 
   /* ── Feedback ── */
   --color-success:        #16a34a;
@@ -100,7 +100,7 @@ input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
   border-color: var(--color-blue);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 0 0 3px rgba(107, 163, 168, 0.35);
   outline: none;
 }
 

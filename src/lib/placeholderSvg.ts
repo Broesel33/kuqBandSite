@@ -3,9 +3,9 @@ export function getPlaceholderSvg(
   height: number,
   dark = false
 ): string {
-  const bg = dark ? '#162338' : '#f0ece7';
-  const border = dark ? 'rgba(255,255,255,0.15)' : '#ddd8d2';
-  const textColor = dark ? '#b0bec8' : '#8a9baa';
+  const bg = dark ? '#4e5e60' : '#e4ecee';
+  const border = dark ? 'rgba(255,255,255,0.15)' : '#b0cccf';
+  const textColor = dark ? '#8cb0b4' : '#6e9096';
 
   const svg = [
     `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">`,

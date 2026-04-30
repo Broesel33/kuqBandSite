@@ -19,8 +19,8 @@ export default function PlaceholderImage({
       aria-label={alt}
       className={`w-full h-full flex flex-col items-center justify-center gap-3 ${className}`}
       style={{
-        backgroundColor: isDark ? '#162338' : '#f0ece7',
-        border: `2px dashed ${isDark ? 'rgba(255,255,255,0.15)' : '#ddd8d2'}`,
+        backgroundColor: isDark ? 'var(--color-navy-mid)' : 'var(--color-warm-gray)',
+        border: `2px dashed ${isDark ? 'rgba(255,255,255,0.15)' : 'var(--color-border)'}`,
       }}
     >
       <span

@@ -67,7 +67,7 @@ export default function Navigation() {
     <header
       className="fixed top-0 w-full z-50"
       style={{
-        backgroundColor: "#0d1b2a",
+        backgroundColor: "var(--color-navy)",
         borderBottom: "1px solid rgba(255,255,255,0.08)",
         boxShadow: scrolled ? "0 2px 16px rgba(0,0,0,0.35)" : "none",
         transition: "box-shadow 0.3s",
@@ -77,10 +77,10 @@ export default function Navigation() {
         <Link
           href="/"
           className="flex items-center gap-2 text-xl font-black tracking-tight"
-          style={{ fontFamily: "var(--font-headline)", color: "#f0ede8" }}
+          style={{ fontFamily: "var(--font-headline)", color: "#e8f2f3" }}
         >
           Kreiz{" "}
-          <span style={{ color: "#c8951a" }}>&amp;</span>{" "}
+          <span style={{ color: "var(--color-gold)" }}>&amp;</span>{" "}
           Quer
         </Link>
 
@@ -96,14 +96,14 @@ export default function Navigation() {
                 className="pb-0.5 font-semibold uppercase text-[11px] tracking-widest"
                 style={{
                   fontFamily: "var(--font-ui)",
-                  color: active ? "#c8951a" : "rgba(240,237,232,0.75)",
-                  borderBottom: active ? "2px solid #c8951a" : "2px solid transparent",
+                  color: active ? "var(--color-gold)" : "rgba(232,242,243,0.75)",
+                  borderBottom: active ? "2px solid var(--color-gold)" : "2px solid transparent",
                 }}
                 onMouseEnter={(e) => {
-                  if (!active) (e.currentTarget as HTMLAnchorElement).style.color = "rgba(240,237,232,1)";
+                  if (!active) (e.currentTarget as HTMLAnchorElement).style.color = "rgba(232,242,243,1)";
                 }}
                 onMouseLeave={(e) => {
-                  if (!active) (e.currentTarget as HTMLAnchorElement).style.color = "rgba(240,237,232,0.75)";
+                  if (!active) (e.currentTarget as HTMLAnchorElement).style.color = "rgba(232,242,243,0.75)";
                 }}
               >
                 {label}
@@ -139,7 +139,7 @@ export default function Navigation() {
             style={{
               width: "44px",
               height: "44px",
-              color: "#f0ede8",
+              color: "#e8f2f3",
               listStyle: "none",
               touchAction: "manipulation",
               WebkitTapHighlightColor: "transparent",
@@ -165,7 +165,7 @@ export default function Navigation() {
             aria-label="Mobile Navigation"
             className="mobile-nav-menu"
             style={{
-              backgroundColor: "#0d1b2a",
+              backgroundColor: "var(--color-navy)",
               borderTop: "1px solid rgba(255,255,255,0.08)",
               padding: "0.5rem 1.5rem 1.5rem",
             }}
@@ -180,7 +180,7 @@ export default function Navigation() {
                   aria-current={active ? "page" : undefined}
                   style={{
                     fontFamily: "var(--font-ui)",
-                    color: active ? "#c8951a" : "rgba(240,237,232,0.8)",
+                    color: active ? "var(--color-gold)" : "rgba(240,237,232,0.8)",
                     fontWeight: 600,
                     fontSize: "0.875rem",
                     textTransform: "uppercase",
