@@ -15,25 +15,28 @@ interface ServiceCardProps {
 
 const variantStyles: Record<
   ServiceCardVariant,
-  { bg: string; text: string; textSecondary: string; border: string }
+  { bg: string; text: string; textSecondary: string; border: string; linkColor: string }
 > = {
   light: {
     bg: 'var(--color-warm-gray)',
     text: 'var(--color-text)',
     textSecondary: 'var(--color-text-secondary)',
     border: 'var(--color-border)',
+    linkColor: 'var(--color-gold-text)',
   },
   dark: {
     bg: 'var(--color-navy)',
     text: 'var(--color-text-on-dark)',
     textSecondary: 'var(--color-text-muted-on-dark)',
     border: 'rgba(255,255,255,0.1)',
+    linkColor: 'var(--color-gold)',
   },
   mid: {
     bg: 'var(--color-warm-gray-2)',
     text: 'var(--color-text)',
     textSecondary: 'var(--color-text-secondary)',
     border: 'var(--color-border)',
+    linkColor: 'var(--color-gold-text)',
   },
 };
 
@@ -48,61 +51,49 @@ export default function ServiceCard({
   const styles = variantStyles[variant];
 
   return (
-    <article
-      className="flex flex-col justify-between rounded-xl p-8 md:p-10 transition-shadow duration-200 hover:shadow-lg"
-      style={{
-        backgroundColor: styles.bg,
-        border: `1px solid ${styles.border}`,
-      }}
+    <Link
+      href={linkHref}
+      aria-label={`${title} – ${linkLabel}`}
+      className="group block rounded-xl transition-all duration-200 hover:-translate-y-1 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)] focus-visible:ring-offset-2"
+      style={{ border: `1px solid ${styles.border}` }}
     >
-      <div className="flex flex-col gap-4">
-        {/* Icon */}
-        <span
-          className="material-symbols-outlined text-4xl select-none"
-          aria-hidden="true"
-          style={{ color: 'var(--color-gold)', fontSize: '2.25rem' }}
-        >
-          {icon}
-        </span>
+      <article
+        className="flex flex-col justify-between rounded-xl p-8 md:p-10 h-full"
+        style={{ backgroundColor: styles.bg }}
+      >
+        <div className="flex flex-col gap-4">
+          <span
+            className="material-symbols-outlined select-none"
+            aria-hidden="true"
+            style={{ color: 'var(--color-gold)', fontSize: '2.25rem' }}
+          >
+            {icon}
+          </span>
 
-        {/* Title */}
-        <h3
-          className="text-xl font-bold"
-          style={{ color: styles.text, fontFamily: 'var(--font-headline)' }}
-        >
-          {title}
-        </h3>
+          <h3
+            className="text-xl font-bold"
+            style={{ color: styles.text, fontFamily: 'var(--font-headline)' }}
+          >
+            {title}
+          </h3>
 
-        {/* Description */}
-        <p
-          className="text-base leading-relaxed"
-          style={{ color: styles.textSecondary, fontFamily: 'var(--font-body)' }}
-        >
-          {description}
-        </p>
-      </div>
+          <p
+            className="text-base leading-relaxed"
+            style={{ color: styles.textSecondary, fontFamily: 'var(--font-body)' }}
+          >
+            {description}
+          </p>
+        </div>
 
-      {/* Link */}
-      <div className="mt-8">
-        <Link
-          href={linkHref}
-          className="inline-flex items-center gap-2 text-sm font-semibold transition-colors min-h-[44px]"
-          style={{ color: variant === 'dark' ? 'var(--color-gold)' : 'var(--color-gold-text)', fontFamily: 'var(--font-ui)' }}
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLAnchorElement).style.color = variant === 'dark'
-              ? 'var(--color-gold-light)'
-              : 'var(--color-gold-text)';
-            (e.currentTarget as HTMLAnchorElement).style.textDecoration = 'underline';
-          }}
-          onMouseLeave={(e) => {
-            (e.currentTarget as HTMLAnchorElement).style.color = variant === 'dark' ? 'var(--color-gold)' : 'var(--color-gold-text)';
-            (e.currentTarget as HTMLAnchorElement).style.textDecoration = 'none';
-          }}
-        >
-          <span>{linkLabel}</span>
-          <span aria-hidden="true">→</span>
-        </Link>
-      </div>
-    </article>
+        <div className="mt-8">
+          <span
+            className="inline-flex items-center gap-2 text-sm font-semibold transition-all duration-200 group-hover:gap-3"
+            style={{ color: styles.linkColor, fontFamily: 'var(--font-ui)' }}
+          >
+            {linkLabel} <span aria-hidden="true">→</span>
+          </span>
+        </div>
+      </article>
+    </Link>
   );
 }

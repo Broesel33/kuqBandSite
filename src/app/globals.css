@@ -29,9 +29,9 @@
   --color-error:          #dc2626;
 
   /* ── Typografie-Referenzen ── */
-  --font-headline: var(--font-space-grotesk), sans-serif;
+  --font-headline: var(--font-syne), sans-serif;
   --font-body:     var(--font-manrope), sans-serif;
-  --font-ui:       var(--font-inter), sans-serif;
+  --font-ui:       var(--font-manrope), sans-serif;
 
   /* ── Border Radius ── */
   --radius-sm:  0.375rem;
@@ -122,6 +122,71 @@ textarea:focus-visible {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   vertical-align: middle;
   user-select: none;
+}
+
+/* ── Mobile-Navigation: native <details>/<summary> ── */
+.mobile-nav-summary {
+  list-style: none;
+}
+.mobile-nav-summary::-webkit-details-marker { display: none; }
+.mobile-nav-summary::marker { display: none; }
+
+.mobile-nav-icon-close { display: none; }
+.mobile-nav-details[open] .mobile-nav-icon-menu { display: none; }
+.mobile-nav-details[open] .mobile-nav-icon-close { display: inline-block; }
+
+.mobile-nav-menu {
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+/* ── Hero entrance animations ── */
+@keyframes heroSlideUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-item {
+  opacity: 0;
+  animation: heroSlideUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.hero-delay-0 { animation-delay: 0ms; }
+.hero-delay-1 { animation-delay: 80ms; }
+.hero-delay-2 { animation-delay: 160ms; }
+.hero-delay-3 { animation-delay: 240ms; }
+.hero-delay-4 { animation-delay: 320ms; }
+.hero-delay-5 { animation-delay: 400ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-item { opacity: 1 !important; animation: none !important; }
+}
+
+/* ── Scroll reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal.visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
 
 /* prefers-reduced-motion */

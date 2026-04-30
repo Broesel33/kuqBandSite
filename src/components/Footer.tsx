@@ -77,7 +77,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 aria-label={`${label} — öffnet in neuem Tab`}
                 className="transition-colors duration-200"
-                style={{ color: "rgba(176,190,200,0.7)" }}
+                style={{ color: "var(--color-text-muted-on-dark)" }}
               >
                 {icon}
                 <span className="sr-only">(öffnet in neuem Tab)</span>
@@ -93,7 +93,7 @@ export default function Footer() {
               <li key={href}>
                 <Link
                   href={href}
-                  className="transition-colors duration-200"
+                  className="transition-colors duration-200 hover:text-white"
                   style={{ color: "var(--color-text-muted-on-dark)" }}
                 >
                   {label}
@@ -154,6 +154,7 @@ export default function Footer() {
           <p style={{ color: "rgba(176,190,200,0.5)", fontSize: "12px" }}>
             © {new Date().getFullYear()} Kreiz &amp; Quer. Live-Band aus der Steiermark.
           </p>
+
         </div>
       </div>
     </footer>

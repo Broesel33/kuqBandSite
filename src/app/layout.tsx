@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Manrope, Inter } from "next/font/google";
+import { Syne, Manrope } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SkipLink from "@/components/SkipLink";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const syne = Syne({
+  variable: "--font-syne",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 const manrope = Manrope({
@@ -17,15 +17,9 @@ const manrope = Manrope({
   weight: ["400", "500", "600", "700"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-});
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.kreizundquer.com"),
-  title: "Kreiz & Quer – Live, leidenschaftlich, unvergesslich – Musik für dein Event!",
+  title: "Die Band aus der Steiermark für dein Event – Live, leidenschaftlich, unvergesslich, Kreiz & Quer",
   description: "Kreiz & Quer: Live-Musik für Hochzeiten, Bälle, Firmenfeiern und Events in ganz Österreich. 4 Musiker, 200+ Auftritte, 100 % live.",
   openGraph: {
     title: "Kreiz & Quer – Live-Band aus der Steiermark",
@@ -49,9 +43,10 @@ export default function RootLayout({
   return (
     <html
       lang="de"
-      className={`${spaceGrotesk.variable} ${manrope.variable} ${inter.variable} h-full antialiased`}
+      className={`${syne.variable} ${manrope.variable} h-full antialiased`}
     >
       <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@400,0&display=swap"
           rel="stylesheet"

@@ -96,7 +96,7 @@ export default function EventRow({
           </span>
           <span style={{
             display: 'block',
-            fontSize: '0.55rem',
+            fontSize: '0.65rem',
             fontWeight: 600,
             letterSpacing: '0.06em',
             textTransform: 'uppercase',

@@ -49,9 +49,10 @@ export default function HeroSection({
     <p
       className="text-sm font-semibold"
       style={{ color: 'var(--color-gold)', fontFamily: 'var(--font-ui)', letterSpacing: '0.02em' }}
-      aria-label="über 200 Events · Fünf Sterne · seit 2019"
     >
-      200+ Events · ★★★★★ · seit 2019
+      200+ Events ·{' '}
+      <span role="img" aria-label="5 von 5 Sternen">★★★★★</span>
+      {' '}· seit 2019
     </p>
   );
 
@@ -71,7 +72,9 @@ export default function HeroSection({
       }}
       aria-label={isPlaying ? 'Hörprobe läuft' : 'Hörprobe abspielen'}
     >
-      <span className="material-symbols-outlined" aria-hidden="true" style={{ fontSize: '1.1rem' }}>{isPlaying ? 'graphic_eq' : 'play_circle'}</span>
+      <span className="material-symbols-outlined" aria-hidden="true" style={{ fontSize: '1.1rem' }}>
+        {isPlaying ? 'graphic_eq' : 'play_circle'}
+      </span>
       {isPlaying ? 'Läuft …' : 'Hörprobe'}
     </button>
   );
@@ -82,35 +85,34 @@ export default function HeroSection({
       style={{ backgroundColor: 'var(--color-navy)' }}
       aria-label={eyebrow ? `${eyebrow}: ${headline}` : headline}
     >
-      {/* ── MOBILE: Flex-Stack — Text · Foto (frei) · CTAs ── */}
+      {/* ── MOBILE ── */}
       <div className="md:hidden relative w-full min-h-[100svh] flex flex-col">
         {/* TOP: Eyebrow + Headline + Subline */}
         <div className="px-6 pt-7 pb-2 flex flex-col gap-2.5">
           {eyebrow && (
             <p
-              className="text-[11px] font-semibold uppercase tracking-[0.28em]"
+              className="hero-item hero-delay-0 text-[11px] font-semibold uppercase tracking-[0.28em]"
               style={{ color: 'var(--color-gold)', fontFamily: 'var(--font-ui)' }}
-              aria-hidden="true"
             >
               {eyebrow}
             </p>
           )}
           <h1
-            className="text-5xl font-bold text-white"
+            className="hero-item hero-delay-1 text-5xl font-bold text-white"
             style={{ fontFamily: 'var(--font-headline)', letterSpacing: '-0.02em', lineHeight: 1.05 }}
           >
             {headline}
           </h1>
           <p
-            className="text-sm"
+            className="hero-item hero-delay-2 text-sm"
             style={{ color: 'rgba(255,255,255,0.88)', fontFamily: 'var(--font-body)', lineHeight: 1.65 }}
           >
             {subline}
           </p>
         </div>
 
-        {/* BOTTOM: Foto + Gradient + CTAs — drei unabhängige Ebenen */}
-        <div className="relative flex-1 min-h-[420px] -mt-14">
+        {/* BOTTOM: Foto + Gradient + CTAs */}
+        <div className="relative flex-1 min-h-[420px] -mt-10">
           <Image
             src="/band.png"
             alt={photoAlt}
@@ -119,19 +121,17 @@ export default function HeroSection({
             priority
             sizes="100vw"
           />
-          {/* Gradient-Ebene: setzt erst bei 58% ein (unterhalb der Hüfte) */}
           <div
             className="absolute inset-0 pointer-events-none"
             style={{ background: 'linear-gradient(to top, #0d1b2a 0px, #0d1b2a 185px, transparent 330px, transparent 100%)' }}
             aria-hidden="true"
           />
-          {/* Button-Ebene: unabhängig vom Gradient */}
           <div className="absolute inset-x-0 bottom-0 px-6 pb-3 pt-3 flex flex-col gap-2">
-            {trustBadge}
-            <div className="flex flex-wrap items-center gap-3 mt-1 pt-2 border-t border-white/10">
+            <div className="hero-item hero-delay-3">{trustBadge}</div>
+            <div className="hero-item hero-delay-4 flex flex-wrap items-center gap-3 mt-1 pt-2 border-t border-white/10">
               <Link
                 href={primaryCta.href}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold min-h-[44px]"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold min-h-[44px] transition-opacity hover:opacity-90"
                 style={{ backgroundColor: 'var(--color-gold)', color: '#000', fontFamily: 'var(--font-ui)', boxShadow: '0 4px 14px rgba(200,149,26,0.4)' }}
               >
                 {primaryCta.label} <span aria-hidden="true">→</span>
@@ -139,7 +139,7 @@ export default function HeroSection({
               {secondaryCta && (
                 <Link
                   href={secondaryCta.href}
-                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-semibold text-white border-2 border-white/55 min-h-[44px]"
+                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-semibold text-white border-2 border-white/55 min-h-[44px] hover:border-white hover:bg-white/10 transition-colors"
                   style={{ fontFamily: 'var(--font-ui)', background: 'transparent' }}
                 >
                   {secondaryCta.label}
@@ -149,12 +149,12 @@ export default function HeroSection({
             </div>
             {contactBar && (
               <div
-                className="flex flex-wrap items-center gap-x-4 gap-y-1 pt-3 border-t border-white/10"
+                className="hero-item hero-delay-5 flex flex-wrap items-center gap-x-4 gap-y-1 pt-3 border-t border-white/10"
                 aria-label="Direkte Kontaktmöglichkeiten"
               >
                 <a
                   href="tel:+436802378954"
-                  className="flex items-center gap-2 text-sm min-h-[36px]"
+                  className="flex items-center gap-2 text-sm min-h-[44px] transition-colors hover:text-white"
                   style={{ color: 'var(--color-text-muted-on-dark)', fontFamily: 'var(--font-ui)' }}
                 >
                   <span className="material-symbols-outlined text-base" aria-hidden="true">phone</span>
@@ -162,7 +162,7 @@ export default function HeroSection({
                 </a>
                 <a
                   href="https://wa.me/436802378954"
-                  className="flex items-center gap-2 text-sm min-h-[36px]"
+                  className="flex items-center gap-2 text-sm min-h-[44px] transition-colors hover:text-white"
                   style={{ color: 'var(--color-text-muted-on-dark)', fontFamily: 'var(--font-ui)' }}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -178,16 +178,16 @@ export default function HeroSection({
         </div>
       </div>
 
-      {/* ── DESKTOP: Golden stage glow + Bandfoto rechts ── */}
+      {/* ── DESKTOP: Bandfoto rechts ── */}
       <div
-        className="hidden md:block absolute right-0 top-6 bottom-6 w-[45%]"
+        className="hero-item hero-delay-2 hidden md:block absolute right-0 top-6 bottom-6 w-[45%]"
         aria-hidden="true"
       >
-        {/* Subtiler Gold-Glow hinter der Band — Bühnen-Atmosphäre */}
+        {/* Gold-Glow hinter der Band */}
         <div
           className="absolute inset-0"
           style={{
-            background: 'radial-gradient(ellipse at 50% 80%, rgba(200,149,26,0.18) 0%, rgba(200,149,26,0.06) 40%, transparent 68%)',
+            background: 'radial-gradient(ellipse at 50% 80%, rgba(200,149,26,0.30) 0%, rgba(200,149,26,0.10) 45%, transparent 80%)',
             pointerEvents: 'none',
             zIndex: 0,
           }}
@@ -208,33 +208,30 @@ export default function HeroSection({
         <div className="w-[55%] flex flex-col gap-5">
           {eyebrow && (
             <p
-              className="text-[11px] font-semibold uppercase tracking-[0.28em]"
+              className="hero-item hero-delay-0 text-[11px] font-semibold uppercase tracking-[0.28em]"
               style={{ color: 'var(--color-gold)', fontFamily: 'var(--font-ui)' }}
-              aria-hidden="true"
             >
               {eyebrow}
             </p>
           )}
           <h1
-            className="text-7xl lg:text-8xl font-bold text-white"
-            style={{ fontFamily: 'var(--font-headline)', letterSpacing: '-0.02em', lineHeight: 1.1 }}
+            className="hero-item hero-delay-1 text-7xl lg:text-8xl font-extrabold text-white"
+            style={{ fontFamily: 'var(--font-headline)', letterSpacing: '-0.02em', lineHeight: 1.05 }}
           >
             {headline}
           </h1>
           <p
-            className="text-xl max-w-lg"
+            className="hero-item hero-delay-2 text-xl max-w-lg"
             style={{ color: 'var(--color-text-muted-on-dark)', fontFamily: 'var(--font-body)', lineHeight: 1.7 }}
           >
             {subline}
           </p>
-          {trustBadge}
-          <div className="flex flex-wrap items-center gap-4 mt-1">
+          <div className="hero-item hero-delay-3">{trustBadge}</div>
+          <div className="hero-item hero-delay-4 flex flex-wrap items-center gap-4 mt-1">
             <Link
               href={primaryCta.href}
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-semibold transition-opacity min-h-[44px]"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-semibold transition-opacity min-h-[44px] hover:opacity-90"
               style={{ backgroundColor: 'var(--color-gold)', color: '#000', fontFamily: 'var(--font-ui)', boxShadow: '0 4px 14px rgba(200,149,26,0.4)' }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '0.88'; }}
-              onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.opacity = '1'; }}
             >
               {primaryCta.label} <span aria-hidden="true">→</span>
             </Link>
@@ -251,28 +248,24 @@ export default function HeroSection({
           </div>
           {contactBar && (
             <div
-              className="flex flex-wrap items-center gap-x-6 gap-y-3 mt-1 pt-6 border-t border-white/10"
+              className="hero-item hero-delay-5 flex flex-wrap items-center gap-x-6 gap-y-3 mt-1 pt-6 border-t border-white/10"
               aria-label="Direkte Kontaktmöglichkeiten"
             >
               <a
                 href="tel:+436802378954"
-                className="flex items-center gap-2 text-sm transition-colors min-h-[44px]"
+                className="flex items-center gap-2 text-sm transition-colors min-h-[44px] hover:text-white"
                 style={{ color: 'var(--color-text-muted-on-dark)', fontFamily: 'var(--font-ui)' }}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#ffffff'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-text-muted-on-dark)'; }}
               >
                 <span className="material-symbols-outlined text-base" aria-hidden="true">phone</span>
                 <span>+43 680 23 78 95 4</span>
               </a>
               <a
                 href="https://wa.me/436802378954"
-                className="flex items-center gap-2 text-sm transition-colors min-h-[44px]"
+                className="flex items-center gap-2 text-sm transition-colors min-h-[44px] hover:text-white"
                 style={{ color: 'var(--color-text-muted-on-dark)', fontFamily: 'var(--font-ui)' }}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp — öffnet in neuem Tab"
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#ffffff'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-text-muted-on-dark)'; }}
               >
                 <WhatsAppIcon className="w-4 h-4" />
                 <span aria-hidden="true">WhatsApp</span>
@@ -280,10 +273,8 @@ export default function HeroSection({
               </a>
               <a
                 href="mailto:info@kreizundquer.com"
-                className="flex items-center gap-2 text-sm transition-colors min-h-[44px]"
+                className="flex items-center gap-2 text-sm transition-colors min-h-[44px] hover:text-white"
                 style={{ color: 'var(--color-text-muted-on-dark)', fontFamily: 'var(--font-ui)' }}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#ffffff'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-text-muted-on-dark)'; }}
               >
                 <span className="material-symbols-outlined text-base" aria-hidden="true">mail</span>
                 <span>info@kreizundquer.com</span>
