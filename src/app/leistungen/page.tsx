@@ -153,15 +153,15 @@ export default function Leistungen() {
               {/* Zweispaltig: Info (2/3) + Details (1/3) */}
               <div
                 style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                  display: "flex",
+                  flexWrap: "wrap",
                   gap: "3rem",
                   alignItems: "start",
                   marginBottom: "2rem",
                 }}
               >
                 {/* Info-Spalte */}
-                <div style={{ gridColumn: "span 2" }}>
+                <div style={{ flex: "2 1 300px", minWidth: 0 }}>
                   <span
                     className="material-symbols-outlined"
                     aria-hidden="true"
@@ -199,7 +199,7 @@ export default function Leistungen() {
                 </div>
 
                 {/* Detail-Spalte */}
-                <div>
+                <div style={{ flex: "1 1 200px", minWidth: 0 }}>
                   <h3
                     style={{
                       fontFamily: "var(--font-ui)",

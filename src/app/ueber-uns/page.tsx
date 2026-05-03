@@ -11,28 +11,28 @@ const mitglieder = [
   {
     name: "Manu",
     instrument: "Gesang · Rhythmus-Gitarre",
-    bio: "Manu ist der Grund, warum Gäste den letzten Zug verpassen. Mit einer Stimme, die tiefer geht als so manche Erwartung, zieht er einen Raum in seinen Bann — langsam, sicher, und bevor man es merkt, singt der ganze Saal mit. Manche nennen das Talent. Manu nennt es Dienstag.",
+    bio: "Manu hat eine Stimme, die den Raum ändert, bevor er auch nur die erste Zeile zu Ende gesungen hat — tiefer, voller und irgendwie echter als erwartet. Auf der Bühne ist er komplett bei der Sache: spürt die Stimmung, reagiert auf sie, zieht die Leute rein ohne großes Aufhebens darum zu machen. Bevor man's merkt, singt der halbe Saal mit. Das klingt einfach. Ist es aber nicht.",
     photoSrc: "/Manu.png",
     photoAlt: "Manu singt und spielt Rhythmus-Gitarre",
   },
   {
     name: "Robert",
     instrument: "Gesang · E-Gitarre",
-    bio: "Robert singt in Höhen, die Manu freundlich lächelnd an sich vorbeilässt — und zusammen klingt das, als wäre es so geplant gewesen. Seit immer. Wo Worte nicht mehr reichen, lässt er seine Gitarre reden. Manche Menschen haben einfach zu viel Talent für eine einzige Sache — Robert ist einer davon.",
+    bio: "Robert trifft Töne, die Manu mit einem freundlichen Lächeln stehen lässt und nie anfasst — und irgendwie klingt das zusammen besser als getrennt. Was er mit seiner Gitarre macht, ist schwer in Worte zu fassen: manchmal nachdenklich und leise, manchmal laut genug, dass die Gespräche am Nebentisch kurz einfrieren. Er ist nicht der Typ, der Aufmerksamkeit sucht. Er kriegt sie trotzdem.",
     photoSrc: "/Robert.png",
     photoAlt: "Robert singt und spielt E-Gitarre",
   },
   {
     name: "Steph",
     instrument: "Schlagzeug · Keyboard",
-    bio: "Steph ist immer einen Schlag voraus. Bevor jemand anderes auch nur überlegt, ob die Energie im Raum gerade kippt, hat er bereits das Tempo angepasst. Zwischen Schlagzeug und Keyboard wechselt er so selbstverständlich, als wäre beides dasselbe Instrument — und irgendwie klingt es auch so.",
+    bio: "Wer Steph beim Aufbau sieht — ruhig, konzentriert, meistens ein bisschen in sich gekehrt — ahnt nicht, was gleich passiert. Dann setzt er sich ans Schlagzeug, und der Raum ändert sich. Zwischen Drums und Keyboard wechselt er so entspannt, als wäre das eine komplett normale Sache. Ist es aber nicht. Die wenigsten, die Schlagzeug spielen, können auch Keyboard — und die noch wenigeren klingen so, als wäre es nie eine Frage gewesen.",
     photoSrc: "/steph.png",
     photoAlt: "Steph am Schlagzeug und Keyboard",
   },
   {
     name: "Gabs",
     instrument: "Bass · Background Vocals",
-    bio: "Gabs ist das Fundament — ohne ihn würde der Rest einfach in der Luft hängen. Sein Bass hält alles zusammen, seine Stimme gibt dem Ganzen Wärme. Man hört ihn vielleicht nicht immer zuerst. Aber wenn er fehlt, merkt es jeder sofort.",
+    bio: "Gabs ist der, der nach dem Auftritt noch mit allen redet — und der einzige, dem das wirklich gelingt, ohne dass es aufgesetzt wirkt. Auf der Bühne läuft sein Bass als Fundament unter allem durch, eher gespürt als bewusst gehört. Er hält zusammen, was zusammengehört. Und seine Stimme im Hintergrund ist oft der Unterschied zwischen einem guten und einem richtig guten Moment.",
     photoSrc: "/gabs.png",
     photoAlt: "Gabs spielt Bass und singt",
   },
@@ -90,7 +90,7 @@ export default function UeberUns() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(min(300px, 100%), 1fr))",
               gap: "4rem",
               alignItems: "center",
             }}
@@ -137,7 +137,7 @@ export default function UeberUns() {
                   marginBottom: "1.5rem",
                 }}
               >
-                Wie aus vier Musikern eine Band wurde.
+                Wie aus uns Vieren eine Band wurde.
               </h2>
 
               <div

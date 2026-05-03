@@ -213,6 +213,7 @@ export default function Navigation() {
                 alignItems: "center",
                 justifyContent: "center",
                 borderRadius: "0.375rem",
+                overflow: "hidden",
               }}
             >
               Anfragen <span aria-hidden="true" style={{ marginLeft: "0.25rem" }}>→</span>
