@@ -4,6 +4,7 @@ export const metadata = {
   title: "Leistungen – Kreiz & Quer",
   description:
     "Live-Musik für Hochzeiten, Bälle, Firmenfeiern und Events in der Steiermark und ganz Österreich — Kreiz & Quer. 100 % live, individuell abgestimmt.",
+  alternates: { canonical: "https://www.kreizundquer.at/leistungen" },
 };
 
 interface LeistungItem {

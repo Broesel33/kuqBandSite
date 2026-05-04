@@ -1,5 +1,6 @@
 export const metadata = {
   title: "Impressum – Kreiz & Quer",
+  alternates: { canonical: "https://www.kreizundquer.at/impressum" },
 };
 
 export default function Impressum() {

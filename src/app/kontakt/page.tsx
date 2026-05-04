@@ -5,6 +5,7 @@ export const metadata = {
   title: "Kontakt – Kreiz & Quer",
   description:
     "Schreib uns für eine unverbindliche Anfrage — Kreiz & Quer, Live-Band aus der Steiermark. Wir antworten innerhalb von 24 Stunden.",
+  alternates: { canonical: "https://www.kreizundquer.at/kontakt" },
 };
 
 export default function KontaktPage() {

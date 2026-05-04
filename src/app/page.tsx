@@ -1,5 +1,9 @@
 import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
+
+export const metadata = {
+  alternates: { canonical: "https://www.kreizundquer.at" },
+};
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import EventRow from "@/components/EventRow";

@@ -5,6 +5,7 @@ export const metadata = {
   title: "Über uns – Kreiz & Quer",
   description:
     "Lern Manu, Robert, Steph und Gabs kennen — die vier Musiker hinter Kreiz & Quer, einer Live-Band aus der Steiermark mit über 200 Auftritten in ganz Österreich.",
+  alternates: { canonical: "https://www.kreizundquer.at/ueber-uns" },
 };
 
 const mitglieder = [

@@ -152,7 +152,7 @@ export default function Footer() {
             info@kreizundquer.com
           </a>
 
-          <p style={{ color: "rgba(176,190,200,0.5)", fontSize: "12px" }}>
+          <p style={{ color: "var(--color-text-muted-on-dark)", fontSize: "12px" }}>
             © {new Date().getFullYear()} Kreiz &amp; Quer. Live-Band aus der Steiermark.
           </p>
 

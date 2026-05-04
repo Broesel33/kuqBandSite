@@ -193,6 +193,7 @@ export default function ContactForm() {
             type="date"
             value={form.datum}
             onChange={set("datum")}
+            min={new Date().toISOString().split("T")[0]}
             style={inputBase}
           />
         </div>

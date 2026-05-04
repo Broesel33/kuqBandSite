@@ -1,5 +1,6 @@
 export const metadata = {
   title: "Datenschutzerklärung – Kreiz & Quer",
+  alternates: { canonical: "https://www.kreizundquer.at/datenschutz" },
 };
 
 const h2Style: React.CSSProperties = {

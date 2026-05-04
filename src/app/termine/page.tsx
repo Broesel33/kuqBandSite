@@ -6,6 +6,7 @@ export const metadata = {
   title: "Termine – Kreiz & Quer",
   description:
     "Alle öffentlichen Auftritte von Kreiz & Quer — erlebe die Live-Band aus der Steiermark bei Konzerten in ganz Österreich.",
+  alternates: { canonical: "https://www.kreizundquer.at/termine" },
 };
 
 export default function Termine() {
