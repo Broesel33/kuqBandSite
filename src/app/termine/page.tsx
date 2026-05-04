@@ -3,17 +3,59 @@ import { TERMINE } from "@/data/termine";
 import EventRow from "@/components/EventRow";
 
 export const metadata = {
-  title: "Termine – Kreiz & Quer",
+  title: "Konzerttermine & Live-Auftritte | Steiermark – Kreiz & Quer",
   description:
     "Alle öffentlichen Auftritte von Kreiz & Quer — erlebe die Live-Band aus der Steiermark bei Konzerten in ganz Österreich.",
   alternates: { canonical: "https://www.kreizundquer.at/termine" },
 };
+
+function buildEventJsonLd(kommendeTermine: typeof TERMINE) {
+  return kommendeTermine.map((t) => {
+    const [venueName, addressLocality] = t.venue.includes(", ")
+      ? t.venue.split(", ")
+      : [t.venue, "Österreich"];
+
+    return {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      name: t.eventName,
+      startDate: t.dateISO,
+      eventStatus: "https://schema.org/EventScheduled",
+      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+      location: {
+        "@type": "Place",
+        name: venueName,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality,
+          addressCountry: "AT",
+        },
+      },
+      organizer: {
+        "@type": "MusicGroup",
+        name: "Kreiz & Quer",
+        url: "https://www.kreizundquer.at",
+      },
+      performer: {
+        "@type": "MusicGroup",
+        name: "Kreiz & Quer",
+        url: "https://www.kreizundquer.at",
+      },
+    };
+  });
+}
 
 export default function Termine() {
   const kommendeTermine = TERMINE.filter((t) => t.status !== "past");
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(buildEventJsonLd(kommendeTermine)),
+        }}
+      />
       {/* 1. Page-Header */}
       <div style={{ background: "var(--color-navy)", padding: "5rem 0" }}>
         <div style={{ maxWidth: "1536px", margin: "0 auto", padding: "0 2rem" }}>

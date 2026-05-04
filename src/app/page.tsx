@@ -2,7 +2,56 @@ import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
 
 export const metadata = {
+  title: "Kreiz & Quer – Live-Band Steiermark | Hochzeiten, Bälle & Events",
   alternates: { canonical: "https://www.kreizundquer.at" },
+};
+
+const musicGroupJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  name: "Kreiz & Quer",
+  url: "https://www.kreizundquer.at",
+  description:
+    "Live-Band aus der Steiermark für Hochzeiten, Bälle und Events — vier Musiker, ein Sound, kein Playback.",
+  foundingDate: "2019",
+  foundingLocation: {
+    "@type": "Place",
+    name: "Steiermark, Österreich",
+  },
+  genre: ["Pop", "Rock", "Austropop", "Cover"],
+  member: [
+    {
+      "@type": "OrganizationRole",
+      member: { "@type": "Person", name: "Manu" },
+      roleName: ["Gesang", "Rhythmus-Gitarre"],
+    },
+    {
+      "@type": "OrganizationRole",
+      member: { "@type": "Person", name: "Robert" },
+      roleName: ["Gesang", "E-Gitarre"],
+    },
+    {
+      "@type": "OrganizationRole",
+      member: { "@type": "Person", name: "Steph" },
+      roleName: ["Schlagzeug", "Keyboard"],
+    },
+    {
+      "@type": "OrganizationRole",
+      member: { "@type": "Person", name: "Gabs" },
+      roleName: ["Bass", "Background Vocals"],
+    },
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+436802378954",
+    email: "info@kreizundquer.com",
+    contactType: "booking",
+  },
+  sameAs: [
+    "https://www.facebook.com/kreizuquer/",
+    "https://www.instagram.com/kreiz_und_quer/",
+    "https://www.youtube.com/@kreizquer",
+  ],
 };
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
@@ -15,6 +64,10 @@ export default function Startseite() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(musicGroupJsonLd) }}
+      />
       {/* 1. Hero */}
       <HeroSection
         headline="Kreiz & Quer"

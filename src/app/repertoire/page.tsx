@@ -2,7 +2,7 @@ import RepertoireFilter, { type GenreSection } from "@/components/RepertoireFilt
 import Link from "next/link";
 
 export const metadata = {
-  title: "Repertoire – Kreiz & Quer",
+  title: "Songliste & Repertoire | Austropop bis Charts – Kreiz & Quer",
   description:
     "Unser Repertoire: Austropop, Pop & Rock, Evergreens und aktuelle Charts — alles live gespielt von Kreiz & Quer, der Live-Band aus der Steiermark.",
   alternates: { canonical: "https://www.kreizundquer.at/repertoire" },

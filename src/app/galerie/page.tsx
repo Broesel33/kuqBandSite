@@ -1,7 +1,7 @@
 import GalleryGrid from "@/components/GalleryGrid";
 
 export const metadata = {
-  title: "Galerie – Kreiz & Quer",
+  title: "Fotos & Live-Impressionen | Hochzeitsband Steiermark – Kreiz & Quer",
   description: "Impressionen von Kreiz & Quer live auf der Bühne: Hochzeiten, Bälle, Events und mehr — eine Live-Band aus der Steiermark.",
   alternates: { canonical: "https://www.kreizundquer.at/galerie" },
 };

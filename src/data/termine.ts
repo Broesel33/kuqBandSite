@@ -65,18 +65,6 @@ export const TERMINE: Termin[] = [
     statusLabel: 'Bald',
   },
   {
-    id: '2026-08-15-teichjubilaeum',
-    dateISO: '2026-08-15',
-    day: '15',
-    monthShort: 'Aug',
-    year: '2026',
-    weekday: 'Sa',
-    eventName: 'Teichjubiläum',
-    venue: 'Tieschen',
-    status: 'upcoming',
-    statusLabel: 'Bald',
-  },
-  {
     id: '2026-08-29-grillfest',
     dateISO: '2026-08-29',
     day: '29',

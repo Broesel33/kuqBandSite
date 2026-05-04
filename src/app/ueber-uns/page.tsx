@@ -1,8 +1,56 @@
 import Image from "next/image";
 import MemberCard from "@/components/MemberCard";
 
+const musicGroupJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  name: "Kreiz & Quer",
+  url: "https://www.kreizundquer.at",
+  description:
+    "Lern Manu, Robert, Steph und Gabs kennen — die vier Musiker hinter Kreiz & Quer, einer Live-Band aus der Steiermark mit über 200 Auftritten in ganz Österreich.",
+  foundingDate: "2019",
+  foundingLocation: {
+    "@type": "Place",
+    name: "Steiermark, Österreich",
+  },
+  genre: ["Pop", "Rock", "Austropop", "Cover"],
+  member: [
+    {
+      "@type": "OrganizationRole",
+      member: { "@type": "Person", name: "Manu" },
+      roleName: ["Gesang", "Rhythmus-Gitarre"],
+    },
+    {
+      "@type": "OrganizationRole",
+      member: { "@type": "Person", name: "Robert" },
+      roleName: ["Gesang", "E-Gitarre"],
+    },
+    {
+      "@type": "OrganizationRole",
+      member: { "@type": "Person", name: "Steph" },
+      roleName: ["Schlagzeug", "Keyboard"],
+    },
+    {
+      "@type": "OrganizationRole",
+      member: { "@type": "Person", name: "Gabs" },
+      roleName: ["Bass", "Background Vocals"],
+    },
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+436802378954",
+    email: "info@kreizundquer.com",
+    contactType: "booking",
+  },
+  sameAs: [
+    "https://www.facebook.com/kreizuquer/",
+    "https://www.instagram.com/kreiz_und_quer/",
+    "https://www.youtube.com/@kreizquer",
+  ],
+};
+
 export const metadata = {
-  title: "Über uns – Kreiz & Quer",
+  title: "Die Band | Live-Musiker aus der Steiermark – Kreiz & Quer",
   description:
     "Lern Manu, Robert, Steph und Gabs kennen — die vier Musiker hinter Kreiz & Quer, einer Live-Band aus der Steiermark mit über 200 Auftritten in ganz Österreich.",
   alternates: { canonical: "https://www.kreizundquer.at/ueber-uns" },
@@ -42,6 +90,10 @@ const mitglieder = [
 export default function UeberUns() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(musicGroupJsonLd) }}
+      />
       {/* 1. Page-Header */}
       <div style={{ background: "var(--color-navy)", padding: "5rem 0" }}>
         <div style={{ maxWidth: "1536px", margin: "0 auto", padding: "0 2rem" }}>
