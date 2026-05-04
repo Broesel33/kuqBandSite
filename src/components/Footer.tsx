@@ -40,6 +40,7 @@ const footerNavLinks = [
   { href: "/galerie", label: "Galerie" },
   { href: "/kontakt", label: "Kontakt" },
   { href: "/impressum", label: "Impressum" },
+  { href: "/datenschutz", label: "Datenschutz" },
 ];
 
 export default function Footer() {

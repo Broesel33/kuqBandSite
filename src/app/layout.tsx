@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SkipLink from "@/components/SkipLink";
+import CookieConsentBanner from "@/components/CookieConsentBanner";
 
 const syne = Syne({
   variable: "--font-syne",
@@ -59,6 +60,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <CookieConsentBanner />
       </body>
     </html>
   );

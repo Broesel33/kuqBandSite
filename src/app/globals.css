@@ -21,7 +21,7 @@
   --color-text:                #1a2627;
   --color-text-secondary:      #3e5558;
   --color-text-muted:          #6e9096;
-  --color-text-muted-on-dark:  #8cb0b4;
+  --color-text-muted-on-dark:  #b8d0d4;
   --color-text-on-dark:        #e8f2f3;
 
   /* ── Feedback ── */
@@ -69,9 +69,10 @@ h1, h2, h3, h4, h5, h6 {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid var(--color-blue);
+  outline: 3px solid var(--color-gold-text);
   outline-offset: 3px;
   border-radius: 2px;
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.5);
 }
 
 /* Skip-Link */
