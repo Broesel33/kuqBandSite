@@ -521,7 +521,7 @@ export default function Startseite() {
             </p>
             <Link
               href="/kontakt"
-              className="inline-flex items-center justify-center gap-2 transition-opacity hover:opacity-90"
+              className="inline-flex items-center justify-center gap-2 btn-cta"
               style={{
                 padding: "1rem 2.5rem",
                 backgroundColor: "var(--color-gold)",

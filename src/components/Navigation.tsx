@@ -130,7 +130,7 @@ export default function Navigation() {
           })}
           <Link
             href="/kontakt"
-            className="ml-2 px-5 py-2 rounded-xl font-semibold text-[11px] uppercase tracking-widest"
+            className="ml-2 px-5 py-2 rounded-xl font-semibold text-[11px] uppercase tracking-widest btn-cta"
             style={{
               fontFamily: "var(--font-ui)",
               backgroundColor: "var(--color-gold)",
@@ -217,10 +217,11 @@ export default function Navigation() {
             <Link
               href="/kontakt"
               onClick={closeMenu}
+              className="btn-cta"
               style={{
                 marginTop: "0.75rem",
                 backgroundColor: "var(--color-gold)",
-                color: "#fff",
+                color: "#000",
                 fontFamily: "var(--font-ui)",
                 fontWeight: 600,
                 fontSize: "0.875rem",

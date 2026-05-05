@@ -421,6 +421,7 @@ export default function FAQ() {
             </p>
             <Link
               href="/kontakt"
+              className="btn-cta"
               style={{
                 display: "inline-flex",
                 alignItems: "center",

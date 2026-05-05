@@ -379,6 +379,7 @@ export default function Leistungen() {
 
             <Link
               href="/kontakt"
+              className="btn-cta"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
