@@ -49,7 +49,7 @@ export default function MemberCard({
       {/* Gold accent bar */}
       <div
         className="h-1 w-full"
-        style={{ backgroundColor: 'var(--color-gold)' }}
+        style={{ backgroundColor: 'var(--color-amber)' }}
         aria-hidden="true"
       />
 
@@ -58,7 +58,7 @@ export default function MemberCard({
         {/* Instrument label */}
         <p
           className="text-[11px] font-semibold uppercase tracking-[0.15em]"
-          style={{ color: 'var(--color-gold-text)', fontFamily: 'var(--font-ui)' }}
+          style={{ color: 'var(--color-amber-text)', fontFamily: 'var(--font-ui)' }}
         >
           {instrument}
         </p>

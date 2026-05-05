@@ -15,8 +15,8 @@ interface EventRowProps {
 }
 
 const statusStyles: Record<EventStatus, { bg: string; text: string }> = {
-  confirmed: { bg: 'rgba(37, 99, 235, 0.12)', text: 'var(--color-blue)' },
-  upcoming:  { bg: 'rgba(200, 149, 26, 0.12)', text: 'var(--color-gold-text)' },
+  confirmed: { bg: 'rgba(37, 99, 235, 0.12)', text: 'var(--color-petrol)' },
+  upcoming:  { bg: 'rgba(200, 149, 26, 0.12)', text: 'var(--color-amber-text)' },
   past:      { bg: 'rgba(92, 84, 72, 0.1)',    text: 'var(--color-text-secondary)' },
 };
 
@@ -70,14 +70,14 @@ export default function EventRow({
           userSelect: 'none',
         }}
       >
-        <div style={{ backgroundColor: 'var(--color-gold)', padding: '0.2rem 0' }}>
+        <div style={{ backgroundColor: 'var(--color-amber)', padding: '0.2rem 0' }}>
           <span style={{
             display: 'block',
             fontSize: '0.6rem',
             fontWeight: 700,
             letterSpacing: '0.08em',
             textTransform: 'uppercase',
-            color: 'var(--color-navy)',
+            color: 'var(--color-dark)',
             fontFamily: 'var(--font-ui)',
           }}>
             {monthShort}

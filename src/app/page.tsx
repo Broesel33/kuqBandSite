@@ -82,7 +82,7 @@ export default function Startseite() {
       {/* 2. Video */}
       <section
         aria-labelledby="video-heading"
-        style={{ background: "var(--color-navy)", padding: "5rem 0" }}
+        style={{ background: "var(--color-dark)", padding: "5rem 0" }}
       >
         <div style={{ maxWidth: "960px", margin: "0 auto", padding: "0 1.5rem" }}>
           <ScrollReveal>
@@ -146,7 +146,7 @@ export default function Startseite() {
                   fontWeight: 600,
                   letterSpacing: "0.15em",
                   textTransform: "uppercase",
-                  color: "var(--color-gold-text)",
+                  color: "var(--color-amber-text)",
                   fontFamily: "var(--font-ui)",
                   marginBottom: "0.75rem",
                 }}
@@ -209,7 +209,7 @@ export default function Startseite() {
       {/* 4. Warum Kreiz & Quer */}
       <section
         aria-labelledby="warum-heading"
-        style={{ background: "var(--color-navy)", padding: "6rem 0" }}
+        style={{ background: "var(--color-dark)", padding: "6rem 0" }}
       >
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <div
@@ -230,7 +230,7 @@ export default function Startseite() {
                     fontWeight: 600,
                     letterSpacing: "0.15em",
                     textTransform: "uppercase",
-                    color: "var(--color-gold)",
+                    color: "var(--color-amber)",
                     fontFamily: "var(--font-ui)",
                     marginBottom: "0.75rem",
                   }}
@@ -252,7 +252,7 @@ export default function Startseite() {
                   style={{
                     width: "3rem",
                     height: "3px",
-                    backgroundColor: "var(--color-gold)",
+                    backgroundColor: "var(--color-amber)",
                   }}
                   aria-hidden="true"
                 />
@@ -300,7 +300,7 @@ export default function Startseite() {
                       aria-hidden="true"
                       style={{
                         fontSize: "2rem",
-                        color: "var(--color-gold)",
+                        color: "var(--color-amber)",
                         display: "block",
                         marginBottom: "0.75rem",
                       }}
@@ -362,7 +362,7 @@ export default function Startseite() {
                     fontWeight: 600,
                     letterSpacing: "0.15em",
                     textTransform: "uppercase",
-                    color: "var(--color-gold-text)",
+                    color: "var(--color-amber-text)",
                     fontFamily: "var(--font-ui)",
                     marginBottom: "0.75rem",
                   }}
@@ -382,9 +382,9 @@ export default function Startseite() {
               </div>
               <Link
                 href="/termine"
-                className="transition-colors hover:text-[var(--color-gold)]"
+                className="transition-colors hover:text-[var(--color-amber)]"
                 style={{
-                  color: "var(--color-gold-text)",
+                  color: "var(--color-amber-text)",
                   fontFamily: "var(--font-ui)",
                   fontWeight: 600,
                   fontSize: "0.9375rem",
@@ -418,7 +418,7 @@ export default function Startseite() {
                   fontWeight: 600,
                   letterSpacing: "0.15em",
                   textTransform: "uppercase",
-                  color: "var(--color-gold-text)",
+                  color: "var(--color-amber-text)",
                   fontFamily: "var(--font-ui)",
                   marginBottom: "0.75rem",
                 }}
@@ -474,7 +474,7 @@ export default function Startseite() {
       <section
         aria-label="Jetzt anfragen"
         style={{
-          background: "var(--color-navy)",
+          background: "var(--color-dark)",
           padding: "6rem 0",
           position: "relative",
           overflow: "hidden",
@@ -528,7 +528,7 @@ export default function Startseite() {
               className="inline-flex items-center justify-center gap-2 btn-cta"
               style={{
                 padding: "1rem 2.5rem",
-                backgroundColor: "var(--color-gold)",
+                backgroundColor: "var(--color-amber)",
                 color: "#000",
                 fontFamily: "var(--font-ui)",
                 fontWeight: 600,
@@ -539,11 +539,4 @@ export default function Startseite() {
                 boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
               }}
             >
-              Unverbindlich anfragen <span aria-hidden="true">→</span>
-            </Link>
-          </ScrollReveal>
-        </div>
-      </section>
-    </>
-  );
-}
+              Unverbin

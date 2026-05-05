@@ -25,7 +25,7 @@ export default function HeroSection({
   const trustBadge = (
     <p
       className="text-sm font-semibold"
-      style={{ color: 'var(--color-gold)', fontFamily: 'var(--font-ui)', letterSpacing: '0.02em' }}
+      style={{ color: 'var(--color-amber)', fontFamily: 'var(--font-ui)', letterSpacing: '0.02em' }}
     >
       200+ Events ·{' '}
       <span role="img" aria-label="5 von 5 Sternen">★★★★★</span>
@@ -36,7 +36,7 @@ export default function HeroSection({
   return (
     <section
       className="relative w-full min-h-[100svh] md:h-[calc(100svh-68px)] overflow-hidden flex items-start"
-      style={{ backgroundColor: 'var(--color-navy)' }}
+      style={{ backgroundColor: 'var(--color-dark)' }}
       aria-label={eyebrow ? `${eyebrow}: ${headline}` : headline}
     >
       {/* ── MOBILE ── */}
@@ -47,7 +47,7 @@ export default function HeroSection({
             <p
               aria-hidden="true"
               className="hero-item hero-delay-0 text-[11px] font-semibold uppercase tracking-[0.28em]"
-              style={{ color: 'var(--color-gold)', fontFamily: 'var(--font-ui)' }}
+              style={{ color: 'var(--color-amber)', fontFamily: 'var(--font-ui)' }}
             >
               {eyebrow}
             </p>
@@ -78,7 +78,7 @@ export default function HeroSection({
           />
           <div
             className="absolute inset-0 pointer-events-none"
-            style={{ background: 'linear-gradient(to top, var(--color-navy) 0px, var(--color-navy) 185px, transparent 330px, transparent 100%)' }}
+            style={{ background: 'linear-gradient(to top, var(--color-dark) 0px, var(--color-dark) 185px, transparent 330px, transparent 100%)' }}
             aria-hidden="true"
           />
           <div className="absolute inset-x-0 bottom-0 px-6 pb-3 pt-3 flex flex-col gap-2">
@@ -87,7 +87,7 @@ export default function HeroSection({
               <Link
                 href={primaryCta.href}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold min-h-[44px] btn-cta"
-                style={{ backgroundColor: 'var(--color-gold)', color: '#000', fontFamily: 'var(--font-ui)' }}
+                style={{ backgroundColor: 'var(--color-amber)', color: '#000', fontFamily: 'var(--font-ui)' }}
               >
                 {primaryCta.label} <span aria-hidden="true">→</span>
               </Link>
@@ -156,7 +156,7 @@ export default function HeroSection({
             <p
               aria-hidden="true"
               className="hero-item hero-delay-0 text-[11px] font-semibold uppercase tracking-[0.28em]"
-              style={{ color: 'var(--color-gold)', fontFamily: 'var(--font-ui)' }}
+              style={{ color: 'var(--color-amber)', fontFamily: 'var(--font-ui)' }}
             >
               {eyebrow}
             </p>
@@ -178,7 +178,7 @@ export default function HeroSection({
             <Link
               href={primaryCta.href}
               className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-semibold min-h-[44px] btn-cta"
-              style={{ backgroundColor: 'var(--color-gold)', color: '#000', fontFamily: 'var(--font-ui)' }}
+              style={{ backgroundColor: 'var(--color-amber)', color: '#000', fontFamily: 'var(--font-ui)' }}
             >
               {primaryCta.label} <span aria-hidden="true">→</span>
             </Link>
@@ -226,10 +226,4 @@ export default function HeroSection({
                 <span className="material-symbols-outlined text-base" aria-hidden="true">mail</span>
                 <span>info@kreizundquer.com</span>
               </a>
-            </div>
-          )}
-        </div>
-      </div>
-    </section>
-  );
-}
+            </di

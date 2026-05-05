@@ -31,14 +31,14 @@ export default function GaleriePage() {
     <div className="min-h-screen">
       {/* Page Header */}
       <header
-        style={{ backgroundColor: "var(--color-navy)" }}
+        style={{ backgroundColor: "var(--color-dark)" }}
         className="py-20 px-6 md:px-8"
       >
         <div className="max-w-screen-xl mx-auto">
           <p
             aria-hidden="true"
             style={{
-              color: "var(--color-gold)",
+              color: "var(--color-amber)",
               fontFamily: "var(--font-ui)",
               fontSize: "0.6875rem",
               fontWeight: 700,
@@ -130,7 +130,7 @@ export default function GaleriePage() {
               display: "inline-flex",
               alignItems: "center",
               gap: "0.5rem",
-              backgroundColor: "var(--color-navy)",
+              backgroundColor: "var(--color-dark)",
               color: "var(--color-text-on-dark)",
               fontFamily: "var(--font-ui)",
               fontWeight: 600,
@@ -156,7 +156,4 @@ export default function GaleriePage() {
             <span className="sr-only">öffnet in neuem Tab</span>
           </a>
         </div>
-      </section>
-    </div>
-  );
-}
+    

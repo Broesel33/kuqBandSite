@@ -84,7 +84,7 @@ export default function Navigation() {
     <header
       className="fixed top-0 w-full z-50"
       style={{
-        backgroundColor: "var(--color-navy)",
+        backgroundColor: "var(--color-dark)",
         borderBottom: "1px solid rgba(255,255,255,0.08)",
         boxShadow: scrolled ? "0 2px 16px rgba(0,0,0,0.35)" : "none",
         transition: "box-shadow 0.3s",
@@ -127,7 +127,7 @@ export default function Navigation() {
             className="ml-2 px-5 py-2 rounded-xl font-semibold text-[11px] uppercase tracking-widest btn-cta"
             style={{
               fontFamily: "var(--font-ui)",
-              backgroundColor: "var(--color-gold)",
+              backgroundColor: "var(--color-amber)",
               color: "#000",
               minHeight: "44px",
               display: "inline-flex",
@@ -179,7 +179,7 @@ export default function Navigation() {
             aria-label="Mobile Navigation"
             className="mobile-nav-menu"
             style={{
-              backgroundColor: "var(--color-navy)",
+              backgroundColor: "var(--color-dark)",
               borderTop: "1px solid rgba(255,255,255,0.08)",
               padding: "0.5rem 1.5rem 1.5rem",
             }}
@@ -194,7 +194,7 @@ export default function Navigation() {
                   aria-current={active ? "page" : undefined}
                   style={{
                     fontFamily: "var(--font-ui)",
-                    color: active ? "var(--color-gold)" : "rgba(240,237,232,0.8)",
+                    color: active ? "var(--color-amber)" : "rgba(240,237,232,0.8)",
                     fontWeight: 600,
                     fontSize: "0.875rem",
                     textTransform: "uppercase",
@@ -216,7 +216,7 @@ export default function Navigation() {
               className="btn-cta"
               style={{
                 marginTop: "0.75rem",
-                backgroundColor: "var(--color-gold)",
+                backgroundColor: "var(--color-amber)",
                 color: "#000",
                 fontFamily: "var(--font-ui)",
                 fontWeight: 600,
@@ -239,3 +239,4 @@ export default function Navigation() {
     </header>
   );
 }
+                                                                                                                                                                                                                                                                                                     

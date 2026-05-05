@@ -57,7 +57,7 @@ export default function Termine() {
         }}
       />
       {/* 1. Page-Header */}
-      <div style={{ background: "var(--color-navy)", padding: "5rem 0" }}>
+      <div style={{ background: "var(--color-dark)", padding: "5rem 0" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <p
             aria-hidden="true"
@@ -66,7 +66,7 @@ export default function Termine() {
               fontWeight: 600,
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "var(--color-gold)",
+              color: "var(--color-amber)",
               fontFamily: "var(--font-ui)",
               marginBottom: "0.75rem",
             }}
@@ -111,7 +111,7 @@ export default function Termine() {
                 fontWeight: 600,
                 letterSpacing: "0.15em",
                 textTransform: "uppercase",
-                color: "var(--color-gold-text)",
+                color: "var(--color-amber-text)",
                 fontFamily: "var(--font-ui)",
                 marginBottom: "0.75rem",
               }}
@@ -174,7 +174,7 @@ export default function Termine() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "0.375rem",
-                  color: "var(--color-gold-text)",
+                  color: "var(--color-amber-text)",
                   fontFamily: "var(--font-ui)",
                   fontWeight: 600,
                   fontSize: "0.9375rem",
@@ -197,7 +197,7 @@ export default function Termine() {
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <div
             style={{
-              background: "var(--color-navy)",
+              background: "var(--color-dark)",
               borderRadius: "var(--radius-xl)",
               padding: "3rem 2.5rem",
               display: "flex",
@@ -238,7 +238,7 @@ export default function Termine() {
                 alignItems: "center",
                 justifyContent: "center",
                 padding: "0.875rem 2rem",
-                backgroundColor: "var(--color-blue)",
+                backgroundColor: "var(--color-petrol)",
                 color: "#ffffff",
                 fontFamily: "var(--font-ui)",
                 fontWeight: 600,
@@ -251,9 +251,3 @@ export default function Termine() {
             >
               Unverbindlich anfragen <span aria-hidden="true">→</span>
             </Link>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}

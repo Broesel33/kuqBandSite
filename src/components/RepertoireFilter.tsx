@@ -81,18 +81,18 @@ function SongPreviewButton({ song }: { song: Song }) {
         border: "none",
         cursor: "pointer",
         transition: "background 0.15s, transform 0.1s",
-        background: playing ? "var(--color-gold)" : "var(--color-warm-gray-2)",
+        background: playing ? "var(--color-amber)" : "var(--color-warm-gray-2)",
         color: playing ? "#000" : "var(--color-text-secondary)",
         opacity: song.previewUrl ? 1 : 0.55,
       }}
       onMouseEnter={(e) => {
         (e.currentTarget as HTMLButtonElement).style.background = playing
-          ? "var(--color-gold)"
+          ? "var(--color-amber)"
           : "var(--color-border)";
       }}
       onMouseLeave={(e) => {
         (e.currentTarget as HTMLButtonElement).style.background = playing
-          ? "var(--color-gold)"
+          ? "var(--color-amber)"
           : "var(--color-warm-gray-2)";
       }}
     >
@@ -160,8 +160,8 @@ export default function RepertoireFilter({ genres }: RepertoireFilterProps) {
               style={{
                 padding: "0.5rem 1.25rem",
                 borderRadius: "9999px",
-                border: isActive ? "2px solid var(--color-gold)" : "2px solid var(--color-border)",
-                background: isActive ? "var(--color-gold)" : "transparent",
+                border: isActive ? "2px solid var(--color-amber)" : "2px solid var(--color-border)",
+                background: isActive ? "var(--color-amber)" : "transparent",
                 color: isActive ? "#000" : "var(--color-text-secondary)",
                 fontFamily: "var(--font-ui)",
                 fontSize: "0.8125rem",
@@ -194,8 +194,8 @@ export default function RepertoireFilter({ genres }: RepertoireFilterProps) {
                 fontSize: "0.75rem",
                 fontWeight: 600,
                 fontFamily: "var(--font-ui)",
-                background: "var(--color-gold-light)",
-                color: "var(--color-gold-text)",
+                background: "var(--color-amber-light)",
+                color: "var(--color-amber-text)",
               }}
             >
               {genre.label}
@@ -305,3 +305,4 @@ export default function RepertoireFilter({ genres }: RepertoireFilterProps) {
     </div>
   );
 }
+                       

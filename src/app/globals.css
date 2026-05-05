@@ -2,14 +2,14 @@
 
 @theme inline {
   /* ── Markenkernfarben — Schema „Dunkles Petrol & Silber" ── */
-  --color-navy:           #3c4748;   /* dunkles Petrol — Bühne/Hero/Nav */
-  --color-navy-mid:       #4e5e60;   /* mittleres Petrol — Karten/Placeholder */
-  --color-blue:           #6ba3a8;   /* Petrol-Silber — CTA / Links / Focus */
-  --color-blue-dark:      #4a8288;   /* dunkles Petrol-Silber — Hover/Pressed */
-  --color-blue-light:     #d4e8ea;   /* helles Petrol — Tag-Hintergründe */
-  --color-gold:           #c8951a;   /* Amber-Gold — CTA-Buttons, Eyebrow-Labels, Akzente auf Dunkel */
-  --color-gold-text:      #235458;   /* dunkles Petrol für Akzenttext auf Hell (≈9:1 auf surface) */
-  --color-gold-light:     #fef3cd;   /* sehr helles Amber — sanfte Hintergründe */
+  --color-dark:           #3c4748;   /* dunkles Petrol — Bühne/Hero/Nav */
+  --color-dark-mid:       #4e5e60;   /* mittleres Petrol — Karten/Placeholder */
+  --color-petrol:           #6ba3a8;   /* Petrol-Silber — CTA / Links / Focus */
+  --color-petrol-dark:      #4a8288;   /* dunkles Petrol-Silber — Hover/Pressed */
+  --color-petrol-light:     #d4e8ea;   /* helles Petrol — Tag-Hintergründe */
+  --color-amber:           #c8951a;   /* Amber-Gold — CTA-Buttons, Eyebrow-Labels, Akzente auf Dunkel */
+  --color-amber-text:      #235458;   /* dunkles Petrol für Akzenttext auf Hell (≈9:1 auf surface) */
+  --color-amber-light:     #fef3cd;   /* sehr helles Amber — sanfte Hintergründe */
 
   /* ── Oberflächenfarben ── */
   --color-surface:        #f3f7f8;   /* kühles Hellgrau-Weiß */
@@ -62,14 +62,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Focus Styles — NIEMALS outline: none ohne Ersatz */
 :focus-visible {
-  outline: 3px solid var(--color-gold-text);
+  outline: 3px solid var(--color-amber-text);
   outline-offset: 3px;
   border-radius: 2px;
 }
 
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid var(--color-gold-text);
+  outline: 3px solid var(--color-amber-text);
   outline-offset: 3px;
   border-radius: 2px;
   box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.5);
@@ -95,7 +95,7 @@ button:focus-visible {
   top: -100%;
   left: 1rem;
   z-index: 9999;
-  background-color: var(--color-gold);
+  background-color: var(--color-amber);
   color: #000;
   padding: 0.75rem 1.5rem;
   font-weight: 600;
@@ -117,7 +117,7 @@ button:focus-visible {
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  border-color: var(--color-blue);
+  border-color: var(--color-petrol);
   box-shadow: 0 0 0 3px rgba(107, 163, 168, 0.35);
   outline: none;
 }
@@ -165,8 +165,8 @@ textarea:focus-visible {
   color: rgba(232, 242, 243, 1);
 }
 .nav-link--active {
-  color: var(--color-gold) !important;
-  border-bottom-color: var(--color-gold) !important;
+  color: var(--color-amber) !important;
+  border-bottom-color: var(--color-amber) !important;
 }
 
 /* ── Mobile-Navigation: native <details>/<summary> ── */
@@ -229,17 +229,4 @@ textarea:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .reveal, .reveal.visible {
     opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-  }
-}
-
-/* prefers-reduced-motion */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
+    transfo

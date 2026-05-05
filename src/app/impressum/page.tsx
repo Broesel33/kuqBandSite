@@ -8,7 +8,7 @@ export default function Impressum() {
     <div className="min-h-screen">
       {/* Page Header */}
       <header
-        style={{ backgroundColor: "var(--color-navy)" }}
+        style={{ backgroundColor: "var(--color-dark)" }}
         className="py-20 px-6 md:px-8"
       >
         <div className="max-w-screen-xl mx-auto">
@@ -96,7 +96,7 @@ export default function Impressum() {
                 Telefon:{" "}
                 <a
                   href="tel:+436802378954"
-                  style={{ color: "var(--color-gold-text)", textDecoration: "none" }}
+                  style={{ color: "var(--color-amber-text)", textDecoration: "none" }}
                 >
                   +43 680 23 78 95 4
                 </a>
@@ -107,7 +107,7 @@ export default function Impressum() {
                   href="https://wa.me/436802378954"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: "var(--color-gold-text)", textDecoration: "none" }}
+                  style={{ color: "var(--color-amber-text)", textDecoration: "none" }}
                 >
                   +43 680 23 78 95 4
                 </a>
@@ -116,7 +116,7 @@ export default function Impressum() {
                 E-Mail:{" "}
                 <a
                   href="mailto:info@kreizundquer.com"
-                  style={{ color: "var(--color-gold-text)", textDecoration: "none" }}
+                  style={{ color: "var(--color-amber-text)", textDecoration: "none" }}
                 >
                   info@kreizundquer.com
                 </a>
@@ -228,7 +228,7 @@ export default function Impressum() {
                   href="https://ec.europa.eu/consumers/odr"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: "var(--color-gold)" }}
+                  style={{ color: "var(--color-amber)" }}
                 >
                   https://ec.europa.eu/consumers/odr
                 </a>

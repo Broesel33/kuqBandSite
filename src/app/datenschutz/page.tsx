@@ -12,7 +12,7 @@ const h2Style: React.CSSProperties = {
 };
 
 const linkStyle: React.CSSProperties = {
-  color: "var(--color-gold-text)",
+  color: "var(--color-amber-text)",
   textDecoration: "none",
 };
 
@@ -32,7 +32,7 @@ export default function Datenschutz() {
     <div className="min-h-screen">
       {/* Page Header */}
       <header
-        style={{ backgroundColor: "var(--color-navy)" }}
+        style={{ backgroundColor: "var(--color-dark)" }}
         className="py-20 px-6 md:px-8"
       >
         <div className="max-w-screen-xl mx-auto">

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Syne, Manrope } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -27,6 +27,10 @@ const materialSymbols = localFont({
   preload: false,
 });
 
+export const viewport: Viewport = {
+  themeColor: "#3c4748",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.kreizundquer.at"),
   title: "Die Band aus der Steiermark für dein Event – Live, leidenschaftlich, unvergesslich, Kreiz & Quer",
@@ -42,6 +46,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kreiz & Quer – Live-Band aus der Steiermark",
     description: "Live-Musik für Hochzeiten, Bälle und Events. 4 Musiker, kein Playback, 200+ Auftritte in ganz Österreich.",
+  },
+  icons: {
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
 };
 
@@ -59,12 +66,4 @@ export default function RootLayout({
         <SkipLink />
         <ConstructionBanner />
         <Navigation />
-        <main id="main-content" className="flex-grow pt-[68px]">
-          {children}
-        </main>
-        <Footer />
-        <CookieConsentBanner />
-      </body>
-    </html>
-  );
-}
+        <ma

@@ -71,8 +71,8 @@ export default function SetlistFilter({ genres }: SetlistFilterProps) {
               style={{
                 padding: "0.5rem 1.25rem",
                 borderRadius: "9999px",
-                border: isActive ? "2px solid var(--color-gold)" : "2px solid var(--color-border)",
-                background: isActive ? "var(--color-gold)" : "transparent",
+                border: isActive ? "2px solid var(--color-amber)" : "2px solid var(--color-border)",
+                background: isActive ? "var(--color-amber)" : "transparent",
                 color: isActive ? "#000" : "var(--color-text-secondary)",
                 fontFamily: "var(--font-ui)",
                 fontSize: "0.8125rem",
@@ -113,8 +113,8 @@ export default function SetlistFilter({ genres }: SetlistFilterProps) {
                 fontSize: "0.75rem",
                 fontWeight: 600,
                 fontFamily: "var(--font-ui)",
-                background: "var(--color-gold-light)",
-                color: "var(--color-gold-text)",
+                background: "var(--color-amber-light)",
+                color: "var(--color-amber-text)",
               }}
             >
               {genre.label}

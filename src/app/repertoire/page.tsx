@@ -90,14 +90,14 @@ export default function RepertoirePage() {
     <div className="min-h-screen">
       {/* Page Header */}
       <header
-        style={{ backgroundColor: "var(--color-navy)" }}
+        style={{ backgroundColor: "var(--color-dark)" }}
         className="py-20 px-6 md:px-8"
       >
         <div className="max-w-screen-xl mx-auto">
           <p
             aria-hidden="true"
             style={{
-              color: "var(--color-gold)",
+              color: "var(--color-amber)",
               fontFamily: "var(--font-ui)",
               fontSize: "0.6875rem",
               fontWeight: 700,
@@ -139,7 +139,7 @@ export default function RepertoirePage() {
               gap: "1.25rem",
               background: "rgba(255,255,255,0.06)",
               border: "1px solid rgba(212,160,23,0.4)",
-              borderLeft: "4px solid var(--color-gold)",
+              borderLeft: "4px solid var(--color-amber)",
               borderRadius: "var(--radius-md)",
               padding: "1rem 1.5rem",
             }}
@@ -149,7 +149,7 @@ export default function RepertoirePage() {
                 fontFamily: "var(--font-headline)",
                 fontSize: "2.5rem",
                 fontWeight: 800,
-                color: "var(--color-gold)",
+                color: "var(--color-amber)",
                 lineHeight: 1,
               }}
             >
@@ -218,7 +218,7 @@ export default function RepertoirePage() {
             <span
               className="material-symbols-outlined"
               aria-hidden="true"
-              style={{ fontSize: "2.5rem", color: "var(--color-gold)" }}
+              style={{ fontSize: "2.5rem", color: "var(--color-amber)" }}
             >
               library_music
             </span>
@@ -250,7 +250,7 @@ export default function RepertoirePage() {
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                backgroundColor: "var(--color-navy)",
+                backgroundColor: "var(--color-dark)",
                 color: "var(--color-text-on-dark)",
                 fontFamily: "var(--font-ui)",
                 fontWeight: 600,
@@ -265,7 +265,4 @@ export default function RepertoirePage() {
             </Link>
           </div>
         </div>
-      </section>
-    </div>
-  );
-}
+    

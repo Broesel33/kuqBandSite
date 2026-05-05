@@ -72,7 +72,7 @@ const leistungen: LeistungItem[] = [
       "Kompaktes Setup",
       "Auch als Überraschungsauftritt",
     ],
-    bg: "var(--color-navy)",
+    bg: "var(--color-dark)",
     dark: true,
   },
   {
@@ -94,7 +94,7 @@ export default function Leistungen() {
   return (
     <>
       {/* Page-Header */}
-      <div style={{ background: "var(--color-navy)", padding: "5rem 0" }}>
+      <div style={{ background: "var(--color-dark)", padding: "5rem 0" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <p
             aria-hidden="true"
@@ -103,7 +103,7 @@ export default function Leistungen() {
               fontWeight: 600,
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "var(--color-gold)",
+              color: "var(--color-amber)",
               fontFamily: "var(--font-ui)",
               marginBottom: "0.75rem",
             }}
@@ -142,7 +142,7 @@ export default function Leistungen() {
         const headingSmColor = l.dark ? "var(--color-text-muted-on-dark)" : "var(--color-text-secondary)";
         const checkColor = l.dark ? "var(--color-text-muted-on-dark)" : "var(--color-text-secondary)";
         const borderColor = l.dark ? "rgba(255,255,255,0.12)" : "var(--color-border)";
-        const linkColor = l.dark ? "var(--color-gold)" : "var(--color-gold-text)";
+        const linkColor = l.dark ? "var(--color-amber)" : "var(--color-amber-text)";
 
         return (
           <section
@@ -169,7 +169,7 @@ export default function Leistungen() {
                     aria-hidden="true"
                     style={{
                       fontSize: "3rem",
-                      color: "var(--color-gold)",
+                      color: "var(--color-amber)",
                       display: "block",
                       marginBottom: "1rem",
                     }}
@@ -234,7 +234,7 @@ export default function Leistungen() {
                         <span
                           aria-hidden="true"
                           style={{
-                            color: "var(--color-gold)",
+                            color: "var(--color-amber)",
                             fontWeight: 700,
                             flexShrink: 0,
                             marginTop: "0.1em",
@@ -275,7 +275,7 @@ export default function Leistungen() {
       <section
         id="preise"
         aria-labelledby="preise-heading"
-        style={{ background: "var(--color-navy)", padding: "5rem 0" }}
+        style={{ background: "var(--color-dark)", padding: "5rem 0" }}
       >
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <div style={{ maxWidth: "720px" }}>
@@ -286,7 +286,7 @@ export default function Leistungen() {
                 fontWeight: 600,
                 letterSpacing: "0.15em",
                 textTransform: "uppercase",
-                color: "var(--color-gold)",
+                color: "var(--color-amber)",
                 fontFamily: "var(--font-ui)",
                 marginBottom: "0.75rem",
               }}
@@ -361,7 +361,7 @@ export default function Leistungen() {
                   <span
                     className="material-symbols-outlined"
                     aria-hidden="true"
-                    style={{ fontSize: "1.25rem", color: "var(--color-gold)", flexShrink: 0 }}
+                    style={{ fontSize: "1.25rem", color: "var(--color-amber)", flexShrink: 0 }}
                   >
                     {icon}
                   </span>
@@ -386,7 +386,7 @@ export default function Leistungen() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.5rem",
-                backgroundColor: "var(--color-gold)",
+                backgroundColor: "var(--color-amber)",
                 color: "#000",
                 fontFamily: "var(--font-ui)",
                 fontWeight: 700,
@@ -399,9 +399,3 @@ export default function Leistungen() {
             >
               Unverbindlich anfragen <span aria-hidden="true">→</span>
             </Link>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}

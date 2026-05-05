@@ -36,9 +36,9 @@ export default function CookieConsentBanner() {
       <div
         className="mx-auto max-w-3xl rounded-[var(--radius-xl)] shadow-2xl"
         style={{
-          background: "var(--color-navy)",
+          background: "var(--color-dark)",
           color: "var(--color-text-on-dark)",
-          border: "1px solid var(--color-navy-mid)",
+          border: "1px solid var(--color-dark-mid)",
         }}
       >
         <div className="flex flex-col gap-4 p-5 sm:p-6">
@@ -57,7 +57,7 @@ export default function CookieConsentBanner() {
               <Link
                 href="/datenschutz"
                 className="underline underline-offset-2 hover:opacity-80 focus-visible:rounded"
-                style={{ color: "var(--color-gold)" }}
+                style={{ color: "var(--color-amber)" }}
               >
                 Datenschutzerklärung
               </Link>
@@ -72,7 +72,7 @@ export default function CookieConsentBanner() {
               style={{
                 background: "transparent",
                 color: "var(--color-text-on-dark)",
-                border: "1px solid var(--color-navy-mid)",
+                border: "1px solid var(--color-dark-mid)",
               }}
             >
               Ablehnen
@@ -81,8 +81,8 @@ export default function CookieConsentBanner() {
               onClick={accept}
               className="rounded-[var(--radius-md)] px-5 py-2.5 text-sm font-semibold transition-opacity hover:opacity-90 focus-visible:rounded-[var(--radius-md)]"
               style={{
-                background: "var(--color-gold)",
-                color: "var(--color-gold-text)",
+                background: "var(--color-amber)",
+                color: "var(--color-amber-text)",
               }}
             >
               Alle akzeptieren

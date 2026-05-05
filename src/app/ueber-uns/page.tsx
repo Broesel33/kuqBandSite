@@ -95,7 +95,7 @@ export default function UeberUns() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(musicGroupJsonLd) }}
       />
       {/* 1. Page-Header */}
-      <div style={{ background: "var(--color-navy)", padding: "5rem 0" }}>
+      <div style={{ background: "var(--color-dark)", padding: "5rem 0" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <p
             aria-hidden="true"
@@ -104,7 +104,7 @@ export default function UeberUns() {
               fontWeight: 600,
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "var(--color-gold)",
+              color: "var(--color-amber)",
               fontFamily: "var(--font-ui)",
               marginBottom: "0.75rem",
             }}
@@ -176,7 +176,7 @@ export default function UeberUns() {
                   fontWeight: 600,
                   letterSpacing: "0.15em",
                   textTransform: "uppercase",
-                  color: "var(--color-gold-text)",
+                  color: "var(--color-amber-text)",
                   fontFamily: "var(--font-ui)",
                   marginBottom: "0.75rem",
                 }}
@@ -243,7 +243,7 @@ export default function UeberUns() {
                       style={{
                         fontSize: "2rem",
                         fontWeight: 700,
-                        color: "var(--color-gold-text)",
+                        color: "var(--color-amber-text)",
                         fontFamily: "var(--font-headline)",
                         lineHeight: 1.1,
                       }}
@@ -282,7 +282,7 @@ export default function UeberUns() {
                 fontWeight: 600,
                 letterSpacing: "0.15em",
                 textTransform: "uppercase",
-                color: "var(--color-gold-text)",
+                color: "var(--color-amber-text)",
                 fontFamily: "var(--font-ui)",
                 marginBottom: "0.75rem",
               }}
@@ -335,7 +335,7 @@ export default function UeberUns() {
                 fontWeight: 600,
                 letterSpacing: "0.15em",
                 textTransform: "uppercase",
-                color: "var(--color-gold-text)",
+                color: "var(--color-amber-text)",
                 fontFamily: "var(--font-ui)",
                 marginBottom: "0.75rem",
               }}
@@ -401,7 +401,7 @@ export default function UeberUns() {
                       display: "inline-flex",
                       alignItems: "center",
                       gap: "0.5rem",
-                      color: "var(--color-gold-text)",
+                      color: "var(--color-amber-text)",
                       fontFamily: "var(--font-ui)",
                       fontWeight: 600,
                       fontSize: "0.9375rem",
@@ -417,13 +417,4 @@ export default function UeberUns() {
                     </span>
                     ViertelVier – {label} <span aria-hidden="true">↗</span>
                     <span className="sr-only">(öffnet in neuem Tab)</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
+             

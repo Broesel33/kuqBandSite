@@ -22,21 +22,21 @@ const variantStyles: Record<
     text: 'var(--color-text)',
     textSecondary: 'var(--color-text-secondary)',
     border: 'var(--color-border)',
-    linkColor: 'var(--color-gold-text)',
+    linkColor: 'var(--color-amber-text)',
   },
   dark: {
-    bg: 'var(--color-navy)',
+    bg: 'var(--color-dark)',
     text: 'var(--color-text-on-dark)',
     textSecondary: 'var(--color-text-muted-on-dark)',
     border: 'rgba(255,255,255,0.1)',
-    linkColor: 'var(--color-gold)',
+    linkColor: 'var(--color-amber)',
   },
   mid: {
     bg: 'var(--color-warm-gray-2)',
     text: 'var(--color-text)',
     textSecondary: 'var(--color-text-secondary)',
     border: 'var(--color-border)',
-    linkColor: 'var(--color-gold-text)',
+    linkColor: 'var(--color-amber-text)',
   },
 };
 
@@ -59,7 +59,7 @@ export default function ServiceCard({
         <span
           className="material-symbols-outlined select-none"
           aria-hidden="true"
-          style={{ color: 'var(--color-gold)', fontSize: '2.25rem' }}
+          style={{ color: 'var(--color-amber)', fontSize: '2.25rem' }}
         >
           {icon}
         </span>
@@ -70,7 +70,7 @@ export default function ServiceCard({
         >
           <Link
             href={linkHref}
-            className="after:absolute after:inset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)] focus-visible:ring-offset-2 rounded-sm"
+            className="after:absolute after:inset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-amber)] focus-visible:ring-offset-2 rounded-sm"
           >
             {title}
           </Link>

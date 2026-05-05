@@ -49,7 +49,7 @@ export default function Footer() {
     <footer
       role="contentinfo"
       className="w-full py-16 px-6 md:px-8"
-      style={{ backgroundColor: "var(--color-navy)" }}
+      style={{ backgroundColor: "var(--color-dark)" }}
     >
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
         {/* Brand & Socials */}
@@ -60,7 +60,7 @@ export default function Footer() {
               style={{ fontFamily: "var(--font-headline)", color: "var(--color-text-on-dark)" }}
             >
               Kreiz{" "}
-              <span style={{ color: "var(--color-gold)" }}>&amp;</span>{" "}
+              <span style={{ color: "var(--color-amber)" }}>&amp;</span>{" "}
               Quer
             </span>
           </div>
@@ -121,7 +121,7 @@ export default function Footer() {
             <span
               className="material-symbols-outlined text-base"
               aria-hidden="true"
-              style={{ color: "var(--color-gold)" }}
+              style={{ color: "var(--color-amber)" }}
             >
               phone
             </span>
@@ -138,7 +138,7 @@ export default function Footer() {
           >
             <WhatsAppIcon
               className="w-4 h-4"
-              style={{ color: "var(--color-gold)" }}
+              style={{ color: "var(--color-amber)" }}
             />
             WhatsApp
             <span className="sr-only">(öffnet in neuem Tab)</span>
@@ -152,7 +152,7 @@ export default function Footer() {
             <span
               className="material-symbols-outlined text-base"
               aria-hidden="true"
-              style={{ color: "var(--color-gold)" }}
+              style={{ color: "var(--color-amber)" }}
             >
               mail
             </span>

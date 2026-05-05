@@ -204,7 +204,7 @@ export default function FAQ() {
       />
 
       {/* Page-Header */}
-      <div style={{ background: "var(--color-navy)", padding: "5rem 0" }}>
+      <div style={{ background: "var(--color-dark)", padding: "5rem 0" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <p
             aria-hidden="true"
@@ -213,7 +213,7 @@ export default function FAQ() {
               fontWeight: 600,
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "var(--color-gold)",
+              color: "var(--color-amber)",
               fontFamily: "var(--font-ui)",
               marginBottom: "0.75rem",
             }}
@@ -274,7 +274,7 @@ export default function FAQ() {
                     aria-hidden="true"
                     style={{
                       fontSize: "1.5rem",
-                      color: "var(--color-gold-text)",
+                      color: "var(--color-amber-text)",
                     }}
                   >
                     {kat.icon}
@@ -334,7 +334,7 @@ export default function FAQ() {
                           aria-hidden="true"
                           style={{
                             fontSize: "1.25rem",
-                            color: "var(--color-gold-text)",
+                            color: "var(--color-amber-text)",
                             flexShrink: 0,
                             transition: "transform 0.25s ease",
                           }}
@@ -373,7 +373,7 @@ export default function FAQ() {
       {/* CTA */}
       <section
         aria-label="Noch Fragen? Jetzt anfragen."
-        style={{ background: "var(--color-navy)", padding: "5rem 0" }}
+        style={{ background: "var(--color-dark)", padding: "5rem 0" }}
       >
         <div
           style={{
@@ -427,7 +427,7 @@ export default function FAQ() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.5rem",
-                backgroundColor: "var(--color-gold)",
+                backgroundColor: "var(--color-amber)",
                 color: "#000",
                 fontFamily: "var(--font-ui)",
                 fontWeight: 700,
@@ -452,10 +452,7 @@ export default function FAQ() {
           transform: rotate(180deg);
         }
         .faq-item summary:hover {
-          background: var(--color-gold-light);
+          background: var(--color-amber-light);
         }
         .faq-item summary::-webkit-details-marker { display: none; }
-      `}</style>
-    </>
-  );
-}
+ 
