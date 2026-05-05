@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
@@ -89,12 +90,16 @@ export default function Navigation() {
         <Link
           href="/"
           aria-label="Kreiz & Quer – Startseite"
-          className="flex items-center gap-2 text-xl font-black tracking-tight"
-          style={{ fontFamily: "var(--font-headline)", color: "#e8f2f3" }}
+          className="flex items-center"
         >
-          Kreiz{" "}
-          <span style={{ color: "var(--color-gold)" }}>&amp;</span>{" "}
-          Quer
+          <Image
+            src="/logo.png"
+            alt="Kreiz & Quer"
+            width={71}
+            height={40}
+            priority
+            style={{ objectFit: "contain" }}
+          />
         </Link>
 
         {/* Desktop Navigation */}
