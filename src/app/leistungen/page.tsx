@@ -15,6 +15,7 @@ interface LeistungItem {
   checks: string[];
   bg: string;
   dark?: boolean;
+  anlass: string;
 }
 
 const leistungen: LeistungItem[] = [
@@ -32,6 +33,7 @@ const leistungen: LeistungItem[] = [
       "Abendprogramm",
     ],
     bg: "var(--color-surface)",
+    anlass: "Hochzeit",
   },
   {
     id: "baelle-gala",
@@ -45,6 +47,7 @@ const leistungen: LeistungItem[] = [
       "Elegantes Abendprogramm",
     ],
     bg: "var(--color-warm-gray)",
+    anlass: "Ball / Gala",
   },
   {
     id: "firmen-events",
@@ -60,6 +63,7 @@ const leistungen: LeistungItem[] = [
       "Spontane Programmänderungen möglich",
     ],
     bg: "var(--color-surface)",
+    anlass: "Event / Sonstige",
   },
   {
     id: "duo",
@@ -74,6 +78,7 @@ const leistungen: LeistungItem[] = [
     ],
     bg: "var(--color-dark)",
     dark: true,
+    anlass: "Event / Sonstige",
   },
   {
     id: "vollband",
@@ -87,6 +92,7 @@ const leistungen: LeistungItem[] = [
       "Bis zu 5 Stunden Programm",
     ],
     bg: "var(--color-surface)",
+    anlass: "Event / Sonstige",
   },
 ];
 
@@ -251,7 +257,7 @@ export default function Leistungen() {
 
               {/* CTA-Link */}
               <Link
-                href="/kontakt"
+                href={{ pathname: "/kontakt", query: { anlass: l.anlass } }}
                 style={{
                   display: "inline-flex",
                   alignItems: "center",

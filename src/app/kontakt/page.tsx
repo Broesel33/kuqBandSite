@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import ContactForm from "@/components/ContactForm";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 
@@ -70,9 +71,93 @@ export default function KontaktPage() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-[1fr_340px] gap-16">
-            {/* Left: Contact Form */}
+            {/* Left: Process Steps + Contact Form */}
             <div>
-              <ContactForm />
+              {/* 3-step process */}
+              <ol
+                aria-label="So läuft eine Anfrage ab"
+                style={{
+                  listStyle: "none",
+                  padding: 0,
+                  margin: "0 0 2.5rem",
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
+                  gap: "1rem",
+                }}
+              >
+                {[
+                  { step: "1", icon: "send", label: "Anfrage schicken", desc: "Formular ausfüllen — dauert 2 Minuten." },
+                  { step: "2", icon: "schedule", label: "Antwort innerhalb 24 h", desc: "Wir melden uns meist noch am selben Tag." },
+                  { step: "3", icon: "handshake", label: "Angebot besprechen", desc: "Gemeinsam stimmen wir Details und Preis ab." },
+                ].map(({ step, icon, label, desc }) => (
+                  <li
+                    key={step}
+                    style={{
+                      backgroundColor: "var(--color-warm-gray)",
+                      borderRadius: "var(--radius-xl)",
+                      padding: "1.5rem",
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "0.75rem",
+                    }}
+                  >
+                    <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+                      <span
+                        aria-hidden="true"
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          width: "2rem",
+                          height: "2rem",
+                          borderRadius: "50%",
+                          backgroundColor: "var(--color-amber)",
+                          color: "#fff",
+                          fontFamily: "var(--font-ui)",
+                          fontSize: "0.8125rem",
+                          fontWeight: 700,
+                          flexShrink: 0,
+                        }}
+                      >
+                        {step}
+                      </span>
+                      <span
+                        className="material-symbols-outlined"
+                        aria-hidden="true"
+                        style={{ fontSize: "1.25rem", color: "var(--color-amber)" }}
+                      >
+                        {icon}
+                      </span>
+                    </div>
+                    <p
+                      style={{
+                        fontFamily: "var(--font-headline)",
+                        fontSize: "0.9375rem",
+                        fontWeight: 700,
+                        color: "var(--color-text)",
+                        margin: 0,
+                      }}
+                    >
+                      {label}
+                    </p>
+                    <p
+                      style={{
+                        fontFamily: "var(--font-body)",
+                        fontSize: "0.875rem",
+                        color: "var(--color-text-muted)",
+                        lineHeight: 1.5,
+                        margin: 0,
+                      }}
+                    >
+                      {desc}
+                    </p>
+                  </li>
+                ))}
+              </ol>
+
+              <Suspense>
+                <ContactForm />
+              </Suspense>
             </div>
 
             {/* Right: Contact Info */}

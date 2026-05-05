@@ -1,3 +1,4 @@
+import Link from "next/link";
 import GalleryGrid from "@/components/GalleryGrid";
 
 export const metadata = {
@@ -121,6 +122,35 @@ export default function GaleriePage() {
           >
             Folg uns für aktuelle Impressionen von Auftritten und Events.
           </p>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "1rem",
+              justifyContent: "center",
+              marginBottom: "1rem",
+            }}
+          >
+            <Link
+              href="/ueber-uns"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                backgroundColor: "var(--color-dark)",
+                color: "var(--color-text-on-dark)",
+                fontFamily: "var(--font-ui)",
+                fontWeight: 600,
+                fontSize: "0.9375rem",
+                padding: "0.75rem 1.75rem",
+                borderRadius: "var(--radius-md)",
+                textDecoration: "none",
+                minHeight: "44px",
+              }}
+            >
+              Die Band kennenlernen
+            </Link>
+          </div>
           <a
             href="https://www.instagram.com/kreizundquer"
             target="_blank"

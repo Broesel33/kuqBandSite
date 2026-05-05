@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import MemberCard from "@/components/MemberCard";
 
@@ -421,6 +422,89 @@ export default function UeberUns() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Interne Weiterführung */}
+      <section
+        style={{
+          background: "var(--color-dark)",
+          padding: "5rem 2rem",
+          textAlign: "center",
+        }}
+      >
+        <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
+          <h2
+            style={{
+              fontFamily: "var(--font-headline)",
+              fontSize: "clamp(1.5rem, 3vw, 2.25rem)",
+              color: "var(--color-text-on-dark)",
+              marginBottom: "1rem",
+            }}
+          >
+            Neugierig geworden?
+          </h2>
+          <p
+            style={{
+              fontFamily: "var(--font-body)",
+              color: "var(--color-text-muted-on-dark)",
+              fontSize: "1.0625rem",
+              lineHeight: 1.7,
+              marginBottom: "2.5rem",
+              maxWidth: "560px",
+              margin: "0 auto 2.5rem",
+            }}
+          >
+            Schaut euch an, was wir spielen — oder direkt, für welche Anlässe wir buchbar sind.
+          </p>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "1rem",
+              justifyContent: "center",
+            }}
+          >
+            <Link
+              href="/repertoire"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                backgroundColor: "var(--color-accent-warm)",
+                color: "#000",
+                fontFamily: "var(--font-ui)",
+                fontWeight: 700,
+                fontSize: "0.9375rem",
+                padding: "0.75rem 1.75rem",
+                borderRadius: "var(--radius-md)",
+                textDecoration: "none",
+                minHeight: "44px",
+              }}
+            >
+              Unser Repertoire
+            </Link>
+            <Link
+              href="/leistungen"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                backgroundColor: "transparent",
+                color: "var(--color-text-on-dark)",
+                border: "1.5px solid var(--color-text-on-dark)",
+                fontFamily: "var(--font-ui)",
+                fontWeight: 600,
+                fontSize: "0.9375rem",
+                padding: "0.75rem 1.75rem",
+                borderRadius: "var(--radius-md)",
+                textDecoration: "none",
+                minHeight: "44px",
+              }}
+            >
+              Unsere Leistungen
+            </Link>
           </div>
         </div>
       </section>

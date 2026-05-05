@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { sendContactForm, ContactFormData } from "@/app/kontakt/actions";
 
 type FieldErrors = Partial<Record<keyof ContactFormData | "_global", string>>;
@@ -33,13 +34,21 @@ const inputBase: React.CSSProperties = {
   transition: "border-color 0.2s",
 };
 
+const VALID_ANLASS = ["Hochzeit", "Ball / Gala", "Firmenfeier", "Event / Sonstige", "Presse / Kooperation"];
+
 export default function ContactForm() {
+  const searchParams = useSearchParams();
+  const initialAnlass = (() => {
+    const param = searchParams.get("anlass");
+    return param && VALID_ANLASS.includes(param) ? param : "";
+  })();
+
   const [form, setForm] = useState<ContactFormData>({
     name: "",
     email: "",
     telefon: "",
     datum: "",
-    anlass: "",
+    anlass: initialAnlass,
     nachricht: "",
   });
   const [errors, setErrors] = useState<FieldErrors>({});
@@ -214,19 +223,6 @@ export default function ContactForm() {
           />
         </div>
 
-        {/* Datum */}
-        <div>
-          <label htmlFor="contact-datum" style={labelStyle}>Wunschdatum</label>
-          <input
-            id="contact-datum"
-            type="date"
-            value={form.datum}
-            onChange={set("datum")}
-            min={new Date().toISOString().split("T")[0]}
-            style={inputBase}
-          />
-        </div>
-
         {/* Anlass */}
         <div className="sm:col-span-2">
           <label htmlFor="contact-anlass" style={labelStyle}>
@@ -246,9 +242,25 @@ export default function ContactForm() {
             <option value="Ball / Gala">Ball / Gala</option>
             <option value="Firmenfeier">Firmenfeier</option>
             <option value="Event / Sonstige">Event / Sonstige</option>
+            <option value="Presse / Kooperation">Presse / Kooperation</option>
           </select>
           {errors.anlass && <span id="contact-anlass-error" role="alert" style={errorStyle}>{errors.anlass}</span>}
         </div>
+
+        {/* Datum */}
+        {form.anlass !== "Presse / Kooperation" && (
+          <div>
+            <label htmlFor="contact-datum" style={labelStyle}>Wunschdatum</label>
+            <input
+              id="contact-datum"
+              type="date"
+              value={form.datum}
+              onChange={set("datum")}
+              min={new Date().toISOString().split("T")[0]}
+              style={inputBase}
+            />
+          </div>
+        )}
 
         {/* Nachricht */}
         <div className="sm:col-span-2">
