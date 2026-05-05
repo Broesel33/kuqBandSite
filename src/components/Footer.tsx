@@ -77,8 +77,14 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${label} — öffnet in neuem Tab`}
-                className="transition-colors duration-200"
-                style={{ color: "var(--color-text-muted-on-dark)" }}
+                className="transition-colors duration-200 inline-flex items-center justify-center"
+                style={{
+                  color: "var(--color-text-muted-on-dark)",
+                  padding: "0.3125rem",
+                  margin: "-0.3125rem",
+                  minWidth: "44px",
+                  minHeight: "44px",
+                }}
               >
                 {icon}
                 <span className="sr-only">(öffnet in neuem Tab)</span>

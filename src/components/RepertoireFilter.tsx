@@ -75,6 +75,8 @@ function SongPreviewButton({ song }: { song: Song }) {
         justifyContent: "center",
         width: "2.25rem",
         height: "2.25rem",
+        padding: "0.3125rem",
+        margin: "-0.3125rem",
         borderRadius: "50%",
         border: "none",
         cursor: "pointer",

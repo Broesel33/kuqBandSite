@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Syne, Manrope } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SkipLink from "@/components/SkipLink";
 import CookieConsentBanner from "@/components/CookieConsentBanner";
+import ConstructionBanner from "@/components/ConstructionBanner";
 
 const syne = Syne({
   variable: "--font-syne",
@@ -18,10 +20,17 @@ const manrope = Manrope({
   weight: ["400", "500", "600", "700"],
 });
 
+const materialSymbols = localFont({
+  src: "./fonts/MaterialSymbolsOutlined.woff2",
+  variable: "--font-material-symbols",
+  display: "swap",
+  preload: false,
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.kreizundquer.at"),
   title: "Die Band aus der Steiermark für dein Event – Live, leidenschaftlich, unvergesslich, Kreiz & Quer",
-  description: "Kreiz & Quer: Live-Musik für Hochzeiten, Bälle, Firmenfeiern und Events in ganz Österreich. 4 Musiker, 200+ Auftritte, 100 % live.",
+  description: "Kreiz & Quer: Live-Band aus der Steiermark für Hochzeiten, Events, Bälle und Firmenfeiern in ganz Österreich. 4 Musiker, 200+ Auftritte, 100 % live.",
   openGraph: {
     title: "Kreiz & Quer – Live-Band aus der Steiermark",
     description: "Live-Musik für Hochzeiten, Bälle und Events. 4 Musiker, kein Playback, 200+ Auftritte in ganz Österreich.",
@@ -44,17 +53,11 @@ export default function RootLayout({
   return (
     <html
       lang="de"
-      className={`${syne.variable} ${manrope.variable} h-full antialiased`}
+      className={`${syne.variable} ${manrope.variable} ${materialSymbols.variable} h-full antialiased`}
     >
-      <head>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@400,0&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body className="min-h-full flex flex-col bg-[var(--color-surface)] text-[var(--color-text)]">
         <SkipLink />
+        <ConstructionBanner />
         <Navigation />
         <main id="main-content" className="flex-grow pt-[68px]">
           {children}

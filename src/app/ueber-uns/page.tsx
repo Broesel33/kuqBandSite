@@ -7,8 +7,8 @@ const musicGroupJsonLd = {
   name: "Kreiz & Quer",
   url: "https://www.kreizundquer.at",
   description:
-    "Lern Manu, Robert, Steph und Gabs kennen — die vier Musiker hinter Kreiz & Quer, einer Live-Band aus der Steiermark mit über 200 Auftritten in ganz Österreich.",
-  foundingDate: "2019",
+    "Lern Manu, Robert, Steph und Gabs kennen — die vier Musiker hinter Kreiz & Quer. Live-Band aus der Steiermark, 200+ Auftritte bei Hochzeiten, Events, Bällen und Firmenfeiern.",
+  foundingDate: "2014",
   foundingLocation: {
     "@type": "Place",
     name: "Steiermark, Österreich",
@@ -52,7 +52,7 @@ const musicGroupJsonLd = {
 export const metadata = {
   title: "Die Band | Live-Musiker aus der Steiermark – Kreiz & Quer",
   description:
-    "Lern Manu, Robert, Steph und Gabs kennen — die vier Musiker hinter Kreiz & Quer, einer Live-Band aus der Steiermark mit über 200 Auftritten in ganz Österreich.",
+    "Lern Manu, Robert, Steph und Gabs kennen — die vier Musiker hinter Kreiz & Quer. Live-Band aus der Steiermark, 200+ Auftritte bei Hochzeiten, Events, Bällen und Firmenfeiern.",
   alternates: { canonical: "https://www.kreizundquer.at/ueber-uns" },
 };
 
@@ -217,7 +217,7 @@ export default function UeberUns() {
                   besonders.
                 </p>
                 <p>
-                  Über 200 Auftritte in ganz Österreich — Hochzeiten, Bälle, Firmenfeiern, Partys.
+                  Über 200 Auftritte in ganz Österreich — von Hochzeiten in Graz bis zu Bällen, Firmenfeiern und Partys in der ganzen Steiermark und weit darüber hinaus.
                   Und bei jedem einzelnen davon geben wir alles. Nicht weil wir müssen. Sondern
                   weil wir es lieben.
                 </p>
@@ -227,14 +227,14 @@ export default function UeberUns() {
               <dl
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "repeat(3, 1fr)",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))",
                   gap: "1.5rem",
                 }}
               >
                 {[
                   { zahl: "200+", label: "Auftritte" },
-                  { zahl: "200+", label: "Songs im Repertoire" },
-                  { zahl: "2019", label: "Gründungsjahr" },
+                  { zahl: "180+", label: "Songs im Repertoire" },
+                  { zahl: "2014", label: "Gründungsjahr" },
                 ].map(({ zahl, label }) => (
                   <div key={label}>
                     <dt

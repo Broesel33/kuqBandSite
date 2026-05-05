@@ -1,8 +1,6 @@
-"use client";
-
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import AudioButton from './AudioButton';
 import WhatsAppIcon from './WhatsAppIcon';
 
 interface HeroSectionProps {
@@ -24,27 +22,6 @@ export default function HeroSection({
   contactBar = false,
   photoAlt,
 }: HeroSectionProps) {
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  // Replace /sample.mp3 with the actual audio file once ready
-  const playAudio = () => {
-    if (isPlaying) return;
-    const AudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
-    const ctx = new AudioCtx();
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
-    osc.connect(gain);
-    gain.connect(ctx.destination);
-    osc.type = 'sine';
-    osc.frequency.value = 440;
-    gain.gain.setValueAtTime(0.3, ctx.currentTime);
-    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 2);
-    osc.start(ctx.currentTime);
-    osc.stop(ctx.currentTime + 2);
-    setIsPlaying(true);
-    setTimeout(() => setIsPlaying(false), 2100);
-  };
-
   const trustBadge = (
     <p
       className="text-sm font-semibold"
@@ -52,31 +29,8 @@ export default function HeroSection({
     >
       200+ Events ·{' '}
       <span role="img" aria-label="5 von 5 Sternen">★★★★★</span>
-      {' '}· seit 2019
+      {' '}· seit 2014
     </p>
-  );
-
-  const playBtn = (
-    <button
-      type="button"
-      onClick={playAudio}
-      disabled={isPlaying}
-      className="inline-flex items-center gap-2 text-sm font-semibold min-h-[44px] px-3 transition-opacity rounded"
-      style={{
-        color: 'var(--color-text-muted-on-dark)',
-        fontFamily: 'var(--font-ui)',
-        opacity: isPlaying ? 0.6 : 1,
-        background: 'transparent',
-        border: 'none',
-        cursor: isPlaying ? 'default' : 'pointer',
-      }}
-      aria-label={isPlaying ? 'Hörprobe läuft' : 'Hörprobe abspielen'}
-    >
-      <span className="material-symbols-outlined" aria-hidden="true" style={{ fontSize: '1.1rem' }}>
-        {isPlaying ? 'graphic_eq' : 'play_circle'}
-      </span>
-      {isPlaying ? 'Läuft …' : 'Hörprobe'}
-    </button>
   );
 
   return (
@@ -145,7 +99,7 @@ export default function HeroSection({
                   {secondaryCta.label}
                 </Link>
               )}
-              {playBtn}
+              <AudioButton />
             </div>
             {contactBar && (
               <div
@@ -235,7 +189,7 @@ export default function HeroSection({
                 {secondaryCta.label}
               </Link>
             )}
-            {playBtn}
+            <AudioButton />
           </div>
           {contactBar && (
             <div

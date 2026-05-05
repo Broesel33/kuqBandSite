@@ -93,7 +93,7 @@ export default async function Image() {
               display: 'flex',
             }}
           >
-            Live · Leidenschaftlich · Unvergesslich
+            Die Band
           </div>
 
           <div
@@ -107,7 +107,7 @@ export default async function Image() {
               fontFamily: fontData ? 'SpaceGrotesk' : 'sans-serif',
             }}
           >
-            Kreiz & Quer
+            Kreiz &amp; Quer
           </div>
 
           <div
@@ -120,7 +120,7 @@ export default async function Image() {
               display: 'flex',
             }}
           >
-            Live-Musik für Hochzeiten, Bälle und Events in ganz Österreich
+            Vier Musiker. Ein Sound. Lern Manu, Robert, Steph und Gabs kennen.
           </div>
 
           <div
@@ -132,7 +132,7 @@ export default async function Image() {
               display: 'flex',
             }}
           >
-            200+ Events · 5 Sterne · seit 2014
+            4 Musiker · gegründet 2014 · Steiermark
           </div>
         </div>
       </div>

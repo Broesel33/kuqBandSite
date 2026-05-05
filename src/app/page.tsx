@@ -12,8 +12,8 @@ const musicGroupJsonLd = {
   name: "Kreiz & Quer",
   url: "https://www.kreizundquer.at",
   description:
-    "Live-Band aus der Steiermark für Hochzeiten, Bälle und Events — vier Musiker, ein Sound, kein Playback.",
-  foundingDate: "2019",
+    "Live-Band aus der Steiermark für Hochzeiten, Events, Bälle und Firmenfeiern — vier Musiker, ein Sound, kein Playback.",
+  foundingDate: "2014",
   foundingLocation: {
     "@type": "Place",
     name: "Steiermark, Österreich",
@@ -535,7 +535,7 @@ export default function Startseite() {
                 boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
               }}
             >
-              Termin sichern <span aria-hidden="true">→</span>
+              Unverbindlich anfragen <span aria-hidden="true">→</span>
             </Link>
           </ScrollReveal>
         </div>

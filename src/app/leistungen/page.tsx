@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Live-Musik buchen | Hochzeit, Ball & Event – Kreiz & Quer",
   description:
-    "Live-Musik für Hochzeiten, Bälle, Firmenfeiern und Events in der Steiermark und ganz Österreich — Kreiz & Quer. 100 % live, individuell abgestimmt.",
+    "Live-Band für Hochzeiten und Events, Bälle und Firmenfeiern — Kreiz & Quer aus der Steiermark. 100 % live, individuell auf jeden Anlass abgestimmt.",
   alternates: { canonical: "https://www.kreizundquer.at/leistungen" },
 };
 
@@ -22,7 +22,7 @@ const leistungen: LeistungItem[] = [
     id: "hochzeiten",
     icon: "favorite",
     title: "Hochzeiten",
-    body: "Vom gefühlvollen Ja-Wort bis zur ausgelassenen Party — wir begleiten deinen großen Tag mit Herz, Feingefühl und genau der Musik, die den Moment unvergesslich macht. Jeder Wunsch, jede Stimmung, jeder Tanz.",
+    body: "Vom gefühlvollen Ja-Wort bis zur ausgelassenen Party — als Hochzeitsband in Graz und der Steiermark begleiten wir deinen großen Tag mit Herz, Feingefühl und genau der Musik, die den Moment unvergesslich macht. Jeder Wunsch, jede Stimmung, jeder Tanz.",
     checks: [
       "Akustik-Set",
       "Vollband",
@@ -50,7 +50,7 @@ const leistungen: LeistungItem[] = [
     id: "firmen-events",
     icon: "business_center",
     title: "Firmen, Partys & Events",
-    body: "Professionell auf der Bühne, flexibel im Programm. Vom ruhigen Empfangsambiente bis zum mitreißenden Hauptact — ob Firmenfeier, Stadtfest, Sommernachtsparty oder Vereinsjubiläum: wir passen uns deinem Event an und liefern genau das, was dein Event braucht.",
+    body: "Professionell auf der Bühne, flexibel im Programm. Vom ruhigen Empfangsambiente bis zum mitreißenden Hauptact — ob Firmenfeier, Stadtfest oder Vereinsjubiläum in Graz, der Steiermark oder ganz Österreich: wir passen uns deinem Event an und liefern genau das, was dein Event braucht.",
     checks: [
       "Hintergrundmusik / Empfang",
       "Hauptact / Tanzabend",
@@ -394,7 +394,7 @@ export default function Leistungen() {
                 minHeight: "44px",
               }}
             >
-              Kostenloses Angebot anfragen <span aria-hidden="true">→</span>
+              Unverbindlich anfragen <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>

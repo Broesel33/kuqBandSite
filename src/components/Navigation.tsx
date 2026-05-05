@@ -8,6 +8,7 @@ const navLinks = [
   { href: "/", label: "Start" },
   { href: "/ueber-uns", label: "Über uns" },
   { href: "/leistungen", label: "Leistungen" },
+  { href: "/faq", label: "FAQ" },
   { href: "/repertoire", label: "Repertoire" },
   { href: "/galerie", label: "Galerie" },
   { href: "/termine", label: "Termine" },
@@ -63,6 +64,17 @@ export default function Navigation() {
     if (detailsRef.current) detailsRef.current.open = false;
   };
 
+  // Escape-to-close für Mobile-Menü
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && detailsRef.current?.open) {
+        detailsRef.current.open = false;
+      }
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, []);
+
   return (
     <header
       className="fixed top-0 w-full z-50"
@@ -76,6 +88,7 @@ export default function Navigation() {
       <div className="flex justify-between items-center w-full px-6 md:px-8 py-3 max-w-screen-2xl mx-auto">
         <Link
           href="/"
+          aria-label="Kreiz & Quer – Startseite"
           className="flex items-center gap-2 text-xl font-black tracking-tight"
           style={{ fontFamily: "var(--font-headline)", color: "#e8f2f3" }}
         >
@@ -122,7 +135,7 @@ export default function Navigation() {
               alignItems: "center",
             }}
           >
-            Anfragen <span aria-hidden="true">→</span>
+            Unverbindlich anfragen <span aria-hidden="true">→</span>
           </Link>
         </nav>
 
@@ -216,7 +229,7 @@ export default function Navigation() {
                 overflow: "hidden",
               }}
             >
-              Anfragen <span aria-hidden="true" style={{ marginLeft: "0.25rem" }}>→</span>
+              Unverbindlich anfragen <span aria-hidden="true" style={{ marginLeft: "0.25rem" }}>→</span>
             </Link>
           </nav>
         </details>

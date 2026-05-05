@@ -152,7 +152,7 @@ export default function RepertoirePage() {
                 lineHeight: 1,
               }}
             >
-              200+
+              180+
             </span>
             <div>
               <p
@@ -260,9 +260,15 @@ export default function RepertoirePage() {
                 minHeight: "44px",
               }}
             >
-              Song anfragen
+              Unverbindlich anfragen <span aria-hidden="true">→</span>
             </Link>
           </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
         </div>
       </section>
     </div>

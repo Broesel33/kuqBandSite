@@ -180,7 +180,7 @@ export default function Termine() {
                   minHeight: "44px",
                 }}
               >
-                Für private Events — jetzt anfragen <span aria-hidden="true">→</span>
+                Unverbindlich anfragen <span aria-hidden="true">→</span>
               </Link>
             </div>
           )}
@@ -247,10 +247,15 @@ export default function Termine() {
                 whiteSpace: "nowrap",
               }}
             >
-              Event planen
+              Unverbindlich anfragen <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
+      </section>
+    </>
+  );
+}
+
       </section>
     </>
   );

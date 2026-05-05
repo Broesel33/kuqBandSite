@@ -93,7 +93,7 @@ export default async function Image() {
               display: 'flex',
             }}
           >
-            Live · Leidenschaftlich · Unvergesslich
+            Eindrücke & Momente
           </div>
 
           <div
@@ -107,7 +107,7 @@ export default async function Image() {
               fontFamily: fontData ? 'SpaceGrotesk' : 'sans-serif',
             }}
           >
-            Kreiz & Quer
+            Kreiz &amp; Quer
           </div>
 
           <div
@@ -120,7 +120,7 @@ export default async function Image() {
               display: 'flex',
             }}
           >
-            Live-Musik für Hochzeiten, Bälle und Events in ganz Österreich
+            Bilder und Impressionen von unseren Auftritten in ganz Österreich.
           </div>
 
           <div
@@ -132,7 +132,7 @@ export default async function Image() {
               display: 'flex',
             }}
           >
-            200+ Events · 5 Sterne · seit 2014
+            Fotos · Live-Momente · seit 2014
           </div>
         </div>
       </div>
