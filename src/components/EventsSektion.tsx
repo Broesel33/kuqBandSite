@@ -19,7 +19,7 @@ export default function EventsSektion() {
 
   return (
     <section id="events" className="bg-[var(--color-surface-container-low)] py-24 px-6 md:px-8">
-      <div className="max-w-screen-2xl mx-auto">
+      <div className="max-w-screen-xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
             <p className="text-[var(--color-secondary)] font-semibold uppercase text-[11px] tracking-widest mb-4" style={{ fontFamily: "var(--font-label)" }}>

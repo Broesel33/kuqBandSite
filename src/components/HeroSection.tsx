@@ -149,7 +149,7 @@ export default function HeroSection({
       </div>
 
       {/* ── DESKTOP: Textinhalt links ── */}
-      <div className="hidden md:block relative w-full max-w-screen-2xl mx-auto px-8 pt-12 pb-16">
+      <div className="hidden md:block relative w-full max-w-screen-xl mx-auto px-8 pt-12 pb-16">
         <div className="w-[55%] flex flex-col gap-5">
           {eyebrow && (
             <p

@@ -58,7 +58,7 @@ export default function Termine() {
       />
       {/* 1. Page-Header */}
       <div style={{ background: "var(--color-navy)", padding: "5rem 0" }}>
-        <div style={{ maxWidth: "1536px", margin: "0 auto", padding: "0 2rem" }}>
+        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <p
             style={{
               fontSize: "0.75rem",
@@ -101,7 +101,7 @@ export default function Termine() {
         aria-labelledby="kommende-termine-heading"
         style={{ background: "var(--color-surface)", padding: "6rem 0" }}
       >
-        <div style={{ maxWidth: "1536px", margin: "0 auto", padding: "0 2rem" }}>
+        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <div style={{ marginBottom: "2.5rem" }}>
             <p
               style={{
@@ -192,7 +192,7 @@ export default function Termine() {
         aria-labelledby="private-event-heading"
         style={{ background: "var(--color-warm-gray)", padding: "5rem 0" }}
       >
-        <div style={{ maxWidth: "1536px", margin: "0 auto", padding: "0 2rem" }}>
+        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <div
             style={{
               background: "var(--color-navy)",

@@ -95,7 +95,7 @@ export default function Leistungen() {
     <>
       {/* Page-Header */}
       <div style={{ background: "var(--color-navy)", padding: "5rem 0" }}>
-        <div style={{ maxWidth: "1536px", margin: "0 auto", padding: "0 2rem" }}>
+        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <p
             style={{
               fontSize: "0.75rem",
@@ -150,7 +150,7 @@ export default function Leistungen() {
             aria-labelledby={`${l.id}-heading`}
             style={{ background: l.bg, padding: "5rem 0" }}
           >
-            <div style={{ maxWidth: "1536px", margin: "0 auto", padding: "0 2rem" }}>
+            <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
               {/* Zweispaltig: Info (2/3) + Details (1/3) */}
               <div
                 style={{
@@ -276,7 +276,7 @@ export default function Leistungen() {
         aria-labelledby="preise-heading"
         style={{ background: "var(--color-navy)", padding: "5rem 0" }}
       >
-        <div style={{ maxWidth: "1536px", margin: "0 auto", padding: "0 2rem" }}>
+        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <div style={{ maxWidth: "720px" }}>
             <p
               style={{

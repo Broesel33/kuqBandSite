@@ -136,7 +136,7 @@ export default function Startseite() {
         aria-labelledby="leistungen-heading"
         style={{ background: "var(--color-surface)", padding: "6rem 0" }}
       >
-        <div style={{ maxWidth: "1536px", margin: "0 auto", padding: "0 2rem" }}>
+        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <ScrollReveal>
             <div style={{ marginBottom: "3rem" }}>
               <p
@@ -210,7 +210,7 @@ export default function Startseite() {
         aria-labelledby="warum-heading"
         style={{ background: "var(--color-navy)", padding: "6rem 0" }}
       >
-        <div style={{ maxWidth: "1536px", margin: "0 auto", padding: "0 2rem" }}>
+        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <div
             style={{
               display: "grid",
@@ -340,7 +340,7 @@ export default function Startseite() {
         aria-labelledby="termine-heading"
         style={{ background: "var(--color-warm-gray)", padding: "6rem 0" }}
       >
-        <div style={{ maxWidth: "1536px", margin: "0 auto", padding: "0 2rem" }}>
+        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <ScrollReveal>
             <div
               style={{
@@ -405,7 +405,7 @@ export default function Startseite() {
         aria-labelledby="stimmen-heading"
         style={{ background: "var(--color-surface)", padding: "6rem 0" }}
       >
-        <div style={{ maxWidth: "1536px", margin: "0 auto", padding: "0 2rem" }}>
+        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <ScrollReveal>
             <div style={{ marginBottom: "3rem" }}>
               <p
@@ -488,7 +488,7 @@ export default function Startseite() {
         />
         <div
           style={{
-            maxWidth: "1536px",
+            maxWidth: "1280px",
             margin: "0 auto",
             padding: "0 2rem",
             textAlign: "center",

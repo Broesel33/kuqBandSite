@@ -205,7 +205,7 @@ export default function FAQ() {
 
       {/* Page-Header */}
       <div style={{ background: "var(--color-navy)", padding: "5rem 0" }}>
-        <div style={{ maxWidth: "1536px", margin: "0 auto", padding: "0 2rem" }}>
+        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <p
             style={{
               fontSize: "0.75rem",
@@ -376,7 +376,7 @@ export default function FAQ() {
       >
         <div
           style={{
-            maxWidth: "1536px",
+            maxWidth: "1280px",
             margin: "0 auto",
             padding: "0 2rem",
             textAlign: "center",

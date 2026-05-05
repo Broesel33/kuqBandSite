@@ -86,7 +86,7 @@ export default function Navigation() {
         transition: "box-shadow 0.3s",
       }}
     >
-      <div className="flex justify-between items-center w-full px-6 md:px-8 py-3 max-w-screen-2xl mx-auto">
+      <div className="flex justify-between items-center w-full px-6 md:px-8 py-3 max-w-screen-xl mx-auto">
         <Link
           href="/"
           aria-label="Kreiz & Quer – Startseite"

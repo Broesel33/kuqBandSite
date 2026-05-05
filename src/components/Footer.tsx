@@ -51,7 +51,7 @@ export default function Footer() {
       className="w-full py-16 px-6 md:px-8"
       style={{ backgroundColor: "var(--color-navy)" }}
     >
-      <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+      <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
         {/* Brand & Socials */}
         <div>
           <div className="mb-6">
