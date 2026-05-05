@@ -255,8 +255,3 @@ export default function Termine() {
     </>
   );
 }
-
-      </section>
-    </>
-  );
-}

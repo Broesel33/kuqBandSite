@@ -268,9 +268,3 @@ export default function RepertoirePage() {
     </div>
   );
 }
-
-        </div>
-      </section>
-    </div>
-  );
-}
