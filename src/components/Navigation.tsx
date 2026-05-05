@@ -19,6 +19,7 @@ const navLinks = [
 export default function Navigation() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const detailsRef = useRef<HTMLDetailsElement>(null);
 
   // Close on route change
@@ -53,7 +54,10 @@ export default function Navigation() {
       }
       document.body.style.overflow = hidden ? "hidden" : "";
     };
-    const onToggle = () => setBackgroundHidden(details.open);
+    const onToggle = () => {
+      setBackgroundHidden(details.open);
+      setMenuOpen(details.open);
+    };
     details.addEventListener("toggle", onToggle);
     return () => {
       details.removeEventListener("toggle", onToggle);
@@ -111,18 +115,8 @@ export default function Navigation() {
                 key={href}
                 href={href}
                 aria-current={active ? "page" : undefined}
-                className="pb-0.5 font-semibold uppercase text-[11px] tracking-widest"
-                style={{
-                  fontFamily: "var(--font-ui)",
-                  color: active ? "var(--color-gold)" : "rgba(232,242,243,0.75)",
-                  borderBottom: active ? "2px solid var(--color-gold)" : "2px solid transparent",
-                }}
-                onMouseEnter={(e) => {
-                  if (!active) (e.currentTarget as HTMLAnchorElement).style.color = "rgba(232,242,243,1)";
-                }}
-                onMouseLeave={(e) => {
-                  if (!active) (e.currentTarget as HTMLAnchorElement).style.color = "rgba(232,242,243,0.75)";
-                }}
+                className={`pb-0.5 font-semibold uppercase text-[11px] tracking-widest nav-link${active ? " nav-link--active" : ""}`}
+                style={{ fontFamily: "var(--font-ui)" }}
               >
                 {label}
               </Link>
@@ -146,13 +140,15 @@ export default function Navigation() {
 
         {/*
           Mobile: native <details>/<summary> disclosure.
-          Browsers handle the toggle natively — no JS click handlers, no React state.
+          Browsers handle the toggle natively — no JS click handlers.
+          aria-expanded mirrors the open state for Screenreaders (NVDA+Firefox compat).
           Works reliably with touch, VoiceOver, TalkBack, keyboard.
           The <summary> sits in the flex row; the menu drops below the header bar.
         */}
         <details ref={detailsRef} className="md:hidden mobile-nav-details">
           <summary
             aria-label="Menü"
+            aria-expanded={menuOpen}
             className="mobile-nav-summary flex items-center justify-center cursor-pointer"
             style={{
               width: "44px",

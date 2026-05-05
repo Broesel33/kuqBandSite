@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { sendContactForm, ContactFormData } from "@/app/kontakt/actions";
 
 type FieldErrors = Partial<Record<keyof ContactFormData | "_global", string>>;
@@ -45,18 +45,23 @@ export default function ContactForm() {
   const [errors, setErrors] = useState<FieldErrors>({});
   const [sent, setSent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [showSummary, setShowSummary] = useState(false);
+  const summaryRef = useRef<HTMLDivElement>(null);
 
   const set = (field: keyof ContactFormData) => (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
-  ) => setForm((prev) => ({ ...prev, [field]: e.target.value }));
+  ) => {
+    setForm((prev) => ({ ...prev, [field]: e.target.value }));
+    setShowSummary(false);
+  };
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const clientErrors = validate(form);
     if (Object.keys(clientErrors).length > 0) {
       setErrors(clientErrors);
-      const firstErrorField = Object.keys(clientErrors)[0];
-      document.getElementById(`contact-${firstErrorField}`)?.focus();
+      setShowSummary(true);
+      setTimeout(() => summaryRef.current?.focus(), 0);
       return;
     }
     setErrors({});
@@ -123,6 +128,30 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} noValidate aria-label="Kontaktformular">
+      {showSummary && Object.keys(errors).filter(k => k !== "_global").length > 0 && (
+        <div
+          ref={summaryRef}
+          role="alert"
+          tabIndex={-1}
+          style={{
+            marginBottom: "1.5rem",
+            padding: "0.875rem 1rem",
+            background: "rgba(220,38,38,0.08)",
+            borderRadius: "0.5rem",
+            borderLeft: "3px solid var(--color-error)",
+            color: "var(--color-error)",
+            fontSize: "0.875rem",
+            fontFamily: "var(--font-ui)",
+            outline: "none",
+          }}
+        >
+          {(() => {
+            const count = Object.keys(errors).filter(k => k !== "_global").length;
+            return `${count} ${count === 1 ? "Fehler gefunden" : "Fehler gefunden"} — bitte korrigiere die markierten Felder.`;
+          })()}
+        </div>
+      )}
+
       <p style={{ fontSize: "0.8125rem", color: "var(--color-text-secondary)", marginBottom: "2rem", fontFamily: "var(--font-ui)" }}>
         Felder mit <abbr title="Pflichtfeld" aria-label="Pflichtfeld">*</abbr> brauchen wir, um dir antworten zu können.
       </p>

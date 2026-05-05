@@ -185,7 +185,6 @@ export default function RepertoireFilter({ genres }: RepertoireFilterProps) {
           id={`panel-${genre.id}`}
           aria-labelledby={`tab-${genre.id}`}
           hidden={activeId !== genre.id}
-          tabIndex={0}
         >
           <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "2rem" }}>
             <span

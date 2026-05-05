@@ -36,6 +36,7 @@ export default function GaleriePage() {
       >
         <div className="max-w-screen-xl mx-auto">
           <p
+            aria-hidden="true"
             style={{
               color: "var(--color-gold)",
               fontFamily: "var(--font-ui)",

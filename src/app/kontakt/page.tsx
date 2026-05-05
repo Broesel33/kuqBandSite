@@ -18,6 +18,7 @@ export default function KontaktPage() {
       >
         <div className="max-w-screen-xl mx-auto">
           <p
+            aria-hidden="true"
             style={{
               color: "var(--color-gold)",
               fontFamily: "var(--font-ui)",
@@ -85,7 +86,7 @@ export default function KontaktPage() {
                   marginBottom: "1.5rem",
                 }}
               >
-                <h2
+                <h3
                   style={{
                     fontFamily: "var(--font-headline)",
                     fontSize: "1.125rem",
@@ -95,7 +96,7 @@ export default function KontaktPage() {
                   }}
                 >
                   So erreichst du uns sofort
-                </h2>
+                </h3>
 
                 <ul
                   style={{

@@ -15,7 +15,7 @@
   --color-surface:        #f3f7f8;   /* kühles Hellgrau-Weiß */
   --color-warm-gray:      #e4ecee;
   --color-warm-gray-2:    #d0e0e2;
-  --color-border:         #b0cccf;
+  --color-border:         #7da0a4;
 
   /* ── Text ── */
   --color-text:                #1a2627;
@@ -153,6 +153,20 @@ textarea:focus-visible {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   vertical-align: middle;
   user-select: none;
+}
+
+/* ── Desktop-Navigationslinks ── */
+.nav-link {
+  color: rgba(232, 242, 243, 0.75);
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease;
+}
+.nav-link:hover {
+  color: rgba(232, 242, 243, 1);
+}
+.nav-link--active {
+  color: var(--color-gold) !important;
+  border-bottom-color: var(--color-gold) !important;
 }
 
 /* ── Mobile-Navigation: native <details>/<summary> ── */

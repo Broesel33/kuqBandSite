@@ -98,6 +98,7 @@ export default function UeberUns() {
       <div style={{ background: "var(--color-navy)", padding: "5rem 0" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <p
+            aria-hidden="true"
             style={{
               fontSize: "0.75rem",
               fontWeight: 600,
@@ -169,6 +170,7 @@ export default function UeberUns() {
             {/* Rechte Spalte: Text */}
             <div>
               <p
+                aria-hidden="true"
                 style={{
                   fontSize: "0.75rem",
                   fontWeight: 600,
@@ -274,6 +276,7 @@ export default function UeberUns() {
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <div style={{ marginBottom: "3rem" }}>
             <p
+              aria-hidden="true"
               style={{
                 fontSize: "0.75rem",
                 fontWeight: 600,
@@ -326,6 +329,7 @@ export default function UeberUns() {
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <div style={{ maxWidth: "720px" }}>
             <p
+              aria-hidden="true"
               style={{
                 fontSize: "0.75rem",
                 fontWeight: 600,

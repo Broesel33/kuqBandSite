@@ -45,6 +45,7 @@ export default function HeroSection({
         <div className="px-6 pt-7 pb-2 flex flex-col gap-2.5">
           {eyebrow && (
             <p
+              aria-hidden="true"
               className="hero-item hero-delay-0 text-[11px] font-semibold uppercase tracking-[0.28em]"
               style={{ color: 'var(--color-gold)', fontFamily: 'var(--font-ui)' }}
             >
@@ -153,6 +154,7 @@ export default function HeroSection({
         <div className="w-[55%] flex flex-col gap-5">
           {eyebrow && (
             <p
+              aria-hidden="true"
               className="hero-item hero-delay-0 text-[11px] font-semibold uppercase tracking-[0.28em]"
               style={{ color: 'var(--color-gold)', fontFamily: 'var(--font-ui)' }}
             >

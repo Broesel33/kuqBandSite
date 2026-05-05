@@ -140,6 +140,7 @@ export default function Startseite() {
           <ScrollReveal>
             <div style={{ marginBottom: "3rem" }}>
               <p
+                aria-hidden="true"
                 style={{
                   fontSize: "0.75rem",
                   fontWeight: 600,
@@ -223,6 +224,7 @@ export default function Startseite() {
             <ScrollReveal>
               <div>
                 <p
+                  aria-hidden="true"
                   style={{
                     fontSize: "0.75rem",
                     fontWeight: 600,
@@ -354,6 +356,7 @@ export default function Startseite() {
             >
               <div>
                 <p
+                  aria-hidden="true"
                   style={{
                     fontSize: "0.75rem",
                     fontWeight: 600,
@@ -409,6 +412,7 @@ export default function Startseite() {
           <ScrollReveal>
             <div style={{ marginBottom: "3rem" }}>
               <p
+                aria-hidden="true"
                 style={{
                   fontSize: "0.75rem",
                   fontWeight: 600,

@@ -97,6 +97,7 @@ export default function Leistungen() {
       <div style={{ background: "var(--color-navy)", padding: "5rem 0" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <p
+            aria-hidden="true"
             style={{
               fontSize: "0.75rem",
               fontWeight: 600,
@@ -279,6 +280,7 @@ export default function Leistungen() {
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <div style={{ maxWidth: "720px" }}>
             <p
+              aria-hidden="true"
               style={{
                 fontSize: "0.75rem",
                 fontWeight: 600,
