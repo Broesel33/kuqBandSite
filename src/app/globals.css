@@ -7,9 +7,9 @@
   --color-blue:           #6ba3a8;   /* Petrol-Silber — CTA / Links / Focus */
   --color-blue-dark:      #4a8288;   /* dunkles Petrol-Silber — Hover/Pressed */
   --color-blue-light:     #d4e8ea;   /* helles Petrol — Tag-Hintergründe */
-  --color-gold:           #a8c8cc;   /* Silber-Highlight — CTA-Button & Akzente auf Dunkel */
+  --color-gold:           #c8951a;   /* Amber-Gold — CTA-Buttons, Eyebrow-Labels, Akzente auf Dunkel */
   --color-gold-text:      #235458;   /* dunkles Petrol für Akzenttext auf Hell (≈9:1 auf surface) */
-  --color-gold-light:     #e4f0f2;   /* sehr helles Petrol — sanfte Hintergründe */
+  --color-gold-light:     #fef3cd;   /* sehr helles Amber — sanfte Hintergründe */
 
   /* ── Oberflächenfarben ── */
   --color-surface:        #f3f7f8;   /* kühles Hellgrau-Weiß */
@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Focus Styles — NIEMALS outline: none ohne Ersatz */
 :focus-visible {
-  outline: 3px solid var(--color-gold);
+  outline: 3px solid var(--color-gold-text);
   outline-offset: 3px;
   border-radius: 2px;
 }
