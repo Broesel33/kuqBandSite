@@ -156,4 +156,7 @@ export default function GaleriePage() {
             <span className="sr-only">öffnet in neuem Tab</span>
           </a>
         </div>
-    
+      </section>
+    </div>
+  );
+}

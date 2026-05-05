@@ -269,4 +269,36 @@ export default function ContactForm() {
               borderBottom: "none",
               border: `1px solid ${errors.nachricht ? "var(--color-error)" : "var(--color-border)"}`,
               borderRadius: "0.5rem",
-              paddi
+              padding: "0.75rem",
+            }}
+          />
+          {errors.nachricht && <span id="contact-nachricht-error" role="alert" style={errorStyle}>{errors.nachricht}</span>}
+        </div>
+      </div>
+
+      <div style={{ marginTop: "2rem" }}>
+        <button
+          type="submit"
+          disabled={submitting}
+          style={{
+            background: "var(--color-dark)",
+            color: "#fff",
+            border: "none",
+            borderRadius: "0.5rem",
+            padding: "0.875rem 2.5rem",
+            fontSize: "1rem",
+            fontWeight: 600,
+            fontFamily: "var(--font-ui)",
+            cursor: submitting ? "not-allowed" : "pointer",
+            opacity: submitting ? 0.7 : 1,
+            minHeight: "44px",
+            transition: "background 0.2s",
+          }}
+          aria-disabled={submitting}
+        >
+          {submitting ? "Wird gesendet …" : "Anfrage senden"}
+        </button>
+      </div>
+    </form>
+  );
+}

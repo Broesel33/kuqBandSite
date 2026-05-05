@@ -265,4 +265,7 @@ export default function RepertoirePage() {
             </Link>
           </div>
         </div>
-    
+      </section>
+    </div>
+  );
+}

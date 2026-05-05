@@ -455,4 +455,7 @@ export default function FAQ() {
           background: var(--color-amber-light);
         }
         .faq-item summary::-webkit-details-marker { display: none; }
- 
+      `}</style>
+    </>
+  );
+}

@@ -66,4 +66,12 @@ export default function RootLayout({
         <SkipLink />
         <ConstructionBanner />
         <Navigation />
-        <ma
+        <main id="main-content" className="flex-grow pt-[68px]">
+          {children}
+        </main>
+        <Footer />
+        <CookieConsentBanner />
+      </body>
+    </html>
+  );
+}

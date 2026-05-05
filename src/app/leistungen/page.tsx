@@ -399,3 +399,9 @@ export default function Leistungen() {
             >
               Unverbindlich anfragen <span aria-hidden="true">→</span>
             </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

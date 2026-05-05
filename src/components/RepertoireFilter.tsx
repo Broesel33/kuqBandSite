@@ -305,4 +305,3 @@ export default function RepertoireFilter({ genres }: RepertoireFilterProps) {
     </div>
   );
 }
-                       

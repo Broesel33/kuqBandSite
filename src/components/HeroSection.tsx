@@ -226,4 +226,10 @@ export default function HeroSection({
                 <span className="material-symbols-outlined text-base" aria-hidden="true">mail</span>
                 <span>info@kreizundquer.com</span>
               </a>
-            </di
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}

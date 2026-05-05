@@ -347,4 +347,7 @@ export default function KontaktPage() {
             </aside>
           </div>
         </div>
-    
+      </section>
+    </div>
+  );
+}
