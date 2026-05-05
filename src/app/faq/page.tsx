@@ -29,22 +29,22 @@ const kategorien: FaqKategorie[] = [
       {
         question: "Wie läuft die Buchung ab?",
         answer:
-          "Ganz entspannt: Du schreibst uns über das Kontaktformular oder per E-Mail — wir melden uns innerhalb von 24 Stunden. Wir klären in einem kurzen Gespräch (telefonisch oder per Mail) alle Details: Datum, Location, gewünschte Besetzung, Programmlänge und deine Wünsche. Danach bekommst du ein unverbindliches Angebot. Wenn alles passt, fixieren wir den Termin mit einem Buchungsvertrag.",
+          "Ganz entspannt: Du schreibst uns unverbindlich über das Kontaktformular, WhatsApp, per E-Mail oder rufst einfach direkt an. Idealerweise hast du bereits ein paar Informationen zu deinem Event, wie Datum, Location, gewünschte Besetzung, Programmlänge und Sonderwünsche. Wir melden uns zuverlässig innerhalb von 24 Stunden und klären in einem kurzen Gespräch alle Details. Danach bekommst du ein unverbindliches Angebot und dein Termin ist erstmal für zwei Wochen reserviert. Wenn alles passt, sagst du zu und wir wir fixieren den Termin mit einem Buchungsvertrag.",
       },
       {
         question: "Wie weit im Voraus sollte ich buchen?",
         answer:
-          "Für Hochzeiten empfehlen wir eine Buchung mindestens 6–12 Monate im Voraus — beliebte Sommerwochenenden sind oft früh vergeben. Für Firmenfeiern, Bälle oder Partys reichen in der Regel 2–4 Monate. Für kurzfristige Anfragen gilt: einfach fragen — manchmal klappt es auch mit wenig Vorlauf!",
+          "Für Hochzeiten empfehlen wir eine Buchung mindestens 6–12 Monate im Voraus. Beliebte Sommerwochenenden sind oft früh vergeben. Für Firmenfeiern, Bälle oder Partys reichen in der Regel 2–4 Monate. Für kurzfristige Anfragen gilt: einfach fragen — manchmal klappt es auch mit wenig Vorlauf!",
       },
       {
         question: "Kann ich einen Termin provisorisch reservieren?",
         answer:
-          "Ja. Wenn du noch nicht sicher bist, können wir dir deinen Wunschtermin für eine kurze Zeit freihalten — einfach in der Anfrage vermerken. So hast du Zeit für deine Planung, ohne dass dir der Termin wegschnappt.",
+          "Dein Termin ist zwei Wochen lang für dich reserviert, sobald du von uns dein Angebot erhalten hast. So hast du in Ruhe Zeit zu überlegen, ob das Angebot für dich passt und musst dir keine Sorgen machen, dass dir jemand deinen Wunschtermin wegschnappt.",
       },
       {
         question: "Was passiert, wenn ich stornieren muss?",
         answer:
-          "Stornierungsbedingungen regeln wir individuell im Buchungsvertrag. Generell gilt: je kurzfristiger die Absage, desto höher der vereinbarte Stornierungsanteil — das ist notwendig, weil wir den Termin für andere nicht mehr anbieten konnten. Bitte sprich uns bei unvorhergesehenen Situationen so früh wie möglich an — gemeinsam finden wir immer eine faire Lösung.",
+          "Stornierungsbedingungen regeln wir individuell im Buchungsvertrag. Generell gilt: je kurzfristiger die Absage, desto höher der vereinbarte Stornierungsanteil. Das ist notwendig, weil wir den Termin für andere nicht mehr anbieten konnten. Bitte sprich uns bei unvorhergesehenen Situationen so früh wie möglich an. Gemeinsam finden wir immer eine faire Lösung.",
       },
     ],
   },
@@ -56,17 +56,17 @@ const kategorien: FaqKategorie[] = [
       {
         question: "Was für Musik spielt ihr?",
         answer:
-          "Unser Repertoire reicht von Austropop-Klassikern über Rock und Pop der letzten Jahrzehnte bis hin zu aktuellen Chart-Hits. Wir verbinden Generationen auf der Tanzfläche — von Wolfgang Ambros bis Ed Sheeran, von Die Toten Hosen bis Taylor Swift. Eine genaue Übersicht findest du auf unserer Repertoire-Seite.",
+          "Unser Repertoire reicht von Austropop-Klassikern über Rock und Pop der letzten Jahrzehnte bis hin zu aktuellen Chart-Hits. Wir verbinden Generationen auf der Tanzfläche — von Wolfgang Ambros bis Ed Sheeran, von Die Ärzte bis Passenger. Eine genaue Übersicht findest du auf unserer Repertoire-Seite.",
       },
       {
         question: "Kann ich Musikwünsche äußern?",
         answer:
-          "Unbedingt! Wir lesen die Stimmung im Raum und passen unser Set spontan an. Du kannst uns vor dem Event eine Wunschliste schicken, und auch auf Zuruf während des Auftritts reagieren wir gerne — solange der Song in unserem Repertoire ist (oder wir ihn rechtzeitig einüben können).",
+          "Unbedingt! Du kannst uns vor dem Event eine Wunschliste schicken, und auch auf Zuruf während des Auftritts reagieren wir gerne — solange der Song in unserem Repertoire ist (oder wir ihn rechtzeitig einüben können).",
       },
       {
         question: "Gibt es Songs, die ihr nicht spielt?",
         answer:
-          "Wir haben ein stetig wachsendes Repertoire — was wir aktuell nicht dabei haben, können wir bei ausreichend Vorlaufzeit oft noch einstudieren. Schick uns einfach deine Wunschliste, und wir sagen dir ehrlich, was machbar ist.",
+          "Wir haben ein stetig wachsendes Repertoire. Was wir aktuell nicht dabei haben, können wir bei ausreichend Vorlaufzeit oft noch einstudieren. Schick uns einfach deine Wunschliste, und wir sagen dir ehrlich, was machbar ist.",
       },
       {
         question: "Spielt ihr Walzer für Bälle?",
@@ -76,7 +76,7 @@ const kategorien: FaqKategorie[] = [
       {
         question: "Spielt ihr auch Zeremonien- oder Hintergrundmusik?",
         answer:
-          "Ja. Für Hochzeiten bieten wir neben dem Party-Programm auch Musik für den Einzug, die Zeremonie, den Empfang und das Dinner an — akustisch und stimmungsvoll. Unser Duo ist besonders für leise, intime Momente ideal.",
+          "Ja. Für Hochzeiten bieten wir neben dem Party-Programm auch Musik für den Einzug, die Zeremonie, den Empfang und das Dinner an - akustisch und stimmungsvoll. Unser Duo ist besonders für leise, intime Momente ideal.",
       },
     ],
   },
@@ -103,7 +103,7 @@ const kategorien: FaqKategorie[] = [
       {
         question: "Seit wann gibt es Kreiz & Quer?",
         answer:
-          "Kreiz & Quer wurde 2014 in der Steiermark gegründet. Seitdem haben wir auf Hunderten von Hochzeiten, Bällen, Firmenfeiern und Events in ganz Österreich gespielt.",
+          "Kreiz & Quer wurde 2014 in der Steiermark gegründet. Seitdem haben wir auf über 200 Hochzeiten, Bällen, Firmenfeiern und Events in ganz Österreich gespielt.",
       },
     ],
   },
@@ -115,17 +115,17 @@ const kategorien: FaqKategorie[] = [
       {
         question: "Bringt ihr euer eigenes Equipment mit?",
         answer:
-          "Ja, komplett. Wir bringen unser volles PA-System (Lautsprecher, Mischpult, Mikrofone), Instrumente und professionelles Licht-Setup mit. Du musst dir um Technik keine Gedanken machen — wir kümmern uns um alles.",
+          "Ja, komplett. Wir bringen unser volles PA-System (Lautsprecher, Mischpult, Mikrofone), Instrumente und professionelles Licht-Setup mit. Du musst dir um Technik keine Gedanken machen — wir kümmern uns um alles. Falls die Technik schon vor Ort sein sollte, geht das aber natürlich auch. Bitte gib uns entsprechend in der Buchungsanfrage bescheid.",
       },
       {
         question: "Wie viel Platz braucht ihr für die Bühne?",
         answer:
-          "Als Vollband benötigen wir mindestens ca. 4 × 5 Meter Bühnenraum. Für das Duo reichen ca. 2 × 3 Meter. Wenn du unsicher bist, ob deine Location passt, schick uns einfach die Maße — wir schauen uns das an und finden eine Lösung.",
+          "Als Vollband benötigen wir ca. 4 × 5 Meter Bühnenraum. Für das Duo reichen ca. 2 × 3 Meter. Wenn du unsicher bist, ob deine Location passt, schick uns einfach die Maße. Wir schauen uns das an und finden eine Lösung.",
       },
       {
         question: "Wie lange dauert Auf- und Abbau?",
         answer:
-          "Für die Vollband planen wir ca. 2–3 Stunden für den Aufbau und Soundcheck ein. Der Abbau dauert ca. 1–1,5 Stunden. Bitte berücksichtige das bei der Planung der Location-Verfügbarkeit — oder sprich uns an, wir koordinieren das gerne direkt mit deiner Location.",
+          "Für die Vollband planen wir ca. 1,5 Stunden für den Aufbau und Soundcheck ein. Der Abbau dauert ca. eine halbe Stunde. Bitte berücksichtige das bei der Planung der Location-Verfügbarkeit — oder sprich uns an, wir koordinieren das gerne direkt mit deiner Location. Die Duo-Option ist entsprechend schneller auf- und wieder abgebaut.",
       },
       {
         question: "Könnt ihr auch outdoor spielen?",
@@ -159,7 +159,7 @@ const kategorien: FaqKategorie[] = [
       {
         question: "Was kostet eine Buchung?",
         answer:
-          "Der Preis hängt von mehreren Faktoren ab: Besetzung (Duo oder Vollband), Spieldauer, Entfernung und gewünschtem Programm. Unsere Pakete starten bereits im niedrigen vierstelligen Bereich. Wir erstellen dir auf Anfrage ein unverbindliches, individuelles Angebot — ohne verstecktes Kleingedrucktes.",
+          "Der Preis hängt von mehreren Faktoren ab: Besetzung (Duo oder Vollband), Spieldauer, Entfernung und gewünschtem Programm. Unsere Pakete starten bereits im mittleren dreistelligen Bereich für die Duo-Option und im unteren vierstelligen Bereich für die Voll-Band. Wir erstellen dir auf Anfrage ein unverbindliches, individuelles Angebot.",
       },
       {
         question: "Was ist im Preis enthalten?",
