@@ -36,6 +36,7 @@ const footerNavLinks = [
   { href: "/ueber-uns", label: "Über uns" },
   { href: "/leistungen", label: "Leistungen" },
   { href: "/repertoire", label: "Repertoire" },
+  { href: "/faq", label: "FAQ" },
   { href: "/termine", label: "Termine" },
   { href: "/galerie", label: "Galerie" },
   { href: "/kontakt", label: "Kontakt" },
