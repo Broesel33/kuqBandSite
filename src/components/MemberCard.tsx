@@ -24,9 +24,9 @@ export default function MemberCard({
         border: '1px solid var(--color-border)',
       }}
     >
-      {/* Photo area — 4:3 aspect ratio */}
+      {/* Photo area — 3:4 aspect ratio (portrait) */}
       <div
-        className="relative w-full aspect-[4/3]"
+        className="relative w-full aspect-[3/4]"
         style={{ backgroundColor: 'var(--color-warm-gray)' }}
       >
         {photoSrc ? (
@@ -34,7 +34,7 @@ export default function MemberCard({
             src={photoSrc}
             alt={photoAlt}
             fill
-            className="object-contain object-bottom"
+            className="object-cover object-top"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
         ) : (
