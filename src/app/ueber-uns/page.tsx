@@ -407,6 +407,7 @@ export default function UeberUns() {
                       fontWeight: 600,
                       fontSize: "0.9375rem",
                       textDecoration: "none",
+                      minHeight: "44px",
                     }}
                   >
                     <span

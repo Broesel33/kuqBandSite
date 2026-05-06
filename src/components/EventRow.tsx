@@ -62,7 +62,7 @@ export default function EventRow({
         aria-label={`${weekday}, ${day}. ${monthShort} ${year}`}
         style={{
           flexShrink: 0,
-          width: '3.25rem',
+          width: '3.5rem',
           borderRadius: '0.5rem',
           overflow: 'hidden',
           border: '1px solid var(--color-border)',
@@ -73,7 +73,7 @@ export default function EventRow({
         <div style={{ backgroundColor: 'var(--color-amber)', padding: '0.2rem 0' }}>
           <span style={{
             display: 'block',
-            fontSize: '0.6rem',
+            fontSize: '0.6875rem',
             fontWeight: 700,
             letterSpacing: '0.08em',
             textTransform: 'uppercase',
@@ -96,7 +96,7 @@ export default function EventRow({
           </span>
           <span style={{
             display: 'block',
-            fontSize: '0.65rem',
+            fontSize: '0.6875rem',
             fontWeight: 600,
             letterSpacing: '0.06em',
             textTransform: 'uppercase',

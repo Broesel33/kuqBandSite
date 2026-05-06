@@ -33,6 +33,7 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
   const lightboxRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const gridButtonRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const touchStartX = useRef<number | null>(null);
 
   const closeLightbox = useCallback(() => {
     const prevIndex = selectedIndex;
@@ -156,6 +157,17 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
           style={{ backgroundColor: 'rgba(0, 0, 0, 0.92)' }}
           onClick={(e) => {
             if (e.target === e.currentTarget) closeLightbox();
+          }}
+          onTouchStart={(e) => {
+            touchStartX.current = e.touches[0].clientX;
+          }}
+          onTouchEnd={(e) => {
+            if (touchStartX.current === null) return;
+            const delta = e.changedTouches[0].clientX - touchStartX.current;
+            touchStartX.current = null;
+            if (Math.abs(delta) < 50) return;
+            if (delta < 0) goNext();
+            else goPrev();
           }}
         >
           {/* Close button */}

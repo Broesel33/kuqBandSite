@@ -215,6 +215,9 @@ export default function KontaktPage() {
                         color: "var(--color-text)",
                         textDecoration: "none",
                         fontSize: "0.9375rem",
+                        minHeight: "44px",
+                        display: "inline-flex",
+                        alignItems: "center",
                       }}
                     >
                       info@kreizundquer.com
@@ -243,6 +246,9 @@ export default function KontaktPage() {
                         color: "var(--color-text)",
                         textDecoration: "none",
                         fontSize: "0.9375rem",
+                        minHeight: "44px",
+                        display: "inline-flex",
+                        alignItems: "center",
                       }}
                     >
                       +43 680 23 78 95 4
@@ -265,6 +271,9 @@ export default function KontaktPage() {
                         color: "var(--color-text)",
                         textDecoration: "none",
                         fontSize: "0.9375rem",
+                        minHeight: "44px",
+                        display: "inline-flex",
+                        alignItems: "center",
                       }}
                     >
                       +43 680 23 78 95 4

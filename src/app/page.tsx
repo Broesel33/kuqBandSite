@@ -6,6 +6,34 @@ export const metadata = {
   alternates: { canonical: "https://www.kreizundquer.at" },
 };
 
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Kreiz & Quer",
+  url: "https://www.kreizundquer.at",
+  telephone: "+436802378954",
+  email: "info@kreizundquer.com",
+  description:
+    "Live-Band aus der Steiermark für Hochzeiten, Events, Bälle und Firmenfeiern — vier Musiker, ein Sound, kein Playback.",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Vormarkt 6",
+    postalCode: "8130",
+    addressLocality: "Frohnleiten",
+    addressRegion: "Steiermark",
+    addressCountry: "AT",
+  },
+  areaServed: [
+    { "@type": "State", name: "Steiermark" },
+    { "@type": "City", name: "Graz" },
+  ],
+  sameAs: [
+    "https://www.facebook.com/kreizuquer/",
+    "https://www.instagram.com/kreiz_und_quer/",
+    "https://www.youtube.com/@kreizquer",
+  ],
+};
+
 const musicGroupJsonLd = {
   "@context": "https://schema.org",
   "@type": "MusicGroup",
@@ -67,6 +95,10 @@ export default function Startseite() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(musicGroupJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
       />
       {/* 1. Hero */}
       <HeroSection
