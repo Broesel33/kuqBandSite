@@ -46,6 +46,11 @@ const kategorien: FaqKategorie[] = [
         answer:
           "Stornierungsbedingungen regeln wir individuell im Buchungsvertrag. Generell gilt: je kurzfristiger die Absage, desto höher der vereinbarte Stornierungsanteil. Das ist notwendig, weil wir den Termin für andere nicht mehr anbieten konnten. Bitte sprich uns bei unvorhergesehenen Situationen so früh wie möglich an. Gemeinsam finden wir immer eine faire Lösung.",
       },
+      {
+        question: "Was benötigt die Band an Verpflegung?",
+        answer:
+          "Damit wir die ganze Nacht top in Form sind, freuen wir uns über eine kleine Verpflegung vor Ort: alkoholfreie Getränke, Bier und Wein sowie mindestens eine vollwertige Mahlzeit während unseres Aufenthalts. Details können gerne vorab mit der Location abgestimmt werden — ihr braucht euch darum in der Regel nicht extra kümmern, wir koordinieren das unkompliziert selbst.",
+      },
     ],
   },
   {
@@ -77,6 +82,16 @@ const kategorien: FaqKategorie[] = [
         question: "Spielt ihr auch Zeremonien- oder Hintergrundmusik?",
         answer:
           "Ja. Für Hochzeiten bieten wir neben dem Party-Programm auch Musik für den Einzug, die Zeremonie, den Empfang und das Dinner an - akustisch und stimmungsvoll. Unser Duo ist besonders für leise, intime Momente ideal.",
+      },
+      {
+        question: "Wie ist die Pausengestaltung geregelt?",
+        answer:
+          "Die Pausengestaltung stimmen wir individuell auf euer Event ab. Als grobe Orientierung gilt: auf eine Stunde Spielzeit kommen etwa 10 Minuten Pause. So bleibt die Energie auf der Tanzfläche hoch, und wir bleiben die ganze Nacht für euch in Topform.",
+      },
+      {
+        question: "Ist Pausenmusik zwischen euren Sets möglich?",
+        answer:
+          "Ja, selbstverständlich! Für die Pausen zwischen unseren Sets stehen euch drei Optionen zur Wahl: energiegeladene Party-Musik, die die Stimmung hochhält, dezente Hintergrundmusik für entspanntere Momente — oder ihr stellt uns einfach eure eigene Playlist zur Verfügung. Letztere sollte uns möglichst rechtzeitig vor dem Event zugeschickt werden, damit wir alles vorbereiten können. Auf Wunsch kann die Playlist auch während unseres Abbaus weiterlaufen, bis wir fertig sind.",
       },
     ],
   },
@@ -130,7 +145,7 @@ const kategorien: FaqKategorie[] = [
       {
         question: "Könnt ihr auch outdoor spielen?",
         answer:
-          "Ja. Wir sind sowohl für Indoor- als auch Outdoor-Events ausgerüstet. Bei Open-Air-Veranstaltungen benötigen wir einen witterungsgeschützten Bereich für das Equipment (Überdachung). Details klären wir individuell.",
+          "Ja. Wir sind sowohl für Indoor- als auch Outdoor-Events ausrüst. Bei Open-Air-Veranstaltungen benötigen wir einen witterungsgeschützten Bereich für das Equipment (Überdachung). Details klären wir individuell.",
       },
     ],
   },
@@ -164,7 +179,7 @@ const kategorien: FaqKategorie[] = [
       {
         question: "Was ist im Preis enthalten?",
         answer:
-          "Im Angebot enthalten sind in der Regel: alle Musiker, vollständiges Equipment inkl. PA und Licht, Soundcheck, das vereinbarte Programm sowie An- und Abfahrt (je nach Distanz). Eventuelle Zusatzleistungen wie ein besonders langer Aufbau, zusätzliche Technik oder außergewöhnliche Reisedistanzen werden separat ausgewiesen.",
+          "Im Angebot enthalten sind in der Regel: alle Musiker, vollständiges Equipment inkl. PA und Licht, Soundcheck, das vereinbarte Programm sowie An- und Abfahrt (je nach Distanz). Eventuelle Zusätzleistungen wie ein besonders langer Aufbau, zusätzliche Technik oder außergewöhnliche Reisedistanzen werden separat ausgewiesen.",
       },
       {
         question: "Gibt es Pakete oder fixe Preislisten?",
@@ -446,7 +461,7 @@ export default function FAQ() {
         </div>
       </section>
 
-      {/* Inline-CSS für <details>-Chevron-Animation */}
+      {/* Inline-CSS fuer details-Chevron-Animation */}
       <style>{`
         .faq-item[open] .faq-chevron {
           transform: rotate(180deg);
