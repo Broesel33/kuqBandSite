@@ -53,7 +53,7 @@ export default function HeroSection({
           fontSize: 'clamp(24rem, 35vw, 42rem)',
           lineHeight: 1,
           color: 'white',
-          opacity: 0.05,
+          opacity: 0.15,
           zIndex: 0,
           userSelect: 'none',
           pointerEvents: 'none',
