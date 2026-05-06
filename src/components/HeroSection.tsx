@@ -39,6 +39,31 @@ export default function HeroSection({
       style={{ backgroundColor: 'var(--color-dark)' }}
       aria-label={eyebrow ? `${eyebrow}: ${headline}` : headline}
     >
+      {/* ── K & Q Ghost Monogram ── */}
+      <span
+        aria-hidden="true"
+        className="hidden md:block"
+        style={{
+          position: 'absolute',
+          right: '-3rem',
+          top: '50%',
+          transform: 'translateY(-50%)',
+          fontFamily: 'var(--font-syne)',
+          fontWeight: 800,
+          fontSize: 'clamp(24rem, 35vw, 42rem)',
+          lineHeight: 1,
+          color: 'white',
+          opacity: 0.05,
+          zIndex: 0,
+          userSelect: 'none',
+          pointerEvents: 'none',
+          whiteSpace: 'nowrap',
+          letterSpacing: '-0.02em',
+        }}
+      >
+        {'K & Q'}
+      </span>
+
       {/* ── MOBILE ── */}
       <div className="md:hidden relative w-full min-h-[100svh] flex flex-col">
         {/* TOP: Eyebrow + Headline + Subline */}
