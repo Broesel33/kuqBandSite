@@ -29,7 +29,7 @@ const localBusinessJsonLd = {
   ],
   sameAs: [
     "https://www.facebook.com/kreizuquer/",
-    "https://www.instagram.com/kreiz_und_quer/",
+    "https://www.instagram.com/kreizundquer/",
     "https://www.youtube.com/@kreizquer",
   ],
 };
@@ -77,7 +77,7 @@ const musicGroupJsonLd = {
   },
   sameAs: [
     "https://www.facebook.com/kreizuquer/",
-    "https://www.instagram.com/kreiz_und_quer/",
+    "https://www.instagram.com/kreizundquer/",
     "https://www.youtube.com/@kreizquer",
   ],
 };
@@ -114,7 +114,8 @@ export default function Startseite() {
       {/* 2. Video */}
       <section
         aria-labelledby="video-heading"
-        style={{ background: "var(--color-dark)", padding: "5rem 0" }}
+        className="py-12 md:py-20"
+        style={{ background: "var(--color-dark)" }}
       >
         <div style={{ maxWidth: "960px", margin: "0 auto", padding: "0 1.5rem" }}>
           <ScrollReveal>
@@ -166,7 +167,8 @@ export default function Startseite() {
       {/* 3. Leistungen */}
       <section
         aria-labelledby="leistungen-heading"
-        style={{ background: "var(--color-surface)", padding: "6rem 0" }}
+        className="py-16 md:py-24"
+        style={{ background: "var(--color-surface)" }}
       >
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <ScrollReveal>
@@ -241,7 +243,8 @@ export default function Startseite() {
       {/* 4. Warum Kreiz & Quer */}
       <section
         aria-labelledby="warum-heading"
-        style={{ background: "var(--color-dark)", padding: "6rem 0" }}
+        className="py-16 md:py-24"
+        style={{ background: "var(--color-dark)" }}
       >
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <div
@@ -372,7 +375,8 @@ export default function Startseite() {
       {/* 5. Termine */}
       <section
         aria-labelledby="termine-heading"
-        style={{ background: "var(--color-warm-gray)", padding: "6rem 0" }}
+        className="py-16 md:py-24"
+        style={{ background: "var(--color-warm-gray)" }}
       >
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <ScrollReveal>
@@ -438,7 +442,8 @@ export default function Startseite() {
       {/* 6. Testimonials */}
       <section
         aria-labelledby="stimmen-heading"
-        style={{ background: "var(--color-surface)", padding: "6rem 0" }}
+        className="py-16 md:py-24"
+        style={{ background: "var(--color-surface)" }}
       >
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <ScrollReveal>
@@ -505,9 +510,9 @@ export default function Startseite() {
       {/* 7. CTA */}
       <section
         aria-label="Jetzt anfragen"
+        className="py-16 md:py-24"
         style={{
           background: "var(--color-dark)",
-          padding: "6rem 0",
           position: "relative",
           overflow: "hidden",
         }}

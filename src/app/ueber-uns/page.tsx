@@ -45,7 +45,7 @@ const musicGroupJsonLd = {
   },
   sameAs: [
     "https://www.facebook.com/kreizuquer/",
-    "https://www.instagram.com/kreiz_und_quer/",
+    "https://www.instagram.com/kreizundquer/",
     "https://www.youtube.com/@kreizquer",
   ],
 };
@@ -96,7 +96,7 @@ export default function UeberUns() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(musicGroupJsonLd) }}
       />
       {/* 1. Page-Header */}
-      <div style={{ background: "var(--color-dark)", padding: "5rem 0" }}>
+      <div className="py-12 md:py-20" style={{ background: "var(--color-dark)" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <p
             aria-hidden="true"
@@ -139,7 +139,8 @@ export default function UeberUns() {
       {/* 2. Band-Story */}
       <section
         aria-labelledby="story-heading"
-        style={{ background: "var(--color-surface)", padding: "6rem 0" }}
+        className="py-16 md:py-24"
+        style={{ background: "var(--color-surface)" }}
       >
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <div
@@ -272,7 +273,8 @@ export default function UeberUns() {
       {/* 3. Mitglieder-Grid */}
       <section
         aria-labelledby="mitglieder-heading"
-        style={{ background: "var(--color-warm-gray)", padding: "6rem 0" }}
+        className="py-16 md:py-24"
+        style={{ background: "var(--color-warm-gray)" }}
       >
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <div style={{ marginBottom: "3rem" }}>
@@ -325,7 +327,8 @@ export default function UeberUns() {
       {/* 4. ViertelVier */}
       <section
         aria-labelledby="viertelvier-heading"
-        style={{ background: "var(--color-surface)", padding: "6rem 0" }}
+        className="py-16 md:py-24"
+        style={{ background: "var(--color-surface)" }}
       >
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <div style={{ maxWidth: "720px" }}>
@@ -429,6 +432,7 @@ export default function UeberUns() {
 
       {/* Interne Weiterführung */}
       <section
+        aria-labelledby="weiterfuehrung-heading"
         style={{
           background: "var(--color-dark)",
           padding: "5rem 2rem",
@@ -437,6 +441,7 @@ export default function UeberUns() {
       >
         <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
           <h2
+            id="weiterfuehrung-heading"
             style={{
               fontFamily: "var(--font-headline)",
               fontSize: "clamp(1.5rem, 3vw, 2.25rem)",
@@ -473,7 +478,7 @@ export default function UeberUns() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.5rem",
-                backgroundColor: "var(--color-accent-warm)",
+                backgroundColor: "var(--color-amber)",
                 color: "#000",
                 fontFamily: "var(--font-ui)",
                 fontWeight: 700,

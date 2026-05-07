@@ -219,7 +219,7 @@ export default function FAQ() {
       />
 
       {/* Page-Header */}
-      <div style={{ background: "var(--color-dark)", padding: "5rem 0" }}>
+      <div className="py-12 md:py-20" style={{ background: "var(--color-dark)" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <p
             aria-hidden="true"
@@ -263,7 +263,8 @@ export default function FAQ() {
       {/* FAQ-Kategorien */}
       <section
         aria-label="Häufige Fragen"
-        style={{ background: "var(--color-surface)", padding: "5rem 0" }}
+        className="py-12 md:py-20"
+        style={{ background: "var(--color-surface)" }}
       >
         <div style={{ maxWidth: "900px", margin: "0 auto", padding: "0 2rem" }}>
           {kategorien.map((kat, katIdx) => (
@@ -388,7 +389,8 @@ export default function FAQ() {
       {/* CTA */}
       <section
         aria-label="Noch Fragen? Jetzt anfragen."
-        style={{ background: "var(--color-dark)", padding: "5rem 0" }}
+        className="py-12 md:py-20"
+        style={{ background: "var(--color-dark)" }}
       >
         <div
           style={{

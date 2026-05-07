@@ -20,7 +20,7 @@
   /* ── Text ── */
   --color-text:                #1a2627;
   --color-text-secondary:      #3e5558;
-  --color-text-muted:          #6e9096;
+  --color-text-muted:          #5c8085;
   --color-text-muted-on-dark:  #b8d0d4;
   --color-text-on-dark:        #e8f2f3;
 
@@ -62,17 +62,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Focus Styles — NIEMALS outline: none ohne Ersatz */
 :focus-visible {
-  outline: 3px solid var(--color-amber-text);
+  outline: 3px solid var(--color-amber);
   outline-offset: 3px;
   border-radius: 2px;
 }
 
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid var(--color-amber-text);
+  outline: 3px solid var(--color-amber);
   outline-offset: 3px;
   border-radius: 2px;
-  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.35);
 }
 
 

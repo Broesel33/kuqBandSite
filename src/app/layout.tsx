@@ -33,7 +33,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.kreizundquer.at"),
-  title: "Die Band aus der Steiermark für dein Event – Live, leidenschaftlich, unvergesslich, Kreiz & Quer",
+  title: "Kreiz & Quer – Live-Band Steiermark | Hochzeiten, Bälle & Events",
   description: "Kreiz & Quer: Live-Band aus der Steiermark für Hochzeiten, Events, Bälle und Firmenfeiern in ganz Österreich. 4 Musiker, 200+ Auftritte, 100 % live.",
   openGraph: {
     title: "Kreiz & Quer – Live-Band aus der Steiermark",

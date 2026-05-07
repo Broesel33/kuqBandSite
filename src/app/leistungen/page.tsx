@@ -100,7 +100,7 @@ export default function Leistungen() {
   return (
     <>
       {/* Page-Header */}
-      <div style={{ background: "var(--color-dark)", padding: "5rem 0" }}>
+      <div className="py-12 md:py-20" style={{ background: "var(--color-dark)" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <p
             aria-hidden="true"
@@ -155,7 +155,8 @@ export default function Leistungen() {
             key={l.id}
             id={l.id}
             aria-labelledby={`${l.id}-heading`}
-            style={{ background: l.bg, padding: "5rem 0" }}
+            className="py-12 md:py-20"
+            style={{ background: l.bg }}
           >
             <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
               {/* Zweispaltig: Info (2/3) + Details (1/3) */}
@@ -281,7 +282,8 @@ export default function Leistungen() {
       <section
         id="preise"
         aria-labelledby="preise-heading"
-        style={{ background: "var(--color-dark)", padding: "5rem 0" }}
+        className="py-12 md:py-20"
+        style={{ background: "var(--color-dark)" }}
       >
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <div style={{ maxWidth: "720px" }}>

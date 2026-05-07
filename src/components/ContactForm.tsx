@@ -30,7 +30,6 @@ const inputBase: React.CSSProperties = {
   color: "var(--color-text)",
   fontFamily: "var(--font-body)",
   fontSize: "1rem",
-  outline: "none",
   transition: "border-color 0.2s",
 };
 
@@ -292,9 +291,10 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={submitting}
+          className="btn-cta"
           style={{
-            background: "var(--color-dark)",
-            color: "#fff",
+            background: "var(--color-amber)",
+            color: "#000",
             border: "none",
             borderRadius: "0.5rem",
             padding: "0.875rem 2.5rem",

@@ -57,7 +57,7 @@ export default function Termine() {
         }}
       />
       {/* 1. Page-Header */}
-      <div style={{ background: "var(--color-dark)", padding: "5rem 0" }}>
+      <div className="py-12 md:py-20" style={{ background: "var(--color-dark)" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <p
             aria-hidden="true"
@@ -100,7 +100,8 @@ export default function Termine() {
       {/* 2. Kommende Termine */}
       <section
         aria-labelledby="kommende-termine-heading"
-        style={{ background: "var(--color-surface)", padding: "6rem 0" }}
+        className="py-16 md:py-24"
+        style={{ background: "var(--color-surface)" }}
       >
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <div style={{ marginBottom: "2.5rem" }}>
@@ -192,7 +193,8 @@ export default function Termine() {
       {/* 3. CTA-Box */}
       <section
         aria-labelledby="private-event-heading"
-        style={{ background: "var(--color-warm-gray)", padding: "5rem 0" }}
+        className="py-12 md:py-20"
+        style={{ background: "var(--color-warm-gray)" }}
       >
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <div
@@ -233,13 +235,14 @@ export default function Termine() {
             </div>
             <Link
               href="/kontakt"
+              className="btn-cta"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
                 padding: "0.875rem 2rem",
-                backgroundColor: "var(--color-petrol)",
-                color: "#ffffff",
+                backgroundColor: "var(--color-amber)",
+                color: "#000000",
                 fontFamily: "var(--font-ui)",
                 fontWeight: 600,
                 fontSize: "0.9375rem",
