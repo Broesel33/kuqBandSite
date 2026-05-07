@@ -81,7 +81,7 @@ export default function Termine() {
               marginBottom: "1rem",
             }}
           >
-            Termine
+            Live-Auftritte — Kreiz & Quer
           </h1>
           <p
             style={{

@@ -29,12 +29,13 @@ const materialSymbols = localFont({
 
 export const viewport: Viewport = {
   themeColor: "#3c4748",
+  viewportFit: "cover",
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.kreizundquer.at"),
   title: "Kreiz & Quer – Live-Band Steiermark | Hochzeiten, Bälle & Events",
-  description: "Kreiz & Quer: Live-Band aus der Steiermark für Hochzeiten, Events, Bälle und Firmenfeiern in ganz Österreich. 4 Musiker, 200+ Auftritte, 100 % live.",
+  description: "Kreiz & Quer: Live-Coverband aus der Steiermark für Hochzeiten, Events, Bälle und Firmenfeiern in ganz Österreich. 4 Musiker, 200+ Auftritte, 100 % live.",
   openGraph: {
     title: "Kreiz & Quer – Live-Band aus der Steiermark",
     description: "Live-Musik für Hochzeiten, Bälle und Events. 4 Musiker, kein Playback, 200+ Auftritte in ganz Österreich.",
@@ -66,7 +67,7 @@ export default function RootLayout({
         <SkipLink />
         <ConstructionBanner />
         <Navigation />
-        <main id="main-content" className="flex-grow pt-[68px]">
+        <main id="main-content" className="flex-grow" style={{ paddingTop: "calc(68px + env(safe-area-inset-top))" }}>
           {children}
         </main>
         <Footer />

@@ -64,6 +64,18 @@ export default function HeroSection({
         {'K & Q'}
       </span>
 
+      {/* ── Radial-Gradient Atmosphere Overlay ── */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(ellipse 75% 85% at 62% 48%, rgba(200,149,26,0.22) 0%, rgba(200,149,26,0.08) 42%, transparent 65%),' +
+            'radial-gradient(ellipse 50% 60% at 5% 90%, rgba(107,163,168,0.12) 0%, transparent 55%)',
+          zIndex: 0,
+        }}
+      />
+
       {/* ── MOBILE ── */}
       <div className="md:hidden relative w-full min-h-[100svh] flex flex-col">
         {/* TOP: Eyebrow + Headline + Subline */}

@@ -41,7 +41,7 @@ export default function KontaktPage() {
               marginBottom: "1rem",
             }}
           >
-            Kontakt
+            Live-Band anfragen — Kreiz & Quer
           </h1>
           <p
             style={{

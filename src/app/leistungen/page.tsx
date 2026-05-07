@@ -84,7 +84,7 @@ const leistungen: LeistungItem[] = [
     id: "vollband",
     icon: "groups",
     title: "Vollband",
-    body: "Wenn die Tanzfläche brennen soll. Mit vier Musikern, vollem Sound und professioneller Technik entfesseln wir die Tanzfläche — druckvoll, lebendig und mitreißend bis zur letzten Zugabe.",
+    body: "Wenn die Tanzfläche brennen soll. Als Live-Coverband mit über 180 Songs und vier Musikern, vollem Sound und professioneller Technik entfesseln wir die Tanzfläche — druckvoll, lebendig und mitreißend bis zur letzten Zugabe.",
     checks: [
       "4 Musiker",
       "Vollständiges Equipment",
@@ -139,6 +139,42 @@ export default function Leistungen() {
           </p>
         </div>
       </div>
+
+      {/* Sprungnavigation */}
+      <nav
+        aria-label="Zu Abschnitt springen"
+        style={{
+          background: "var(--color-surface)",
+          borderBottom: "1px solid var(--color-border)",
+          position: "sticky",
+          top: "calc(68px + env(safe-area-inset-top))",
+          zIndex: 40,
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1280px",
+            margin: "0 auto",
+            padding: "0.75rem 2rem",
+            display: "flex",
+            gap: "0.5rem",
+            overflowX: "auto",
+            scrollbarWidth: "none",
+          }}
+        >
+          {[
+            { label: "Hochzeiten", anchor: "hochzeiten" },
+            { label: "Bälle & Gala", anchor: "baelle-gala" },
+            { label: "Firmen & Events", anchor: "firmen-events" },
+            { label: "Duo", anchor: "duo" },
+            { label: "Vollband", anchor: "vollband" },
+          ].map(({ label, anchor }) => (
+            <a key={anchor} href={`#${anchor}`} className="jump-nav-pill">
+              {label}
+            </a>
+          ))}
+        </div>
+      </nav>
 
       {/* Leistungs-Sektionen */}
       {leistungen.map((l) => {

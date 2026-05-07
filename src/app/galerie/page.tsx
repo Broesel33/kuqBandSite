@@ -59,7 +59,7 @@ export default function GaleriePage() {
               marginBottom: "1rem",
             }}
           >
-            Galerie
+            Impressionen — Kreiz & Quer live
           </h1>
           <p
             style={{

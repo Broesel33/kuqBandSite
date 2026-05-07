@@ -117,7 +117,7 @@ export default function RepertoirePage() {
               marginBottom: "1rem",
             }}
           >
-            Repertoire
+            Songliste & Repertoire — Kreiz & Quer
           </h1>
           <p
             style={{

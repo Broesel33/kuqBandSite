@@ -88,6 +88,7 @@ export default function Navigation() {
         borderBottom: "1px solid rgba(255,255,255,0.08)",
         boxShadow: scrolled ? "0 2px 16px rgba(0,0,0,0.35)" : "none",
         transition: "box-shadow 0.3s",
+        paddingTop: "env(safe-area-inset-top)",
       }}
     >
       <div className="flex justify-between items-center w-full px-6 md:px-8 py-3 max-w-screen-xl mx-auto">
