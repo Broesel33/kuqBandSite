@@ -382,6 +382,7 @@ export default function UeberUns() {
               </p>
             </div>
             <ul
+              role="list"
               style={{
                 listStyle: "none",
                 padding: 0,

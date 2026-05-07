@@ -222,7 +222,7 @@ export default function Leistungen() {
                   >
                     Was du bekommst
                   </h3>
-                  <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                  <ul role="list" style={{ listStyle: "none", padding: 0, margin: 0 }}>
                     {l.checks.map((check) => (
                       <li
                         key={check}

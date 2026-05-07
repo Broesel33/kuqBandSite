@@ -1,5 +1,6 @@
 import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
+import YouTubeFacade from "@/components/YouTubeFacade";
 
 export const metadata = {
   title: "Kreiz & Quer – Live-Band Steiermark | Hochzeiten, Bälle & Events",
@@ -144,20 +145,9 @@ export default function Startseite() {
                 boxShadow: "0 24px 64px rgba(0,0,0,0.5)",
               }}
             >
-              <iframe
-                src="https://www.youtube.com/embed/WW9Yz7XWEPA"
+              <YouTubeFacade
+                videoId="WW9Yz7XWEPA"
                 title="Kreiz & Quer — Live-Vorstellung"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  border: "none",
-                }}
               />
             </div>
           </ScrollReveal>
@@ -431,11 +421,13 @@ export default function Startseite() {
               </Link>
             </div>
           </ScrollReveal>
-          <div role="list">
+          <ul role="list" style={{ listStyle: "none", padding: 0, margin: 0 }}>
             {naechsteTermine.map((t) => (
-              <EventRow key={t.id} {...t} />
+              <li key={t.id}>
+                <EventRow {...t} />
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 

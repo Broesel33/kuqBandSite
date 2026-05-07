@@ -184,6 +184,7 @@ export default function KontaktPage() {
                 </h3>
 
                 <ul
+                  role="list"
                   style={{
                     listStyle: "none",
                     padding: 0,
@@ -362,6 +363,7 @@ export default function KontaktPage() {
                 </h3>
 
                 <ul
+                  role="list"
                   style={{
                     listStyle: "none",
                     padding: 0,

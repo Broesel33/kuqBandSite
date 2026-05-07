@@ -100,6 +100,8 @@ export default function HeroSection({
             className="object-contain object-top"
             priority
             sizes="100vw"
+            placeholder="blur"
+            blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMzYzQ3NDgiLz48L3N2Zz4="
           />
           <div
             className="absolute inset-0 pointer-events-none"
@@ -171,6 +173,8 @@ export default function HeroSection({
           priority
           sizes="45vw"
           style={{ position: 'absolute', zIndex: 1 }}
+          placeholder="blur"
+          blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMzYzQ3NDgiLz48L3N2Zz4="
         />
       </div>
 

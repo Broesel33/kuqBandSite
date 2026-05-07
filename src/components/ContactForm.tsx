@@ -272,6 +272,7 @@ export default function ContactForm() {
             aria-required
             aria-invalid={!!errors.nachricht}
             aria-describedby={errors.nachricht ? "contact-nachricht-error" : undefined}
+            placeholder="z. B. Wir heiraten am 20. September 2026 im Glücksgarten in Waldstein, ca. 80 Gäste, suchen eine Band für Empfang und Abendprogramm, geplante Spieldauer ca. 4 Stunden…"
             value={form.nachricht}
             onChange={set("nachricht")}
             style={{
@@ -290,7 +291,8 @@ export default function ContactForm() {
       <div style={{ marginTop: "2rem" }}>
         <button
           type="submit"
-          disabled={submitting}
+          aria-disabled={submitting}
+          onClick={(e) => { if (submitting) e.preventDefault(); }}
           className="btn-cta"
           style={{
             background: "var(--color-amber)",
@@ -306,10 +308,16 @@ export default function ContactForm() {
             minHeight: "44px",
             transition: "background 0.2s",
           }}
-          aria-disabled={submitting}
         >
           {submitting ? "Wird gesendet …" : "Anfrage senden"}
         </button>
+        <p style={{ marginTop: "0.875rem", fontSize: "0.8125rem", color: "var(--color-text-muted)", fontFamily: "var(--font-ui)" }}>
+          Mit dem Absenden stimmst du der Verarbeitung deiner Daten gemäß unserer{" "}
+          <a href="/datenschutz" style={{ color: "var(--color-text-muted)", textDecoration: "underline" }}>
+            Datenschutzerklärung
+          </a>{" "}
+          zu.
+        </p>
       </div>
     </form>
   );
