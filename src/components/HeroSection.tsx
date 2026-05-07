@@ -53,7 +53,7 @@ export default function HeroSection({
           fontSize: 'clamp(24rem, 35vw, 42rem)',
           lineHeight: 1,
           color: 'white',
-          opacity: 0.15,
+          opacity: 0.11,
           zIndex: 0,
           userSelect: 'none',
           pointerEvents: 'none',
@@ -70,8 +70,8 @@ export default function HeroSection({
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 75% 85% at 62% 48%, rgba(200,149,26,0.22) 0%, rgba(200,149,26,0.08) 42%, transparent 65%),' +
-            'radial-gradient(ellipse 50% 60% at 5% 90%, rgba(107,163,168,0.12) 0%, transparent 55%)',
+            'radial-gradient(ellipse 75% 85% at 62% 48%, rgba(200,149,26,0.16) 0%, rgba(200,149,26,0.06) 42%, transparent 65%),' +
+            'radial-gradient(ellipse 50% 60% at 5% 90%, rgba(107,163,168,0.09) 0%, transparent 55%)',
           zIndex: 0,
         }}
       />
