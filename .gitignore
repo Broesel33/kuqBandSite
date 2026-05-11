@@ -20,6 +20,12 @@
 # production
 /build
 
+# local gallery uploads
+/public/galary/
+
+# local scripts (may contain credentials)
+/scripts/
+
 # misc
 .DS_Store
 *.pem

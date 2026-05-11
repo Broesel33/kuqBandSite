@@ -2,33 +2,14 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { getPlaceholderSvg } from '@/lib/placeholderSvg';
-
-interface GalleryImage {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-}
+import type { GalerieMedia } from '@/data/galerie';
+import { cloudinaryUrl, cloudinaryVideoUrl } from '@/lib/cloudinary';
 
 interface GalleryGridProps {
-  images: GalleryImage[];
+  media: GalerieMedia[];
 }
 
-const PLACEHOLDER_COUNT = 12;
-
-function buildPlaceholderImages(): GalleryImage[] {
-  return Array.from({ length: PLACEHOLDER_COUNT }, (_, i) => ({
-    src: getPlaceholderSvg(800, 600),
-    alt: `Auftritt ${i < 4 ? 'Hochzeit' : i < 8 ? 'Ball' : 'Event'} ${2024 + Math.floor(i / 4)} — Foto folgt`,
-    width: 800,
-    height: 600,
-  }));
-}
-
-export default function GalleryGrid({ images }: GalleryGridProps) {
-  const displayImages = images.length > 0 ? images : buildPlaceholderImages();
-
+export default function GalleryGrid({ media }: GalleryGridProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const lightboxRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
@@ -38,7 +19,6 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
   const closeLightbox = useCallback(() => {
     const prevIndex = selectedIndex;
     setSelectedIndex(null);
-    // Return focus to the grid button that opened the lightbox
     if (prevIndex !== null) {
       setTimeout(() => {
         gridButtonRefs.current[prevIndex]?.focus();
@@ -48,21 +28,19 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
 
   const goNext = useCallback(() => {
     setSelectedIndex((prev) =>
-      prev === null ? null : (prev + 1) % displayImages.length
+      prev === null ? null : (prev + 1) % media.length
     );
-  }, [displayImages.length]);
+  }, [media.length]);
 
   const goPrev = useCallback(() => {
     setSelectedIndex((prev) =>
-      prev === null ? null : (prev - 1 + displayImages.length) % displayImages.length
+      prev === null ? null : (prev - 1 + media.length) % media.length
     );
-  }, [displayImages.length]);
+  }, [media.length]);
 
-  // Focus trap + keyboard navigation inside lightbox
   useEffect(() => {
     if (selectedIndex === null) return;
 
-    // Move focus to close button when lightbox opens
     setTimeout(() => {
       closeButtonRef.current?.focus();
     }, 0);
@@ -74,27 +52,14 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
     const last = focusableEls?.[focusableEls.length - 1];
 
     const handleKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        closeLightbox();
-        return;
-      }
-      if (e.key === 'ArrowRight') {
-        e.preventDefault();
-        goNext();
-        return;
-      }
-      if (e.key === 'ArrowLeft') {
-        e.preventDefault();
-        goPrev();
-        return;
-      }
+      if (e.key === 'Escape') { closeLightbox(); return; }
+      if (e.key === 'ArrowRight') { e.preventDefault(); goNext(); return; }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); goPrev(); return; }
       if (e.key !== 'Tab') return;
       if (e.shiftKey && document.activeElement === first) {
-        e.preventDefault();
-        last?.focus();
+        e.preventDefault(); last?.focus();
       } else if (!e.shiftKey && document.activeElement === last) {
-        e.preventDefault();
-        first?.focus();
+        e.preventDefault(); first?.focus();
       }
     };
 
@@ -102,52 +67,77 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
     return () => document.removeEventListener('keydown', handleKey);
   }, [selectedIndex, closeLightbox, goNext, goPrev]);
 
-  const currentImage = selectedIndex !== null ? displayImages[selectedIndex] : null;
+  const currentItem = selectedIndex !== null ? media[selectedIndex] : null;
 
   return (
     <>
       {/* Grid */}
       <div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
-        aria-label="Galerie-Bilder"
+        aria-label="Galerie-Medien"
       >
-        {displayImages.map((img, index) => (
+        {media.map((item, index) => (
           <button
-            key={`${img.src}-${index}`}
+            key={`${item.publicId}-${index}`}
             ref={(el) => { gridButtonRefs.current[index] = el; }}
             onClick={() => setSelectedIndex(index)}
-            className="relative w-full aspect-[4/3] overflow-hidden rounded-xl group focus-visible:ring-2 focus-visible:ring-offset-2"
-            style={{ display: 'block' }}
-            aria-label={`${img.alt} — Bild vergrößern`}
+            className="relative w-full overflow-hidden rounded-xl group focus-visible:ring-2 focus-visible:ring-offset-2"
+            style={{ display: 'block', aspectRatio: '4/3' }}
+            aria-label={`${item.alt} — ${item.type === 'video' ? 'Video abspielen' : 'Bild vergrößern'}`}
             type="button"
           >
-            <Image
-              src={img.src}
-              alt={img.alt}
-              fill
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              unoptimized={img.src.startsWith('data:')}
-            />
-            {/* Hover overlay */}
-            <div
-              className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-              style={{ backgroundColor: 'rgba(13, 27, 42, 0.5)' }}
-              aria-hidden="true"
-            >
-              <span
-                className="material-symbols-outlined text-white"
-                style={{ fontSize: '2rem' }}
-              >
-                zoom_in
-              </span>
-            </div>
+            {item.type === 'video' ? (
+              <>
+                <video
+                  src={cloudinaryVideoUrl(item.publicId)}
+                  preload="metadata"
+                  muted
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover"
+                  aria-hidden="true"
+                  tabIndex={-1}
+                />
+                {/* Play overlay always visible for videos */}
+                <div
+                  className="absolute inset-0 flex items-center justify-center transition-colors duration-200"
+                  style={{ backgroundColor: 'rgba(13, 27, 42, 0.35)' }}
+                  aria-hidden="true"
+                >
+                  <span
+                    className="material-symbols-outlined text-white transition-transform duration-200 group-hover:scale-110"
+                    style={{ fontSize: '3rem', filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.5))' }}
+                  >
+                    play_circle
+                  </span>
+                </div>
+              </>
+            ) : (
+              <>
+                <Image
+                  src={cloudinaryUrl(item.publicId, { width: 800 })}
+                  alt={item.alt}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                {/* Hover overlay for images */}
+                <div
+                  className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                  style={{ backgroundColor: 'rgba(13, 27, 42, 0.5)' }}
+                  aria-hidden="true"
+                >
+                  <span className="material-symbols-outlined text-white" style={{ fontSize: '2rem' }}>
+                    zoom_in
+                  </span>
+                </div>
+              </>
+            )}
           </button>
         ))}
       </div>
 
       {/* Lightbox */}
-      {selectedIndex !== null && currentImage && (
+      {selectedIndex !== null && currentItem && (
         <div
           ref={lightboxRef}
           role="dialog"
@@ -155,22 +145,17 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
           aria-label="Galerie-Lightbox"
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
           style={{ backgroundColor: 'rgba(0, 0, 0, 0.92)' }}
-          onClick={(e) => {
-            if (e.target === e.currentTarget) closeLightbox();
-          }}
-          onTouchStart={(e) => {
-            touchStartX.current = e.touches[0].clientX;
-          }}
+          onClick={(e) => { if (e.target === e.currentTarget) closeLightbox(); }}
+          onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX; }}
           onTouchEnd={(e) => {
             if (touchStartX.current === null) return;
             const delta = e.changedTouches[0].clientX - touchStartX.current;
             touchStartX.current = null;
             if (Math.abs(delta) < 50) return;
-            if (delta < 0) goNext();
-            else goPrev();
+            if (delta < 0) goNext(); else goPrev();
           }}
         >
-          {/* Close button */}
+          {/* Close */}
           <button
             ref={closeButtonRef}
             onClick={closeLightbox}
@@ -184,12 +169,12 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
             <span className="material-symbols-outlined" aria-hidden="true">close</span>
           </button>
 
-          {/* Prev button */}
+          {/* Prev */}
           <button
             onClick={goPrev}
             className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center justify-center w-11 h-11 rounded-full text-white transition-colors"
             style={{ backgroundColor: 'rgba(255,255,255,0.15)' }}
-            aria-label="Vorheriges Bild"
+            aria-label="Vorheriges Medium"
             type="button"
             onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'rgba(255,255,255,0.25)'; }}
             onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'rgba(255,255,255,0.15)'; }}
@@ -197,17 +182,28 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
             <span className="material-symbols-outlined" aria-hidden="true">chevron_left</span>
           </button>
 
-          {/* Image */}
-          <div className="relative max-w-4xl w-full max-h-[80vh] aspect-[4/3]">
-            <Image
-              src={currentImage.src}
-              alt={currentImage.alt}
-              fill
-              className="object-contain"
-              sizes="(max-width: 1024px) 100vw, 896px"
-              unoptimized={currentImage.src.startsWith('data:')}
+          {/* Content */}
+          {currentItem.type === 'video' ? (
+            <video
+              key={currentItem.publicId}
+              src={cloudinaryVideoUrl(currentItem.publicId)}
+              className="max-w-4xl w-full"
+              style={{ maxHeight: '80vh', objectFit: 'contain' }}
+              controls
+              autoPlay
+              playsInline
             />
-          </div>
+          ) : (
+            <div className="relative max-w-4xl w-full" style={{ maxHeight: '80vh', aspectRatio: '4/3' }}>
+              <Image
+                src={cloudinaryUrl(currentItem.publicId, { width: 1600 })}
+                alt={currentItem.alt}
+                fill
+                className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 896px"
+              />
+            </div>
+          )}
 
           {/* Caption */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-center px-4">
@@ -215,23 +211,23 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
               className="text-sm"
               style={{ color: 'rgba(255,255,255,0.75)', fontFamily: 'var(--font-body)' }}
             >
-              {currentImage.alt}
+              {currentItem.alt}
             </p>
             <p
               className="text-xs mt-1"
               style={{ color: 'rgba(255,255,255,0.45)', fontFamily: 'var(--font-ui)' }}
               aria-live="polite"
             >
-              {selectedIndex + 1} / {displayImages.length}
+              {selectedIndex + 1} / {media.length}
             </p>
           </div>
 
-          {/* Next button */}
+          {/* Next */}
           <button
             onClick={goNext}
             className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center justify-center w-11 h-11 rounded-full text-white transition-colors"
             style={{ backgroundColor: 'rgba(255,255,255,0.15)' }}
-            aria-label="Nächstes Bild"
+            aria-label="Nächstes Medium"
             type="button"
             onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'rgba(255,255,255,0.25)'; }}
             onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'rgba(255,255,255,0.15)'; }}
