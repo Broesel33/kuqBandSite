@@ -12,7 +12,7 @@ export default function EventCard({ event }: { event: GalerieEvent }) {
       aria-label={`${event.title}, ${event.dateLabel} — ${event.mediaCount} Fotos & Videos ansehen`}
     >
       <Image
-        src={cloudinaryUrl(event.previewImage, { width: 1200 })}
+        src={cloudinaryUrl(event.previewImage, { width: 1200, crop: 'fill', gravity: 'auto', aspectRatio: '4:3' })}
         alt={event.previewAlt}
         fill
         className="object-cover transition-transform duration-500 group-hover:scale-105"
