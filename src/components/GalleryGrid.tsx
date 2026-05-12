@@ -82,7 +82,7 @@ export default function GalleryGrid({ media }: GalleryGridProps) {
             ref={(el) => { gridButtonRefs.current[index] = el; }}
             onClick={() => setSelectedIndex(index)}
             className="relative w-full overflow-hidden rounded-xl group focus-visible:ring-2 focus-visible:ring-offset-2"
-            style={{ display: 'block', aspectRatio: '4/3' }}
+            style={{ display: 'block', aspectRatio: '4/3', backgroundColor: 'rgba(13,27,42,0.85)' }}
             aria-label={`${item.alt} — ${item.type === 'video' ? 'Video abspielen' : 'Bild vergrößern'}`}
             type="button"
           >
@@ -117,7 +117,7 @@ export default function GalleryGrid({ media }: GalleryGridProps) {
                   src={cloudinaryUrl(item.publicId, { width: 800 })}
                   alt={item.alt}
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="object-contain transition-transform duration-300 group-hover:scale-105"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 {/* Hover overlay for images */}
