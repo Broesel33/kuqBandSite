@@ -135,7 +135,7 @@ const kategorien: FaqKategorie[] = [
       {
         question: "Wie viel Platz braucht ihr für die Bühne?",
         answer:
-          "Als Vollband benötigen wir ca. 4 × 5 Meter Bühnenraum. Für das Duo reichen ca. 2 × 3 Meter. Wenn du unsicher bist, ob deine Location passt, schick uns einfach die Maße. Wir schauen uns das an und finden eine Lösung.",
+          "Als Vollband benötigen wir ca. 3 × 4 Meter Bühnenraum. Für das Duo reichen ca. 2 × 3 Meter. Wenn du unsicher bist, ob deine Location passt, schick uns einfach die Maße. Wir schauen uns das an und finden eine Lösung.",
       },
       {
         question: "Wie lange dauert Auf- und Abbau?",
