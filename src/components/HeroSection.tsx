@@ -96,7 +96,7 @@ export default function HeroSection({
             {headline}
           </h1>
           <p
-            className="hero-item hero-delay-2 text-sm"
+            className="hero-item hero-delay-2 text-base"
             style={{ color: 'rgba(255,255,255,0.88)', fontFamily: 'var(--font-body)', lineHeight: 1.65 }}
           >
             {subline}

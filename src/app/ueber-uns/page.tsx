@@ -96,7 +96,7 @@ export default function UeberUns() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(musicGroupJsonLd) }}
       />
       {/* 1. Page-Header */}
-      <div className="py-12 md:py-20" style={{ background: "var(--color-dark)" }}>
+      <header className="py-12 md:py-20" style={{ background: "var(--color-dark)" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <p
             aria-hidden="true"
@@ -134,7 +134,7 @@ export default function UeberUns() {
             Die vier Köpfe hinter dem Sound.
           </p>
         </div>
-      </div>
+      </header>
 
       {/* 2. Band-Story */}
       <section

@@ -15,11 +15,16 @@ function buildEventJsonLd(kommendeTermine: typeof TERMINE) {
       ? t.venue.split(", ")
       : [t.venue, "Österreich"];
 
+    const startDateTime = `${t.dateISO}T20:00:00+02:00`;
+    const endDateTime = `${t.dateISO}T24:00:00+02:00`;
+
     return {
       "@context": "https://schema.org",
       "@type": "Event",
       name: t.eventName,
-      startDate: t.dateISO,
+      startDate: startDateTime,
+      endDate: endDateTime,
+      image: "https://www.kreizundquer.at/og-image.jpg",
       eventStatus: "https://schema.org/EventScheduled",
       eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
       location: {
@@ -57,7 +62,7 @@ export default function Termine() {
         }}
       />
       {/* 1. Page-Header */}
-      <div className="py-12 md:py-20" style={{ background: "var(--color-dark)" }}>
+      <header className="py-12 md:py-20" style={{ background: "var(--color-dark)" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <p
             aria-hidden="true"
@@ -95,7 +100,7 @@ export default function Termine() {
             Du willst uns erst einmal live erleben? Schau einfach bei einem unserer öffentlichen Auftritte vorbei — ein Hallo nach dem Set ist immer drin.
           </p>
         </div>
-      </div>
+      </header>
 
       {/* 2. Kommende Termine */}
       <section

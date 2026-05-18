@@ -11,13 +11,13 @@ import ConstructionBanner from "@/components/ConstructionBanner";
 const syne = Syne({
   variable: "--font-syne",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["700", "800"],
 });
 
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600", "700"],
 });
 
 const materialSymbols = localFont({
@@ -67,7 +67,7 @@ export default function RootLayout({
         <SkipLink />
         <ConstructionBanner />
         <Navigation />
-        <main id="main-content" className="flex-grow" style={{ paddingTop: "calc(68px + env(safe-area-inset-top))" }}>
+        <main id="main-content" className="flex-grow" style={{ paddingTop: "calc(4.25rem + env(safe-area-inset-top))" }}>
           {children}
         </main>
         <Footer />

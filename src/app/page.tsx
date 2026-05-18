@@ -27,6 +27,40 @@ const localBusinessJsonLd = {
   areaServed: [
     { "@type": "State", name: "Steiermark" },
     { "@type": "City", name: "Graz" },
+    { "@type": "City", name: "Graz-Umgebung" },
+    { "@type": "City", name: "Frohnleiten" },
+    { "@type": "City", name: "Bruck an der Mur" },
+    { "@type": "City", name: "Leoben" },
+    { "@type": "City", name: "Kapfenberg" },
+    { "@type": "City", name: "Mürzzuschlag" },
+    { "@type": "City", name: "Judenburg" },
+    { "@type": "City", name: "Knittelfeld" },
+    { "@type": "City", name: "Voitsberg" },
+    { "@type": "City", name: "Deutschlandsberg" },
+    { "@type": "City", name: "Leibnitz" },
+    { "@type": "City", name: "Radkersburg" },
+    { "@type": "City", name: "Feldbach" },
+    { "@type": "City", name: "Weiz" },
+    { "@type": "City", name: "Hartberg" },
+    { "@type": "City", name: "Fürstenfeld" },
+    { "@type": "City", name: "Liezen" },
+    { "@type": "City", name: "Schladming" },
+    { "@type": "City", name: "Bad Aussee" },
+    { "@type": "City", name: "Murau" },
+    { "@type": "City", name: "Wolfsberg" },
+    { "@type": "City", name: "Völkermarkt" },
+    { "@type": "City", name: "Klagenfurt" },
+    { "@type": "City", name: "Villach" },
+    { "@type": "City", name: "Oberwart" },
+    { "@type": "City", name: "Güssing" },
+    { "@type": "City", name: "Wiener Neustadt" },
+    { "@type": "City", name: "Neunkirchen" },
+    { "@type": "City", name: "Baden" },
+    { "@type": "City", name: "Steyr" },
+    { "@type": "City", name: "Wels" },
+    { "@type": "City", name: "Salzburg" },
+    { "@type": "City", name: "Hallein" },
+    { "@type": "Country", name: "Österreich" },
   ],
   aggregateRating: {
     "@type": "AggregateRating",
@@ -114,7 +148,6 @@ const musicGroupJsonLd = {
   ],
 };
 import ServiceCard from "@/components/ServiceCard";
-import TestimonialCard from "@/components/TestimonialCard";
 import EventRow from "@/components/EventRow";
 import ScrollReveal from "@/components/ScrollReveal";
 import { TERMINE } from "@/data/termine";
@@ -180,6 +213,23 @@ export default function Startseite() {
                 videoId="WW9Yz7XWEPA"
                 title="Kreiz & Quer — Live-Vorstellung"
               />
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={160}>
+            <div style={{ textAlign: "center", marginTop: "2rem" }}>
+              <Link
+                href="/galerie"
+                className="transition-colors hover:text-[var(--color-amber)]"
+                style={{
+                  color: "var(--color-amber)",
+                  fontFamily: "var(--font-ui)",
+                  fontWeight: 600,
+                  fontSize: "0.9375rem",
+                  textDecoration: "none",
+                }}
+              >
+                Mehr Impressionen in der Galerie <span aria-hidden="true">→</span>
+              </Link>
             </div>
           </ScrollReveal>
         </div>
@@ -462,75 +512,7 @@ export default function Startseite() {
         </div>
       </section>
 
-      {/* 6. Testimonials */}
-      <section
-        aria-labelledby="stimmen-heading"
-        className="py-16 md:py-24"
-        style={{ background: "var(--color-surface)" }}
-      >
-        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
-          <ScrollReveal>
-            <div style={{ marginBottom: "3rem" }}>
-              <p
-                aria-hidden="true"
-                style={{
-                  fontSize: "0.75rem",
-                  fontWeight: 600,
-                  letterSpacing: "0.15em",
-                  textTransform: "uppercase",
-                  color: "var(--color-amber-text)",
-                  fontFamily: "var(--font-ui)",
-                  marginBottom: "0.75rem",
-                }}
-              >
-                Stimmen
-              </p>
-              <h2
-                id="stimmen-heading"
-                style={{
-                  fontFamily: "var(--font-headline)",
-                  fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)",
-                  color: "var(--color-text)",
-                }}
-              >
-                Was wir nach dem Event hören
-              </h2>
-            </div>
-          </ScrollReveal>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-              gap: "1.5rem",
-            }}
-          >
-            <ScrollReveal delay={0}>
-              <TestimonialCard
-                quote="Ein ganz besonderer Abend mit ganz besonderer Stimmung! Danke!"
-                authorName="Melanie"
-                eventDescription="Geburtstagsfeier · Dezember 2025"
-              />
-            </ScrollReveal>
-            <ScrollReveal delay={80}>
-              <TestimonialCard
-                quote="Das machen wir wieder! Es war genial!"
-                authorName="Daniel"
-                eventDescription="Sommerfest · Juli 2025"
-              />
-            </ScrollReveal>
-            <ScrollReveal delay={160}>
-              <TestimonialCard
-                quote="Hi, ich muss dir nochmal schreiben: Wir haben nämlich auch Tage nach der Hochzeit noch so oft von Gästen gehört, dass die Band so cool war! Das wollt ich euch nochmal sagen!"
-                authorName="Jakob & Marlene"
-                eventDescription="Hochzeit · Oktober 2024"
-                variant="dark"
-              />
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. CTA */}
+      {/* 6. CTA */}
       <section
         aria-label="Jetzt anfragen"
         className="py-16 md:py-24"

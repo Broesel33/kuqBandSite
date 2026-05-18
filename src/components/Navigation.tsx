@@ -91,7 +91,7 @@ export default function Navigation() {
         paddingTop: "env(safe-area-inset-top)",
       }}
     >
-      <div className="flex justify-between items-center w-full px-6 md:px-8 py-3 max-w-screen-xl mx-auto">
+      <div className="flex justify-between items-center w-full px-6 lg:px-8 py-3 max-w-screen-xl mx-auto">
         <Link
           href="/"
           aria-label="Kreiz & Quer – Startseite"
@@ -108,7 +108,7 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6" aria-label="Hauptnavigation">
+        <nav className="hidden lg:flex items-center gap-6" aria-label="Hauptnavigation">
           {navLinks.map(({ href, label }) => {
             const active = pathname === href;
             return (
@@ -142,14 +142,12 @@ export default function Navigation() {
         {/*
           Mobile: native <details>/<summary> disclosure.
           Browsers handle the toggle natively — no JS click handlers.
-          aria-expanded mirrors the open state for Screenreaders (NVDA+Firefox compat).
           Works reliably with touch, VoiceOver, TalkBack, keyboard.
           The <summary> sits in the flex row; the menu drops below the header bar.
         */}
-        <details ref={detailsRef} className="md:hidden mobile-nav-details">
+        <details ref={detailsRef} className="lg:hidden mobile-nav-details">
           <summary
             aria-label="Menü"
-            aria-expanded={menuOpen}
             className="mobile-nav-summary flex items-center justify-center cursor-pointer"
             style={{
               width: "44px",

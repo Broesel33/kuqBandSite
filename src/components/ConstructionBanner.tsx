@@ -29,7 +29,7 @@ export default function ConstructionBanner() {
       }}
     >
       <span style={{ textAlign: "center" }}>
-        🚧 Diese Website befindet sich noch im Aufbau — nicht alle Inhalte sind bereits verfügbar. Danke für dein Verständnis!
+        🚧 Seite im Aufbau — wir stimmen gerade noch die letzten Saiten. Bis dahin sind wir gerne unter info@kreizundquer.com erreichbar.
       </span>
       <button
         onClick={() => setClosed(true)}

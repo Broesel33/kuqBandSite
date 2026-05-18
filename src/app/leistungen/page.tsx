@@ -100,7 +100,7 @@ export default function Leistungen() {
   return (
     <>
       {/* Page-Header */}
-      <div className="py-12 md:py-20" style={{ background: "var(--color-dark)" }}>
+      <header className="py-12 md:py-20" style={{ background: "var(--color-dark)" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <p
             aria-hidden="true"
@@ -138,7 +138,7 @@ export default function Leistungen() {
             Für jeden Anlass die richtige Musik. Immer 100 % live.
           </p>
         </div>
-      </div>
+      </header>
 
       {/* Sprungnavigation */}
       <nav

@@ -278,6 +278,7 @@ export default function ContactForm() {
             style={{
               ...inputBase,
               resize: "vertical",
+              minHeight: "120px",
               borderBottom: "none",
               border: `1px solid ${errors.nachricht ? "var(--color-error)" : "var(--color-border)"}`,
               borderRadius: "0.5rem",

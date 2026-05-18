@@ -47,7 +47,6 @@ const footerNavLinks = [
 export default function Footer() {
   return (
     <footer
-      role="contentinfo"
       className="w-full py-16 px-6 md:px-8"
       style={{ backgroundColor: "var(--color-dark)" }}
     >

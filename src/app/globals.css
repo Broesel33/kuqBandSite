@@ -97,7 +97,11 @@ button:focus-visible {
   color: #000;
   border-color: var(--color-amber);
 }
+a, button {
+  touch-action: manipulation;
+}
 .btn-cta {
+  touch-action: manipulation;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease !important;
 }
 .btn-cta:hover {
