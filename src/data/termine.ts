@@ -56,7 +56,7 @@ export const TERMINE: Termin[] = [
     venue: 'Rinthpark, Frohnleiten',
     status: 'upcoming',
     statusLabel: 'Bald',
-    time: 'ab ca. 15:00 Uhr',
+    time: 'ab 22:00 Uhr',
   },
   {
     id: '2026-08-12-akustische-sommernacht',
@@ -69,7 +69,7 @@ export const TERMINE: Termin[] = [
     venue: 'Hauptplatz, Frohnleiten',
     status: 'upcoming',
     statusLabel: 'Bald',
-    time: 'ab ca. 20:00 Uhr',
+    time: 'ab 19:00 Uhr',
   },
   {
     id: '2026-08-29-grillfest',
@@ -82,6 +82,6 @@ export const TERMINE: Termin[] = [
     venue: 'Trend, Frohnleiten',
     status: 'upcoming',
     statusLabel: 'Bald',
-    time: 'ab ca. 14:00 Uhr',
+    time: 'ab 18:00 Uhr',
   },
 ];

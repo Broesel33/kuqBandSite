@@ -139,7 +139,8 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { TERMINE } from "@/data/termine";
 
 export default function Startseite() {
-  const naechsteTermine = TERMINE.filter((t) => t.status !== "past").slice(0, 4);
+  const todayISO = new Date().toISOString().slice(0, 10);
+  const naechsteTermine = TERMINE.filter((t) => t.dateISO >= todayISO).slice(0, 4);
 
   return (
     <>
