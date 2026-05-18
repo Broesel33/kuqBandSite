@@ -13,10 +13,10 @@ export default function GaleriePage() {
     <div className="min-h-screen">
       {/* Page Header */}
       <header
-        style={{ backgroundColor: "var(--color-dark)" }}
-        className="py-20 px-6 md:px-8"
+        className="py-12 md:py-20"
+        style={{ background: "var(--color-dark)" }}
       >
-        <div className="max-w-screen-xl mx-auto">
+        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <p
             aria-hidden="true"
             style={{

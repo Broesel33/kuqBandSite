@@ -65,32 +65,18 @@ const localBusinessJsonLd = {
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "5",
-    reviewCount: "3",
+    reviewCount: "1",
     bestRating: "5",
     worstRating: "5",
   },
   review: [
     {
       "@type": "Review",
-      author: { "@type": "Person", name: "Melanie" },
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      reviewBody: "Ein ganz besonderer Abend mit ganz besonderer Stimmung! Danke!",
-      datePublished: "2025-12",
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Daniel" },
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      reviewBody: "Das machen wir wieder! Es war genial!",
-      datePublished: "2025-07",
-    },
-    {
-      "@type": "Review",
       author: { "@type": "Person", name: "Jakob & Marlene" },
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
       reviewBody:
         "Wir haben nämlich auch Tage nach der Hochzeit noch so oft von Gästen gehört, dass die Band so cool war!",
-      datePublished: "2024-10",
+      datePublished: "2024-10-01",
     },
   ],
   sameAs: [

@@ -2,52 +2,57 @@ import Link from "next/link";
 import Image from "next/image";
 import MemberCard from "@/components/MemberCard";
 
-const musicGroupJsonLd = {
+const profilePageJsonLd = {
   "@context": "https://schema.org",
-  "@type": "MusicGroup",
-  name: "Kreiz & Quer",
-  url: "https://www.kreizundquer.at",
-  description:
-    "Lern Manu, Robert, Steph und Gabs kennen — die vier Musiker hinter Kreiz & Quer. Live-Band aus der Steiermark, 200+ Auftritte bei Hochzeiten, Events, Bällen und Firmenfeiern.",
-  foundingDate: "2014",
-  foundingLocation: {
-    "@type": "Place",
-    name: "Steiermark, Österreich",
+  "@type": "ProfilePage",
+  name: "Die Band | Kreiz & Quer",
+  url: "https://www.kreizundquer.at/ueber-uns",
+  mainEntity: {
+    "@type": "MusicGroup",
+    name: "Kreiz & Quer",
+    url: "https://www.kreizundquer.at",
+    description:
+      "Lern Manu, Robert, Steph und Gabs kennen — die vier Musiker hinter Kreiz & Quer. Live-Band aus der Steiermark, 200+ Auftritte bei Hochzeiten, Events, Bällen und Firmenfeiern.",
+    foundingDate: "2014",
+    foundingLocation: {
+      "@type": "Place",
+      name: "Steiermark, Österreich",
+    },
+    genre: ["Pop", "Rock", "Austropop", "Cover"],
+    member: [
+      {
+        "@type": "OrganizationRole",
+        member: { "@type": "Person", name: "Manu" },
+        roleName: ["Gesang", "Rhythmus-Gitarre"],
+      },
+      {
+        "@type": "OrganizationRole",
+        member: { "@type": "Person", name: "Robert" },
+        roleName: ["Gesang", "E-Gitarre"],
+      },
+      {
+        "@type": "OrganizationRole",
+        member: { "@type": "Person", name: "Steph" },
+        roleName: ["Schlagzeug", "Keyboard"],
+      },
+      {
+        "@type": "OrganizationRole",
+        member: { "@type": "Person", name: "Gabs" },
+        roleName: ["Bass", "Background Vocals"],
+      },
+    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+436802378954",
+      email: "info@kreizundquer.com",
+      contactType: "booking",
+    },
+    sameAs: [
+      "https://www.facebook.com/kreizuquer/",
+      "https://www.instagram.com/kreizundquer/",
+      "https://www.youtube.com/@kreizquer",
+    ],
   },
-  genre: ["Pop", "Rock", "Austropop", "Cover"],
-  member: [
-    {
-      "@type": "OrganizationRole",
-      member: { "@type": "Person", name: "Manu" },
-      roleName: ["Gesang", "Rhythmus-Gitarre"],
-    },
-    {
-      "@type": "OrganizationRole",
-      member: { "@type": "Person", name: "Robert" },
-      roleName: ["Gesang", "E-Gitarre"],
-    },
-    {
-      "@type": "OrganizationRole",
-      member: { "@type": "Person", name: "Steph" },
-      roleName: ["Schlagzeug", "Keyboard"],
-    },
-    {
-      "@type": "OrganizationRole",
-      member: { "@type": "Person", name: "Gabs" },
-      roleName: ["Bass", "Background Vocals"],
-    },
-  ],
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+436802378954",
-    email: "info@kreizundquer.com",
-    contactType: "booking",
-  },
-  sameAs: [
-    "https://www.facebook.com/kreizuquer/",
-    "https://www.instagram.com/kreizundquer/",
-    "https://www.youtube.com/@kreizquer",
-  ],
 };
 
 export const metadata = {
@@ -93,7 +98,7 @@ export default function UeberUns() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(musicGroupJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageJsonLd) }}
       />
       {/* 1. Page-Header */}
       <header className="py-12 md:py-20" style={{ background: "var(--color-dark)" }}>
@@ -324,7 +329,112 @@ export default function UeberUns() {
         </div>
       </section>
 
-      {/* 4. ViertelVier */}
+      {/* 4. Interne Weiterführung */}
+      <section
+        aria-labelledby="weiterfuehrung-heading"
+        style={{
+          background: "var(--color-dark)",
+          padding: "5rem 2rem",
+          textAlign: "center",
+        }}
+      >
+        <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
+          <h2
+            id="weiterfuehrung-heading"
+            style={{
+              fontFamily: "var(--font-headline)",
+              fontSize: "clamp(1.5rem, 3vw, 2.25rem)",
+              color: "var(--color-text-on-dark)",
+              marginBottom: "1rem",
+            }}
+          >
+            Neugierig geworden?
+          </h2>
+          <p
+            style={{
+              fontFamily: "var(--font-body)",
+              color: "var(--color-text-muted-on-dark)",
+              fontSize: "1.0625rem",
+              lineHeight: 1.7,
+              maxWidth: "560px",
+              margin: "0 auto 2.5rem",
+            }}
+          >
+            Frag direkt an — oder schau dir an, was wir spielen und für welche Anlässe wir buchbar sind.
+          </p>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "1rem",
+              justifyContent: "center",
+            }}
+          >
+            <Link
+              href="/kontakt"
+              className="btn-cta"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                backgroundColor: "var(--color-amber)",
+                color: "#000",
+                fontFamily: "var(--font-ui)",
+                fontWeight: 700,
+                fontSize: "0.9375rem",
+                padding: "0.75rem 1.75rem",
+                borderRadius: "var(--radius-md)",
+                textDecoration: "none",
+                minHeight: "44px",
+              }}
+            >
+              Jetzt anfragen
+            </Link>
+            <Link
+              href="/repertoire"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                backgroundColor: "transparent",
+                color: "var(--color-text-on-dark)",
+                border: "1.5px solid var(--color-text-on-dark)",
+                fontFamily: "var(--font-ui)",
+                fontWeight: 600,
+                fontSize: "0.9375rem",
+                padding: "0.75rem 1.75rem",
+                borderRadius: "var(--radius-md)",
+                textDecoration: "none",
+                minHeight: "44px",
+              }}
+            >
+              Unser Repertoire
+            </Link>
+            <Link
+              href="/leistungen"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                backgroundColor: "transparent",
+                color: "var(--color-text-on-dark)",
+                border: "1.5px solid var(--color-text-on-dark)",
+                fontFamily: "var(--font-ui)",
+                fontWeight: 600,
+                fontSize: "0.9375rem",
+                padding: "0.75rem 1.75rem",
+                borderRadius: "var(--radius-md)",
+                textDecoration: "none",
+                minHeight: "44px",
+              }}
+            >
+              Unsere Leistungen
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. ViertelVier */}
       <section
         aria-labelledby="viertelvier-heading"
         className="py-16 md:py-24"
@@ -369,15 +479,15 @@ export default function UeberUns() {
               }}
             >
               <p>
-                Jetzt wisst ihr, wer wir sind. Aber es gibt noch eine Seite von uns, die ihr
-                vielleicht noch nicht kennt: Neben Kreiz &amp; Quer machen wir als{" "}
+                Jetzt weißt du, wer wir sind. Aber es gibt noch eine Seite von uns, die du
+                vielleicht noch nicht kennst: Neben Kreiz &amp; Quer machen wir als{" "}
                 <strong style={{ color: "var(--color-text)" }}>ViertelVier</strong> eigene Musik —
                 modernen Austropop, den wir selbst schreiben, selbst produzieren und der sich
                 schlicht nach uns anhört.
               </p>
               <p>
                 Keine fremden Songs, keine Vorgaben — nur das, was wir wirklich sagen wollen.
-                Wenn ihr neugierig seid, wie wir klingen, wenn wir ganz wir selbst sind, hört
+                Wenn du neugierig bist, wie wir klingen, wenn wir ganz wir selbst sind, hör
                 einfach rein:
               </p>
             </div>
@@ -427,91 +537,6 @@ export default function UeberUns() {
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Interne Weiterführung */}
-      <section
-        aria-labelledby="weiterfuehrung-heading"
-        style={{
-          background: "var(--color-dark)",
-          padding: "5rem 2rem",
-          textAlign: "center",
-        }}
-      >
-        <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
-          <h2
-            id="weiterfuehrung-heading"
-            style={{
-              fontFamily: "var(--font-headline)",
-              fontSize: "clamp(1.5rem, 3vw, 2.25rem)",
-              color: "var(--color-text-on-dark)",
-              marginBottom: "1rem",
-            }}
-          >
-            Neugierig geworden?
-          </h2>
-          <p
-            style={{
-              fontFamily: "var(--font-body)",
-              color: "var(--color-text-muted-on-dark)",
-              fontSize: "1.0625rem",
-              lineHeight: 1.7,
-              marginBottom: "2.5rem",
-              maxWidth: "560px",
-              margin: "0 auto 2.5rem",
-            }}
-          >
-            Schaut euch an, was wir spielen — oder direkt, für welche Anlässe wir buchbar sind.
-          </p>
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "1rem",
-              justifyContent: "center",
-            }}
-          >
-            <Link
-              href="/repertoire"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.5rem",
-                backgroundColor: "var(--color-amber)",
-                color: "#000",
-                fontFamily: "var(--font-ui)",
-                fontWeight: 700,
-                fontSize: "0.9375rem",
-                padding: "0.75rem 1.75rem",
-                borderRadius: "var(--radius-md)",
-                textDecoration: "none",
-                minHeight: "44px",
-              }}
-            >
-              Unser Repertoire
-            </Link>
-            <Link
-              href="/leistungen"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.5rem",
-                backgroundColor: "transparent",
-                color: "var(--color-text-on-dark)",
-                border: "1.5px solid var(--color-text-on-dark)",
-                fontFamily: "var(--font-ui)",
-                fontWeight: 600,
-                fontSize: "0.9375rem",
-                padding: "0.75rem 1.75rem",
-                borderRadius: "var(--radius-md)",
-                textDecoration: "none",
-                minHeight: "44px",
-              }}
-            >
-              Unsere Leistungen
-            </Link>
           </div>
         </div>
       </section>

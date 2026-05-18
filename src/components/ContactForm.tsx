@@ -181,7 +181,7 @@ export default function ContactForm() {
             type="text"
             autoComplete="name"
             aria-required
-            aria-invalid={!!errors.name}
+            aria-invalid={errors.name ? true : undefined}
             aria-describedby={errors.name ? "contact-name-error" : undefined}
             value={form.name}
             onChange={set("name")}
@@ -200,7 +200,7 @@ export default function ContactForm() {
             type="email"
             autoComplete="email"
             aria-required
-            aria-invalid={!!errors.email}
+            aria-invalid={errors.email ? true : undefined}
             aria-describedby={errors.email ? "contact-email-error" : undefined}
             value={form.email}
             onChange={set("email")}
@@ -230,7 +230,7 @@ export default function ContactForm() {
           <select
             id="contact-anlass"
             aria-required
-            aria-invalid={!!errors.anlass}
+            aria-invalid={errors.anlass ? true : undefined}
             aria-describedby={errors.anlass ? "contact-anlass-error" : undefined}
             value={form.anlass}
             onChange={set("anlass")}
@@ -249,7 +249,7 @@ export default function ContactForm() {
         {/* Datum */}
         {form.anlass !== "Presse / Kooperation" && (
           <div>
-            <label htmlFor="contact-datum" style={labelStyle}>Wunschdatum</label>
+            <label htmlFor="contact-datum" style={labelStyle}>Wunschdatum (optional)</label>
             <input
               id="contact-datum"
               type="date"
@@ -270,7 +270,7 @@ export default function ContactForm() {
             id="contact-nachricht"
             rows={5}
             aria-required
-            aria-invalid={!!errors.nachricht}
+            aria-invalid={errors.nachricht ? true : undefined}
             aria-describedby={errors.nachricht ? "contact-nachricht-error" : undefined}
             placeholder="z. B. Wir heiraten am 20. September 2026 im Glücksgarten in Waldstein, ca. 80 Gäste, suchen eine Band für Empfang und Abendprogramm, geplante Spieldauer ca. 4 Stunden…"
             value={form.nachricht}
@@ -292,7 +292,7 @@ export default function ContactForm() {
       <div style={{ marginTop: "2rem" }}>
         <button
           type="submit"
-          aria-disabled={submitting}
+          aria-disabled={submitting ? true : undefined}
           onClick={(e) => { if (submitting) e.preventDefault(); }}
           className="btn-cta"
           style={{

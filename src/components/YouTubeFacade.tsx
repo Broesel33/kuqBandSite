@@ -34,6 +34,7 @@ export default function YouTubeFacade({ videoId, title }: YouTubeFacadeProps) {
 
   return (
     <button
+      type="button"
       onClick={() => setActive(true)}
       aria-label={`Video abspielen: ${title}`}
       style={{

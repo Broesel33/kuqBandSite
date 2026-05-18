@@ -16,6 +16,7 @@ interface LeistungItem {
   bg: string;
   dark?: boolean;
   anlass: string;
+  testimonial?: { quote: string; author: string };
 }
 
 const leistungen: LeistungItem[] = [
@@ -34,6 +35,10 @@ const leistungen: LeistungItem[] = [
     ],
     bg: "var(--color-surface)",
     anlass: "Hochzeit",
+    testimonial: {
+      quote: "Wir haben nämlich auch Tage nach der Hochzeit noch so oft von Gästen gehört, dass die Band so cool war!",
+      author: "Jakob & Marlene",
+    },
   },
   {
     id: "baelle-gala",
@@ -124,7 +129,7 @@ export default function Leistungen() {
               marginBottom: "1rem",
             }}
           >
-            Leistungen
+            Live-Musik für jeden Anlass
           </h1>
           <p
             style={{
@@ -241,6 +246,42 @@ export default function Leistungen() {
                   >
                     {l.body}
                   </p>
+                  {l.testimonial && (
+                    <figure
+                      style={{
+                        marginTop: "2rem",
+                        padding: "1.25rem 1.5rem",
+                        borderLeft: "3px solid var(--color-amber)",
+                        background: "rgba(200,149,26,0.07)",
+                        borderRadius: "0 var(--radius-md) var(--radius-md) 0",
+                        maxWidth: "600px",
+                      }}
+                    >
+                      <blockquote
+                        style={{
+                          fontFamily: "var(--font-body)",
+                          fontSize: "1rem",
+                          fontStyle: "italic",
+                          lineHeight: 1.7,
+                          color: "var(--color-text)",
+                          margin: 0,
+                        }}
+                      >
+                        &ldquo;{l.testimonial.quote}&rdquo;
+                      </blockquote>
+                      <figcaption
+                        style={{
+                          marginTop: "0.75rem",
+                          fontFamily: "var(--font-ui)",
+                          fontSize: "0.875rem",
+                          fontWeight: 600,
+                          color: "var(--color-amber-text)",
+                        }}
+                      >
+                        — {l.testimonial.author}
+                      </figcaption>
+                    </figure>
+                  )}
                 </div>
 
                 {/* Detail-Spalte */}
@@ -292,17 +333,21 @@ export default function Leistungen() {
                 </div>
               </div>
 
-              {/* CTA-Link */}
+              {/* CTA-Button */}
               <Link
                 href={{ pathname: "/kontakt", query: { anlass: l.anlass } }}
+                className="btn-cta"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "0.375rem",
-                  color: linkColor,
+                  backgroundColor: "var(--color-amber)",
+                  color: "#000",
                   fontFamily: "var(--font-ui)",
-                  fontWeight: 600,
+                  fontWeight: 700,
                   fontSize: "0.9375rem",
+                  padding: "0.875rem 2rem",
+                  borderRadius: "var(--radius-md)",
                   textDecoration: "none",
                   minHeight: "44px",
                 }}
@@ -357,11 +402,11 @@ export default function Leistungen() {
                 marginBottom: "2rem",
               }}
             >
-              Gute Musik hat ihren Preis — und der soll fair und nachvollziehbar sein.
-              Unsere Pakete beginnen bereits bei wenigen hundert Euro und werden individuell
-              auf deinen Anlass zugeschnitten. Was den genauen Preis beeinflusst? Spieldauer,
-              Anreise, Besetzung (Duo oder Vollband), technischer Aufwand und ob du dein
-              Event mit ein paar Extras unvergesslich machen möchtest.
+              Gute Musik hat ihren Preis, und der soll fair und nachvollziehbar sein.
+              Das Duo liegt im mittleren dreistelligen Bereich, die Vollband je nach Aufwand
+              im unteren bis mittleren vierstelligen Bereich. Spieldauer, Anreise und ein paar
+              persönliche Extras spielen dabei eine Rolle. Wir nennen dir gerne den genauen Preis
+              im unverbindlichen Angebot, ohne versteckte Kosten.
             </p>
             <p
               style={{

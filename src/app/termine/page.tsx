@@ -16,7 +16,7 @@ function buildEventJsonLd(kommendeTermine: typeof TERMINE) {
       : [t.venue, "Österreich"];
 
     const startDateTime = `${t.dateISO}T20:00:00+02:00`;
-    const endDateTime = `${t.dateISO}T24:00:00+02:00`;
+    const endDateTime = `${t.dateISO}T23:59:00+02:00`;
 
     return {
       "@context": "https://schema.org",
@@ -95,9 +95,26 @@ export default function Termine() {
               fontSize: "1.25rem",
               maxWidth: "640px",
               lineHeight: 1.6,
+              marginBottom: "0.75rem",
             }}
           >
             Du willst uns erst einmal live erleben? Schau einfach bei einem unserer öffentlichen Auftritte vorbei — ein Hallo nach dem Set ist immer drin.
+          </p>
+          <p
+            style={{
+              color: "var(--color-text-muted-on-dark)",
+              fontFamily: "var(--font-body)",
+              fontSize: "1rem",
+              maxWidth: "640px",
+              lineHeight: 1.6,
+              opacity: 0.8,
+            }}
+          >
+            Seit 2014 spielen wir in ganz Österreich — von Graz bis Bregenz. Die öffentlichen Termine hier sind nur ein kleiner Teil: Den Großteil unserer Auftritte spielen wir auf privaten Feiern.{" "}
+            <Link href="/kontakt" style={{ color: "var(--color-amber)", textDecoration: "underline" }}>
+              Jetzt für dein Event anfragen
+            </Link>
+            .
           </p>
         </div>
       </header>

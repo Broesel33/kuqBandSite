@@ -49,6 +49,7 @@ export const metadata: Metadata = {
     description: "Live-Musik für Hochzeiten, Bälle und Events. 4 Musiker, kein Playback, 200+ Auftritte in ganz Österreich.",
   },
   icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
 };
@@ -67,7 +68,7 @@ export default function RootLayout({
         <SkipLink />
         <ConstructionBanner />
         <Navigation />
-        <main id="main-content" className="flex-grow" style={{ paddingTop: "calc(4.25rem + env(safe-area-inset-top))" }}>
+        <main id="main-content" tabIndex={-1} className="flex-grow" style={{ paddingTop: "calc(4.25rem + env(safe-area-inset-top))" }}>
           {children}
         </main>
         <Footer />
