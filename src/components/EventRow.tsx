@@ -13,6 +13,7 @@ interface EventRowProps {
   status: EventStatus;
   statusLabel: string;
   time?: string;
+  note?: string;
 }
 
 const statusStyles: Record<EventStatus, { bg: string; text: string }> = {
@@ -32,6 +33,7 @@ export default function EventRow({
   status,
   statusLabel,
   time,
+  note,
 }: EventRowProps) {
   const isPast = status === 'past';
   const badge = statusStyles[status];
@@ -161,6 +163,18 @@ export default function EventRow({
               schedule
             </span>
             {time}
+          </p>
+        )}
+        {/* Row 4: note (optional) */}
+        {note && (
+          <p style={{
+            fontFamily: 'var(--font-body)',
+            fontSize: '0.8125rem',
+            color: 'var(--color-text-muted)',
+            margin: '0.2rem 0 0',
+            fontStyle: 'italic',
+          }}>
+            {note}
           </p>
         )}
       </div>

@@ -12,6 +12,7 @@ export interface Termin {
   status: EventStatus;
   statusLabel: string;
   time?: string;
+  note?: string;
 }
 
 // Aktuelles Datum: April 2026
@@ -42,6 +43,7 @@ export const TERMINE: Termin[] = [
     status: 'upcoming',
     statusLabel: 'Bald',
     time: 'ab ca. 19:00 Uhr',
+    note: 'Akustische Begleitung zwischen den Lesungen',
   },
   {
     id: '2026-08-01-sommerfest',
