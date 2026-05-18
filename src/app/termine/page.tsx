@@ -2,6 +2,8 @@ import Link from "next/link";
 import { TERMINE } from "@/data/termine";
 import EventRow from "@/components/EventRow";
 
+export const revalidate = 3600;
+
 export const metadata = {
   title: "Konzerttermine & Live-Auftritte | Steiermark – Kreiz & Quer",
   description:
@@ -51,7 +53,8 @@ function buildEventJsonLd(kommendeTermine: typeof TERMINE) {
 }
 
 export default function Termine() {
-  const kommendeTermine = TERMINE.filter((t) => t.status !== "past");
+  const todayISO = new Date().toISOString().slice(0, 10);
+  const kommendeTermine = TERMINE.filter((t) => t.dateISO >= todayISO);
 
   return (
     <>
@@ -189,7 +192,7 @@ export default function Termine() {
                   marginBottom: "1.5rem",
                 }}
               >
-                Aktuell sind keine öffentlichen Termine geplant.
+                Gerade keine öffentlichen Auftritte — aber vielleicht spielen wir bald auf deiner Feier?
               </p>
               <Link
                 href="/kontakt"

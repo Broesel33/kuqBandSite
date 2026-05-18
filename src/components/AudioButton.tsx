@@ -40,7 +40,8 @@ export default function AudioButton() {
         border: "none",
         cursor: isPlaying ? "default" : "pointer",
       }}
-      aria-label={isPlaying ? "Hörprobe läuft" : "Hörprobe abspielen"}
+      aria-label={isPlaying ? "Hörprobe stoppen" : "Hörprobe abspielen"}
+      aria-pressed={isPlaying}
     >
       <span
         className="material-symbols-outlined"

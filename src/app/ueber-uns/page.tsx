@@ -283,20 +283,6 @@ export default function UeberUns() {
       >
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
           <div style={{ marginBottom: "3rem" }}>
-            <p
-              aria-hidden="true"
-              style={{
-                fontSize: "0.75rem",
-                fontWeight: 600,
-                letterSpacing: "0.15em",
-                textTransform: "uppercase",
-                color: "var(--color-amber-text)",
-                fontFamily: "var(--font-ui)",
-                marginBottom: "0.75rem",
-              }}
-            >
-              Wir Vier
-            </p>
             <h2
               id="mitglieder-heading"
               style={{

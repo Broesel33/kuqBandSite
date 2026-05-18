@@ -275,6 +275,13 @@ textarea:focus-visible {
   }
 }
 
+/* Sticky Mobile CTA — nur auf kleinen Bildschirmen sichtbar */
+@media (max-width: 767px) {
+  .mobile-sticky-cta {
+    display: block !important;
+  }
+}
+
 /* prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

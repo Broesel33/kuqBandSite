@@ -12,6 +12,7 @@ interface EventRowProps {
   venue: string;
   status: EventStatus;
   statusLabel: string;
+  time?: string;
 }
 
 const statusStyles: Record<EventStatus, { bg: string; text: string }> = {
@@ -30,6 +31,7 @@ export default function EventRow({
   venue,
   status,
   statusLabel,
+  time,
 }: EventRowProps) {
   const isPast = status === 'past';
   const badge = statusStyles[status];
@@ -140,6 +142,27 @@ export default function EventRow({
           </span>
           {venue}
         </p>
+        {/* Row 3: time (optional) */}
+        {time && (
+          <p style={{
+            fontFamily: 'var(--font-body)',
+            fontSize: '0.875rem',
+            color: 'var(--color-text-secondary)',
+            margin: '0.2rem 0 0',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.3rem',
+          }}>
+            <span
+              className="material-symbols-outlined"
+              aria-hidden="true"
+              style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)' }}
+            >
+              schedule
+            </span>
+            {time}
+          </p>
+        )}
       </div>
     </div>
   );

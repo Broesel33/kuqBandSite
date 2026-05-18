@@ -57,6 +57,7 @@ function SongPreviewButton({ song }: { song: Song }) {
         audio.onended = () => setPlaying(false);
       }).catch(() => setPlaying(false));
     } else {
+      if (playing) return;
       playBeep();
       setPlaying(true);
       setTimeout(() => setPlaying(false), 700);
@@ -65,8 +66,10 @@ function SongPreviewButton({ song }: { song: Song }) {
 
   return (
     <button
+      type="button"
       onClick={handlePlay}
       aria-label={`${playing ? "Stopp" : "Vorschau"}: ${song.title} von ${song.artist}`}
+      aria-pressed={playing}
       title={song.previewUrl ? undefined : "Vorschau folgt"}
       style={{
         flexShrink: 0,

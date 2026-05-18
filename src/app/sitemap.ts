@@ -50,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${BASE_URL}/kontakt`,
       lastModified: new Date(),
       changeFrequency: "yearly",
-      priority: 0.6,
+      priority: 0.8,
     },
     {
       url: `${BASE_URL}/datenschutz`,

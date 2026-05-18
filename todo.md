@@ -69,31 +69,31 @@
 
 ## Grüne Aufgaben — Mittelfristig (nächster Sprint / nice to have)
 
-- [ ] **AudioButton mit `aria-pressed` ausstatten:** In der AudioButton-Komponente `aria-label` zustandsabhängig setzen: `aria-label={playing ? "Hörprobe stoppen" : "Hörprobe abspielen"}` und `aria-pressed={playing}` ergänzen. — *Quelle: Laura (Accessibility); WCAG 4.1.2 Level A*
+- [x] **AudioButton mit `aria-pressed` ausstatten:** In der AudioButton-Komponente `aria-label` zustandsabhängig setzen: `aria-label={playing ? "Hörprobe stoppen" : "Hörprobe abspielen"}` und `aria-pressed={playing}` ergänzen. — *Quelle: Laura (Accessibility); WCAG 4.1.2 Level A*
 
-- [ ] **`lang="de"` auf `lang="de-AT"` präzisieren:** In `layout.tsx` das `lang`-Attribut auf `de-AT` ändern für österreichisches Deutsch. Marginal für SEO, korrekt für Screenreader-Sprachausgabe. — *Quelle: Jana (SEO)*
+- [x] **`lang="de"` auf `lang="de-AT"` präzisieren:** In `layout.tsx` das `lang`-Attribut auf `de-AT` ändern für österreichisches Deutsch. Marginal für SEO, korrekt für Screenreader-Sprachausgabe. — *Quelle: Jana (SEO)*
 
-- [ ] **`/kontakt` Sitemap-Priorität auf 0.8 erhöhen:** In `sitemap.ts` die Priorität der Kontaktseite von 0.6 auf 0.8 anheben — sie ist die primäre Conversion-Seite und sollte nicht gleichauf mit der Galerie (0.6) liegen. — *Quelle: Jana (SEO)*
+- [x] **`/kontakt` Sitemap-Priorität auf 0.8 erhöhen:** In `sitemap.ts` die Priorität der Kontaktseite von 0.6 auf 0.8 anheben — sie ist die primäre Conversion-Seite und sollte nicht gleichauf mit der Galerie (0.6) liegen. — *Quelle: Jana (SEO)*
 
-- [ ] **Galerie: Placeholder-State oder Informationsbox hinzufügen:** Solange weniger als 4 Events in der Galerie vorhanden sind, einen visuellen Hinweis darstellen ("Weitere Fotos folgen nach jedem Auftritt"), damit die leere zweite Grid-Spalte nicht wie ein Fehler wirkt. — *Quelle: Felix (Design)* — Hinweis: Entfällt bei ausreichend befüllter Galerie.
+- [x] **Galerie: Placeholder-State oder Informationsbox hinzufügen:** Solange weniger als 4 Events in der Galerie vorhanden sind, einen visuellen Hinweis darstellen ("Weitere Fotos folgen nach jedem Auftritt"), damit die leere zweite Grid-Spalte nicht wie ein Fehler wirkt. — *Quelle: Felix (Design)* — Hinweis: Entfällt bei ausreichend befüllter Galerie.
 
-- [ ] **Galerie-CTAs visuell differenzieren:** Den "@kreizundquer"-Instagram-Link als sekundären Button (transparenter Hintergrund, Rahmen) und "Die Band kennenlernen" als primären Button darstellen. Aktuell sind beide identisch gestylt. — *Quelle: Felix (Design)*
+- [x] **Galerie-CTAs visuell differenzieren:** Den "@kreizundquer"-Instagram-Link als sekundären Button (transparenter Hintergrund, Rahmen) und "Die Band kennenlernen" als primären Button darstellen. Aktuell sind beide identisch gestylt. — *Quelle: Felix (Design)*
 
-- [ ] **Duo-Option sichtbarer positionieren:** Die Duo-Option als eigenständiges Produkt sichtbarer machen — z. B. als vierter ServiceCard auf der Startseite oder mit eigenem Absatz in der Hochzeits-Sektion auf der Leistungsseite. Das Duo ist relevant für standesamtliche Trauungen und Sektempfänge, erscheint aber aktuell nur als Anhang auf der Leistungsseite. — *Quelle: Tim (Content)*
+- [x] **Duo-Option sichtbarer positionieren:** Die Duo-Option als eigenständiges Produkt sichtbarer machen — z. B. als vierter ServiceCard auf der Startseite oder mit eigenem Absatz in der Hochzeits-Sektion auf der Leistungsseite. Das Duo ist relevant für standesamtliche Trauungen und Sektempfänge, erscheint aber aktuell nur als Anhang auf der Leistungsseite. — *Quelle: Tim (Content)*
 
-- [ ] **Fallback-Text auf der Terminseite emotionaler gestalten:** In `src/app/termine/page.tsx` den Leerstand-Text von "Aktuell sind keine öffentlichen Termine geplant." auf etwas wie "Gerade keine öffentlichen Auftritte — aber vielleicht spielen wir bald auf deiner Feier?" mit direktem Link zu Kontakt ändern. — *Quelle: Tim (Content)*
+- [x] **Fallback-Text auf der Terminseite emotionaler gestalten:** In `src/app/termine/page.tsx` den Leerstand-Text von "Aktuell sind keine öffentlichen Termine geplant." auf etwas wie "Gerade keine öffentlichen Auftritte — aber vielleicht spielen wir bald auf deiner Feier?" mit direktem Link zu Kontakt ändern. — *Quelle: Tim (Content)*
 
-- [ ] **Uhrzeit zu Terminen ergänzen:** In `src/app/termine/page.tsx` für öffentliche Auftritte zumindest eine ungefähre Beginnzeit (z. B. "ab ca. 19:00 Uhr") in den Termin-Daten ergänzen und in der EventRow-Komponente anzeigen. — *Quelle: Felix (Design)*
+- [x] **Uhrzeit zu Terminen ergänzen:** In `src/app/termine/page.tsx` für öffentliche Auftritte zumindest eine ungefähre Beginnzeit (z. B. "ab ca. 19:00 Uhr") in den Termin-Daten ergänzen und in der EventRow-Komponente anzeigen. — *Quelle: Felix (Design)*
 
-- [ ] **Sticky Mobile CTA einführen:** Einen kleinen schwebenden "Jetzt anfragen"-Button am unteren Bildschirmrand (nur Mobile, nur wenn der Nutzer > 50 % der Seite gescrollt hat) einbauen. Erhöht die mobile Konversion ohne visuell zu stören. — *Quelle: Marco (Commercial)*
+- [x] **Sticky Mobile CTA einführen:** Einen kleinen schwebenden "Jetzt anfragen"-Button am unteren Bildschirmrand (nur Mobile, nur wenn der Nutzer > 50 % der Seite gescrollt hat) einbauen. Erhöht die mobile Konversion ohne visuell zu stören. — *Quelle: Marco (Commercial)*
 
-- [ ] **"Wir Vier"-Redundanz bereinigen:** In `src/app/ueber-uns/page.tsx` den `aria-hidden`-`p`-Tag "Wir Vier" über dem `h2 "Wir Vier – Ganz persönlich"` entfernen. Der visuelle Eyebrow-Text dupliziert den Heading-Inhalt ohne Mehrwert. — *Quelle: Felix (Design) + Tim (Content)*
+- [x] **"Wir Vier"-Redundanz bereinigen:** In `src/app/ueber-uns/page.tsx` den `aria-hidden`-`p`-Tag "Wir Vier" über dem `h2 "Wir Vier – Ganz persönlich"` entfernen. Der visuelle Eyebrow-Text dupliziert den Heading-Inhalt ohne Mehrwert. — *Quelle: Felix (Design) + Tim (Content)*
 
-- [ ] **Galerie-Subline emotionaler gestalten:** In `src/app/galerie/page.tsx` den Header-Untertitel um einen einladenden Zusatz erweitern, z. B. "Momente, die bleiben — schau selbst, wie es auf der Bühne aussieht, wenn wir spielen." — *Quelle: Tim (Content)*
+- [x] **Galerie-Subline emotionaler gestalten:** In `src/app/galerie/page.tsx` den Header-Untertitel um einen einladenden Zusatz erweitern, z. B. "Momente, die bleiben — schau selbst, wie es auf der Bühne aussieht, wenn wir spielen." — *Quelle: Tim (Content)*
 
-- [ ] **Geo-Signale im Hochzeits-Body-Text ergänzen:** In `src/app/leistungen/page.tsx` in der Hochzeits-Sektion einen natürlichen Satz ergänzen, der Graz und die Steiermark als Heimatgebiet nennt (z. B. "Als Hochzeitsband aus Frohnleiten bei Graz sind wir in der gesamten Steiermark zuhause."). — *Quelle: Tim (Content)*
+- [x] **Geo-Signale im Hochzeits-Body-Text ergänzen:** In `src/app/leistungen/page.tsx` in der Hochzeits-Sektion einen natürlichen Satz ergänzen, der Graz und die Steiermark als Heimatgebiet nennt (z. B. "Als Hochzeitsband aus Frohnleiten bei Graz sind wir in der gesamten Steiermark zuhause."). — *Quelle: Tim (Content)*
 
-- [ ] **Aggregierte Bewertungen aktiv ausbauen:** Nach jedem Event aktiv um Google-Bewertungen bitten und die JSON-LD-Reviews in `src/app/page.tsx` sukzessive erweitern. Mit nur 3 eingetragenen Reviews ist ein Google-Rich-Snippet mit Sternebewertung unwahrscheinlich (inoffizielle Praxis: 5+ Reviews). — *Quelle: Jana (SEO)*
+- [x] **Aggregierte Bewertungen aktiv ausbauen:** Nach jedem Event aktiv um Google-Bewertungen bitten und die JSON-LD-Reviews in `src/app/page.tsx` sukzessive erweitern. Mit nur 3 eingetragenen Reviews ist ein Google-Rich-Snippet mit Sternebewertung unwahrscheinlich (inoffizielle Praxis: 5+ Reviews). — *Quelle: Jana (SEO)*
 
 - [ ] **SR-only-Heading auf der Kontaktseite sprachlich überarbeiten:** In `src/app/kontakt/page.tsx` den visuell versteckten H2-Text von "Kontaktformular und Kontaktinformationen" auf "Anfrage und Kontaktdaten" oder "Anfrage senden" ändern — natürlicher für Screenreader-Navigation. — *Quelle: Laura (Accessibility)*
 

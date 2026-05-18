@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import SkipLink from "@/components/SkipLink";
 import CookieConsentBanner from "@/components/CookieConsentBanner";
 import ConstructionBanner from "@/components/ConstructionBanner";
+import StickyMobileCta from "@/components/StickyMobileCta";
 
 const syne = Syne({
   variable: "--font-syne",
@@ -61,7 +62,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="de"
+      lang="de-AT"
       className={`${syne.variable} ${manrope.variable} ${materialSymbols.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[var(--color-surface)] text-[var(--color-text)]">
@@ -72,6 +73,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <StickyMobileCta />
         <CookieConsentBanner />
       </body>
     </html>

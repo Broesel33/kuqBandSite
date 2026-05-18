@@ -24,7 +24,7 @@ const leistungen: LeistungItem[] = [
     id: "hochzeiten",
     icon: "favorite",
     title: "Hochzeiten",
-    body: "Vom gefühlvollen Ja-Wort bis zur ausgelassenen Party — als Hochzeitsband in Graz und der Steiermark begleiten wir deinen großen Tag mit Herz, Feingefühl und genau der Musik, die den Moment unvergesslich macht. Jeder Wunsch, jede Stimmung, jeder Tanz.",
+    body: "Vom gefühlvollen Ja-Wort bis zur ausgelassenen Party — als Hochzeitsband in Graz und der Steiermark begleiten wir deinen großen Tag mit Herz, Feingefühl und genau der Musik, die den Moment unvergesslich macht. Jeder Wunsch, jede Stimmung, jeder Tanz. Als Hochzeitsband aus Frohnleiten bei Graz sind wir in der gesamten Steiermark zuhause.",
     checks: [
       "Akustik-Set",
       "Vollband",

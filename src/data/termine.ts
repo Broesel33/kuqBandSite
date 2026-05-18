@@ -11,6 +11,7 @@ export interface Termin {
   venue: string;
   status: EventStatus;
   statusLabel: string;
+  time?: string;
 }
 
 // Aktuelles Datum: April 2026
@@ -27,6 +28,7 @@ export const TERMINE: Termin[] = [
     venue: 'Rinthpark, Frohnleiten',
     status: 'confirmed',
     statusLabel: 'Bestätigt',
+    time: 'ab ca. 14:00 Uhr',
   },
   {
     id: '2026-06-21-lesung',
@@ -39,6 +41,7 @@ export const TERMINE: Termin[] = [
     venue: 'Bibliothek, Frohnleiten',
     status: 'upcoming',
     statusLabel: 'Bald',
+    time: 'ab ca. 19:00 Uhr',
   },
   {
     id: '2026-08-01-sommerfest',
@@ -51,6 +54,7 @@ export const TERMINE: Termin[] = [
     venue: 'Rinthpark, Frohnleiten',
     status: 'upcoming',
     statusLabel: 'Bald',
+    time: 'ab ca. 15:00 Uhr',
   },
   {
     id: '2026-08-12-akustische-sommernacht',
@@ -63,6 +67,7 @@ export const TERMINE: Termin[] = [
     venue: 'Hauptplatz, Frohnleiten',
     status: 'upcoming',
     statusLabel: 'Bald',
+    time: 'ab ca. 20:00 Uhr',
   },
   {
     id: '2026-08-29-grillfest',
@@ -75,5 +80,6 @@ export const TERMINE: Termin[] = [
     venue: 'Trend, Frohnleiten',
     status: 'upcoming',
     statusLabel: 'Bald',
+    time: 'ab ca. 14:00 Uhr',
   },
 ];

@@ -51,7 +51,7 @@ export default function GaleriePage() {
               lineHeight: 1.6,
             }}
           >
-            Momente, die bleiben — Fotos und Videos von unseren Auftritten.
+            Momente, die bleiben — schau selbst, wie es auf der Bühne aussieht, wenn wir spielen.
           </p>
         </div>
       </header>
@@ -158,8 +158,9 @@ export default function GaleriePage() {
               display: "inline-flex",
               alignItems: "center",
               gap: "0.5rem",
-              backgroundColor: "var(--color-dark)",
-              color: "var(--color-text-on-dark)",
+              backgroundColor: "transparent",
+              color: "var(--color-text)",
+              border: "2px solid var(--color-border)",
               fontFamily: "var(--font-ui)",
               fontWeight: 600,
               fontSize: "0.9375rem",
@@ -167,7 +168,7 @@ export default function GaleriePage() {
               borderRadius: "var(--radius-md)",
               textDecoration: "none",
               minHeight: "44px",
-              transition: "opacity 0.15s",
+              transition: "border-color 0.15s",
             }}
           >
             <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
