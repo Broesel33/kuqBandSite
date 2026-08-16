@@ -2,6 +2,8 @@ import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
 import YouTubeFacade from "@/components/YouTubeFacade";
 
+export const revalidate = 3600;
+
 export const metadata = {
   title: "Kreiz & Quer – Live-Band Steiermark | Hochzeiten, Bälle & Events",
   alternates: { canonical: "https://www.kreizundquer.at" },
