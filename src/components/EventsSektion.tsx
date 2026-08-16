@@ -9,7 +9,7 @@ const termine = [
   { datum: "01.08.2026", wochentag: "Sa", name: "SPÖ-Sommerfest", ort: "Rinthpark, Frohnleiten" },
   { datum: "12.08.2026", wochentag: "Mi", name: "Akustische Sommernacht", ort: "Hauptplatz, Frohnleiten" },
   { datum: "15.08.2026", wochentag: "Sa", name: "Teichjubiläum", ort: "Tieschen" },
-  { datum: "29.08.2026", wochentag: "Sa", name: "Grillfest", ort: "Trend, Frohnleiten" },
+  { datum: "21.08.2026", wochentag: "Fr", name: "Grillfest", ort: "Trend, Frohnleiten" },
 ];
 
 export default function EventsSektion() {
