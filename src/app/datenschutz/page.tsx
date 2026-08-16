@@ -108,10 +108,11 @@ export default function Datenschutz() {
               <p style={paraStyle}>
                 Wir nehmen den Schutz deiner persönlichen Daten ernst und behandeln diese
                 vertraulich, entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser
-                Datenschutzerklärung. Unsere Website verwendet <strong>keine Tracking-Cookies,
-                keine Analyse-Tools und kein Remarketing</strong>. Es werden keine
-                Nutzerprofile erstellt und kein Verhalten über verschiedene Websites hinweg
-                verfolgt.
+                Datenschutzerklärung. Unsere Website setzt <strong>keine Cookies</strong> und
+                speichert auch sonst nichts auf deinem Endgerät. Wir verwenden{" "}
+                <strong>keine Analyse-Tools, kein Tracking und kein Remarketing</strong>. Es werden
+                keine Nutzerprofile erstellt und kein Verhalten über verschiedene Websites hinweg
+                verfolgt. Aus diesem Grund benötigen wir auch keinen Cookie-Einwilligungsbanner.
               </p>
             </div>
 
@@ -186,16 +187,28 @@ export default function Datenschutz() {
               </p>
 
               <p style={{ ...paraStyle, marginTop: "0.75rem", fontWeight: 600, color: "var(--color-text)" }}>
-                Google Material Symbols (Icons)
+                Material Symbols (Icons) — selbst gehostet
               </p>
               <p style={{ ...paraStyle, marginBottom: "0.75rem" }}>
-                Für Icons auf dieser Website wird die Schriftart „Material Symbols" direkt
-                von Google-Servern (fonts.googleapis.com, fonts.gstatic.com) geladen. Dabei
-                wird deine IP-Adresse an Google LLC (USA) übermittelt. Google ist unter dem
-                EU-US Data Privacy Framework zertifiziert, das die Europäische Kommission
-                als angemessenes Datenschutzniveau anerkannt hat (Angemessenheitsbeschluss
-                vom 10. Juli 2023). Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes
-                Interesse an einheitlicher Darstellung). Googles Datenschutzerklärung:{" "}
+                Auch die Icon-Schriftart &bdquo;Material Symbols&ldquo; liegt auf unserem eigenen Server und
+                wird von dort ausgeliefert. Bei deinem Besuch findet <strong>keine Verbindung zu
+                Google-Servern</strong> statt.
+              </p>
+
+              <p style={{ ...paraStyle, marginTop: "0.75rem", fontWeight: 600, color: "var(--color-text)" }}>
+                YouTube-Video (Zwei-Klick-Lösung)
+              </p>
+              <p style={{ ...paraStyle, marginBottom: "0.75rem" }}>
+                Auf unserer Startseite binden wir ein Video von YouTube ein (Google Ireland Limited,
+                Gordon House, Barrow Street, Dublin 4, Irland). Beim bloßen Aufruf der Seite wird{" "}
+                <strong>keine Verbindung zu YouTube hergestellt</strong>: Das Vorschaubild liegt auf
+                unserem eigenen Server. Erst wenn du aktiv auf den Abspielen-Button klickst, wird
+                der YouTube-Player nachgeladen. Dabei werden deine IP-Adresse und Angaben zu deinem
+                Browser an Google übermittelt; Google kann den Aufruf gegebenenfalls deinem Konto
+                zuordnen, wenn du eingeloggt bist. Wir verwenden dafür den erweiterten
+                Datenschutzmodus (youtube-nocookie.com). Rechtsgrundlage ist deine Einwilligung
+                durch den Klick auf den Abspielen-Button (Art. 6 Abs. 1 lit. a DSGVO), auf die wir
+                unmittelbar davor sichtbar hinweisen. Datenschutzerklärung von Google:{" "}
                 <a
                   href="https://policies.google.com/privacy"
                   target="_blank"
@@ -255,11 +268,12 @@ export default function Datenschutz() {
                 Unsere Website enthält Links zu Facebook (Meta Platforms Ireland Ltd.),
                 Instagram (Meta Platforms Ireland Ltd.) und YouTube (Google Ireland Ltd.).
                 Diese Links sind einfache Hyperlinks — es werden <strong>keine
-                Social-Media-Plug-ins oder eingebetteten Inhalte</strong> verwendet. Erst
-                wenn du auf einen Link klickst und die jeweilige Plattform besuchst, werden
-                dort Daten erhoben. Für diese Datenverarbeitung sind die jeweiligen
-                Plattformbetreiber verantwortlich. Wir empfehlen, deren Datenschutzerklärungen
-                zu lesen.
+                Social-Media-Plug-ins</strong> eingesetzt, die beim Seitenaufruf Daten
+                übertragen. Erst wenn du auf einen Link klickst und die jeweilige Plattform
+                besuchst, werden dort Daten erhoben. Für diese Datenverarbeitung sind die
+                jeweiligen Plattformbetreiber verantwortlich. Wir empfehlen, deren
+                Datenschutzerklärungen zu lesen. Die einzige Einbettung auf dieser Website ist
+                das oben beschriebene YouTube-Video, das erst auf deinen Klick hin geladen wird.
               </p>
             </div>
 
@@ -289,8 +303,9 @@ export default function Datenschutz() {
               <h2 style={h2Style}>Übermittlungen in Drittländer (außerhalb der EU/EWR)</h2>
               <p style={paraStyle}>
                 Beim Betrieb dieser Website können Daten in die USA übermittelt werden
-                (Google für Material Symbols Icons; Resend für E-Mail-Versand; ggf.
-                Hosting-Anbieter). Für diese Übermittlungen bestehen geeignete Garantien:
+                (Google — nur wenn du das YouTube-Video aktiv startest; Resend für den
+                E-Mail-Versand; ggf. Hosting-Anbieter). Für diese Übermittlungen bestehen
+                geeignete Garantien:
               </p>
               <ul style={listStyle}>
                 <li>
@@ -375,7 +390,7 @@ export default function Datenschutz() {
             <div>
               <h2 style={h2Style}>Aktualität dieser Datenschutzerklärung</h2>
               <p style={paraStyle}>
-                Diese Datenschutzerklärung gilt ab Mai 2026. Wir behalten uns vor, sie bei
+                Diese Datenschutzerklärung gilt ab August 2026. Wir behalten uns vor, sie bei
                 Bedarf anzupassen, um stets den aktuellen rechtlichen Anforderungen zu
                 entsprechen. Die jeweils aktuelle Version ist auf dieser Seite abrufbar.
               </p>

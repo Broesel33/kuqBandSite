@@ -29,7 +29,7 @@ const variantStyles: Record<
     text: 'var(--color-text-on-dark)',
     textSecondary: 'var(--color-text-muted-on-dark)',
     border: 'rgba(255,255,255,0.1)',
-    linkColor: 'var(--color-amber)',
+    linkColor: 'var(--color-amber-on-dark)',
   },
   mid: {
     bg: 'var(--color-warm-gray-2)',

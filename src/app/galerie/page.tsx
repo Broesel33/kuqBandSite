@@ -20,7 +20,7 @@ export default function GaleriePage() {
           <p
             aria-hidden="true"
             style={{
-              color: "var(--color-amber)",
+              color: "var(--color-amber-on-dark)",
               fontFamily: "var(--font-ui)",
               fontSize: "0.6875rem",
               fontWeight: 700,

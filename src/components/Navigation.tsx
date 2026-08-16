@@ -193,7 +193,7 @@ export default function Navigation() {
                   aria-current={active ? "page" : undefined}
                   style={{
                     fontFamily: "var(--font-ui)",
-                    color: active ? "var(--color-amber)" : "rgba(240,237,232,0.8)",
+                    color: active ? "var(--color-amber-on-dark)" : "rgba(240,237,232,0.8)",
                     fontWeight: 600,
                     fontSize: "0.875rem",
                     textTransform: "uppercase",

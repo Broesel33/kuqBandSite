@@ -35,10 +35,6 @@ const leistungen: LeistungItem[] = [
     ],
     bg: "var(--color-surface)",
     anlass: "Hochzeit",
-    testimonial: {
-      quote: "Wir haben nämlich auch Tage nach der Hochzeit noch so oft von Gästen gehört, dass die Band so cool war!",
-      author: "Jakob & Marlene",
-    },
   },
   {
     id: "firmen-events",
@@ -114,7 +110,7 @@ export default function Leistungen() {
               fontWeight: 600,
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "var(--color-amber)",
+              color: "var(--color-amber-on-dark)",
               fontFamily: "var(--font-ui)",
               marginBottom: "0.75rem",
             }}
@@ -318,7 +314,7 @@ export default function Leistungen() {
                         <span
                           aria-hidden="true"
                           style={{
-                            color: "var(--color-amber)",
+                            color: l.dark ? "var(--color-amber-on-dark)" : "var(--color-amber-text)",
                             fontWeight: 700,
                             flexShrink: 0,
                             marginTop: "0.1em",
@@ -375,7 +371,7 @@ export default function Leistungen() {
                 fontWeight: 600,
                 letterSpacing: "0.15em",
                 textTransform: "uppercase",
-                color: "var(--color-amber)",
+                color: "var(--color-amber-on-dark)",
                 fontFamily: "var(--font-ui)",
                 marginBottom: "0.75rem",
               }}

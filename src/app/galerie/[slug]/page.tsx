@@ -46,7 +46,7 @@ export default async function EventDetailPage({
               display: "inline-flex",
               alignItems: "center",
               gap: "0.375rem",
-              color: "var(--color-amber)",
+              color: "var(--color-amber-on-dark)",
               fontFamily: "var(--font-ui)",
               fontSize: "0.8125rem",
               fontWeight: 600,
@@ -64,7 +64,7 @@ export default async function EventDetailPage({
           <p
             aria-hidden="true"
             style={{
-              color: "var(--color-amber)",
+              color: "var(--color-amber-on-dark)",
               fontFamily: "var(--font-ui)",
               fontSize: "0.6875rem",
               fontWeight: 700,

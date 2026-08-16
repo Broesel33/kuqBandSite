@@ -25,7 +25,7 @@ export default function HeroSection({
   const trustBadge = (
     <p
       className="text-sm font-semibold"
-      style={{ color: 'var(--color-amber)', fontFamily: 'var(--font-ui)', letterSpacing: '0.02em' }}
+      style={{ color: 'var(--color-amber-on-dark)', fontFamily: 'var(--font-ui)', letterSpacing: '0.02em' }}
     >
       200+ Events ·{' '}
       <span role="img" aria-label="5 von 5 Sternen">★★★★★</span>
@@ -84,7 +84,7 @@ export default function HeroSection({
             <p
               aria-hidden="true"
               className="hero-item hero-delay-0 text-[11px] font-semibold uppercase tracking-[0.28em]"
-              style={{ color: 'var(--color-amber)', fontFamily: 'var(--font-ui)' }}
+              style={{ color: 'var(--color-amber-on-dark)', fontFamily: 'var(--font-ui)' }}
             >
               {eyebrow}
             </p>
@@ -197,7 +197,7 @@ export default function HeroSection({
             <p
               aria-hidden="true"
               className="hero-item hero-delay-0 text-[11px] font-semibold uppercase tracking-[0.28em]"
-              style={{ color: 'var(--color-amber)', fontFamily: 'var(--font-ui)' }}
+              style={{ color: 'var(--color-amber-on-dark)', fontFamily: 'var(--font-ui)' }}
             >
               {eyebrow}
             </p>

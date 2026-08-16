@@ -10,13 +10,14 @@ interface YouTubeFacadeProps {
 export default function YouTubeFacade({ videoId, title }: YouTubeFacadeProps) {
   const [active, setActive] = useState(false);
 
-  // hqdefault (480×360) is guaranteed to exist for all videos
-  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+  // Vorschaubild liegt lokal in /public — vor dem Klick entsteht so keinerlei
+  // Verbindung zu Google. Erst das Abspielen lädt YouTube nach (Zwei-Klick-Lösung).
+  const thumbnailUrl = "/video-vorschau.jpg";
 
   if (active) {
     return (
       <iframe
-        src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+        src={`https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`}
         title={title}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
@@ -36,7 +37,7 @@ export default function YouTubeFacade({ videoId, title }: YouTubeFacadeProps) {
     <button
       type="button"
       onClick={() => setActive(true)}
-      aria-label={`Video abspielen: ${title}`}
+      aria-label={`Video abspielen: ${title}. Beim Abspielen wird eine Verbindung zu YouTube hergestellt.`}
       style={{
         position: "absolute",
         top: 0,
@@ -50,11 +51,11 @@ export default function YouTubeFacade({ videoId, title }: YouTubeFacadeProps) {
         display: "block",
       }}
     >
-      {/* Plain img avoids next/image remote-pattern config for an external thumbnail */}
+      {/* Dekorativ: Der Button trägt bereits die vollständige Beschriftung */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={thumbnailUrl}
-        alt={title}
+        alt=""
         loading="lazy"
         style={{
           position: "absolute",
@@ -93,6 +94,25 @@ export default function YouTubeFacade({ videoId, title }: YouTubeFacadeProps) {
         >
           <path d="M8 5v14l11-7z" />
         </svg>
+      </span>
+      {/* Datenschutzhinweis vor dem ersten Kontakt zu YouTube */}
+      <span
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          left: 0,
+          right: 0,
+          bottom: 0,
+          padding: "0.625rem 1rem",
+          background: "rgba(0,0,0,0.72)",
+          color: "#ffffff",
+          fontFamily: "var(--font-ui)",
+          fontSize: "0.8125rem",
+          lineHeight: 1.45,
+          textAlign: "center",
+        }}
+      >
+        Beim Abspielen wird eine Verbindung zu YouTube hergestellt.
       </span>
     </button>
   );

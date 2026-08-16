@@ -11,22 +11,39 @@ export const metadata = {
   alternates: { canonical: "https://www.kreizundquer.at/termine" },
 };
 
+/**
+ * UTC-Offset für Europa/Wien am jeweiligen Datum — im Sommer +02:00, im Winter +01:00.
+ * Ermittelt über den Mittag des Tages, damit die Umstellungsnacht nicht hineinspielt.
+ */
+function wienerOffset(dateISO: string): string {
+  const mittag = new Date(`${dateISO}T12:00:00Z`);
+  const teil = new Intl.DateTimeFormat("en-US", {
+    timeZone: "Europe/Vienna",
+    timeZoneName: "longOffset",
+  })
+    .formatToParts(mittag)
+    .find((p) => p.type === "timeZoneName")?.value;
+
+  return teil?.replace("GMT", "") || "+01:00";
+}
+
 function buildEventJsonLd(kommendeTermine: typeof TERMINE) {
   return kommendeTermine.map((t) => {
     const [venueName, addressLocality] = t.venue.includes(", ")
       ? t.venue.split(", ")
       : [t.venue, "Österreich"];
 
-    const startDateTime = `${t.dateISO}T20:00:00+02:00`;
-    const endDateTime = `${t.dateISO}T23:59:00+02:00`;
+    // Uhrzeit stammt aus denselben Daten wie die Anzeige; ohne Angabe bleibt es ein reines Datum.
+    const startDateTime = t.startTime
+      ? `${t.dateISO}T${t.startTime}:00${wienerOffset(t.dateISO)}`
+      : t.dateISO;
 
     return {
       "@context": "https://schema.org",
       "@type": "Event",
       name: t.eventName,
       startDate: startDateTime,
-      endDate: endDateTime,
-      image: "https://www.kreizundquer.at/og-image.jpg",
+      image: "https://www.kreizundquer.at/opengraph-image",
       eventStatus: "https://schema.org/EventScheduled",
       eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
       location: {
@@ -74,7 +91,7 @@ export default function Termine() {
               fontWeight: 600,
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "var(--color-amber)",
+              color: "var(--color-amber-on-dark)",
               fontFamily: "var(--font-ui)",
               marginBottom: "0.75rem",
             }}
@@ -114,7 +131,7 @@ export default function Termine() {
             }}
           >
             Seit 2014 spielen wir in ganz Österreich — von Graz bis Bregenz. Die öffentlichen Termine hier sind nur ein kleiner Teil: Den Großteil unserer Auftritte spielen wir auf privaten Feiern.{" "}
-            <Link href="/kontakt" style={{ color: "var(--color-amber)", textDecoration: "underline" }}>
+            <Link href="/kontakt" style={{ color: "var(--color-amber-on-dark)", textDecoration: "underline" }}>
               Jetzt für dein Event anfragen
             </Link>
             .

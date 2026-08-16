@@ -110,7 +110,7 @@ export default function UeberUns() {
               fontWeight: 600,
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "var(--color-amber)",
+              color: "var(--color-amber-on-dark)",
               fontFamily: "var(--font-ui)",
               marginBottom: "0.75rem",
             }}

@@ -64,23 +64,7 @@ const localBusinessJsonLd = {
     { "@type": "City", name: "Hallein" },
     { "@type": "Country", name: "Österreich" },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5",
-    reviewCount: "1",
-    bestRating: "5",
-    worstRating: "5",
-  },
-  review: [
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Jakob & Marlene" },
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      reviewBody:
-        "Wir haben nämlich auch Tage nach der Hochzeit noch so oft von Gästen gehört, dass die Band so cool war!",
-      datePublished: "2024-10-01",
-    },
-  ],
+  // aggregateRating und review folgen, sobald echte Kundenbewertungen vorliegen.
   sameAs: [
     "https://www.facebook.com/kreizuquer/",
     "https://www.instagram.com/kreizundquer/",
@@ -208,9 +192,9 @@ export default function Startseite() {
             <div style={{ textAlign: "center", marginTop: "2rem" }}>
               <Link
                 href="/galerie"
-                className="transition-colors hover:text-[var(--color-amber)]"
+                className="transition-colors hover:text-[var(--color-amber-on-dark)]"
                 style={{
-                  color: "var(--color-amber)",
+                  color: "var(--color-amber-on-dark)",
                   fontFamily: "var(--font-ui)",
                   fontWeight: 600,
                   fontSize: "0.9375rem",
@@ -325,7 +309,7 @@ export default function Startseite() {
                     fontWeight: 600,
                     letterSpacing: "0.15em",
                     textTransform: "uppercase",
-                    color: "var(--color-amber)",
+                    color: "var(--color-amber-on-dark)",
                     fontFamily: "var(--font-ui)",
                     marginBottom: "0.75rem",
                   }}
@@ -432,74 +416,76 @@ export default function Startseite() {
         </div>
       </section>
 
-      {/* 5. Termine */}
-      <section
-        aria-labelledby="termine-heading"
-        className="py-16 md:py-24"
-        style={{ background: "var(--color-warm-gray)" }}
-      >
-        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
-          <ScrollReveal>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "flex-end",
-                marginBottom: "2.5rem",
-                flexWrap: "wrap",
-                gap: "1rem",
-              }}
-            >
-              <div>
-                <p
-                  aria-hidden="true"
-                  style={{
-                    fontSize: "0.75rem",
-                    fontWeight: 600,
-                    letterSpacing: "0.15em",
-                    textTransform: "uppercase",
-                    color: "var(--color-amber-text)",
-                    fontFamily: "var(--font-ui)",
-                    marginBottom: "0.75rem",
-                  }}
-                >
-                  Nächste Auftritte
-                </p>
-                <h2
-                  id="termine-heading"
-                  style={{
-                    fontFamily: "var(--font-headline)",
-                    fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)",
-                    color: "var(--color-text)",
-                  }}
-                >
-                  Kreiz &amp; Quer live erleben
-                </h2>
-              </div>
-              <Link
-                href="/termine"
-                className="transition-colors hover:text-[var(--color-amber)]"
+      {/* 5. Termine — Abschnitt entfällt, wenn nichts Öffentliches ansteht */}
+      {naechsteTermine.length > 0 && (
+        <section
+          aria-labelledby="termine-heading"
+          className="py-16 md:py-24"
+          style={{ background: "var(--color-warm-gray)" }}
+        >
+          <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 2rem" }}>
+            <ScrollReveal>
+              <div
                 style={{
-                  color: "var(--color-amber-text)",
-                  fontFamily: "var(--font-ui)",
-                  fontWeight: 600,
-                  fontSize: "0.9375rem",
-                  textDecoration: "none",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "flex-end",
+                  marginBottom: "2.5rem",
+                  flexWrap: "wrap",
+                  gap: "1rem",
                 }}
               >
-                Alle Termine ansehen <span aria-hidden="true">→</span>
-              </Link>
-            </div>
-          </ScrollReveal>
-          <ul role="list" style={{ listStyle: "none", padding: 0, margin: 0 }}>
-            {naechsteTermine.map((t) => (
-              <li key={t.id}>
-                <EventRow {...t} />
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+                <div>
+                  <p
+                    aria-hidden="true"
+                    style={{
+                      fontSize: "0.75rem",
+                      fontWeight: 600,
+                      letterSpacing: "0.15em",
+                      textTransform: "uppercase",
+                      color: "var(--color-amber-text)",
+                      fontFamily: "var(--font-ui)",
+                      marginBottom: "0.75rem",
+                    }}
+                  >
+                    Nächste Auftritte
+                  </p>
+                  <h2
+                    id="termine-heading"
+                    style={{
+                      fontFamily: "var(--font-headline)",
+                      fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)",
+                      color: "var(--color-text)",
+                    }}
+                  >
+                    Kreiz &amp; Quer live erleben
+                  </h2>
+                </div>
+                <Link
+                  href="/termine"
+                  className="transition-colors hover:text-[var(--color-text)]"
+                  style={{
+                    color: "var(--color-amber-text)",
+                    fontFamily: "var(--font-ui)",
+                    fontWeight: 600,
+                    fontSize: "0.9375rem",
+                    textDecoration: "none",
+                  }}
+                >
+                  Alle Termine ansehen <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+            </ScrollReveal>
+            <ul role="list" style={{ listStyle: "none", padding: 0, margin: 0 }}>
+              {naechsteTermine.map((t) => (
+                <li key={t.id}>
+                  <EventRow {...t} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* 6. CTA */}
       <section

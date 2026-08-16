@@ -1,7 +1,6 @@
 export const metadata = {
   title: "Impressum – Kreiz & Quer",
   alternates: { canonical: "https://www.kreizundquer.at/impressum" },
-  robots: { index: false },
 };
 
 export default function Impressum() {
@@ -229,7 +228,7 @@ export default function Impressum() {
                   href="https://ec.europa.eu/consumers/odr"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: "var(--color-amber)" }}
+                  style={{ color: "var(--color-amber-text)" }}
                 >
                   https://ec.europa.eu/consumers/odr
                 </a>

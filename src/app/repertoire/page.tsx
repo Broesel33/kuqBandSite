@@ -97,7 +97,7 @@ export default function RepertoirePage() {
           <p
             aria-hidden="true"
             style={{
-              color: "var(--color-amber)",
+              color: "var(--color-amber-on-dark)",
               fontFamily: "var(--font-ui)",
               fontSize: "0.6875rem",
               fontWeight: 700,
@@ -149,7 +149,7 @@ export default function RepertoirePage() {
                 fontFamily: "var(--font-headline)",
                 fontSize: "2.5rem",
                 fontWeight: 800,
-                color: "var(--color-amber)",
+                color: "var(--color-amber-on-dark)",
                 lineHeight: 1,
               }}
             >

@@ -34,7 +34,7 @@ export default function EventCard({ event }: { event: GalerieEvent }) {
         className="absolute top-4 left-4"
         style={{
           backgroundColor: 'var(--color-amber)',
-          color: 'var(--color-dark)',
+          color: '#000',
           fontFamily: 'var(--font-ui)',
           fontSize: '0.6875rem',
           fontWeight: 700,
@@ -90,7 +90,7 @@ export default function EventCard({ event }: { event: GalerieEvent }) {
             alignItems: 'center',
             gap: '0.5rem',
             backgroundColor: 'var(--color-amber)',
-            color: 'var(--color-dark)',
+            color: '#000',
             fontFamily: 'var(--font-ui)',
             fontWeight: 700,
             fontSize: '0.875rem',

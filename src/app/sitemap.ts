@@ -1,8 +1,17 @@
 import type { MetadataRoute } from "next";
+import { galerieEvents } from "@/data/galerie";
 
 const BASE_URL = "https://www.kreizundquer.at";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Galerie-Detailseiten wachsen automatisch mit jedem neuen Event mit
+  const galerieSeiten: MetadataRoute.Sitemap = galerieEvents.map((event) => ({
+    url: `${BASE_URL}/galerie/${event.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "yearly",
+    priority: 0.5,
+  }));
+
   return [
     {
       url: BASE_URL,
@@ -46,6 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
+    ...galerieSeiten,
     {
       url: `${BASE_URL}/kontakt`,
       lastModified: new Date(),

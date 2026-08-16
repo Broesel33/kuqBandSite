@@ -12,7 +12,8 @@ interface EventRowProps {
   venue: string;
   status: EventStatus;
   statusLabel: string;
-  time?: string;
+  startTime?: string;
+  timeApprox?: boolean;
   note?: string;
 }
 
@@ -32,9 +33,11 @@ export default function EventRow({
   venue,
   status,
   statusLabel,
-  time,
+  startTime,
+  timeApprox,
   note,
 }: EventRowProps) {
+  const timeLabel = startTime ? `ab ${timeApprox ? "ca. " : ""}${startTime} Uhr` : undefined;
   const isPast = status === 'past';
   const badge = statusStyles[status];
 
@@ -81,7 +84,7 @@ export default function EventRow({
             fontWeight: 700,
             letterSpacing: '0.08em',
             textTransform: 'uppercase',
-            color: 'var(--color-dark)',
+            color: '#000',
             fontFamily: 'var(--font-ui)',
           }}>
             {monthShort}
@@ -145,7 +148,7 @@ export default function EventRow({
           {venue}
         </p>
         {/* Row 3: time (optional) */}
-        {time && (
+        {timeLabel && (
           <p style={{
             fontFamily: 'var(--font-body)',
             fontSize: '0.875rem',
@@ -162,7 +165,7 @@ export default function EventRow({
             >
               schedule
             </span>
-            {time}
+            {timeLabel}
           </p>
         )}
         {/* Row 4: note (optional) */}

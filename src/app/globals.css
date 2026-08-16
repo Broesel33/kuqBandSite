@@ -7,7 +7,8 @@
   --color-petrol:           #6ba3a8;   /* Petrol-Silber — CTA / Links / Focus */
   --color-petrol-dark:      #4a8288;   /* dunkles Petrol-Silber — Hover/Pressed */
   --color-petrol-light:     #d4e8ea;   /* helles Petrol — Tag-Hintergründe */
-  --color-amber:           #c8951a;   /* Amber-Gold — CTA-Buttons, Eyebrow-Labels, Akzente auf Dunkel */
+  --color-amber:           #c8951a;   /* Amber-Gold — Flächen: CTA-Buttons, Badges, Icons */
+  --color-amber-on-dark:   #e6b542;   /* Amber für Text auf Dunkel (5,05:1 auf --color-dark) */
   --color-amber-text:      #235458;   /* dunkles Petrol für Akzenttext auf Hell (≈9:1 auf surface) */
   --color-amber-light:     #fef3cd;   /* sehr helles Amber — sanfte Hintergründe */
 
@@ -20,7 +21,7 @@
   /* ── Text ── */
   --color-text:                #1a2627;
   --color-text-secondary:      #3e5558;
-  --color-text-muted:          #5c8085;
+  --color-text-muted:          #4a686c;
   --color-text-muted-on-dark:  #b8d0d4;
   --color-text-on-dark:        #e8f2f3;
 
@@ -204,7 +205,7 @@ textarea:focus-visible {
   transform: scaleX(1);
 }
 .nav-link--active {
-  color: var(--color-amber) !important;
+  color: var(--color-amber-on-dark) !important;
 }
 .nav-link--active::after {
   transform: scaleX(1);

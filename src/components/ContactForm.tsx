@@ -25,7 +25,7 @@ const inputBase: React.CSSProperties = {
   borderTop: "none",
   borderLeft: "none",
   borderRight: "none",
-  borderBottom: "2px solid var(--color-border)",
+  borderBottom: "2px solid var(--color-text-muted)",
   background: "transparent",
   color: "var(--color-text)",
   fontFamily: "var(--font-body)",
@@ -185,7 +185,7 @@ export default function ContactForm() {
             aria-describedby={errors.name ? "contact-name-error" : undefined}
             value={form.name}
             onChange={set("name")}
-            style={{ ...inputBase, borderBottomColor: errors.name ? "var(--color-error)" : "var(--color-border)" }}
+            style={{ ...inputBase, borderBottomColor: errors.name ? "var(--color-error)" : "var(--color-text-muted)" }}
           />
           {errors.name && <span id="contact-name-error" role="alert" style={errorStyle}>{errors.name}</span>}
         </div>
@@ -204,7 +204,7 @@ export default function ContactForm() {
             aria-describedby={errors.email ? "contact-email-error" : undefined}
             value={form.email}
             onChange={set("email")}
-            style={{ ...inputBase, borderBottomColor: errors.email ? "var(--color-error)" : "var(--color-border)" }}
+            style={{ ...inputBase, borderBottomColor: errors.email ? "var(--color-error)" : "var(--color-text-muted)" }}
           />
           {errors.email && <span id="contact-email-error" role="alert" style={errorStyle}>{errors.email}</span>}
         </div>
@@ -234,7 +234,7 @@ export default function ContactForm() {
             aria-describedby={errors.anlass ? "contact-anlass-error" : undefined}
             value={form.anlass}
             onChange={set("anlass")}
-            style={{ ...inputBase, borderBottomColor: errors.anlass ? "var(--color-error)" : "var(--color-border)" }}
+            style={{ ...inputBase, borderBottomColor: errors.anlass ? "var(--color-error)" : "var(--color-text-muted)" }}
           >
             <option value="">Bitte auswählen …</option>
             <option value="Hochzeit">Hochzeit</option>
@@ -280,7 +280,7 @@ export default function ContactForm() {
               resize: "vertical",
               minHeight: "120px",
               borderBottom: "none",
-              border: `1px solid ${errors.nachricht ? "var(--color-error)" : "var(--color-border)"}`,
+              border: `1px solid ${errors.nachricht ? "var(--color-error)" : "var(--color-text-muted)"}`,
               borderRadius: "0.5rem",
               padding: "0.75rem",
             }}

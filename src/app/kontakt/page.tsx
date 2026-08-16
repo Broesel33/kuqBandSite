@@ -21,7 +21,7 @@ export default function KontaktPage() {
           <p
             aria-hidden="true"
             style={{
-              color: "var(--color-amber)",
+              color: "var(--color-amber-on-dark)",
               fontFamily: "var(--font-ui)",
               fontSize: "0.6875rem",
               fontWeight: 700,
@@ -112,7 +112,7 @@ export default function KontaktPage() {
                           height: "2rem",
                           borderRadius: "50%",
                           backgroundColor: "var(--color-amber)",
-                          color: "#fff",
+                          color: "#000",
                           fontFamily: "var(--font-ui)",
                           fontSize: "0.8125rem",
                           fontWeight: 700,
