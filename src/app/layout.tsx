@@ -65,6 +65,16 @@ export default function RootLayout({
       className={`${syne.variable} ${manrope.variable} ${materialSymbols.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[var(--color-surface)] text-[var(--color-text)]">
+        {/*
+          Markiert das Dokument als „JavaScript läuft". Nur dann starten die
+          Einblend-Animationen unsichtbar — ohne JavaScript bleibt jeder Inhalt
+          von Anfang an sichtbar. Läuft synchron vor dem ersten Rendern.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.documentElement.classList.add("js")`,
+          }}
+        />
         <SkipLink />
         <ConstructionBanner />
         <Navigation />
