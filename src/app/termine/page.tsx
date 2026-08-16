@@ -174,11 +174,13 @@ export default function Termine() {
           </div>
 
           {kommendeTermine.length > 0 ? (
-            <div>
+            <ul role="list" style={{ listStyle: "none", padding: 0, margin: 0 }}>
               {kommendeTermine.map((t) => (
-                <EventRow key={t.id} {...t} />
+                <li key={t.id}>
+                  <EventRow {...t} />
+                </li>
               ))}
-            </div>
+            </ul>
           ) : (
             <div
               style={{

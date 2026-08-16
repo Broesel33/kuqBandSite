@@ -29,7 +29,7 @@ const leistungen: LeistungItem[] = [
       "Akustik-Set",
       "Vollband",
       "Individuelle Songwünsche",
-      "Ceremonie-Musik",
+      "Zeremonien-Musik",
       "Empfang & Dinner",
       "Abendprogramm",
     ],

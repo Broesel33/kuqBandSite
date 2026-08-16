@@ -1,7 +1,5 @@
 "use client";
 
-import type { EventStatus } from '@/data/termine';
-
 interface EventRowProps {
   dateISO: string;
   day: string;
@@ -10,18 +8,10 @@ interface EventRowProps {
   weekday: string;
   eventName: string;
   venue: string;
-  status: EventStatus;
-  statusLabel: string;
   startTime?: string;
   timeApprox?: boolean;
   note?: string;
 }
-
-const statusStyles: Record<EventStatus, { bg: string; text: string }> = {
-  confirmed: { bg: 'rgba(37, 99, 235, 0.12)', text: 'var(--color-petrol)' },
-  upcoming:  { bg: 'rgba(200, 149, 26, 0.12)', text: 'var(--color-amber-text)' },
-  past:      { bg: 'rgba(92, 84, 72, 0.1)',    text: 'var(--color-text-secondary)' },
-};
 
 export default function EventRow({
   dateISO,
@@ -31,19 +21,14 @@ export default function EventRow({
   weekday,
   eventName,
   venue,
-  status,
-  statusLabel,
   startTime,
   timeApprox,
   note,
 }: EventRowProps) {
   const timeLabel = startTime ? `ab ${timeApprox ? "ca. " : ""}${startTime} Uhr` : undefined;
-  const isPast = status === 'past';
-  const badge = statusStyles[status];
 
   return (
     <div
-      role="listitem"
       style={{
         display: 'flex',
         alignItems: 'center',
@@ -53,7 +38,6 @@ export default function EventRow({
         marginBottom: '0.5rem',
         backgroundColor: 'var(--color-surface)',
         border: '1px solid var(--color-border)',
-        opacity: isPast ? 0.55 : 1,
         transition: 'box-shadow 0.15s',
       }}
       onMouseEnter={(e) => {

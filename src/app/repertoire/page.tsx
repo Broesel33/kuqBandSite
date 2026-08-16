@@ -233,7 +233,7 @@ export default function RepertoirePage() {
                   marginBottom: "0.5rem",
                 }}
               >
-                Euer Lieblingssong ist nicht dabei?
+                Dein Lieblingssong ist nicht dabei?
               </h2>
               <p
                 style={{

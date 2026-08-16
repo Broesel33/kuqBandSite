@@ -1,5 +1,3 @@
-export type EventStatus = 'upcoming' | 'confirmed' | 'past';
-
 export interface Termin {
   id: string;
   dateISO: string;
@@ -9,8 +7,6 @@ export interface Termin {
   weekday: string;
   eventName: string;
   venue: string;
-  status: EventStatus;
-  statusLabel: string;
   /** Beginn im Format HH:MM — speist Anzeige und strukturierte Daten */
   startTime?: string;
   /** true = „ab ca. 19:00 Uhr" statt „ab 19:00 Uhr" */
@@ -18,8 +14,8 @@ export interface Termin {
   note?: string;
 }
 
-// Aktuelles Datum: April 2026
-// Alle Termine liegen in der Zukunft (Mai–August 2026)
+// Chronologisch gepflegt. Vergangene Termine werden beim Rendern
+// anhand von dateISO ausgefiltert und müssen hier nicht gelöscht werden.
 export const TERMINE: Termin[] = [
   {
     id: '2026-05-09-rinthpark-eroeffnung',
@@ -30,8 +26,6 @@ export const TERMINE: Termin[] = [
     weekday: 'Sa',
     eventName: 'Eröffnung Rinthpark',
     venue: 'Rinthpark, Frohnleiten',
-    status: 'confirmed',
-    statusLabel: 'Bestätigt',
     startTime: '14:00',
     timeApprox: true,
   },
@@ -44,8 +38,6 @@ export const TERMINE: Termin[] = [
     weekday: 'So',
     eventName: 'Lesung',
     venue: 'Bibliothek, Frohnleiten',
-    status: 'upcoming',
-    statusLabel: 'Bald',
     startTime: '19:00',
     timeApprox: true,
     note: 'Akustische Begleitung zwischen den Lesungen',
@@ -59,8 +51,6 @@ export const TERMINE: Termin[] = [
     weekday: 'Sa',
     eventName: 'Sommerfest',
     venue: 'Rinthpark, Frohnleiten',
-    status: 'upcoming',
-    statusLabel: 'Bald',
     startTime: '22:00',
   },
   {
@@ -72,8 +62,6 @@ export const TERMINE: Termin[] = [
     weekday: 'Mi',
     eventName: 'Akustische Sommernacht',
     venue: 'Hauptplatz, Frohnleiten',
-    status: 'upcoming',
-    statusLabel: 'Bald',
     startTime: '19:00',
   },
   {
@@ -85,8 +73,6 @@ export const TERMINE: Termin[] = [
     weekday: 'Fr',
     eventName: 'Grillfest',
     venue: 'Trend, Frohnleiten',
-    status: 'upcoming',
-    statusLabel: 'Bald',
     startTime: '18:00',
   },
   {
@@ -98,8 +84,6 @@ export const TERMINE: Termin[] = [
     weekday: 'Fr',
     eventName: 'Modeschau',
     venue: 'Hauptplatz, Frohnleiten',
-    status: 'upcoming',
-    statusLabel: 'Bald',
     startTime: '18:00',
   },
 ];

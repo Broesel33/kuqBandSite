@@ -140,6 +140,11 @@ export default function Impressum() {
                 Musikdarbietungen und Livemusik bei Veranstaltungen aller Art (Hochzeiten,
                 Firmenfeiern, öffentliche Events, Bälle).
               </p>
+              <p style={{ marginTop: "0.75rem", lineHeight: 1.7 }}>
+                Diese Tätigkeit ist eine Ausübung der schönen Künste im Sinne des § 2 Abs. 1
+                Z 7 GewO 1994 und unterliegt damit nicht der Gewerbeordnung. Es besteht daher
+                keine Gewerbeberechtigung und keine Mitgliedschaft in der Wirtschaftskammer.
+              </p>
             </div>
 
             {/* Grundlegende Richtung */}
@@ -219,20 +224,10 @@ export default function Impressum() {
                   marginBottom: "0.75rem",
                 }}
               >
-                Online-Streitbeilegung
+                Verbraucherschlichtung
               </h2>
               <p style={{ lineHeight: 1.7 }}>
-                Die EU-Kommission stellt eine Plattform zur Online-Streitbeilegung (OS)
-                bereit:{" "}
-                <a
-                  href="https://ec.europa.eu/consumers/odr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "var(--color-amber-text)" }}
-                >
-                  https://ec.europa.eu/consumers/odr
-                </a>
-                . Wir sind nicht verpflichtet und nicht bereit, an einem
+                Wir sind nicht verpflichtet und nicht bereit, an einem
                 Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
                 teilzunehmen.
               </p>

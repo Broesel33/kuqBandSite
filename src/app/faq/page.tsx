@@ -29,7 +29,7 @@ const kategorien: FaqKategorie[] = [
       {
         question: "Wie läuft die Buchung ab?",
         answer:
-          "Ganz entspannt: Du schreibst uns unverbindlich über das Kontaktformular, WhatsApp, per E-Mail oder rufst einfach direkt an. Idealerweise hast du bereits ein paar Informationen zu deinem Event, wie Datum, Location, gewünschte Besetzung, Programmlänge und Sonderwünsche. Wir melden uns zuverlässig innerhalb von 24 Stunden und klären in einem kurzen Gespräch alle Details. Danach bekommst du ein unverbindliches Angebot und dein Termin ist erstmal für zwei Wochen reserviert. Wenn alles passt, sagst du zu und wir wir fixieren den Termin mit einem Buchungsvertrag.",
+          "Ganz entspannt: Du schreibst uns unverbindlich über das Kontaktformular, WhatsApp, per E-Mail oder rufst einfach direkt an. Idealerweise hast du bereits ein paar Informationen zu deinem Event, wie Datum, Location, gewünschte Besetzung, Programmlänge und Sonderwünsche. Wir melden uns zuverlässig innerhalb von 24 Stunden und klären in einem kurzen Gespräch alle Details. Danach bekommst du ein unverbindliches Angebot und dein Termin ist erstmal für zwei Wochen reserviert. Wenn alles passt, sagst du zu und wir fixieren den Termin mit einem Buchungsvertrag.",
       },
       {
         question: "Wie weit im Voraus sollte ich buchen?",
@@ -81,7 +81,7 @@ const kategorien: FaqKategorie[] = [
       {
         question: "Spielt ihr auch Zeremonien- oder Hintergrundmusik?",
         answer:
-          "Ja. Für Hochzeiten bieten wir neben dem Party-Programm auch Musik für den Einzug, die Zeremonie, den Empfang und das Dinner an - akustisch und stimmungsvoll. Unser Duo ist besonders für leise, intime Momente ideal.",
+          "Ja. Für Hochzeiten bieten wir neben dem Party-Programm auch Musik für den Einzug, die Zeremonie, den Empfang und das Dinner an — akustisch und stimmungsvoll. Unser Duo ist besonders für leise, intime Momente ideal.",
       },
       {
         question: "Wie ist die Pausengestaltung geregelt?",
@@ -130,7 +130,7 @@ const kategorien: FaqKategorie[] = [
       {
         question: "Bringt ihr euer eigenes Equipment mit?",
         answer:
-          "Ja, komplett. Wir bringen unser volles PA-System (Lautsprecher, Mischpult, Mikrofone), Instrumente und professionelles Licht-Setup mit. Du musst dir um Technik keine Gedanken machen — wir kümmern uns um alles. Falls die Technik schon vor Ort sein sollte, geht das aber natürlich auch. Bitte gib uns entsprechend in der Buchungsanfrage bescheid.",
+          "Ja, komplett. Wir bringen unser volles PA-System (Lautsprecher, Mischpult, Mikrofone), Instrumente und professionelles Licht-Setup mit. Du musst dir um Technik keine Gedanken machen — wir kümmern uns um alles. Falls die Technik schon vor Ort sein sollte, geht das aber natürlich auch. Bitte gib uns entsprechend in der Buchungsanfrage Bescheid.",
       },
       {
         question: "Wie viel Platz braucht ihr für die Bühne?",
@@ -145,7 +145,7 @@ const kategorien: FaqKategorie[] = [
       {
         question: "Könnt ihr auch outdoor spielen?",
         answer:
-          "Ja. Wir sind sowohl für Indoor- als auch Outdoor-Events ausrüst. Bei Open-Air-Veranstaltungen benötigen wir einen witterungsgeschützten Bereich für das Equipment (Überdachung). Details klären wir individuell.",
+          "Ja. Wir sind sowohl für Indoor- als auch Outdoor-Events ausgerüstet. Bei Open-Air-Veranstaltungen benötigen wir einen witterungsgeschützten Bereich für das Equipment (Überdachung). Details klären wir individuell.",
       },
     ],
   },
@@ -155,7 +155,7 @@ const kategorien: FaqKategorie[] = [
     title: "Anreise & Region",
     items: [
       {
-        question: "Wo spielt ihr auf?",
+        question: "Wo tretet ihr auf?",
         answer:
           "Wir kommen aus der Steiermark und spielen österreichweit — von Wien bis Vorarlberg. Auf Anfrage reisen wir auch nach Deutschland, in die Schweiz oder nach Südtirol.",
       },
@@ -179,7 +179,7 @@ const kategorien: FaqKategorie[] = [
       {
         question: "Was ist im Preis enthalten?",
         answer:
-          "Im Angebot enthalten sind in der Regel: alle Musiker, vollständiges Equipment inkl. PA und Licht, Soundcheck, das vereinbarte Programm sowie An- und Abfahrt (je nach Distanz). Eventuelle Zusätzleistungen wie ein besonders langer Aufbau, zusätzliche Technik oder außergewöhnliche Reisedistanzen werden separat ausgewiesen.",
+          "Im Angebot enthalten sind in der Regel: alle Musiker, vollständiges Equipment inkl. PA und Licht, Soundcheck, das vereinbarte Programm sowie An- und Abfahrt (je nach Distanz). Eventuelle Zusatzleistungen wie ein besonders langer Aufbau, zusätzliche Technik oder außergewöhnliche Reisedistanzen werden separat ausgewiesen.",
       },
       {
         question: "Gibt es Pakete oder fixe Preislisten?",
