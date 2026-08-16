@@ -6,7 +6,7 @@ export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
 export default async function Image() {
-  const bandData = readFileSync(join(process.cwd(), 'public', 'band.png'))
+  const bandData = readFileSync(join(process.cwd(), 'public', 'og-band.png'))
   const bandSrc = `data:image/png;base64,${bandData.toString('base64')}`
 
   let fontData: ArrayBuffer | null = null

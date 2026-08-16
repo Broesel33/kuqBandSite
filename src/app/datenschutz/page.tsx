@@ -196,6 +196,28 @@ export default function Datenschutz() {
               </p>
 
               <p style={{ ...paraStyle, marginTop: "0.75rem", fontWeight: 600, color: "var(--color-text)" }}>
+                Bildauslieferung über Cloudinary
+              </p>
+              <p style={{ ...paraStyle, marginBottom: "0.75rem" }}>
+                Die Bandporträts auf der Seite „Über uns" sowie die Fotos und Videos in der
+                Galerie liefern wir über den Medien-Dienst Cloudinary aus (Cloudinary Ltd., USA).
+                Beim Anzeigen dieser Bilder wird deine IP-Adresse an Cloudinary übermittelt;
+                Cookies werden dabei nicht gesetzt. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO
+                (berechtigtes Interesse an einer schnellen und ressourcenschonenden
+                Bildauslieferung). Für die Übermittlung in die USA stützen wir uns auf die
+                Standardvertragsklauseln der EU-Kommission (Art. 46 Abs. 2 lit. c DSGVO).
+                Datenschutzerklärung von Cloudinary:{" "}
+                <a
+                  href="https://cloudinary.com/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={linkStyle}
+                >
+                  cloudinary.com/privacy
+                </a>
+              </p>
+
+              <p style={{ ...paraStyle, marginTop: "0.75rem", fontWeight: 600, color: "var(--color-text)" }}>
                 YouTube-Video (Zwei-Klick-Lösung)
               </p>
               <p style={{ ...paraStyle, marginBottom: "0.75rem" }}>
@@ -295,6 +317,10 @@ export default function Datenschutz() {
                   <strong>Resend Inc. (USA):</strong> E-Mail-Versand von
                   Kontaktformular-Anfragen (nur in Produktion).
                 </li>
+                <li>
+                  <strong>Cloudinary Ltd. (USA):</strong> Speicherung und Auslieferung der
+                  Fotos und Videos dieser Website.
+                </li>
               </ul>
             </div>
 
@@ -303,9 +329,9 @@ export default function Datenschutz() {
               <h2 style={h2Style}>Übermittlungen in Drittländer (außerhalb der EU/EWR)</h2>
               <p style={paraStyle}>
                 Beim Betrieb dieser Website können Daten in die USA übermittelt werden
-                (Google — nur wenn du das YouTube-Video aktiv startest; Resend für den
-                E-Mail-Versand; ggf. Hosting-Anbieter). Für diese Übermittlungen bestehen
-                geeignete Garantien:
+                (Cloudinary für die Bildauslieferung; Google — nur wenn du das YouTube-Video
+                aktiv startest; Resend für den E-Mail-Versand; ggf. Hosting-Anbieter). Für
+                diese Übermittlungen bestehen geeignete Garantien:
               </p>
               <ul style={listStyle}>
                 <li>
@@ -313,8 +339,9 @@ export default function Datenschutz() {
                   Angemessenheitsbeschluss der EU-Kommission (Juli 2023) zertifiziert.
                 </li>
                 <li>
-                  <strong>Standardvertragsklauseln (SCC):</strong> Für Resend stützen wir uns
-                  auf die Standardvertragsklauseln gemäß Art. 46 Abs. 2 lit. c DSGVO.
+                  <strong>Standardvertragsklauseln (SCC):</strong> Für Resend und Cloudinary
+                  stützen wir uns auf die Standardvertragsklauseln gemäß Art. 46 Abs. 2
+                  lit. c DSGVO.
                 </li>
               </ul>
             </div>

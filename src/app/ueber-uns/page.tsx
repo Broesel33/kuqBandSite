@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import MemberCard from "@/components/MemberCard";
+import { cloudinaryUrl } from "@/lib/cloudinary";
 
 const profilePageJsonLd = {
   "@context": "https://schema.org",
@@ -67,28 +68,28 @@ const mitglieder = [
     name: "Manu",
     instrument: "Gesang · Rhythmus-Gitarre",
     bio: "Manu hat eine Stimme, die den Raum ändert, bevor er auch nur die erste Zeile zu Ende gesungen hat — tiefer, voller und irgendwie echter als erwartet. Auf der Bühne ist er komplett bei der Sache: spürt die Stimmung, reagiert auf sie, zieht die Leute rein ohne großes Aufhebens darum zu machen. Bevor man's merkt, singt der halbe Saal mit. Das klingt einfach. Ist es aber nicht.",
-    photoSrc: "/Manu.png",
+    photoSrc: cloudinaryUrl("band/manu", { width: 800 }),
     photoAlt: "Manu singt und spielt Rhythmus-Gitarre",
   },
   {
     name: "Robert",
     instrument: "Gesang · E-Gitarre",
     bio: "Robert trifft Töne, die Manu mit einem freundlichen Lächeln stehen lässt und nie anfasst — und irgendwie klingt das zusammen besser als getrennt. Was er mit seiner Gitarre macht, ist schwer in Worte zu fassen: manchmal nachdenklich und leise, manchmal laut genug, dass die Gespräche am Nebentisch kurz einfrieren. Er ist nicht der Typ, der Aufmerksamkeit sucht. Er kriegt sie trotzdem.",
-    photoSrc: "/Robert.png",
+    photoSrc: cloudinaryUrl("band/robert", { width: 800 }),
     photoAlt: "Robert singt und spielt E-Gitarre",
   },
   {
     name: "Steph",
     instrument: "Schlagzeug · Keyboard",
     bio: "Wer Steph beim Aufbau sieht — ruhig, konzentriert, meistens ein bisschen in sich gekehrt — ahnt nicht, was gleich passiert. Dann setzt er sich ans Schlagzeug, und der Raum ändert sich. Zwischen Drums und Keyboard wechselt er so entspannt, als wäre das eine komplett normale Sache. Ist es aber nicht. Die wenigsten, die Schlagzeug spielen, können auch Keyboard — und die noch wenigeren klingen so, als wäre es nie eine Frage gewesen.",
-    photoSrc: "/steph.png",
+    photoSrc: cloudinaryUrl("band/steph", { width: 800 }),
     photoAlt: "Steph am Schlagzeug und Keyboard",
   },
   {
     name: "Gabs",
     instrument: "Bass · Background Vocals",
     bio: "Gabs ist der, der nach dem Auftritt noch mit allen redet — und der einzige, dem das wirklich gelingt, ohne dass es aufgesetzt wirkt. Auf der Bühne läuft sein Bass als Fundament unter allem durch, eher gespürt als bewusst gehört. Er hält zusammen, was zusammengehört. Und seine Stimme im Hintergrund ist oft der Unterschied zwischen einem guten und einem richtig guten Moment.",
-    photoSrc: "/gabs.png",
+    photoSrc: cloudinaryUrl("band/gabs", { width: 800 }),
     photoAlt: "Gabs spielt Bass und singt",
   },
 ];
@@ -166,7 +167,7 @@ export default function UeberUns() {
               }}
             >
               <Image
-                src="/band.png"
+                src="/band.webp"
                 alt="Kreiz & Quer — die Band live auf der Bühne"
                 fill
                 className="object-cover object-top"

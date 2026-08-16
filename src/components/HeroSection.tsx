@@ -106,7 +106,7 @@ export default function HeroSection({
         {/* BOTTOM: Foto + Gradient + CTAs */}
         <div className="relative flex-1 min-h-[420px] -mt-4">
           <Image
-            src="/band.png"
+            src="/band.webp"
             alt={photoAlt}
             fill
             className="object-contain object-top"
@@ -178,7 +178,7 @@ export default function HeroSection({
         aria-hidden="true"
       >
 <Image
-          src="/band.png"
+          src="/band.webp"
           alt={photoAlt}
           fill
           className="object-contain object-center"
