@@ -4,7 +4,7 @@ import { galerieEvents } from "@/data/galerie";
 
 export const metadata = {
   title: "Fotos & Live-Impressionen | Hochzeitsband Steiermark – Kreiz & Quer",
-  description: "Impressionen von Kreiz & Quer live auf der Bühne: Hochzeiten, Bälle, Events und mehr — eine Live-Band aus der Steiermark.",
+  description: "Impressionen von Kreiz & Quer live auf der Bühne: Hochzeiten, Events, Bälle und mehr — eine Live-Band aus der Steiermark.",
   alternates: { canonical: "https://www.kreizundquer.at/galerie" },
 };
 

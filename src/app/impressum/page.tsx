@@ -139,7 +139,7 @@ export default function Impressum() {
               </h2>
               <p>
                 Musikdarbietungen und Livemusik bei Veranstaltungen aller Art (Hochzeiten,
-                Bälle, Firmenfeiern, öffentliche Events).
+                Firmenfeiern, öffentliche Events, Bälle).
               </p>
             </div>
 

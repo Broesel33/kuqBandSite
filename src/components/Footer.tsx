@@ -67,7 +67,7 @@ export default function Footer() {
             className="text-sm mb-6"
             style={{ color: "var(--color-text-muted-on-dark)", fontFamily: "var(--font-body)" }}
           >
-            Live-Band aus der Steiermark für Hochzeiten, Bälle, Firmenfeiern und Events.
+            Live-Band aus der Steiermark für Hochzeiten, Firmenfeiern, Events und Bälle.
           </p>
           <div className="flex items-center gap-4">
             {socialLinks.map(({ label, href, icon }) => (

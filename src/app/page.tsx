@@ -5,7 +5,7 @@ import YouTubeFacade from "@/components/YouTubeFacade";
 export const revalidate = 3600;
 
 export const metadata = {
-  title: "Kreiz & Quer – Live-Band Steiermark | Hochzeiten, Bälle & Events",
+  title: "Kreiz & Quer – Live-Band Steiermark | Hochzeiten, Events & Bälle",
   alternates: { canonical: "https://www.kreizundquer.at" },
 };
 
@@ -17,7 +17,7 @@ const localBusinessJsonLd = {
   telephone: "+436802378954",
   email: "info@kreizundquer.com",
   description:
-    "Live-Band aus der Steiermark für Hochzeiten, Events, Bälle und Firmenfeiern — vier Musiker, ein Sound, kein Playback.",
+    "Live-Band aus der Steiermark für Hochzeiten, Events, Firmenfeiern und Bälle — vier Musiker, ein Sound, kein Playback.",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Vormarkt 6",
@@ -94,7 +94,7 @@ const musicGroupJsonLd = {
   name: "Kreiz & Quer",
   url: "https://www.kreizundquer.at",
   description:
-    "Live-Band aus der Steiermark für Hochzeiten, Events, Bälle und Firmenfeiern — vier Musiker, ein Sound, kein Playback.",
+    "Live-Band aus der Steiermark für Hochzeiten, Events, Firmenfeiern und Bälle — vier Musiker, ein Sound, kein Playback.",
   foundingDate: "2014",
   foundingLocation: {
     "@type": "Place",
@@ -157,7 +157,7 @@ export default function Startseite() {
       {/* 1. Hero */}
       <HeroSection
         headline="Kreiz & Quer — Live-Band aus der Steiermark"
-        subline="Hochzeiten, Bälle und Events — vier Musiker, ein Sound, kein Playback."
+        subline="Hochzeiten, Events und Bälle — vier Musiker, ein Sound, kein Playback."
         eyebrow="Live · Leidenschaftlich · Unvergesslich"
         primaryCta={{ label: "Unverbindlich anfragen", href: "/kontakt" }}
         secondaryCta={{ label: "Repertoire ansehen", href: "/repertoire" }}
@@ -278,9 +278,9 @@ export default function Startseite() {
             </ScrollReveal>
             <ScrollReveal delay={80}>
               <ServiceCard
-                icon="celebration"
-                title="Bälle & Gala"
-                description="Eleganter Walzer, zeitlose Evergreens — wir wissen, wann Eleganz gefragt ist und wann die Tanzfläche explodieren soll."
+                icon="business_center"
+                title="Firmen, Partys & Events"
+                description="Professionell auf der Bühne, flexibel im Programm. Vom ruhigen Empfangsambiente bis zum mitreißenden Hauptact."
                 linkHref="/leistungen"
                 linkLabel="Details ansehen"
                 variant="dark"
@@ -288,9 +288,9 @@ export default function Startseite() {
             </ScrollReveal>
             <ScrollReveal delay={160}>
               <ServiceCard
-                icon="business_center"
-                title="Firmen, Partys & Events"
-                description="Professionell auf der Bühne, flexibel im Programm. Vom ruhigen Empfangsambiente bis zum mitreißenden Hauptact."
+                icon="celebration"
+                title="Bälle & Gala"
+                description="Eleganter Walzer, zeitlose Evergreens — wir wissen, wann Eleganz gefragt ist und wann die Tanzfläche explodieren soll."
                 linkHref="/leistungen"
                 linkLabel="Details ansehen"
                 variant="mid"

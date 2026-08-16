@@ -5,7 +5,7 @@ import WhatsAppIcon from "@/components/WhatsAppIcon";
 export const metadata = {
   title: "Live-Band anfragen & buchen | Graz, Steiermark – Kreiz & Quer",
   description:
-    "Live-Band für Hochzeit, Ball oder Firmenfeier in der Steiermark buchen — jetzt unverbindlich anfragen. Kreiz & Quer antwortet innerhalb von 24 Stunden.",
+    "Live-Band für Hochzeiten, Events oder Firmenfeiern und Bälle in der Steiermark buchen — jetzt unverbindlich anfragen. Kreiz & Quer antwortet innerhalb von 24 Stunden.",
   alternates: { canonical: "https://www.kreizundquer.at/kontakt" },
 };
 

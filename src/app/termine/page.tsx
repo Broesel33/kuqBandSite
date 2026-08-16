@@ -255,7 +255,7 @@ export default function Termine() {
                   lineHeight: 1.6,
                 }}
               >
-                Hochzeiten, Bälle, Firmenfeiern — schreib uns einfach und wir planen gemeinsam dein Event.
+                Hochzeiten, Firmenfeiern, Bälle — schreib uns einfach und wir planen gemeinsam dein Event.
               </p>
             </div>
             <Link

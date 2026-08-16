@@ -33,7 +33,7 @@ const inputBase: React.CSSProperties = {
   transition: "border-color 0.2s",
 };
 
-const VALID_ANLASS = ["Hochzeit", "Ball / Gala", "Firmenfeier", "Event / Sonstige", "Presse / Kooperation"];
+const VALID_ANLASS = ["Hochzeit", "Firmenfeier", "Event / Sonstige", "Ball / Gala", "Presse / Kooperation"];
 
 export default function ContactForm() {
   const searchParams = useSearchParams();
@@ -238,9 +238,9 @@ export default function ContactForm() {
           >
             <option value="">Bitte auswählen …</option>
             <option value="Hochzeit">Hochzeit</option>
-            <option value="Ball / Gala">Ball / Gala</option>
             <option value="Firmenfeier">Firmenfeier</option>
             <option value="Event / Sonstige">Event / Sonstige</option>
+            <option value="Ball / Gala">Ball / Gala</option>
             <option value="Presse / Kooperation">Presse / Kooperation</option>
           </select>
           {errors.anlass && <span id="contact-anlass-error" role="alert" style={errorStyle}>{errors.anlass}</span>}

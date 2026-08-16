@@ -34,7 +34,7 @@ const kategorien: FaqKategorie[] = [
       {
         question: "Wie weit im Voraus sollte ich buchen?",
         answer:
-          "Für Hochzeiten empfehlen wir eine Buchung mindestens 6–12 Monate im Voraus. Beliebte Sommerwochenenden sind oft früh vergeben. Für Firmenfeiern, Bälle oder Partys reichen in der Regel 2–4 Monate. Für kurzfristige Anfragen gilt: einfach fragen — manchmal klappt es auch mit wenig Vorlauf!",
+          "Für Hochzeiten empfehlen wir eine Buchung mindestens 6–12 Monate im Voraus. Beliebte Sommerwochenenden sind oft früh vergeben. Für Firmenfeiern, Partys oder Bälle reichen in der Regel 2–4 Monate. Für kurzfristige Anfragen gilt: einfach fragen — manchmal klappt es auch mit wenig Vorlauf!",
       },
       {
         question: "Kann ich einen Termin provisorisch reservieren?",
@@ -118,7 +118,7 @@ const kategorien: FaqKategorie[] = [
       {
         question: "Seit wann gibt es Kreiz & Quer?",
         answer:
-          "Kreiz & Quer wurde 2014 in der Steiermark gegründet. Seitdem haben wir auf über 200 Hochzeiten, Bällen, Firmenfeiern und Events in ganz Österreich gespielt.",
+          "Kreiz & Quer wurde 2014 in der Steiermark gegründet. Seitdem haben wir auf über 200 Hochzeiten, Firmenfeiern, Events und Bällen in ganz Österreich gespielt.",
       },
     ],
   },

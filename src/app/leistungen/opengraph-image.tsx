@@ -93,7 +93,7 @@ export default async function Image() {
               display: 'flex',
             }}
           >
-            Hochzeit · Ball · Firmenevents
+            Hochzeiten · Events · Bälle
           </div>
 
           <div

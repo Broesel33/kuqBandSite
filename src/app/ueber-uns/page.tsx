@@ -12,7 +12,7 @@ const profilePageJsonLd = {
     name: "Kreiz & Quer",
     url: "https://www.kreizundquer.at",
     description:
-      "Lern Manu, Robert, Steph und Gabs kennen — die vier Musiker hinter Kreiz & Quer. Live-Band aus der Steiermark, 200+ Auftritte bei Hochzeiten, Events, Bällen und Firmenfeiern.",
+      "Lern Manu, Robert, Steph und Gabs kennen — die vier Musiker hinter Kreiz & Quer. Live-Band aus der Steiermark, 200+ Auftritte bei Hochzeiten, Events, Firmenfeiern und Bällen.",
     foundingDate: "2014",
     foundingLocation: {
       "@type": "Place",
@@ -58,7 +58,7 @@ const profilePageJsonLd = {
 export const metadata = {
   title: "Die Band | Live-Musiker aus der Steiermark – Kreiz & Quer",
   description:
-    "Lern Manu, Robert, Steph und Gabs kennen — die vier Musiker hinter Kreiz & Quer. Live-Band aus der Steiermark, 200+ Auftritte bei Hochzeiten, Events, Bällen und Firmenfeiern.",
+    "Lern Manu, Robert, Steph und Gabs kennen — die vier Musiker hinter Kreiz & Quer. Live-Band aus der Steiermark, 200+ Auftritte bei Hochzeiten, Events, Firmenfeiern und Bällen.",
   alternates: { canonical: "https://www.kreizundquer.at/ueber-uns" },
 };
 
@@ -226,7 +226,7 @@ export default function UeberUns() {
                   besonders.
                 </p>
                 <p>
-                  Über 200 Auftritte in ganz Österreich — von Hochzeiten in Graz bis zu Bällen, Firmenfeiern und Partys in der ganzen Steiermark und weit darüber hinaus.
+                  Über 200 Auftritte in ganz Österreich — von Hochzeiten in Graz bis zu Firmenfeiern, Partys und Bällen in der ganzen Steiermark und weit darüber hinaus.
                   Und bei jedem einzelnen davon geben wir alles. Nicht weil wir müssen. Sondern
                   weil wir es lieben.
                 </p>

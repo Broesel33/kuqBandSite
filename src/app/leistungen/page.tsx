@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Live-Musik buchen | Hochzeit, Ball & Event – Kreiz & Quer",
+  title: "Live-Musik buchen | Hochzeiten, Events & Bälle – Kreiz & Quer",
   description:
-    "Live-Band für Hochzeiten und Events, Bälle und Firmenfeiern — Kreiz & Quer aus der Steiermark. 100 % live, individuell auf jeden Anlass abgestimmt.",
+    "Live-Band für Hochzeiten, Events, Firmenfeiern und Bälle — Kreiz & Quer aus der Steiermark. 100 % live, individuell auf jeden Anlass abgestimmt.",
   alternates: { canonical: "https://www.kreizundquer.at/leistungen" },
 };
 
@@ -41,20 +41,6 @@ const leistungen: LeistungItem[] = [
     },
   },
   {
-    id: "baelle-gala",
-    icon: "celebration",
-    title: "Bälle & Gala",
-    body: "Eleganter Walzer, zeitlose Evergreens und mitreißende Tanzmusik — wir wissen, wann Eleganz gefragt ist und wann die Tanzfläche explodieren soll. Erfahrung auf unzähligen Bällen in ganz Österreich.",
-    checks: [
-      "Walzer & Tanzmusik",
-      "Mitternachtseinlage",
-      "Ballthema-Abstimmung",
-      "Elegantes Abendprogramm",
-    ],
-    bg: "var(--color-warm-gray)",
-    anlass: "Ball / Gala",
-  },
-  {
     id: "firmen-events",
     icon: "business_center",
     title: "Firmen, Partys & Events",
@@ -67,8 +53,22 @@ const leistungen: LeistungItem[] = [
       "Outdoor- & Innenbereich geeignet",
       "Spontane Programmänderungen möglich",
     ],
-    bg: "var(--color-surface)",
+    bg: "var(--color-warm-gray)",
     anlass: "Event / Sonstige",
+  },
+  {
+    id: "baelle-gala",
+    icon: "celebration",
+    title: "Bälle & Gala",
+    body: "Eleganter Walzer, zeitlose Evergreens und mitreißende Tanzmusik — wir wissen, wann Eleganz gefragt ist und wann die Tanzfläche explodieren soll. Erfahrung auf unzähligen Bällen in ganz Österreich.",
+    checks: [
+      "Walzer & Tanzmusik",
+      "Mitternachtseinlage",
+      "Ballthema-Abstimmung",
+      "Elegantes Abendprogramm",
+    ],
+    bg: "var(--color-surface)",
+    anlass: "Ball / Gala",
   },
   {
     id: "duo",
@@ -169,8 +169,8 @@ export default function Leistungen() {
         >
           {[
             { label: "Hochzeiten", anchor: "hochzeiten" },
-            { label: "Bälle & Gala", anchor: "baelle-gala" },
             { label: "Firmen & Events", anchor: "firmen-events" },
+            { label: "Bälle & Gala", anchor: "baelle-gala" },
             { label: "Duo", anchor: "duo" },
             { label: "Vollband", anchor: "vollband" },
           ].map(({ label, anchor }) => (

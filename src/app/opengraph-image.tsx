@@ -120,7 +120,7 @@ export default async function Image() {
               display: 'flex',
             }}
           >
-            Live-Musik für Hochzeiten, Bälle und Events in ganz Österreich
+            Live-Musik für Hochzeiten, Events und Bälle in ganz Österreich
           </div>
 
           <div

@@ -35,11 +35,11 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.kreizundquer.at"),
-  title: "Kreiz & Quer – Live-Band Steiermark | Hochzeiten, Bälle & Events",
-  description: "Kreiz & Quer: Live-Coverband aus der Steiermark für Hochzeiten, Events, Bälle und Firmenfeiern in ganz Österreich. 4 Musiker, 200+ Auftritte, 100 % live.",
+  title: "Kreiz & Quer – Live-Band Steiermark | Hochzeiten, Events & Bälle",
+  description: "Kreiz & Quer: Live-Coverband aus der Steiermark für Hochzeiten, Events, Firmenfeiern und Bälle in ganz Österreich. 4 Musiker, 200+ Auftritte, 100 % live.",
   openGraph: {
     title: "Kreiz & Quer – Live-Band aus der Steiermark",
-    description: "Live-Musik für Hochzeiten, Bälle und Events. 4 Musiker, kein Playback, 200+ Auftritte in ganz Österreich.",
+    description: "Live-Musik für Hochzeiten, Events und Bälle. 4 Musiker, kein Playback, 200+ Auftritte in ganz Österreich.",
     siteName: "Kreiz & Quer",
     locale: "de_AT",
     type: "website",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Kreiz & Quer – Live-Band aus der Steiermark",
-    description: "Live-Musik für Hochzeiten, Bälle und Events. 4 Musiker, kein Playback, 200+ Auftritte in ganz Österreich.",
+    description: "Live-Musik für Hochzeiten, Events und Bälle. 4 Musiker, kein Playback, 200+ Auftritte in ganz Österreich.",
   },
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
