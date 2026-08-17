@@ -45,7 +45,7 @@ const profilePageJsonLd = {
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+436802378954",
-      email: "info@kreizundquer.com",
+      email: "kreizundquer@gmail.com",
       contactType: "booking",
     },
     sameAs: [

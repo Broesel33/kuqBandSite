@@ -15,7 +15,7 @@ const localBusinessJsonLd = {
   name: "Kreiz & Quer",
   url: "https://www.kreizundquer.at",
   telephone: "+436802378954",
-  email: "info@kreizundquer.com",
+  email: "kreizundquer@gmail.com",
   description:
     "Live-Band aus der Steiermark für Hochzeiten, Events, Firmenfeiern und Bälle — vier Musiker, ein Sound, kein Playback.",
   address: {
@@ -110,7 +110,7 @@ const musicGroupJsonLd = {
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+436802378954",
-    email: "info@kreizundquer.com",
+    email: "kreizundquer@gmail.com",
     contactType: "booking",
   },
   sameAs: [
@@ -255,7 +255,7 @@ export default function Startseite() {
                 icon="favorite"
                 title="Hochzeiten"
                 description="Vom gefühlvollen Ja-Wort bis zur ausgelassenen Party — wir begleiten deinen großen Tag mit Herz, Feingefühl und genau der Musik, die den Moment unvergesslich macht."
-                linkHref="/leistungen"
+                linkHref="/leistungen#hochzeiten"
                 linkLabel="Details ansehen"
                 variant="light"
               />
@@ -265,7 +265,7 @@ export default function Startseite() {
                 icon="business_center"
                 title="Firmen, Partys & Events"
                 description="Professionell auf der Bühne, flexibel im Programm. Vom ruhigen Empfangsambiente bis zum mitreißenden Hauptact."
-                linkHref="/leistungen"
+                linkHref="/leistungen#firmen-events"
                 linkLabel="Details ansehen"
                 variant="dark"
               />
@@ -275,7 +275,7 @@ export default function Startseite() {
                 icon="celebration"
                 title="Bälle & Gala"
                 description="Eleganter Walzer, zeitlose Evergreens — wir wissen, wann Eleganz gefragt ist und wann die Tanzfläche explodieren soll."
-                linkHref="/leistungen"
+                linkHref="/leistungen#baelle-gala"
                 linkLabel="Details ansehen"
                 variant="mid"
               />

@@ -2,10 +2,6 @@
 
 interface EventRowProps {
   dateISO: string;
-  day: string;
-  monthShort: string;
-  year: string;
-  weekday: string;
   eventName: string;
   venue: string;
   startTime?: string;
@@ -13,18 +9,27 @@ interface EventRowProps {
   note?: string;
 }
 
+// dateISO ist ein reines Kalenderdatum ("YYYY-MM-DD") ohne Zeitzone. Über
+// Date.UTC + timeZone: "UTC" bleibt das Kalenderdatum unabhängig davon
+// erhalten, in welcher Zeitzone Server oder Browser gerade laufen.
+function formatDatePart(dateISO: string, options: Intl.DateTimeFormatOptions): string {
+  const [year, month, day] = dateISO.split("-").map(Number);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  return new Intl.DateTimeFormat("de-AT", { ...options, timeZone: "UTC" }).format(date);
+}
+
 export default function EventRow({
   dateISO,
-  day,
-  monthShort,
-  year,
-  weekday,
   eventName,
   venue,
   startTime,
   timeApprox,
   note,
 }: EventRowProps) {
+  const day = formatDatePart(dateISO, { day: "2-digit" });
+  const monthShort = formatDatePart(dateISO, { month: "short" });
+  const year = formatDatePart(dateISO, { year: "numeric" });
+  const weekday = formatDatePart(dateISO, { weekday: "short" });
   const timeLabel = startTime ? `ab ${timeApprox ? "ca. " : ""}${startTime} Uhr` : undefined;
 
   return (

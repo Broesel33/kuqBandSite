@@ -137,8 +137,6 @@ export default function RepertoireFilter({ genres }: RepertoireFilterProps) {
     }
   }
 
-  const activeGenre = genres.find((g) => g.id === activeId);
-
   return (
     <div>
       {/* Tab List */}

@@ -260,12 +260,12 @@ export default function HeroSection({
                 <span className="sr-only">öffnet in neuem Tab</span>
               </a>
               <a
-                href="mailto:info@kreizundquer.com"
+                href="mailto:kreizundquer@gmail.com"
                 className="flex items-center gap-2 text-sm transition-colors min-h-[44px] hover:text-white"
                 style={{ color: 'var(--color-text-muted-on-dark)', fontFamily: 'var(--font-ui)' }}
               >
                 <span className="material-symbols-outlined text-base" aria-hidden="true">mail</span>
-                <span>info@kreizundquer.com</span>
+                <span>kreizundquer@gmail.com</span>
               </a>
             </div>
           )}

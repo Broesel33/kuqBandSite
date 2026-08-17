@@ -144,7 +144,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="mailto:info@kreizundquer.com"
+            href="mailto:kreizundquer@gmail.com"
             className="flex items-center gap-2 transition-colors duration-200 mb-6"
             style={{ color: "var(--color-text-muted-on-dark)", minHeight: "44px" }}
           >
@@ -155,7 +155,7 @@ export default function Footer() {
             >
               mail
             </span>
-            info@kreizundquer.com
+            kreizundquer@gmail.com
           </a>
 
           <p style={{ color: "var(--color-text-muted-on-dark)", fontSize: "12px" }}>

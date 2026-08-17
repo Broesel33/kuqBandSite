@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { sendContactForm, ContactFormData } from "@/app/kontakt/actions";
+import { VALID_ANLASS, FIELD_LIMITS } from "@/lib/contactForm";
 
 type FieldErrors = Partial<Record<keyof ContactFormData | "_global", string>>;
 
@@ -19,6 +20,15 @@ function validate(data: ContactFormData): FieldErrors {
   return errors;
 }
 
+const FIELD_IDS: Record<string, string> = {
+  name: "contact-name",
+  email: "contact-email",
+  telefon: "contact-telefon",
+  datum: "contact-datum",
+  anlass: "contact-anlass",
+  nachricht: "contact-nachricht",
+};
+
 const inputBase: React.CSSProperties = {
   width: "100%",
   padding: "0.625rem 0",
@@ -33,13 +43,11 @@ const inputBase: React.CSSProperties = {
   transition: "border-color 0.2s",
 };
 
-const VALID_ANLASS = ["Hochzeit", "Firmenfeier", "Event / Sonstige", "Ball / Gala", "Presse / Kooperation"];
-
 export default function ContactForm() {
   const searchParams = useSearchParams();
   const initialAnlass = (() => {
     const param = searchParams.get("anlass");
-    return param && VALID_ANLASS.includes(param) ? param : "";
+    return param && (VALID_ANLASS as readonly string[]).includes(param) ? param : "";
   })();
 
   const [form, setForm] = useState<ContactFormData>({
@@ -49,12 +57,18 @@ export default function ContactForm() {
     datum: "",
     anlass: initialAnlass,
     nachricht: "",
+    website: "",
   });
   const [errors, setErrors] = useState<FieldErrors>({});
   const [sent, setSent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [showSummary, setShowSummary] = useState(false);
   const summaryRef = useRef<HTMLDivElement>(null);
+
+  const focusField = (field: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    document.getElementById(FIELD_IDS[field])?.focus();
+  };
 
   const set = (field: keyof ContactFormData) => (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -154,8 +168,29 @@ export default function ContactForm() {
           }}
         >
           {(() => {
-            const count = Object.keys(errors).filter(k => k !== "_global").length;
-            return `${count} ${count === 1 ? "Fehler gefunden" : "Fehler gefunden"} — bitte korrigiere die markierten Felder.`;
+            const fieldErrors = Object.entries(errors).filter(
+              (entry): entry is [string, string] => entry[0] !== "_global" && !!entry[1]
+            );
+            return (
+              <>
+                <p style={{ margin: 0, marginBottom: "0.5rem" }}>
+                  {fieldErrors.length} {fieldErrors.length === 1 ? "Fehler gefunden" : "Fehler gefunden"} — bitte korrigiere die markierten Felder.
+                </p>
+                <ul style={{ margin: 0, paddingLeft: "1.25rem" }}>
+                  {fieldErrors.map(([field, message]) => (
+                    <li key={field}>
+                      <a
+                        href={`#${FIELD_IDS[field]}`}
+                        onClick={focusField(field)}
+                        style={{ color: "inherit", textDecoration: "underline" }}
+                      >
+                        {message}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            );
           })()}
         </div>
       )}
@@ -180,6 +215,7 @@ export default function ContactForm() {
             id="contact-name"
             type="text"
             autoComplete="name"
+            maxLength={FIELD_LIMITS.name}
             aria-required
             aria-invalid={errors.name ? true : undefined}
             aria-describedby={errors.name ? "contact-name-error" : undefined}
@@ -199,6 +235,7 @@ export default function ContactForm() {
             id="contact-email"
             type="email"
             autoComplete="email"
+            maxLength={FIELD_LIMITS.email}
             aria-required
             aria-invalid={errors.email ? true : undefined}
             aria-describedby={errors.email ? "contact-email-error" : undefined}
@@ -216,6 +253,7 @@ export default function ContactForm() {
             id="contact-telefon"
             type="tel"
             autoComplete="tel"
+            maxLength={FIELD_LIMITS.telefon}
             value={form.telefon}
             onChange={set("telefon")}
             style={inputBase}
@@ -269,6 +307,7 @@ export default function ContactForm() {
           <textarea
             id="contact-nachricht"
             rows={5}
+            maxLength={FIELD_LIMITS.nachricht}
             aria-required
             aria-invalid={errors.nachricht ? true : undefined}
             aria-describedby={errors.nachricht ? "contact-nachricht-error" : undefined}
@@ -287,6 +326,20 @@ export default function ContactForm() {
           />
           {errors.nachricht && <span id="contact-nachricht-error" role="alert" style={errorStyle}>{errors.nachricht}</span>}
         </div>
+      </div>
+
+      {/* Honeypot: für Menschen und Screenreader unsichtbar, Bots füllen es oft trotzdem aus */}
+      <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", top: "-9999px" }}>
+        <label htmlFor="contact-website">Website</label>
+        <input
+          id="contact-website"
+          name="website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          value={form.website}
+          onChange={set("website")}
+        />
       </div>
 
       <div style={{ marginTop: "2rem" }}>

@@ -29,7 +29,7 @@ export default function ScrollReveal({ children, delay = 0, className = "" }: Sc
           observer.unobserve(el);
         }
       },
-      { threshold: 0.12 }
+      { threshold: 0, rootMargin: "0px 0px -10% 0px" }
     );
 
     observer.observe(el);

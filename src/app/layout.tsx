@@ -63,6 +63,7 @@ export default function RootLayout({
     <html
       lang="de-AT"
       className={`${syne.variable} ${manrope.variable} ${materialSymbols.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-[var(--color-surface)] text-[var(--color-text)]">
         {/*

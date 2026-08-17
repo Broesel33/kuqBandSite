@@ -210,7 +210,7 @@ export default function KontaktPage() {
                       mail
                     </span>
                     <a
-                      href="mailto:info@kreizundquer.com"
+                      href="mailto:kreizundquer@gmail.com"
                       style={{
                         fontFamily: "var(--font-body)",
                         color: "var(--color-text)",
@@ -221,7 +221,7 @@ export default function KontaktPage() {
                         alignItems: "center",
                       }}
                     >
-                      info@kreizundquer.com
+                      kreizundquer@gmail.com
                     </a>
                   </li>
 

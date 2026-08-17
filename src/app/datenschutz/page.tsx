@@ -1,5 +1,7 @@
 export const metadata = {
   title: "Datenschutzerklärung – Kreiz & Quer",
+  description:
+    "Datenschutzerklärung von Kreiz & Quer — wie wir mit deinen Daten bei Kontaktaufnahme und Website-Nutzung umgehen.",
   alternates: { canonical: "https://www.kreizundquer.at/datenschutz" },
 };
 
@@ -90,8 +92,8 @@ export default function Datenschutz() {
               <p>Österreich</p>
               <p style={{ marginTop: "0.75rem" }}>
                 E-Mail:{" "}
-                <a href="mailto:info@kreizundquer.com" style={linkStyle}>
-                  info@kreizundquer.com
+                <a href="mailto:kreizundquer@gmail.com" style={linkStyle}>
+                  kreizundquer@gmail.com
                 </a>
               </p>
               <p>
@@ -199,7 +201,7 @@ export default function Datenschutz() {
                 Bildauslieferung über Cloudinary
               </p>
               <p style={{ ...paraStyle, marginBottom: "0.75rem" }}>
-                Die Bandporträts auf der Seite „Über uns" sowie die Fotos und Videos in der
+                Die Bandporträts auf der Seite „Über uns&rdquo; sowie die Fotos und Videos in der
                 Galerie liefern wir über den Medien-Dienst Cloudinary aus (Cloudinary Ltd., USA).
                 Beim Anzeigen dieser Bilder wird deine IP-Adresse an Cloudinary übermittelt;
                 Cookies werden dabei nicht gesetzt. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO
@@ -383,8 +385,8 @@ export default function Datenschutz() {
               </ul>
               <p style={{ ...paraStyle, marginTop: "0.75rem" }}>
                 Zur Ausübung deiner Rechte wende dich bitte an:{" "}
-                <a href="mailto:info@kreizundquer.com" style={linkStyle}>
-                  info@kreizundquer.com
+                <a href="mailto:kreizundquer@gmail.com" style={linkStyle}>
+                  kreizundquer@gmail.com
                 </a>
               </p>
             </div>

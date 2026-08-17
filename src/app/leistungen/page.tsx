@@ -169,6 +169,7 @@ export default function Leistungen() {
             { label: "Bälle & Gala", anchor: "baelle-gala" },
             { label: "Duo", anchor: "duo" },
             { label: "Vollband", anchor: "vollband" },
+            { label: "Preise", anchor: "preise" },
           ].map(({ label, anchor }) => (
             <a key={anchor} href={`#${anchor}`} className="jump-nav-pill">
               {label}
@@ -185,7 +186,6 @@ export default function Leistungen() {
         const headingSmColor = l.dark ? "var(--color-text-muted-on-dark)" : "var(--color-text-secondary)";
         const checkColor = l.dark ? "var(--color-text-muted-on-dark)" : "var(--color-text-secondary)";
         const borderColor = l.dark ? "rgba(255,255,255,0.12)" : "var(--color-border)";
-        const linkColor = l.dark ? "var(--color-amber)" : "var(--color-amber-text)";
 
         return (
           <section

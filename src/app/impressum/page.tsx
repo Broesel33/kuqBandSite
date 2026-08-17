@@ -1,5 +1,7 @@
 export const metadata = {
   title: "Impressum – Kreiz & Quer",
+  description:
+    "Impressum von Kreiz & Quer — Anbieterkennzeichnung und Kontaktangaben gemäß § 5 ECG.",
   alternates: { canonical: "https://www.kreizundquer.at/impressum" },
 };
 
@@ -115,10 +117,10 @@ export default function Impressum() {
               <p>
                 E-Mail:{" "}
                 <a
-                  href="mailto:info@kreizundquer.com"
+                  href="mailto:kreizundquer@gmail.com"
                   style={{ color: "var(--color-amber-text)", textDecoration: "none" }}
                 >
-                  info@kreizundquer.com
+                  kreizundquer@gmail.com
                 </a>
               </p>
             </div>

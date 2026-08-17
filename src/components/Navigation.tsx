@@ -19,7 +19,6 @@ const navLinks = [
 export default function Navigation() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
   const detailsRef = useRef<HTMLDetailsElement>(null);
 
   // Close on route change
@@ -56,7 +55,6 @@ export default function Navigation() {
     };
     const onToggle = () => {
       setBackgroundHidden(details.open);
-      setMenuOpen(details.open);
     };
     details.addEventListener("toggle", onToggle);
     return () => {
