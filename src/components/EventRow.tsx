@@ -18,6 +18,75 @@ function formatDatePart(dateISO: string, options: Intl.DateTimeFormatOptions): s
   return new Intl.DateTimeFormat("de-AT", { ...options, timeZone: "UTC" }).format(date);
 }
 
+// Gleiche Offset-Ermittlung wie im Event-JSON-LD auf der Termine-Seite:
+// UTC-Offset für Europa/Wien am jeweiligen Datum (Sommer +02:00, Winter +01:00).
+function wienerOffset(dateISO: string): string {
+  const mittag = new Date(`${dateISO}T12:00:00Z`);
+  const teil = new Intl.DateTimeFormat("en-US", {
+    timeZone: "Europe/Vienna",
+    timeZoneName: "longOffset",
+  })
+    .formatToParts(mittag)
+    .find((p) => p.type === "timeZoneName")?.value;
+  return teil?.replace("GMT", "") || "+01:00";
+}
+
+function toIcsUtcStamp(date: Date): string {
+  return date.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
+}
+
+function nextDayCompact(dateISO: string): string {
+  const [year, month, day] = dateISO.split("-").map(Number);
+  const next = new Date(Date.UTC(year, month - 1, day + 1));
+  return next.toISOString().slice(0, 10).replace(/-/g, "");
+}
+
+function icsEscape(text: string): string {
+  return text
+    .replace(/\\/g, "\\\\")
+    .replace(/;/g, "\\;")
+    .replace(/,/g, "\\,")
+    .replace(/\n/g, "\\n");
+}
+
+const EVENT_DURATION_HOURS = 3;
+
+function buildIcsDataUri(props: EventRowProps): string {
+  const { dateISO, eventName, venue, startTime, note } = props;
+  const uid = `${dateISO}-${eventName}`.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+
+  let dtStart: string;
+  let dtEnd: string;
+  if (startTime) {
+    const start = new Date(`${dateISO}T${startTime}:00${wienerOffset(dateISO)}`);
+    const end = new Date(start.getTime() + EVENT_DURATION_HOURS * 60 * 60 * 1000);
+    dtStart = `DTSTART:${toIcsUtcStamp(start)}`;
+    dtEnd = `DTEND:${toIcsUtcStamp(end)}`;
+  } else {
+    dtStart = `DTSTART;VALUE=DATE:${dateISO.replace(/-/g, "")}`;
+    dtEnd = `DTEND;VALUE=DATE:${nextDayCompact(dateISO)}`;
+  }
+
+  const lines = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//Kreiz & Quer//Termine//DE",
+    "CALSCALE:GREGORIAN",
+    "BEGIN:VEVENT",
+    `UID:${uid}@kreizundquer.at`,
+    `DTSTAMP:${toIcsUtcStamp(new Date())}`,
+    dtStart,
+    dtEnd,
+    `SUMMARY:${icsEscape(`Kreiz & Quer live: ${eventName}`)}`,
+    `LOCATION:${icsEscape(venue)}`,
+    ...(note ? [`DESCRIPTION:${icsEscape(note)}`] : []),
+    "END:VEVENT",
+    "END:VCALENDAR",
+  ];
+
+  return `data:text/calendar;charset=utf-8,${encodeURIComponent(lines.join("\r\n"))}`;
+}
+
 export default function EventRow({
   dateISO,
   eventName,
@@ -31,6 +100,8 @@ export default function EventRow({
   const year = formatDatePart(dateISO, { year: "numeric" });
   const weekday = formatDatePart(dateISO, { weekday: "short" });
   const timeLabel = startTime ? `ab ${timeApprox ? "ca. " : ""}${startTime} Uhr` : undefined;
+  const icsHref = buildIcsDataUri({ dateISO, eventName, venue, startTime, timeApprox, note });
+  const icsFileName = `${eventName.replace(/[^a-zA-Z0-9]+/g, "-")}.ics`;
 
   return (
     <div
@@ -170,6 +241,34 @@ export default function EventRow({
           </p>
         )}
       </div>
+
+      {/* Zum Kalender hinzufügen */}
+      <a
+        href={icsHref}
+        download={icsFileName}
+        aria-label={`${eventName} am ${day}. ${monthShort} zum Kalender hinzufügen`}
+        title="Zum Kalender hinzufügen"
+        style={{
+          flexShrink: 0,
+          display: 'inline-flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: '2.75rem',
+          height: '2.75rem',
+          borderRadius: '0.5rem',
+          border: '1px solid var(--color-border)',
+          color: 'var(--color-text-secondary)',
+          textDecoration: 'none',
+        }}
+      >
+        <span
+          className="material-symbols-outlined"
+          aria-hidden="true"
+          style={{ fontSize: '1.25rem' }}
+        >
+          calendar_month
+        </span>
+      </a>
     </div>
   );
 }

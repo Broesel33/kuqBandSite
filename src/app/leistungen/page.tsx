@@ -426,16 +426,16 @@ export default function Leistungen() {
               }}
             >
               {[
-                { icon: "schedule", label: "Spieldauer" },
-                { icon: "location_on", label: "Anreise" },
-                { icon: "groups", label: "Besetzung" },
-                { icon: "speaker", label: "Technik & Equipment" },
-              ].map(({ icon, label }) => (
+                { icon: "schedule", label: "Spieldauer", detail: "Bis zu 5 Stunden Programm" },
+                { icon: "location_on", label: "Anreise", detail: "Österreichweit, transparent im Angebot ausgewiesen" },
+                { icon: "groups", label: "Besetzung", detail: "Duo oder 4-köpfige Vollband" },
+                { icon: "speaker", label: "Technik & Equipment", detail: "PA, Mikrofone & Licht inklusive" },
+              ].map(({ icon, label, detail }) => (
                 <div
                   key={label}
                   style={{
                     display: "flex",
-                    alignItems: "center",
+                    alignItems: "flex-start",
                     gap: "0.75rem",
                     background: "rgba(255,255,255,0.06)",
                     borderRadius: "var(--radius-md)",
@@ -446,19 +446,31 @@ export default function Leistungen() {
                   <span
                     className="material-symbols-outlined"
                     aria-hidden="true"
-                    style={{ fontSize: "1.25rem", color: "var(--color-amber)", flexShrink: 0 }}
+                    style={{ fontSize: "1.25rem", color: "var(--color-amber)", flexShrink: 0, marginTop: "0.125rem" }}
                   >
                     {icon}
                   </span>
-                  <span
-                    style={{
-                      fontFamily: "var(--font-ui)",
-                      fontSize: "0.875rem",
-                      fontWeight: 600,
-                      color: "var(--color-text-on-dark)",
-                    }}
-                  >
-                    {label}
+                  <span style={{ display: "flex", flexDirection: "column", gap: "0.2rem" }}>
+                    <span
+                      style={{
+                        fontFamily: "var(--font-ui)",
+                        fontSize: "0.875rem",
+                        fontWeight: 600,
+                        color: "var(--color-text-on-dark)",
+                      }}
+                    >
+                      {label}
+                    </span>
+                    <span
+                      style={{
+                        fontFamily: "var(--font-body)",
+                        fontSize: "0.8125rem",
+                        color: "var(--color-text-muted-on-dark)",
+                        lineHeight: 1.4,
+                      }}
+                    >
+                      {detail}
+                    </span>
                   </span>
                 </div>
               ))}
