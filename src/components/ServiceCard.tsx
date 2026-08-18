@@ -15,7 +15,7 @@ interface ServiceCardProps {
 
 const variantStyles: Record<
   ServiceCardVariant,
-  { bg: string; text: string; textSecondary: string; border: string; linkColor: string }
+  { bg: string; text: string; textSecondary: string; border: string; linkColor: string; iconColor: string }
 > = {
   light: {
     bg: 'var(--color-warm-gray)',
@@ -23,6 +23,7 @@ const variantStyles: Record<
     textSecondary: 'var(--color-text-secondary)',
     border: 'var(--color-border)',
     linkColor: 'var(--color-amber-text)',
+    iconColor: 'var(--color-amber-text)',
   },
   dark: {
     bg: 'var(--color-dark)',
@@ -30,6 +31,7 @@ const variantStyles: Record<
     textSecondary: 'var(--color-text-muted-on-dark)',
     border: 'rgba(255,255,255,0.1)',
     linkColor: 'var(--color-amber-on-dark)',
+    iconColor: 'var(--color-amber)',
   },
   mid: {
     bg: 'var(--color-warm-gray-2)',
@@ -37,6 +39,7 @@ const variantStyles: Record<
     textSecondary: 'var(--color-text-secondary)',
     border: 'var(--color-border)',
     linkColor: 'var(--color-amber-text)',
+    iconColor: 'var(--color-amber-text)',
   },
 };
 
@@ -59,7 +62,7 @@ export default function ServiceCard({
         <span
           className="material-symbols-outlined select-none"
           aria-hidden="true"
-          style={{ color: 'var(--color-amber)', fontSize: '2.25rem' }}
+          style={{ color: styles.iconColor, fontSize: '2.25rem' }}
         >
           {icon}
         </span>

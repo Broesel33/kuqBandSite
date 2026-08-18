@@ -282,6 +282,8 @@ export default function Leistungen() {
 
                 {/* Detail-Spalte */}
                 <div style={{ flex: "1 1 200px", minWidth: 0 }}>
+                  {/* Platzhalter: gleicht die Höhe des Icons + Abstands in der Info-Spalte aus, damit beide Überschriften auf gleicher Höhe beginnen */}
+                  <div aria-hidden="true" style={{ height: "4rem" }} />
                   <h3
                     style={{
                       fontFamily: "var(--font-ui)",

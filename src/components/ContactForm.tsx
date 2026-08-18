@@ -260,6 +260,21 @@ export default function ContactForm() {
           />
         </div>
 
+        {/* Datum */}
+        {form.anlass !== "Presse / Kooperation" && (
+          <div>
+            <label htmlFor="contact-datum" style={labelStyle}>Wunschdatum (optional)</label>
+            <input
+              id="contact-datum"
+              type="date"
+              value={form.datum}
+              onChange={set("datum")}
+              min={new Date().toISOString().split("T")[0]}
+              style={inputBase}
+            />
+          </div>
+        )}
+
         {/* Anlass */}
         <div className="sm:col-span-2">
           <label htmlFor="contact-anlass" style={labelStyle}>
@@ -283,21 +298,6 @@ export default function ContactForm() {
           </select>
           {errors.anlass && <span id="contact-anlass-error" role="alert" style={errorStyle}>{errors.anlass}</span>}
         </div>
-
-        {/* Datum */}
-        {form.anlass !== "Presse / Kooperation" && (
-          <div>
-            <label htmlFor="contact-datum" style={labelStyle}>Wunschdatum (optional)</label>
-            <input
-              id="contact-datum"
-              type="date"
-              value={form.datum}
-              onChange={set("datum")}
-              min={new Date().toISOString().split("T")[0]}
-              style={inputBase}
-            />
-          </div>
-        )}
 
         {/* Nachricht */}
         <div className="sm:col-span-2">

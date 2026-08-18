@@ -99,7 +99,7 @@ export default async function EventDetailPage({
             <span className="material-symbols-outlined" style={{ fontSize: "1.125rem" }} aria-hidden="true">
               photo_library
             </span>
-            {event.mediaCount} Fotos &amp; Videos
+            {`${event.mediaCount} Fotos & Videos`}
           </p>
         </div>
       </header>

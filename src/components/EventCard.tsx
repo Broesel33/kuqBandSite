@@ -75,7 +75,7 @@ export default function EventCard({ event }: { event: GalerieEvent }) {
           <span className="material-symbols-outlined" style={{ fontSize: '1rem' }} aria-hidden="true">
             photo_library
           </span>
-          {event.mediaCount} Fotos &amp; Videos
+          {`${event.mediaCount} Fotos & Videos`}
         </p>
       </div>
 

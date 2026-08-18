@@ -159,7 +159,7 @@ export default function Footer() {
           </a>
 
           <p style={{ color: "var(--color-text-muted-on-dark)", fontSize: "12px" }}>
-            © {new Date().getFullYear()} Kreiz &amp; Quer. Live-Band aus der Steiermark.
+            {`© ${new Date().getFullYear()} Kreiz & Quer. Live-Band aus der Steiermark.`}
           </p>
 
         </div>
